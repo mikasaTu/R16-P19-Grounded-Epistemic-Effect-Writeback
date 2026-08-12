@@ -102,6 +102,7 @@ PY
 echo "FIRST_ARTIFACT_OWNER_OK path=$contract_marker uid_gid=$(stat -c '%u:%g' "$contract_marker")"
 
 export PYTHONPATH="$CODE_ROOT:$LIBERO_ROOT${PYTHONPATH:+:$PYTHONPATH}"
+export LIBERO_CONFIG_PATH="$CODE_ROOT/experiments/r16p19_libero_phase1/libero_config"
 export CUDA_VISIBLE_DEVICES="$active_gpu_uuid"
 export MUJOCO_GL=egl
 export MUJOCO_EGL_DEVICE_ID=0
