@@ -1,0 +1,224 @@
+{
+  "dependencies": {
+    "bddl": "1.0.1",
+    "h5py": "3.11.0",
+    "mujoco": "2.3.7",
+    "numpy": "1.22.4",
+    "robomimic": "0.2.0",
+    "robosuite": "1.4.0",
+    "scipy": "1.10.1",
+    "torch": "1.11.0+cu113"
+  },
+  "experiment_commit": "ae362efeba68643ab4dd2a99cfd295c72a9cbdcc",
+  "input_sha256": {
+    "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it.bddl": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+    "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/bddl_files/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.bddl": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+    "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/init_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it.init": "8519d4638868ce661a20d331495d97e0521f8e1535479dd26ba875d5cc06b88f",
+    "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/init_files/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.init": "7eba1f68f9d3a553b14e99a437356fbcc91ba1a531ac2475fc858c1e9bcbe2fc",
+    "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_demo.hdf5": "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
+    "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_demo.hdf5": "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"
+  },
+  "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "runtime_uid_gid": "2254:2254",
+  "torch_cuda_available": true,
+  "torch_cuda_device": "NVIDIA A800-SXM4-80GB"
+}
+{
+  "incomplete_preserved": true,
+  "retained_steps": [
+    10000,
+    13000,
+    14000,
+    16000
+  ],
+  "rng_resume_exact": true,
+  "status": "CHECKPOINT_RETENTION_OK"
+}
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+DEMO_LABELS_COMPLETE task=stove_moka count=50
+DEMO_LABELS_COMPLETE task=bowl_drawer count=50
+ACTOR_FREE_GATE pass=True
+/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/wandb/util.py:118: SentryHubDeprecationWarning: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+  sentry_hub = sentry_sdk.Hub(sentry_client)
+/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py:30: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import parse_version
+/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/pkg_resources/__init__.py:3154: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('mpl_toolkits')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/pkg_resources/__init__.py:3154: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+wandb: Currently logged in as: chen_jian (chen_jian-cj-workspace). Use `wandb login --relogin` to force relogin
+/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/wandb/util.py:249: DeprecationWarning: The `Scope.user` setter is deprecated in favor of `Scope.set_user()`.
+  scope.user = {"email": s.email}
+/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/wandb/util.py:249: DeprecationWarning: The `Scope.user` setter is deprecated in favor of `Scope.set_user()`.
+  scope.user = {"email": s.email}
+wandb: Tracking run with wandb version 0.13.1
+wandb: Run data is saved locally in /mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1/r16p19-libero-phase1-20260813-013200/experiments/r16p19_libero_phase1/wandb/wandb/run-20260813_011936-63azf17y
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run r16p19-libero-phase1-20260813-013200
+wandb: ⭐️ View project at https://wandb.ai/chen_jian-cj-workspace/r16p19-libero-phase1
+wandb: 🚀 View run at https://wandb.ai/chen_jian-cj-workspace/r16p19-libero-phase1/runs/63azf17y
+WANDB_RUN_READY entity=chen_jian-cj-workspace project=r16p19-libero-phase1 run_id=63azf17y
+TRAIN_STEP_LOSS step=1 loss=1.13038063
+TRAIN_STEP_LOSS step=50 loss=0.29887015
+TRAIN_STEP_LOSS step=100 loss=0.20592800
+TRAIN_STEP_LOSS step=150 loss=0.17365453
+TRAIN_STEP_LOSS step=200 loss=0.16214412
+TRAIN_STEP_LOSS step=250 loss=0.15659682
+TRAIN_STEP_LOSS step=300 loss=0.14277059
+TRAIN_STEP_LOSS step=350 loss=0.11862686
+TRAIN_STEP_LOSS step=400 loss=0.12256295
+TRAIN_STEP_LOSS step=450 loss=0.11529291
+TRAIN_STEP_LOSS step=500 loss=0.10584995
+TRAIN_STEP_LOSS step=550 loss=0.11156789
+TRAIN_STEP_LOSS step=600 loss=0.10173711
+TRAIN_STEP_LOSS step=650 loss=0.10936857
+TRAIN_STEP_LOSS step=700 loss=0.09170546
+TRAIN_STEP_LOSS step=750 loss=0.09427225
+TRAIN_STEP_LOSS step=800 loss=0.09447570
+TRAIN_STEP_LOSS step=850 loss=0.08934222
+TRAIN_STEP_LOSS step=900 loss=0.08898474
+TRAIN_STEP_LOSS step=950 loss=0.08330017
+TRAIN_STEP_LOSS step=1000 loss=0.07935339
+CHECKPOINT_COMPLETE component=actor step=1000
+TRAIN_STEP_LOSS step=1050 loss=0.08009598
+TRAIN_STEP_LOSS step=1100 loss=0.07808883
+TRAIN_STEP_LOSS step=1150 loss=0.07660322
+TRAIN_STEP_LOSS step=1200 loss=0.07207545
+TRAIN_STEP_LOSS step=1250 loss=0.07098711
+TRAIN_STEP_LOSS step=1300 loss=0.06941237
+TRAIN_STEP_LOSS step=1350 loss=0.06472591
+TRAIN_STEP_LOSS step=1400 loss=0.06791677
+TRAIN_STEP_LOSS step=1450 loss=0.05778436
+TRAIN_STEP_LOSS step=1500 loss=0.06135454
+TRAIN_STEP_LOSS step=1550 loss=0.05792863
+TRAIN_STEP_LOSS step=1600 loss=0.05517574
+TRAIN_STEP_LOSS step=1650 loss=0.05195803
+TRAIN_STEP_LOSS step=1700 loss=0.05633328
+TRAIN_STEP_LOSS step=1750 loss=0.05241729
+TRAIN_STEP_LOSS step=1800 loss=0.05560331
+TRAIN_STEP_LOSS step=1850 loss=0.05526714
+TRAIN_STEP_LOSS step=1900 loss=0.05541579
+TRAIN_STEP_LOSS step=1950 loss=0.05461017
+TRAIN_STEP_LOSS step=2000 loss=0.05225711
+CHECKPOINT_COMPLETE component=actor step=2000
+TRAIN_STEP_LOSS step=2050 loss=0.05180136
+TRAIN_STEP_LOSS step=2100 loss=0.05720399
+TRAIN_STEP_LOSS step=2150 loss=0.05295644
+TRAIN_STEP_LOSS step=2200 loss=0.04820399
+TRAIN_STEP_LOSS step=2250 loss=0.05087204
+TRAIN_STEP_LOSS step=2300 loss=0.04873285
+TRAIN_STEP_LOSS step=2350 loss=0.05042094
+TRAIN_STEP_LOSS step=2400 loss=0.05472846
+TRAIN_STEP_LOSS step=2450 loss=0.04576912
+TRAIN_STEP_LOSS step=2500 loss=0.04850519
+TRAIN_STEP_LOSS step=2550 loss=0.04661327
+TRAIN_STEP_LOSS step=2600 loss=0.04389564
+TRAIN_STEP_LOSS step=2650 loss=0.04385436
+TRAIN_STEP_LOSS step=2700 loss=0.04739760
+TRAIN_STEP_LOSS step=2750 loss=0.05018627
+TRAIN_STEP_LOSS step=2800 loss=0.04362510
+TRAIN_STEP_LOSS step=2850 loss=0.04522313
+TRAIN_STEP_LOSS step=2900 loss=0.04620195
+TRAIN_STEP_LOSS step=2950 loss=0.05119800
+TRAIN_STEP_LOSS step=3000 loss=0.04931363
+CHECKPOINT_COMPLETE component=actor step=3000
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=0 effects=[True, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=1 effects=[True, True, True, True] full=True steps=257
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=2 effects=[True, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=3 effects=[True, True, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=4 effects=[True, True, True, True] full=True steps=249
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=5 effects=[True, True, True, True] full=True steps=217
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=6 effects=[True, True, True, True] full=True steps=274
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=7 effects=[True, True, True, True] full=True steps=253
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=8 effects=[True, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=9 effects=[True, True, True, True] full=True steps=242
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=10 effects=[True, True, True, True] full=True steps=343
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=11 effects=[True, True, True, True] full=True steps=251
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=12 effects=[True, True, True, True] full=True steps=240
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=13 effects=[True, True, True, True] full=True steps=458
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=14 effects=[True, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=15 effects=[True, True, True, True] full=True steps=269
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=16 effects=[True, True, True, True] full=True steps=284
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=17 effects=[True, True, True, True] full=True steps=243
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=18 effects=[True, True, True, True] full=True steps=256
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=stove_moka init=19 effects=[True, True, True, True] full=True steps=270
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=0 effects=[True, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=1 effects=[True, True, True, True] full=True steps=232
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=2 effects=[True, True, True, True] full=True steps=516
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=3 effects=[True, True, True, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=4 effects=[True, True, True, True] full=True steps=241
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=5 effects=[True, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=6 effects=[True, True, True, True] full=True steps=209
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=7 effects=[True, True, True, True] full=True steps=204
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=8 effects=[True, True, True, True] full=True steps=250
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=9 effects=[True, True, True, True] full=True steps=213
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=10 effects=[True, True, True, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=11 effects=[True, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=12 effects=[True, True, True, True] full=True steps=235
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=13 effects=[True, True, True, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=14 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=15 effects=[True, True, True, True] full=True steps=216
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=16 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=17 effects=[True, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=18 effects=[True, True, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=retrieval_augmented_tiny_mlp task=bowl_drawer init=19 effects=[True, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=0 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=1 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=2 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=3 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=4 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=5 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=6 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=7 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=8 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=9 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=10 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=11 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=12 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=13 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=14 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=15 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=16 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=17 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=18 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=stove_moka init=19 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=0 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=1 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=2 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=3 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=4 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=5 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=6 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=7 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=8 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=9 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=10 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=11 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=12 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=13 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=14 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=15 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=16 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=17 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=18 effects=[False, False, False, False] full=False steps=600
+COMPETENCE_ROLLOUT actor=nearest_demo_phase_script task=bowl_drawer init=19 effects=[False, False, False, False] full=False steps=600
+R16P19_FINAL_STATUS BLOCKED_BY_ACTOR
+wandb: Waiting for W&B process to finish... (success).
+wandb: - 0.001 MB of 0.001 MB uploaded (0.000 MB deduped)wandb: \ 0.001 MB of 0.001 MB uploaded (0.000 MB deduped)wandb: | 0.001 MB of 0.001 MB uploaded (0.000 MB deduped)wandb: / 0.001 MB of 0.004 MB uploaded (0.000 MB deduped)wandb: - 0.001 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: \ 0.001 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: | 0.001 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: / 0.001 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: - 0.001 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: \ 0.001 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: | 0.001 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: / 0.001 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: - 0.001 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: \ 0.001 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: | 0.004 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: / 0.004 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: - 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: \ 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: | 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: / 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: - 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: \ 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: | 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: / 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: - 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: \ 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: | 0.017 MB of 0.017 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb: actor/train_loss █▃▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   optimizer_step ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇███
+wandb: 
+wandb: Run summary:
+wandb: actor/train_loss 0.04931
+wandb:   optimizer_step 3000
+wandb: 
+wandb: Synced r16p19-libero-phase1-20260813-013200: https://wandb.ai/chen_jian-cj-workspace/r16p19-libero-phase1/runs/63azf17y
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: /mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1/r16p19-libero-phase1-20260813-013200/experiments/r16p19_libero_phase1/wandb/wandb/run-20260813_011936-63azf17y/logs
+R16P19_FORMAL_RUN_COMPLETE path=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1/r16p19-libero-phase1-20260813-013200/RUN_COMPLETE.json

@@ -1,0 +1,160 @@
+{
+  "description": "Formal R16-P19 actor-free trace gate, tiny state-BC training, competence inference, and gated 2x20x5x4 LIBERO closed loop; one active A800 and one contract-reserved idle A800",
+  "evidence": {
+    "action_horizon": 8,
+    "application_resume_semantics": "model_optimizer_scheduler_rng_global_step",
+    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1/tiny_state_bc_v1",
+    "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
+    "checkpoint_interval_steps": 1000,
+    "checkpoint_retention": "all_positive_10000_milestones_plus_latest_3_complete_nonmilestones",
+    "closed_loop_factorial_rollouts_if_competent": 800,
+    "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
+    "contract_ready": true,
+    "dataset_sha256": [
+      "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
+      "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"
+    ],
+    "deleted_superseded_jobs": [],
+    "evidence_boundary": "Actor-free epistemic traces plus tiny privileged-state BC causal sanity only; not Pi0.5, not a large VLA, and not a VLA-improvement claim",
+    "expected_first_work_gid": 2254,
+    "expected_first_work_uid": 2254,
+    "expected_terminal_policy_step": 3000,
+    "first_work_evidence_path": "{{ARTIFACT_DIR}}/launch-contract.env",
+    "kind": "r16p19_libero_actor_decoupled_phase1_formal",
+    "launcher_attempts": 1,
+    "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "memory_arms": 7,
+    "model_id": "retrieval_augmented_tiny_mlp_state_bc",
+    "model_run_id": "r16p19_libero_phase1_v1",
+    "pai_probe_created": false,
+    "platform_restart_limit": 0,
+    "policy": "retrieval_augmented_tiny_mlp_state_bc",
+    "require_first_completed_rollout": true,
+    "require_post_launch_real_loss": true,
+    "reserved_idle_gpu_ordinal": 1,
+    "reserved_idle_gpu_telemetry": "nvidia-smi-dmon-pucm-10s",
+    "resource_contract": "dedicated_2gpu_one_active_one_idle_v1",
+    "source_commit": "ae362efeba68643ab4dd2a99cfd295c72a9cbdcc",
+    "success_gate": "persisted_real_optimizer_step_loss_and_completed_actor_free_gate_and_completed_competence_or_closed_loop_status",
+    "superseded_failed_jobs": [],
+    "task_id": "libero10_stove_moka_plus_bowl_bottom_drawer",
+    "trace_conditions": 8,
+    "validation_method": "unit+checkpoint-retention+cpu-simulator-trace+one-batch-smoke",
+    "validation_status": "passed_without_local_training",
+    "wandb_entity": "chen_jian-cj-workspace",
+    "wandb_mode": "online_new_formal_run",
+    "wandb_project": "r16p19-libero-phase1",
+    "workload_type": "training_and_evaluation"
+  },
+  "fault_tolerance": {
+    "aimaster_args": "",
+    "application_auto_resume": true,
+    "complete_state_save_interval_steps": 1000,
+    "expected_platform_restarts": 0,
+    "launcher_attempts": 1,
+    "maximum_platform_restarts": 0,
+    "pai_automatic_fault_tolerance": false,
+    "retry_sleep_seconds": 30
+  },
+  "kind": "pytorchjob",
+  "name_prefix": "r16p19-libero-phase1",
+  "network": {},
+  "provenance": {
+    "contract_source_job_id": "dlcfp1szuc2cgqfp",
+    "pai_clone_performed": false,
+    "resource_source_job_id": "dlc1j2p8ui63ulps",
+    "source_role": "readback_reference",
+    "submission_method": "cli_create"
+  },
+  "resource_alias": "exp-efficiency-a800-2gpu",
+  "runtime": {
+    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry-r16p19-libero-phase1-20260813/launchers/r16p19_libero_phase1_formal.sh",
+    "create_artifact_dir": true,
+    "gid": 2254,
+    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
+    "output_mode": "resume",
+    "payload_transport": "base64",
+    "pod_env": {},
+    "recursive_repair": false,
+    "secret_env_names": [
+      "WANDB_API_KEY",
+      "WANDB_ENTITY"
+    ],
+    "uid": 2254,
+    "wandb_entity_contract": {
+      "allow_identity_inference": false,
+      "entity": "chen_jian-cj-workspace",
+      "forbidden_viewers": [
+        "shiyanpei0826"
+      ],
+      "require_live_membership_write_gate": true,
+      "source": "explicit_user_contract"
+    },
+    "write_paths": [
+      "{{ARTIFACT_DIR}}",
+      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1/tiny_state_bc_v1"
+    ]
+  },
+  "schema_version": 2,
+  "storage": {
+    "data_sources": [
+      {
+        "id": "d-mkixtohdn75dp8x9tb",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-lg9t2b6xajpukeqqeb",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-36p023eg0f2vuqny8y",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-ejgj2ej7io1t2t32uc",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-7fi8hehav247qi6x5o",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/",
+        "options": "",
+        "version": "v1"
+      }
+    ],
+    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1"
+  },
+  "submission": {
+    "disable_ecs_stock_check": false,
+    "job_max_running_time_minutes": 0,
+    "job_reserved_minutes": 0,
+    "job_reserved_policy": "",
+    "priority": 9,
+    "tags": {
+      "dataset": "libero10-two-task-frozen",
+      "experiment_role": "r16p19-actor-decoupled-phase1",
+      "hardware": "2xa800-one-active-one-idle",
+      "managed_by": "pai-job-registry",
+      "model": "tiny-state-bc-epistemic-memory",
+      "purpose": "formal-training-evaluation",
+      "resource_pool": "exp-efficiency",
+      "task": "r16p19-libero-phase1"
+    }
+  },
+  "worker": {
+    "count": 1,
+    "cpu": 12,
+    "gpu": 2,
+    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+    "memory": "200Gi",
+    "shared_memory": "200Gi"
+  },
+  "workspace_id": "179169"
+}

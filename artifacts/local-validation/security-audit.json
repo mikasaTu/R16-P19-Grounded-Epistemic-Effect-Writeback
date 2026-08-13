@@ -1,0 +1,24 @@
+{
+  "audit_date": "2026-08-13",
+  "generic_assignment_candidates": [
+    {
+      "classification": "shell_required_environment_guard",
+      "file": "launch/pai_formal_phase1.sh",
+      "key": "WANDB_API_KEY",
+      "secret_value_present": false
+    }
+  ],
+  "high_confidence_secret_hits": 0,
+  "json_sensitive_field_review": "PASS; nonempty matches were booleans, counters, or the non-secret credential-source descriptor.",
+  "patterns_checked": [
+    "PEM private keys",
+    "AWS access keys",
+    "GitHub tokens",
+    "OpenAI API keys",
+    "Slack tokens"
+  ],
+  "raw_wandb_api_key_values": 0,
+  "status": "PASS",
+  "wandb_api_key_reference_files": 23,
+  "wandb_reference_policy": "Only environment-variable names, required-variable guards, or literal <redacted> control-plane values are retained."
+}

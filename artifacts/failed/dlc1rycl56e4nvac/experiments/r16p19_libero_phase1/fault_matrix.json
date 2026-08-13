@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "conditions": {
+    "C0": {"name": "clean", "trace": true, "closed_loop": true},
+    "C1": {"name": "command_noop", "trace": true, "closed_loop": true, "mutation": "suppress one physical effect after command"},
+    "C2": {"name": "delayed_effect", "trace": true, "closed_loop": true, "delay_decision_cycles": [2, 4]},
+    "C3": {"name": "post_realization_reversal", "trace": true, "closed_loop": true, "mutation": "restore the selected effect's pre-realization simulator state"},
+    "C4": {"name": "single_camera_false_positive", "trace": true, "closed_loop": false},
+    "C5": {"name": "evidence_id_alias", "trace": true, "closed_loop": false, "mutation": "duplicate identical frame bytes under a new evidence ID"},
+    "C6": {"name": "resident_memory_pressure", "trace": true, "closed_loop": false, "irrelevant_events": 40},
+    "C7": {"name": "imagined_success_then_observed_failure", "trace": true, "closed_loop": true}
+  },
+  "target_effect_rule": "sha256(task_key, episode_or_seed, condition) modulo effect_count",
+  "all_variants_of_source_episode_same_split": true,
+  "all_non_oracle_arms_receive_byte_identical_event_streams": true
+}
+

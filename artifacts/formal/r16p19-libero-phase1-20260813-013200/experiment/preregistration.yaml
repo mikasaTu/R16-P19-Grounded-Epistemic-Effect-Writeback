@@ -1,0 +1,157 @@
+schema_version: 1
+frozen_at_utc: "2026-08-13T00:00:00Z"
+preregistration_state: frozen_before_formal_pai_run
+experiment_id: r16p19_libero_phase1_v1
+idea: grounded_epistemic_effect_writeback
+scientific_question: >-
+  Does separating requested, imagined, observed, verified, realized, stalled,
+  and invalidated-realization effects reduce false completion and improve
+  contradiction recovery under command failure, delayed effects, and physical
+  reversals?
+
+evidence_boundary:
+  statement: >-
+    Actor-free trace semantics plus a tiny low-dimensional state-BC causal
+    sanity test on two official LIBERO-10 tasks.
+  excluded:
+    - Pi0.5
+    - large VLA
+    - DINO-WM
+    - visual policy improvement claims
+    - Mem-0 full experiments
+    - official ACT full experiments
+    - formal activation or cryptographic infrastructure
+
+benchmark:
+  repository: https://github.com/Lifelong-Robot-Learning/LIBERO
+  official_commit: 8f1084e3132a39270c3a13ebe37270a43ece2a01
+  local_source: /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e
+  suite: libero_10
+  task_ids:
+    - KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it
+    - KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it
+  task_selection_reason: >-
+    The first task combines a reversible toggle with grasp/place effects. The
+    second combines containment, release, and a dependent articulated closure.
+    Together they expose no-op, delay, reversal, and contradiction failures
+    while retaining explicit simulator predicates and 50 official demos each.
+  demos_per_task: 50
+  split:
+    train: demo_0..demo_29
+    calibration: demo_30..demo_39
+    trace_test: demo_40..demo_49
+  simulator_eval_init_indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+information_boundary:
+  memory_inputs:
+    - requested or imagined effect events
+    - command issuance events
+    - camera evidence receipts with source identity and frame digest
+    - verification and contradiction events derived from those receipts
+  privileged_label_only:
+    - MuJoCo flattened state
+    - LIBERO BDDL predicates
+    - robosuite grasp checks
+    - simulator reward and success
+    - physical fault mutation
+  privileged_actor_only:
+    - low-dimensional simulator state for the tiny state-BC actor
+  prohibited_memory_inputs:
+    - flattened MuJoCo state
+    - object pose vectors
+    - contact arrays
+    - future states
+    - simulator reward or success
+
+effect_label_audit:
+  contact_reconstruction_fallback: >-
+    If replaying a flattened state loses the MuJoCo contact bit for a grasp
+    that is physically necessary in an official successful trajectory, label
+    the grasp at the first 5 mm object-transport witness after a close-action
+    run and record the inference method per episode.
+  audited_fallback_episodes:
+    stove_moka: [demo_23, demo_43]
+    bowl_drawer: [demo_13, demo_30, demo_40]
+  optional_effect_absent_in_successful_source_demos:
+    MOKA_RELEASED_ON_STOVE: [demo_11, demo_12, demo_16]
+  absent_effect_policy: >-
+    Preserve the source episode and false physical label; never fabricate a
+    release. These three episodes are train-only and no trace-test effect is
+    missing after the explicitly recorded transport-witness fallback.
+
+memory:
+  resident_slots: 32
+  provenance_ledger: append_only
+  dangling_parent_policy: fail_closed
+
+actor_free:
+  conditions: [C0, C1, C2, C3, C4, C5, C6, C7]
+  arms: [B1, B2, B3, B4, B5, B6, B7]
+  candidate_decisions:
+    - ADVANCE_TO_NEXT_SUBTASK
+    - RETRY_CURRENT_EFFECT
+    - REOBSERVE
+    - ROLLBACK_OR_REPLAN
+    - SAFE_STOP
+  byte_identical_streams_for_non_oracle_arms: true
+
+state_bc:
+  family: retrieval_augmented_tiny_mlp_state_bc
+  parameter_limit: 10000000
+  action_chunk_horizon: 8
+  action_dim: 7
+  hidden_dim: 256
+  hidden_layers: 4
+  optimizer_steps: 3000
+  checkpoint_interval_optimizer_steps: 1000
+  batch_size: 256
+  learning_rate: 0.0003
+  train_seed: 1619
+  shared_frozen_actor_across_arms: true
+  competence_gate_min_per_effect_success: 0.80
+  fallback_if_gate_fails: scripted_demo_trajectory_primitive
+  interpretation_if_gate_fails: forbidden
+  closed_loop_conditions: [C0, C1, C2, C3, C7]
+  closed_loop_arms: [B2, B3, B5, B6]
+  seeds_per_task: 20
+
+statistics:
+  paired_unit: task_and_init_index
+  paired_bootstrap_repetitions: 10000
+  bootstrap_seed: 1619
+  primary_mechanism_metric: paired_faulted_task_success_B6_minus_B3
+
+phase1_pass_criteria:
+  correctness_gates:
+    evidence_alias_acceptance: 0
+    dangling_parent_count: 0
+    duplicate_contradiction_idempotency: 1
+    contradicted_realized_has_recovery: 1
+    resident_slot_count_max: 32
+    B6_outperforms_B4_and_B5_on_contradiction_recovery: true
+    degenerate_safe_decision_policy_forbidden: true
+  behavior_gates:
+    B6_false_completion_relative_reduction_vs_B3_min: 0.50
+    B6_contradiction_recovery_recall_min: 0.80
+    B6_faulted_success_exceeds: [B3, B5]
+    paired_bootstrap_95ci_lower_bound_min_exclusive: 0.0
+    clean_success_degradation_vs_B3_max_percentage_points: 3.0
+    B6_not_statistically_indistinguishable_from_B2: true
+
+final_status_vocabulary:
+  - PASS_PHASE1
+  - REJECT_CORE_MECHANISM
+  - BLOCKED_BY_ACTOR
+  - BLOCKED_BY_IMPLEMENTATION
+
+execution:
+  local_machine: static checks, CPU trace/simulator smoke, optional one-batch GPU smoke only
+  formal_training_and_inference: Alibaba PAI DLC
+  storage_namespace: /mnt/cpfs/zbl-cpfs-new
+  runtime_uid_gid: "2254:2254"
+  intended_hardware: one active A800 plus one contract-reserved idle A800
+  pai_automatic_fault_tolerance: false
+  platform_restarts: 0
+  application_auto_resume: true
+  checkpoint_contract: model_optimizer_scheduler_rng_global_step
+  checkpoint_retention: all_positive_10000_milestones_plus_latest_3_complete_nonmilestones

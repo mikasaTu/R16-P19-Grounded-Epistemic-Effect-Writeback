@@ -1,0 +1,38 @@
+From 0354c4f344b8bf342dc949496ecd0a54fd111dea Mon Sep 17 00:00:00 2001
+From: mikasaTu <mikasaTu@users.noreply.github.com>
+Date: Thu, 13 Aug 2026 01:15:53 +0800
+Subject: [PATCH 2/3] Pin noninteractive LIBERO PAI source
+
+---
+ launchers/r16p19_libero_phase1_formal.sh                | 2 +-
+ templates/r16p19-libero-phase1-exp-efficiency-2gpu.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/launchers/r16p19_libero_phase1_formal.sh b/launchers/r16p19_libero_phase1_formal.sh
+index ed51571a..4f729d4a 100755
+--- a/launchers/r16p19_libero_phase1_formal.sh
++++ b/launchers/r16p19_libero_phase1_formal.sh
+@@ -1,6 +1,6 @@
+ #!/usr/bin/env bash
+ set -Eeuo pipefail
+ 
+-export R16P19_EXPECTED_COMMIT=773a02e653e9b0ecf4d040e6b31891528f4825f0
++export R16P19_EXPECTED_COMMIT=ae362efeba68643ab4dd2a99cfd295c72a9cbdcc
+ 
+ exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1-20260813/launch/pai_formal_phase1.sh "$@"
+diff --git a/templates/r16p19-libero-phase1-exp-efficiency-2gpu.json b/templates/r16p19-libero-phase1-exp-efficiency-2gpu.json
+index a3dfa8d8..bc429869 100644
+--- a/templates/r16p19-libero-phase1-exp-efficiency-2gpu.json
++++ b/templates/r16p19-libero-phase1-exp-efficiency-2gpu.json
+@@ -106,7 +106,7 @@
+     "first_work_evidence_path": "{{ARTIFACT_DIR}}/launch-contract.env",
+     "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
+     "contract_ready": true,
+-    "source_commit": "773a02e653e9b0ecf4d040e6b31891528f4825f0",
++    "source_commit": "ae362efeba68643ab4dd2a99cfd295c72a9cbdcc",
+     "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+     "dataset_sha256": [
+       "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
+-- 
+2.34.1
+

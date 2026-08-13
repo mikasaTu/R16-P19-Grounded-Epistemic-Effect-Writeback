@@ -1,0 +1,235 @@
+{
+  "artifact_dir": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1/r16p19-libero-phase1-20260813-011500",
+  "controller_version": "5",
+  "description": "Formal R16-P19 actor-free trace gate, tiny state-BC training, competence inference, and gated 2x20x5x4 LIBERO closed loop; one active A800 and one contract-reserved idle A800; run_id=r16p19-libero-phase1-20260813-011500; resource_alias=exp-efficiency-a800-2gpu; resource_id=quotakzri8a5wqcp; contract_source_job_id=dlcfp1szuc2cgqfp; resource_source_job_id=dlc1j2p8ui63ulps; submission_method=cli_create; pai_clone_performed=false; nonce=633c4cc1d7f72953b94e5840dd266d04",
+  "evidence": {
+    "action_horizon": 8,
+    "application_resume_semantics": "model_optimizer_scheduler_rng_global_step",
+    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1/tiny_state_bc_v1",
+    "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
+    "checkpoint_interval_steps": 1000,
+    "checkpoint_retention": "all_positive_10000_milestones_plus_latest_3_complete_nonmilestones",
+    "closed_loop_factorial_rollouts_if_competent": 800,
+    "completed_evidence_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1/r16p19-libero-phase1-20260813-011500/RUN_COMPLETE.json",
+    "contract_ready": true,
+    "dataset_sha256": [
+      "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
+      "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"
+    ],
+    "deleted_superseded_jobs": [],
+    "evidence_boundary": "Actor-free epistemic traces plus tiny privileged-state BC causal sanity only; not Pi0.5, not a large VLA, and not a VLA-improvement claim",
+    "expected_first_work_gid": 2254,
+    "expected_first_work_uid": 2254,
+    "expected_terminal_policy_step": 3000,
+    "first_work_evidence_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1/r16p19-libero-phase1-20260813-011500/launch-contract.env",
+    "kind": "r16p19_libero_actor_decoupled_phase1_formal",
+    "launcher_attempts": 1,
+    "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "memory_arms": 7,
+    "model_id": "retrieval_augmented_tiny_mlp_state_bc",
+    "model_run_id": "r16p19_libero_phase1_v1",
+    "pai_probe_created": false,
+    "platform_restart_limit": 0,
+    "policy": "retrieval_augmented_tiny_mlp_state_bc",
+    "require_first_completed_rollout": true,
+    "require_post_launch_real_loss": true,
+    "reserved_idle_gpu_ordinal": 1,
+    "reserved_idle_gpu_telemetry": "nvidia-smi-dmon-pucm-10s",
+    "resource_contract": "dedicated_2gpu_one_active_one_idle_v1",
+    "source_commit": "773a02e653e9b0ecf4d040e6b31891528f4825f0",
+    "success_gate": "persisted_real_optimizer_step_loss_and_completed_actor_free_gate_and_completed_competence_or_closed_loop_status",
+    "superseded_failed_jobs": [],
+    "task_id": "libero10_stove_moka_plus_bowl_bottom_drawer",
+    "trace_conditions": 8,
+    "validation_method": "unit+checkpoint-retention+cpu-simulator-trace+one-batch-smoke",
+    "validation_status": "passed_without_local_training",
+    "wandb_entity": "chen_jian-cj-workspace",
+    "wandb_mode": "online_new_formal_run",
+    "wandb_project": "r16p19-libero-phase1",
+    "workload_type": "training_and_evaluation"
+  },
+  "fault_tolerance": {
+    "aimaster_args": "",
+    "application_auto_resume": true,
+    "complete_state_save_interval_steps": 1000,
+    "expected_platform_restarts": 0,
+    "launcher_attempts": 1,
+    "maximum_platform_restarts": 0,
+    "pai_automatic_fault_tolerance": false,
+    "retry_sleep_seconds": 30
+  },
+  "name": "r16p19-libero-ph-r16p19-libero-phase1-20260813-011500-n633c4cc1",
+  "network": {},
+  "provenance": {
+    "contract_source_job_id": "dlcfp1szuc2cgqfp",
+    "pai_clone_performed": false,
+    "resource_source_job_id": "dlc1j2p8ui63ulps",
+    "source_role": "readback_reference",
+    "submission_method": "cli_create"
+  },
+  "resolved_at_utc": "2026-08-12T17:11:21Z",
+  "resource": {
+    "authorized_data_sources": [
+      {
+        "id": "d-mkixtohdn75dp8x9tb",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-lg9t2b6xajpukeqqeb",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-36p023eg0f2vuqny8y",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-ejgj2ej7io1t2t32uc",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-7fi8hehav247qi6x5o",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/",
+        "options": "",
+        "version": "v1"
+      }
+    ],
+    "contract_source_job_id": "dlcfp1szuc2cgqfp",
+    "display_name": "exp-efficiency",
+    "evidence": "Live GetJob on canonical contract source dlcfp1szuc2cgqfp supplies the pinned image, five Leon new-root mounts, empty network/driver, and 1x8 contract carrier. Live GetJob on succeeded exp-efficiency job dlc1j2p8ui63ulps supplies the exact dedicated 1x2 worker preset (2 GPU, 12 CPU, 200Gi memory/shared-memory), ForbiddenQuotaOverSold resource, and disabled AIMaster. The target must use the exact 1x2 preset and repeat both live readbacks before CreateJob.",
+    "oversold_type": "ForbiddenQuotaOverSold",
+    "resource_id": "quotakzri8a5wqcp",
+    "resource_source": "resource_quota_two_card_verified_carrier",
+    "source_contract": {
+      "aimaster_args": "",
+      "aimaster_enabled": false,
+      "require_status": "Succeeded"
+    },
+    "source_job_id": "dlc1j2p8ui63ulps",
+    "source_worker_contracts": {
+      "contract": {
+        "count": 1,
+        "cpu": 92,
+        "gpu": 8,
+        "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+        "memory": "1600Gi",
+        "shared_memory": "1600Gi"
+      },
+      "resource": {
+        "count": 1,
+        "cpu": 12,
+        "gpu": 2,
+        "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+        "memory": "200Gi",
+        "shared_memory": "200Gi"
+      }
+    },
+    "verification_state": "combined_canonical_new_root_contract_and_live_succeeded_two_card_resource_carrier",
+    "verified_at": "2026-08-05T06:24:00+08:00"
+  },
+  "resource_alias": "exp-efficiency-a800-2gpu",
+  "run_id": "r16p19-libero-phase1-20260813-011500",
+  "runtime": {
+    "canary_nonce": "633c4cc1d7f72953b94e5840dd266d04",
+    "command": "exec /bin/bash --noprofile --norc -c '#!/usr/bin/env bash\nset -Eeuo pipefail\numask 077\nexport PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\nunset BASH_ENV ENV CDPATH GLOBIGNORE\nLEON_UID=2254\nLEON_GID=2254\nNEW_ROOT=/mnt/cpfs/zbl-cpfs-new\nUSER_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon\nRUN_ID=r16p19-libero-phase1-20260813-011500\nNONCE=633c4cc1d7f72953b94e5840dd266d04\nEXPECTED_GPUS=2\nSENTINEL=/mnt/cpfs/zbl-cpfs-new/USERS/leon/.pai_mount_identity\nSENTINEL_SHA256=b3cc124ffbbebf8a12d52f70555b834f9c62a34ae09ff6ee397d0abbba600ef9\nEXPECTED_CPFS_ID=cpfs-29001v2qz7p5ag7gckzsw\nPAYLOAD_SHA256=9e79332afb600116b6293584e02d36e0f6918816a005547125e6075806375313\nWRITE_PATHS=(/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1/r16p19-libero-phase1-20260813-011500 /mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1/tiny_state_bc_v1)\nRECURSIVE_REPAIR=0\nCURRENT_UID=$(id -u)\nCURRENT_GID=$(id -g)\nif [[ \"$CURRENT_UID\" != 0 && \"$CURRENT_UID:$CURRENT_GID\" != \"$LEON_UID:$LEON_GID\" ]]; then\n  echo \"BOOTSTRAP_REFUSED unexpected identity $CURRENT_UID:$CURRENT_GID\" >&2\n  exit 50\nfi\nfor required in realpath findmnt sha256sum base64 mktemp stat dirname install setpriv env bash; do\n  command -v \"$required\" >/dev/null || {\n    echo \"BOOTSTRAP_REFUSED missing command: $required\" >&2\n    exit 51\n  }\ndone\ntest -d \"$NEW_ROOT\" || { echo \"BOOTSTRAP_REFUSED missing new root\" >&2; exit 52; }\n[[ \"$(realpath -e \"$NEW_ROOT\")\" == \"$NEW_ROOT\" ]] || {\n  echo \"BOOTSTRAP_REFUSED non-canonical new root\" >&2; exit 53;\n}\nassert_cpfs_path() {\n  local path=$1 resolved target fstype source\n  resolved=$(realpath -e -- \"$path\") || {\n    echo \"BOOTSTRAP_REFUSED cannot resolve CPFS path: $path\" >&2; exit 54;\n  }\n  case \"$resolved\" in \"$NEW_ROOT\"|\"$NEW_ROOT\"/*) ;;\n    *) echo \"BOOTSTRAP_REFUSED path outside new root: $resolved\" >&2; exit 55 ;;\n  esac\n  target=$(findmnt -n -o TARGET -T \"$resolved\") || {\n    echo \"BOOTSTRAP_REFUSED path is not mounted: $resolved\" >&2; exit 56;\n  }\n  case \"$target\" in \"$NEW_ROOT\"|\"$NEW_ROOT\"/*) ;;\n    *) echo \"BOOTSTRAP_REFUSED unexpected mount target: $target\" >&2; exit 57 ;;\n  esac\n  fstype=$(findmnt -n -o FSTYPE -T \"$resolved\")\n  case \"$fstype\" in *cpfs*|*aliyun-alinas*) ;;\n    *) echo \"BOOTSTRAP_REFUSED unexpected filesystem: $fstype\" >&2; exit 58 ;;\n  esac\n  source=$(findmnt -n -o SOURCE -T \"$resolved\")\n  [[ \"$source\" == *\"$EXPECTED_CPFS_ID\"* ]] || {\n    echo \"BOOTSTRAP_REFUSED unexpected CPFS source: $source\" >&2; exit 59;\n  }\n}\ntest -f \"$SENTINEL\" && test ! -L \"$SENTINEL\" || {\n  echo \"BOOTSTRAP_REFUSED mount sentinel missing\" >&2; exit 60;\n}\n[[ \"$(sha256sum \"$SENTINEL\" | awk '\"'\"'{print $1}'\"'\"')\" == \"$SENTINEL_SHA256\" ]] || {\n  echo \"BOOTSTRAP_REFUSED mount sentinel mismatch\" >&2; exit 61;\n}\nassert_cpfs_path \"$SENTINEL\"\nassert_write_path() {\n  local path=$1 resolved\n  [[ \"$path\" == /* && \"$path\" != *\"/../\"* && \"$path\" != */.. ]] || {\n    echo \"BOOTSTRAP_REFUSED invalid write path $path\" >&2; exit 62;\n  }\n  resolved=$(realpath -m -- \"$path\")\n  [[ \"$resolved\" == \"$path\" ]] || {\n    echo \"BOOTSTRAP_REFUSED non-canonical write path $path -> $resolved\" >&2; exit 63;\n  }\n  case \"$path\" in\n    /mnt/cpfs/zbl-cpfs-new/USERS/leon/cache/*|/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/*|/mnt/cpfs/zbl-cpfs-new/USERS/leon/assets/*|/mnt/cpfs/zbl-cpfs-new/USERS/leon/artifacts/qpilots/wrc_task_success_q/*|/mnt/cpfs/zbl-cpfs-new/dataset/leon/*|/mnt/cpfs/zbl-cpfs-new/CKPT/leon/*|/mnt/cpfs/zbl-cpfs-new/SHARE/leon/*) ;;\n    *) echo \"BOOTSTRAP_REFUSED write path outside Leon roots: $path\" >&2; exit 64 ;;\n  esac\n}\nfor path in \"${WRITE_PATHS[@]}\"; do\n  assert_write_path \"$path\"\n  anchor=\"$path\"\n  while [[ ! -e \"$anchor\" ]]; do\n    parent=$(dirname -- \"$anchor\")\n    [[ \"$parent\" != \"$anchor\" ]] || {\n      echo \"BOOTSTRAP_REFUSED no mounted ancestor for $path\" >&2; exit 65;\n    }\n    anchor=\"$parent\"\n  done\n  assert_cpfs_path \"$anchor\"\n  if [[ \"$CURRENT_UID\" == 0 ]]; then\n    install -d -m 0700 -o \"$LEON_UID\" -g \"$LEON_GID\" -- \"$path\"\n  else\n    mkdir -p -- \"$path\"\n    chmod 0700 -- \"$path\"\n  fi\n  assert_cpfs_path \"$path\"\n  [[ \"$(stat -c '\"'\"'%u:%g'\"'\"' \"$path\")\" == \"$LEON_UID:$LEON_GID\" ]] || {\n    echo \"BOOTSTRAP_REFUSED write directory owner mismatch: $path\" >&2; exit 66;\n  }\ndone\nif [[ \"$CURRENT_UID\" == 0 && \"$RECURSIVE_REPAIR\" == 1 ]]; then\n  chown -R --no-dereference \"$LEON_UID:$LEON_GID\" -- \"${WRITE_PATHS[@]}\"\nfi\npayload_dir=$(mktemp -d /tmp/pai-payload.XXXXXXXX) || exit 67\nif [[ \"$CURRENT_UID\" == 0 ]]; then chmod 0711 \"$payload_dir\"; fi\npayload_path=\"$payload_dir/payload.sh\"\npayload_b64=IyEvdXNyL2Jpbi9lbnYgYmFzaApzZXQgLUVldW8gcGlwZWZhaWwKCmV4cG9ydCBSMTZQMTlfRVhQRUNURURfQ09NTUlUPTc3M2EwMmU2NTNlOWIwZWNmNGQwNDBlNmIzMTg5MTUyOGY0ODI1ZjAKCmV4ZWMgL21udC9jcGZzL3pibC1jcGZzLW5ldy9VU0VSUy9sZW9uL2NvZGUvcjE2cDE5LWxpYmVyby1waGFzZTEtMjAyNjA4MTMvbGF1bmNoL3BhaV9mb3JtYWxfcGhhc2UxLnNoICIkQCIK\n(umask 022; printf '\"'\"'%s'\"'\"' \"$payload_b64\" | base64 -d >\"$payload_path\")\nunset payload_b64\nchmod 0555 \"$payload_path\"\n[[ \"$(sha256sum \"$payload_path\" | awk '\"'\"'{print $1}'\"'\"')\" == \"$PAYLOAD_SHA256\" ]] || {\n  echo \"BOOTSTRAP_REFUSED payload hash mismatch\" >&2; exit 68;\n}\nHOME_DIR=/mnt/cpfs/zbl-cpfs-new/USERS/leon\nXDG_DIR=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1/r16p19-libero-phase1-20260813-011500/xdg-cache\nsafe_env=(\n  HOME=\"$HOME_DIR\" USER=leon LOGNAME=leon XDG_CACHE_HOME=\"$XDG_DIR\"\n  PATH=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\n  PAI_CANARY_RUN_ID=\"$RUN_ID\" PAI_CANARY_NONCE=\"$NONCE\"\n  PAI_CANARY_RUN_DIR=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1/r16p19-libero-phase1-20260813-011500\n  PAI_CANARY_EXPECTED_GPUS=\"$EXPECTED_GPUS\"\n  PAI_MOUNT_SENTINEL=\"$SENTINEL\"\n  PAI_MOUNT_SENTINEL_SHA256=\"$SENTINEL_SHA256\"\n)\nwhile IFS= read -r env_name; do\n  case \"$env_name\" in\n    CUDA_*|NVIDIA_*|NCCL_*|OMPI_*|PMI_*|PMIX_*|MASTER_ADDR|MASTER_PORT|WORLD_SIZE|RANK|LOCAL_RANK|NODE_RANK|GROUP_RANK|ROLE_RANK|TORCHELASTIC_*|LD_LIBRARY_PATH|HTTP_PROXY|HTTPS_PROXY|NO_PROXY|http_proxy|https_proxy|no_proxy|WANDB_*|HF_*|TRANSFORMERS_*|XLA_*|JAX_*|TORCH_*|OMP_*|MKL_*|PAI_TASK_*)\n      safe_env+=(\"$env_name=${!env_name}\") ;;\n  esac\ndone < <(compgen -e)\nif [[ \"$CURRENT_UID\" == 0 ]]; then\n  exec setpriv --reuid=\"$LEON_UID\" --regid=\"$LEON_GID\" --clear-groups -- \\\n    env -i \"${safe_env[@]}\" bash --noprofile --norc \"$payload_path\"\nfi\n[[ \"$CURRENT_UID:$CURRENT_GID\" == \"$LEON_UID:$LEON_GID\" ]] || exit 69\nexec env -i \"${safe_env[@]}\" bash --noprofile --norc \"$payload_path\"\n'",
+    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry-r16p19-libero-phase1-20260813/launchers/r16p19_libero_phase1_formal.sh",
+    "command_file_sha256": "9e79332afb600116b6293584e02d36e0f6918816a005547125e6075806375313",
+    "create_artifact_dir": true,
+    "gid": 2254,
+    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
+    "output_mode": "resume",
+    "payload_base64": "IyEvdXNyL2Jpbi9lbnYgYmFzaApzZXQgLUVldW8gcGlwZWZhaWwKCmV4cG9ydCBSMTZQMTlfRVhQRUNURURfQ09NTUlUPTc3M2EwMmU2NTNlOWIwZWNmNGQwNDBlNmIzMTg5MTUyOGY0ODI1ZjAKCmV4ZWMgL21udC9jcGZzL3pibC1jcGZzLW5ldy9VU0VSUy9sZW9uL2NvZGUvcjE2cDE5LWxpYmVyby1waGFzZTEtMjAyNjA4MTMvbGF1bmNoL3BhaV9mb3JtYWxfcGhhc2UxLnNoICIkQCIK",
+    "payload_sha256": "9e79332afb600116b6293584e02d36e0f6918816a005547125e6075806375313",
+    "payload_transport": "base64",
+    "pod_env": {},
+    "recursive_repair": false,
+    "secret_env_names": [
+      "WANDB_API_KEY",
+      "WANDB_ENTITY"
+    ],
+    "uid": 2254,
+    "wandb_entity_contract": {
+      "allow_identity_inference": false,
+      "entity": "chen_jian-cj-workspace",
+      "forbidden_viewers": [
+        "shiyanpei0826"
+      ],
+      "require_live_membership_write_gate": true,
+      "source": "explicit_user_contract"
+    },
+    "write_paths": [
+      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1/r16p19-libero-phase1-20260813-011500",
+      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1/tiny_state_bc_v1"
+    ]
+  },
+  "schema_version": 2,
+  "source_template": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry-r16p19-libero-phase1-20260813/templates/r16p19-libero-phase1-exp-efficiency-2gpu.json",
+  "storage": {
+    "data_sources": [
+      {
+        "id": "d-mkixtohdn75dp8x9tb",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-lg9t2b6xajpukeqqeb",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-36p023eg0f2vuqny8y",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-ejgj2ej7io1t2t32uc",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-7fi8hehav247qi6x5o",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/",
+        "options": "",
+        "version": "v1"
+      }
+    ],
+    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1"
+  },
+  "submission": {
+    "disable_ecs_stock_check": false,
+    "job_max_running_time_minutes": 0,
+    "job_reserved_minutes": 0,
+    "job_reserved_policy": "",
+    "priority": 9,
+    "tags": {
+      "dataset": "libero10-two-task-frozen",
+      "experiment_role": "r16p19-actor-decoupled-phase1",
+      "hardware": "2xa800-one-active-one-idle",
+      "managed_by": "pai-job-registry",
+      "model": "tiny-state-bc-epistemic-memory",
+      "purpose": "formal-training-evaluation",
+      "resource_pool": "exp-efficiency",
+      "task": "r16p19-libero-phase1"
+    }
+  },
+  "worker": {
+    "count": 1,
+    "cpu": 12,
+    "gpu": 2,
+    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+    "memory": "200Gi",
+    "shared_memory": "200Gi"
+  },
+  "workspace_id": "179169"
+}

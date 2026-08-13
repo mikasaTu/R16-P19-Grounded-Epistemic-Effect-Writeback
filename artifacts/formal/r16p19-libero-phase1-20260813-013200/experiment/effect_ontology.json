@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "tasks": {
+    "stove_moka": [
+      {
+        "effect_id": "STOVE_TURNED_ON",
+        "prerequisites": [],
+        "incompatible_effects": ["STOVE_TURNED_OFF"],
+        "requested_event": "REQUEST_TURN_ON_STOVE",
+        "observed_evidence": "camera frame labeled Turnon(flat_stove_1)",
+        "verification_evidence": "second non-aliased view confirms Turnon(flat_stove_1)",
+        "realization_witness": "verified Turnon after a causally linked command",
+        "invalidation_witness": "camera evidence labeled not Turnon(flat_stove_1)",
+        "valid_recovery_actions": ["RETRY_CURRENT_EFFECT", "REOBSERVE"]
+      },
+      {
+        "effect_id": "MOKA_GRASPED",
+        "prerequisites": ["STOVE_TURNED_ON"],
+        "incompatible_effects": ["MOKA_RELEASED_AWAY_FROM_STOVE"],
+        "requested_event": "REQUEST_GRASP_MOKA",
+        "observed_evidence": "camera frame labeled grasp(moka_pot_1)",
+        "verification_evidence": "second non-aliased view confirms grasp",
+        "realization_witness": "verified grasp after a causally linked command",
+        "invalidation_witness": "loss of grasp before placement",
+        "valid_recovery_actions": ["RETRY_CURRENT_EFFECT", "REOBSERVE"]
+      },
+      {
+        "effect_id": "MOKA_ON_STOVE",
+        "prerequisites": ["STOVE_TURNED_ON", "MOKA_GRASPED"],
+        "incompatible_effects": ["MOKA_OFF_STOVE"],
+        "requested_event": "REQUEST_PLACE_MOKA_ON_STOVE",
+        "observed_evidence": "camera frame labeled On(moka_pot_1, stove cook region)",
+        "verification_evidence": "second non-aliased view confirms On",
+        "realization_witness": "verified On after a causally linked command",
+        "invalidation_witness": "later not-On evidence",
+        "valid_recovery_actions": ["ROLLBACK_OR_REPLAN", "RETRY_CURRENT_EFFECT"]
+      },
+      {
+        "effect_id": "MOKA_RELEASED_ON_STOVE",
+        "prerequisites": ["MOKA_ON_STOVE"],
+        "incompatible_effects": ["MOKA_REGRASPED", "MOKA_OFF_STOVE"],
+        "requested_event": "REQUEST_RELEASE_MOKA",
+        "observed_evidence": "camera frame labeled On and not grasped",
+        "verification_evidence": "second non-aliased view confirms stable On and release",
+        "realization_witness": "verified stable release after command",
+        "invalidation_witness": "regrasp or displacement from stove",
+        "valid_recovery_actions": ["ROLLBACK_OR_REPLAN", "RETRY_CURRENT_EFFECT"]
+      }
+    ],
+    "bowl_drawer": [
+      {
+        "effect_id": "BOWL_GRASPED",
+        "prerequisites": [],
+        "incompatible_effects": ["BOWL_RELEASED_OUTSIDE_DRAWER"],
+        "requested_event": "REQUEST_GRASP_BOWL",
+        "observed_evidence": "camera frame labeled grasp(akita_black_bowl_1)",
+        "verification_evidence": "second non-aliased view confirms grasp",
+        "realization_witness": "verified grasp after a causally linked command",
+        "invalidation_witness": "loss of grasp before containment",
+        "valid_recovery_actions": ["RETRY_CURRENT_EFFECT", "REOBSERVE"]
+      },
+      {
+        "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+        "prerequisites": ["BOWL_GRASPED"],
+        "incompatible_effects": ["BOWL_OUTSIDE_BOTTOM_DRAWER"],
+        "requested_event": "REQUEST_PUT_BOWL_IN_DRAWER",
+        "observed_evidence": "camera frame labeled In(bowl, bottom drawer)",
+        "verification_evidence": "second non-aliased view confirms containment",
+        "realization_witness": "verified In after a causally linked command",
+        "invalidation_witness": "later not-In evidence",
+        "valid_recovery_actions": ["ROLLBACK_OR_REPLAN", "RETRY_CURRENT_EFFECT"]
+      },
+      {
+        "effect_id": "BOWL_RELEASED_IN_DRAWER",
+        "prerequisites": ["BOWL_IN_BOTTOM_DRAWER"],
+        "incompatible_effects": ["BOWL_REGRASPED", "BOWL_OUTSIDE_BOTTOM_DRAWER"],
+        "requested_event": "REQUEST_RELEASE_BOWL",
+        "observed_evidence": "camera frame labeled In and stably not grasped",
+        "verification_evidence": "second non-aliased view confirms stable release",
+        "realization_witness": "verified stable release after command",
+        "invalidation_witness": "regrasp or removal from drawer",
+        "valid_recovery_actions": ["ROLLBACK_OR_REPLAN", "RETRY_CURRENT_EFFECT"]
+      },
+      {
+        "effect_id": "BOTTOM_DRAWER_CLOSED",
+        "prerequisites": ["BOWL_IN_BOTTOM_DRAWER", "BOWL_RELEASED_IN_DRAWER"],
+        "incompatible_effects": ["BOTTOM_DRAWER_OPEN"],
+        "requested_event": "REQUEST_CLOSE_BOTTOM_DRAWER",
+        "observed_evidence": "camera frame labeled Close(bottom drawer)",
+        "verification_evidence": "second non-aliased view confirms Close",
+        "realization_witness": "verified Close after a causally linked command",
+        "invalidation_witness": "later Open(bottom drawer) evidence",
+        "valid_recovery_actions": ["ROLLBACK_OR_REPLAN", "RETRY_CURRENT_EFFECT"]
+      }
+    ]
+  }
+}
+

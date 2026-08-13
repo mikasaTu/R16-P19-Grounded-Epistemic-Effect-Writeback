@@ -1,0 +1,18 @@
+{
+  "invalid_json_files": 0,
+  "invalid_jsonl_records": 0,
+  "invalid_yaml_files": 0,
+  "json_files_checked": 57,
+  "jsonl_files_checked": 6,
+  "jsonl_records_by_file": {
+    "artifacts/checkpoints/tiny_state_bc_v1/actor/train_metrics.jsonl": 61,
+    "artifacts/formal/r16p19-libero-phase1-20260813-013200/experiment/demo_effect_labels.jsonl": 100,
+    "artifacts/formal/r16p19-libero-phase1-20260813-013200/experiment/memory_outputs.jsonl": 12320,
+    "artifacts/formal/r16p19-libero-phase1-20260813-013200/experiment/state_bc_results.jsonl": 80,
+    "artifacts/formal/r16p19-libero-phase1-20260813-013200/experiment/trace_case_results.jsonl": 1120,
+    "artifacts/formal/r16p19-libero-phase1-20260813-013200/experiment/trace_events.jsonl": 1760
+  },
+  "status": "PASS",
+  "total_jsonl_records": 15441,
+  "yaml_files_checked": 7
+}

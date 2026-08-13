@@ -1,0 +1,6 @@
+{
+  "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1/tiny_state_bc_v1/actor/step_000003000",
+  "optimizer_steps": 3000,
+  "parameter_count": 239160,
+  "training_samples": 15350
+}

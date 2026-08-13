@@ -1,0 +1,390 @@
+From 6d68e74b31f73129bd508d56946eaa92451c20c8 Mon Sep 17 00:00:00 2001
+From: mikasaTu <mikasaTu@users.noreply.github.com>
+Date: Thu, 13 Aug 2026 01:10:43 +0800
+Subject: [PATCH 1/3] Add exact R16-P19 LIBERO Phase-1 PAI profile
+
+---
+ bin/pai-job                                   | 166 ++++++++++++++++++
+ launchers/r16p19_libero_phase1_formal.sh      |   6 +
+ ...p19-libero-phase1-exp-efficiency-2gpu.json | 158 +++++++++++++++++
+ 3 files changed, 330 insertions(+)
+ create mode 100755 launchers/r16p19_libero_phase1_formal.sh
+ create mode 100644 templates/r16p19-libero-phase1-exp-efficiency-2gpu.json
+
+diff --git a/bin/pai-job b/bin/pai-job
+index e06f634b..85b37fcb 100755
+--- a/bin/pai-job
++++ b/bin/pai-job
+@@ -174,6 +174,17 @@ R10P25_LIBERO_SMALL_GATE_CHECKPOINT_ROOT = Path(
+     "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/"
+     "r10p25_small_model/libero_goal_bowl_plate_v1"
+ )
++R16P19_LIBERO_PHASE1_EVIDENCE_KIND = (
++    "r16p19_libero_actor_decoupled_phase1_formal"
++)
++R16P19_LIBERO_PHASE1_OUTPUT_ROOT = Path(
++    "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/"
++    "r16p19_libero_phase1/tiny_state_bc_v1"
++)
++R16P19_LIBERO_PHASE1_CHECKPOINT_ROOT = Path(
++    "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/"
++    "r16p19_libero_phase1/tiny_state_bc_v1"
++)
+ WALLX_WHERE_REAL_NPZ_E2E_EVIDENCE_KIND = (
+     "wallx_three_view_where_real_npz_full_forward_backward_regression"
+ )
+@@ -5482,6 +5493,151 @@ def validate_r10p25_libero_small_gate_profile(
+             raise Refused("R10P25 launcher binding drifted: %s" % fragment)
+ 
+ 
++def validate_r16p19_libero_phase1_profile(
++    *,
++    resolved: Dict[str, Any],
++    runtime: Dict[str, Any],
++    payload: bytes,
++    write_paths: List[str],
++    artifact_dir: Path,
++    output_mode: Any,
++) -> None:
++    evidence = resolved.get("evidence")
++    fault = resolved.get("fault_tolerance")
++    submission = resolved.get("submission")
++    if not isinstance(evidence, dict):
++        raise Refused("R16P19 LIBERO evidence contract is missing")
++    if evidence.get("kind") != R16P19_LIBERO_PHASE1_EVIDENCE_KIND:
++        raise Refused("R16P19 LIBERO evidence kind drifted")
++    if not isinstance(fault, dict) or not isinstance(submission, dict):
++        raise Refused("R16P19 LIBERO fault/submission contract is missing")
++    expected_worker = {
++        "count": 1,
++        "image": (
++            "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/"
++            "modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-"
++            "py311-cu121-ubuntu22.04"
++        ),
++        "gpu": 2,
++        "cpu": 12,
++        "memory": "200Gi",
++        "shared_memory": "200Gi",
++    }
++    if resolved.get("worker") != expected_worker:
++        raise Refused("R16P19 LIBERO worker must equal the verified 2-GPU preset")
++    if resolved.get("network") != {}:
++        raise Refused("R16P19 LIBERO network contract must be empty")
++    storage = resolved.get("storage")
++    if not isinstance(storage, dict) or Path(str(storage.get("output_root", ""))) != (
++        R16P19_LIBERO_PHASE1_OUTPUT_ROOT
++    ):
++        raise Refused("R16P19 LIBERO output root drifted")
++    expected_launcher = ROOT / "launchers" / "r16p19_libero_phase1_formal.sh"
++    if runtime.get("command_file") != str(expected_launcher):
++        raise Refused("R16P19 LIBERO command file is not the pinned launcher")
++    if write_paths != [
++        str(artifact_dir),
++        str(R16P19_LIBERO_PHASE1_CHECKPOINT_ROOT),
++    ]:
++        raise Refused("R16P19 LIBERO write paths drifted")
++    if output_mode != "resume":
++        raise Refused("R16P19 LIBERO must resume only the exact checkpoint root")
++    if runtime.get("create_artifact_dir") is not True:
++        raise Refused("R16P19 LIBERO requires a fresh registry artifact directory")
++    if runtime.get("recursive_repair") is not False:
++        raise Refused("R16P19 LIBERO forbids recursive ownership repair")
++    expected_fault = {
++        "aimaster_args": "",
++        "maximum_platform_restarts": 0,
++        "expected_platform_restarts": 0,
++        "launcher_attempts": 1,
++        "retry_sleep_seconds": 30,
++        "complete_state_save_interval_steps": 1000,
++        "application_auto_resume": True,
++        "pai_automatic_fault_tolerance": False,
++    }
++    if fault != expected_fault:
++        raise Refused("R16P19 LIBERO fault-tolerance contract drifted")
++    expected_evidence = {
++        "kind": R16P19_LIBERO_PHASE1_EVIDENCE_KIND,
++        "resource_contract": "dedicated_2gpu_one_active_one_idle_v1",
++        "workload_type": "training_and_evaluation",
++        "task_id": "libero10_stove_moka_plus_bowl_bottom_drawer",
++        "model_id": "retrieval_augmented_tiny_mlp_state_bc",
++        "model_run_id": "r16p19_libero_phase1_v1",
++        "success_gate": "persisted_real_optimizer_step_loss_and_completed_actor_free_gate_and_completed_competence_or_closed_loop_status",
++        "validation_method": "unit+checkpoint-retention+cpu-simulator-trace+one-batch-smoke",
++        "validation_status": "passed_without_local_training",
++        "pai_probe_created": False,
++        "first_work_evidence_path": str(artifact_dir / "launch-contract.env"),
++        "completed_evidence_path": str(artifact_dir / "RUN_COMPLETE.json"),
++        "contract_ready": True,
++        "source_commit": "773a02e653e9b0ecf4d040e6b31891528f4825f0",
++        "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
++        "dataset_sha256": [
++            "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
++            "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638",
++        ],
++        "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
++        "checkpoint_retention": "all_positive_10000_milestones_plus_latest_3_complete_nonmilestones",
++        "checkpoint_interval_steps": 1000,
++        "checkpoint_base": str(R16P19_LIBERO_PHASE1_CHECKPOINT_ROOT),
++        "expected_terminal_policy_step": 3000,
++        "policy": "retrieval_augmented_tiny_mlp_state_bc",
++        "action_horizon": 8,
++        "trace_conditions": 8,
++        "memory_arms": 7,
++        "closed_loop_factorial_rollouts_if_competent": 800,
++        "platform_restart_limit": 0,
++        "launcher_attempts": 1,
++        "application_resume_semantics": "model_optimizer_scheduler_rng_global_step",
++        "expected_first_work_uid": 2254,
++        "expected_first_work_gid": 2254,
++        "require_post_launch_real_loss": True,
++        "require_first_completed_rollout": True,
++        "reserved_idle_gpu_ordinal": 1,
++        "reserved_idle_gpu_telemetry": "nvidia-smi-dmon-pucm-10s",
++        "wandb_mode": "online_new_formal_run",
++        "wandb_entity": "chen_jian-cj-workspace",
++        "wandb_project": "r16p19-libero-phase1",
++        "evidence_boundary": "Actor-free epistemic traces plus tiny privileged-state BC causal sanity only; not Pi0.5, not a large VLA, and not a VLA-improvement claim",
++        "superseded_failed_jobs": [],
++        "deleted_superseded_jobs": [],
++    }
++    if evidence != expected_evidence:
++        raise Refused("R16P19 LIBERO exact evidence contract drifted")
++    expected_tags = {
++        "managed_by": "pai-job-registry",
++        "purpose": "formal-training-evaluation",
++        "task": "r16p19-libero-phase1",
++        "model": "tiny-state-bc-epistemic-memory",
++        "dataset": "libero10-two-task-frozen",
++        "hardware": "2xa800-one-active-one-idle",
++        "resource_pool": "exp-efficiency",
++        "experiment_role": "r16p19-actor-decoupled-phase1",
++    }
++    if submission != {
++        "priority": 9,
++        "disable_ecs_stock_check": False,
++        "job_reserved_policy": "",
++        "job_reserved_minutes": 0,
++        "job_max_running_time_minutes": 0,
++        "tags": expected_tags,
++    }:
++        raise Refused("R16P19 LIBERO exact submission contract drifted")
++    try:
++        payload_text = payload.decode("utf-8")
++    except UnicodeDecodeError as exc:
++        raise Refused("R16P19 launcher payload must be UTF-8") from exc
++    required_fragments = (
++        "export R16P19_EXPECTED_COMMIT=773a02e653e9b0ecf4d040e6b31891528f4825f0",
++        "exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1-20260813/launch/pai_formal_phase1.sh",
++    )
++    for fragment in required_fragments:
++        if payload_text.count(fragment) != 1:
++            raise Refused("R16P19 launcher binding drifted: %s" % fragment)
++
++
+ def validate_dinowm_pusht_official_eval_profile(
+     *,
+     resolved: Dict[str, Any],
+@@ -6653,6 +6809,7 @@ def validate_resolved(resolved: Dict[str, Any]) -> None:
+             DINO_WM_PUSHT_OFFICIAL_EVAL_EVIDENCE_KIND,
+             DINO_WM_WALL_SINGLE_OFFICIAL_EVAL_EVIDENCE_KIND,
+             R10P25_LIBERO_SMALL_GATE_EVIDENCE_KIND,
++            R16P19_LIBERO_PHASE1_EVIDENCE_KIND,
+         }:
+             raise Refused(
+                 "the verified 2-GPU exp-efficiency alias is restricted to "
+@@ -6667,6 +6824,15 @@ def validate_resolved(resolved: Dict[str, Any]) -> None:
+                 artifact_dir=artifact_dir,
+                 output_mode=output_mode,
+             )
++        elif evidence_kind == R16P19_LIBERO_PHASE1_EVIDENCE_KIND:
++            validate_r16p19_libero_phase1_profile(
++                resolved=resolved,
++                runtime=runtime,
++                payload=payload,
++                write_paths=write_paths,
++                artifact_dir=artifact_dir,
++                output_mode=output_mode,
++            )
+         else:
+             validator = (
+                 validate_dinowm_pusht_official_eval_profile
+diff --git a/launchers/r16p19_libero_phase1_formal.sh b/launchers/r16p19_libero_phase1_formal.sh
+new file mode 100755
+index 00000000..ed51571a
+--- /dev/null
++++ b/launchers/r16p19_libero_phase1_formal.sh
+@@ -0,0 +1,6 @@
++#!/usr/bin/env bash
++set -Eeuo pipefail
++
++export R16P19_EXPECTED_COMMIT=773a02e653e9b0ecf4d040e6b31891528f4825f0
++
++exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1-20260813/launch/pai_formal_phase1.sh "$@"
+diff --git a/templates/r16p19-libero-phase1-exp-efficiency-2gpu.json b/templates/r16p19-libero-phase1-exp-efficiency-2gpu.json
+new file mode 100644
+index 00000000..a3dfa8d8
+--- /dev/null
++++ b/templates/r16p19-libero-phase1-exp-efficiency-2gpu.json
+@@ -0,0 +1,158 @@
++{
++  "schema_version": 2,
++  "kind": "pytorchjob",
++  "name_prefix": "r16p19-libero-phase1",
++  "description": "Formal R16-P19 actor-free trace gate, tiny state-BC training, competence inference, and gated 2x20x5x4 LIBERO closed loop; one active A800 and one contract-reserved idle A800",
++  "resource_alias": "exp-efficiency-a800-2gpu",
++  "workspace_id": "179169",
++  "provenance": {
++    "contract_source_job_id": "dlcfp1szuc2cgqfp",
++    "resource_source_job_id": "dlc1j2p8ui63ulps",
++    "submission_method": "cli_create",
++    "pai_clone_performed": false,
++    "source_role": "readback_reference"
++  },
++  "network": {},
++  "storage": {
++    "data_sources": [
++      {
++        "id": "d-mkixtohdn75dp8x9tb",
++        "version": "v1",
++        "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
++        "options": ""
++      },
++      {
++        "id": "d-lg9t2b6xajpukeqqeb",
++        "version": "v1",
++        "mount_path": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon",
++        "options": ""
++      },
++      {
++        "id": "d-36p023eg0f2vuqny8y",
++        "version": "v1",
++        "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
++        "options": ""
++      },
++      {
++        "id": "d-ejgj2ej7io1t2t32uc",
++        "version": "v1",
++        "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
++        "options": ""
++      },
++      {
++        "id": "d-7fi8hehav247qi6x5o",
++        "version": "v1",
++        "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/",
++        "options": ""
++      }
++    ],
++    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1"
++  },
++  "worker": {
++    "count": 1,
++    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
++    "gpu": 2,
++    "cpu": 12,
++    "memory": "200Gi",
++    "shared_memory": "200Gi"
++  },
++  "runtime": {
++    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry-r16p19-libero-phase1-20260813/launchers/r16p19_libero_phase1_formal.sh",
++    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
++    "uid": 2254,
++    "gid": 2254,
++    "pod_env": {},
++    "secret_env_names": [
++      "WANDB_API_KEY",
++      "WANDB_ENTITY"
++    ],
++    "wandb_entity_contract": {
++      "entity": "chen_jian-cj-workspace",
++      "source": "explicit_user_contract",
++      "allow_identity_inference": false,
++      "require_live_membership_write_gate": true,
++      "forbidden_viewers": ["shiyanpei0826"]
++    },
++    "write_paths": [
++      "{{ARTIFACT_DIR}}",
++      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1/tiny_state_bc_v1"
++    ],
++    "output_mode": "resume",
++    "create_artifact_dir": true,
++    "recursive_repair": false,
++    "payload_transport": "base64"
++  },
++  "fault_tolerance": {
++    "aimaster_args": "",
++    "maximum_platform_restarts": 0,
++    "expected_platform_restarts": 0,
++    "launcher_attempts": 1,
++    "retry_sleep_seconds": 30,
++    "complete_state_save_interval_steps": 1000,
++    "application_auto_resume": true,
++    "pai_automatic_fault_tolerance": false
++  },
++  "evidence": {
++    "kind": "r16p19_libero_actor_decoupled_phase1_formal",
++    "resource_contract": "dedicated_2gpu_one_active_one_idle_v1",
++    "workload_type": "training_and_evaluation",
++    "task_id": "libero10_stove_moka_plus_bowl_bottom_drawer",
++    "model_id": "retrieval_augmented_tiny_mlp_state_bc",
++    "model_run_id": "r16p19_libero_phase1_v1",
++    "success_gate": "persisted_real_optimizer_step_loss_and_completed_actor_free_gate_and_completed_competence_or_closed_loop_status",
++    "validation_method": "unit+checkpoint-retention+cpu-simulator-trace+one-batch-smoke",
++    "validation_status": "passed_without_local_training",
++    "pai_probe_created": false,
++    "first_work_evidence_path": "{{ARTIFACT_DIR}}/launch-contract.env",
++    "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
++    "contract_ready": true,
++    "source_commit": "773a02e653e9b0ecf4d040e6b31891528f4825f0",
++    "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
++    "dataset_sha256": [
++      "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
++      "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"
++    ],
++    "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
++    "checkpoint_retention": "all_positive_10000_milestones_plus_latest_3_complete_nonmilestones",
++    "checkpoint_interval_steps": 1000,
++    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1/tiny_state_bc_v1",
++    "expected_terminal_policy_step": 3000,
++    "policy": "retrieval_augmented_tiny_mlp_state_bc",
++    "action_horizon": 8,
++    "trace_conditions": 8,
++    "memory_arms": 7,
++    "closed_loop_factorial_rollouts_if_competent": 800,
++    "platform_restart_limit": 0,
++    "launcher_attempts": 1,
++    "application_resume_semantics": "model_optimizer_scheduler_rng_global_step",
++    "expected_first_work_uid": 2254,
++    "expected_first_work_gid": 2254,
++    "require_post_launch_real_loss": true,
++    "require_first_completed_rollout": true,
++    "reserved_idle_gpu_ordinal": 1,
++    "reserved_idle_gpu_telemetry": "nvidia-smi-dmon-pucm-10s",
++    "wandb_mode": "online_new_formal_run",
++    "wandb_entity": "chen_jian-cj-workspace",
++    "wandb_project": "r16p19-libero-phase1",
++    "evidence_boundary": "Actor-free epistemic traces plus tiny privileged-state BC causal sanity only; not Pi0.5, not a large VLA, and not a VLA-improvement claim",
++    "superseded_failed_jobs": [],
++    "deleted_superseded_jobs": []
++  },
++  "submission": {
++    "priority": 9,
++    "disable_ecs_stock_check": false,
++    "job_reserved_policy": "",
++    "job_reserved_minutes": 0,
++    "job_max_running_time_minutes": 0,
++    "tags": {
++      "managed_by": "pai-job-registry",
++      "purpose": "formal-training-evaluation",
++      "task": "r16p19-libero-phase1",
++      "model": "tiny-state-bc-epistemic-memory",
++      "dataset": "libero10-two-task-frozen",
++      "hardware": "2xa800-one-active-one-idle",
++      "resource_pool": "exp-efficiency",
++      "experiment_role": "r16p19-actor-decoupled-phase1"
++    }
++  }
++}
+-- 
+2.34.1
+

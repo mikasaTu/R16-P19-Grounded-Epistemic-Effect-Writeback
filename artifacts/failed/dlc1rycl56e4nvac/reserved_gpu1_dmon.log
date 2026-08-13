@@ -1,0 +1,4 @@
+#Date        Time         gpu    pwr  gtemp  mtemp     sm    mem    enc    dec    jpg    ofa   mclk   pclk     fb   bar1   ccpm 
+#YYYYMMDD    HH:MM:SS     Idx      W      C      C      %      %      %      %      %      %    MHz    MHz     MB     MB     MB 
+ 20260813    01:13:18       1     53     25     43      0      0      0      0      0      0   1593    210      0      1      0 
+ 20260813    01:13:28       1     53     25     43      0      0      0      0      0      0   1593    210      0      1      0 

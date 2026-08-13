@@ -1,0 +1,22 @@
+{
+  "actor": "nearest_demo_phase_script",
+  "full_task_success_rate": 0.0,
+  "min_per_effect_success": 0.0,
+  "pass": false,
+  "per_effect_success": {
+    "bowl_drawer": {
+      "BOTTOM_DRAWER_CLOSED": 0.0,
+      "BOWL_GRASPED": 0.0,
+      "BOWL_IN_BOTTOM_DRAWER": 0.0,
+      "BOWL_RELEASED_IN_DRAWER": 0.0
+    },
+    "stove_moka": {
+      "MOKA_GRASPED": 0.0,
+      "MOKA_ON_STOVE": 0.0,
+      "MOKA_RELEASED_ON_STOVE": 0.0,
+      "STOVE_TURNED_ON": 0.0
+    }
+  },
+  "rollout_count": 40,
+  "threshold": 0.8
+}

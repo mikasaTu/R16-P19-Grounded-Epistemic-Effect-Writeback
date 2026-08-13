@@ -1,0 +1,41 @@
+schema_version: 1
+family: retrieval_augmented_tiny_mlp_state_bc
+state:
+  source: MuJoCo flattened low-dimensional state
+  remove_time_scalar: true
+  padded_dim: 64
+  task_token_dim: 2
+  subtask_token_dim: 4
+  memory_summary_dim: 28
+action:
+  dim: 7
+  chunk_horizon: 8
+model:
+  hidden_dim: 256
+  hidden_layers: 4
+  activation: SiLU
+  normalization: LayerNorm
+  parameter_limit: 10000000
+retrieval:
+  k: 5
+  same_task_and_subtask_only: true
+  temporal_cursor_window: [-4, 24]
+  model_blend_weight: 0.15
+training:
+  optimizer: AdamW
+  optimizer_steps: 3000
+  batch_size: 256
+  learning_rate: 0.0003
+  weight_decay: 0.000001
+  seed: 1619
+  checkpoint_interval_optimizer_steps: 1000
+  complete_state_checkpoint: [model, optimizer, scheduler, rng, global_step]
+  retention: all_positive_10000_milestones_plus_latest_3_complete_nonmilestones
+evaluation:
+  max_task_steps: 700
+  max_phase_steps: 160
+  competence_gate_min_per_effect_success: 0.80
+  closed_loop_tasks: 2
+  closed_loop_seeds_per_task: 20
+  closed_loop_conditions: [C0, C1, C2, C3, C7]
+  closed_loop_arms: [B2, B3, B5, B6]

@@ -1,0 +1,10 @@
+{
+  "output_dir": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1/tiny_state_bc_v1/r16p19-libero-phase1-20260813-013200/experiments/r16p19_libero_phase1",
+  "result": {
+    "allowed_vocabulary": true,
+    "closed_loop_interpretable": false,
+    "final_status": "BLOCKED_BY_ACTOR"
+  },
+  "run_complete": true,
+  "runtime_uid_gid": "2254:2254"
+}

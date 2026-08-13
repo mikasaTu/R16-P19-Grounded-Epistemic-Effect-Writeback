@@ -1,0 +1,11 @@
+{
+  "incomplete_preserved": true,
+  "retained_steps": [
+    10000,
+    13000,
+    14000,
+    16000
+  ],
+  "rng_resume_exact": true,
+  "status": "CHECKPOINT_RETENTION_OK"
+}

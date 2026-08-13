@@ -1,0 +1,24 @@
+{
+  "algorithm": "SHA-256 per-file source/destination comparison plus torch.load(map_location=cpu)",
+  "checkpoint_global_steps_loaded": [
+    1000,
+    2000,
+    3000
+  ],
+  "checkpoint_state_keys": [
+    "extra",
+    "global_step",
+    "model",
+    "optimizer",
+    "rng",
+    "scheduler"
+  ],
+  "excluded_source_files": [
+    ".writer.lock (zero-byte transient lock)"
+  ],
+  "extra_files": [],
+  "mismatched_files": [],
+  "missing_files": [],
+  "source_files_checked": 10,
+  "status": "PASS"
+}

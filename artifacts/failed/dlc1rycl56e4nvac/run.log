@@ -1,0 +1,52 @@
+{
+  "dependencies": {
+    "bddl": "1.0.1",
+    "h5py": "3.11.0",
+    "mujoco": "2.3.7",
+    "numpy": "1.22.4",
+    "robomimic": "0.2.0",
+    "robosuite": "1.4.0",
+    "scipy": "1.10.1",
+    "torch": "1.11.0+cu113"
+  },
+  "experiment_commit": "773a02e653e9b0ecf4d040e6b31891528f4825f0",
+  "input_sha256": {
+    "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it.bddl": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+    "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/bddl_files/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.bddl": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+    "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/init_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it.init": "8519d4638868ce661a20d331495d97e0521f8e1535479dd26ba875d5cc06b88f",
+    "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/init_files/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.init": "7eba1f68f9d3a553b14e99a437356fbcc91ba1a531ac2475fc858c1e9bcbe2fc",
+    "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_demo.hdf5": "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
+    "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_demo.hdf5": "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"
+  },
+  "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "runtime_uid_gid": "2254:2254",
+  "torch_cuda_available": true,
+  "torch_cuda_device": "NVIDIA A800-SXM4-80GB"
+}
+{
+  "incomplete_preserved": true,
+  "retained_steps": [
+    10000,
+    13000,
+    14000,
+    16000
+  ],
+  "rng_resume_exact": true,
+  "status": "CHECKPOINT_RETENTION_OK"
+}
+Do you want to specify a custom path for the dataset folder? (Y/N): Traceback (most recent call last):
+  File "pipeline.py", line 453, in <module>
+    raise SystemExit(main())
+  File "pipeline.py", line 449, in main
+    return formal_run(args)
+  File "pipeline.py", line 325, in formal_run
+    labels = get_demo_labels(output_dir)
+  File "pipeline.py", line 155, in get_demo_labels
+    task_values = label_demos(task, episodes)
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1-20260813/r16p19/simulator.py", line 194, in label_demos
+    env = make_env(task, camera_obs=False)
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1-20260813/r16p19/simulator.py", line 18, in make_env
+    from libero.libero.envs.env_wrapper import ControlEnv
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/__init__.py", line 69, in <module>
+    answer = input(
+EOFError: EOF when reading a line
