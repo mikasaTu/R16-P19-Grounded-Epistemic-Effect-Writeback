@@ -290,6 +290,7 @@ GitHub 仓库：
 | `393ee7e` | single-class gripper normalization 边界修正 |
 | `49e2bfe` | 修正后 fallback 全量重跑的隔离 namespace |
 | `b218d52` | 失败 run 全量归档与 PAI control patch |
+| `b62f20b` | 最终 gate 结果、全部 corrected fallback 证据、报告与 checksums |
 
 主要路径：
 
