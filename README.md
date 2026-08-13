@@ -1,44 +1,55 @@
 # R16-P19 Grounded Epistemic Effect Writeback
 
-This repository is the complete publication bundle for the actor-decoupled
-Phase-1 validation of Grounded Epistemic Effect Writeback on two frozen
-official LIBERO-10 tasks. It contains the exact experiment code, frozen
-protocols, tests, PAI submission contracts, control-plane evidence, raw
-trace-level outputs, checkpoints, failure diagnosis, and the final report.
+This repository contains the complete Phase-1, Phase-1B, and Phase-2 validation
+bundle for Grounded Epistemic Effect Writeback on two frozen official
+LIBERO-10 tasks: frozen protocols, implementation, tests, PAI submission and
+control-plane evidence, raw JSONL, failure videos, mechanism diagnosis, and
+reports.
 
-The scientific terminal status is **`BLOCKED_BY_ACTOR`**:
+The latest scientific terminal status is **`BLOCKED_BY_EXECUTOR_V3`**. The
+frozen deterministic, non-neural `RetargetedGeometricSkillExecutor` completed
+its 2×20 clean qualification but missed every combined competence gate: minimum
+per-effect success was 0.70 (required 0.90), bowl full-task success was 0.70
+(required 0.80), and repeated-loop rate was 0.25 (maximum 0.10). The PAI job
+succeeded; this is a scientific executor failure, not an infrastructure error.
 
-- the actor-free correctness gate passed;
-- the learned tiny state-BC actor did not reach the preregistered clean
-  per-effect competence threshold of 0.80;
-- the preregistered nearest-demo fallback also failed;
-- therefore the 800 memory-conditioned closed-loop rollouts and paired
-  bootstrap were correctly **not run**.
-
-This is a mechanism-level positive result and a behavior-level blocked result.
-It is not evidence that R16-P19 improves end-to-end LIBERO task success, Pi0.5,
-or any large VLA.
+The stop rule therefore kept formal init 0--19, the 800-rollout memory matrix,
+causal replay, and paired bootstrap unobserved. Phase-2 neither validates nor
+rejects the B6 memory mechanism. Earlier `BLOCKED_BY_ACTOR` and
+`BLOCKED_BY_ACTOR_V2` results remain predecessor phases, not the current status.
 
 ## Headline results
 
-| Gate | Result | Key evidence |
+| Phase-2 gate | Result | Key evidence |
 |---|---:|---|
-| Actor-free trace gate | PASS | 1,120 cases; all correctness gates true |
-| B6 false completion | 0.000 | B3 was 0.500 |
-| B6 contradiction recovery recall | 1.000 | B4 and B5 were 0.000 |
-| Evidence alias acceptance | 0 | 20 alias challenges were rejected |
-| Dangling parents / transition violations | 0 / 0 | Maximum resident slots was exactly 32 |
-| Learned actor clean full-task success | 24/40 = 0.600 | Minimum per-effect success was 0.450 |
-| Fallback clean full-task success | 0/40 | Minimum per-effect success was 0 |
-| 800 closed-loop factorial rollouts | NOT_RUN | Competence gate failed, as preregistered |
-| Formal PAI job | Succeeded | `dlc6sr1fu466f1g9`, 764 seconds |
+| Frozen qualification | FAIL | 30/40 full-task successes; minimum effect 0.70 |
+| stove_moka full success | 16/20 = 0.80 | Meets the per-task 0.80 threshold |
+| bowl_drawer full success | 14/20 = 0.70 | Below the per-task 0.80 threshold |
+| Repeated-effect loops | 10/40 = 0.25 | Maximum allowed was 0.10 |
+| Qualification failure videos | 10/10 retained | Every failed rollout has an MP4 |
+| Formal clean gate | NOT_RUN | Qualification failed; formal init access is zero |
+| Closed-loop matrix | 0/800 | Preregistered stop rule applied |
+| PAI qualification job | Succeeded | `dlceyy7m2jhmxc4o`, 231 seconds, one RTX 4090 |
 
 The complete interpretation is in
-[docs/EXPERIMENT_REPORT.md](docs/EXPERIMENT_REPORT.md). Machine-readable metrics
-are in
-[metrics.json](artifacts/formal/r16p19-libero-phase1-20260813-013200/experiment/metrics.json).
+[docs/PHASE2_STEP3_EXPERIMENT_REPORT.md](docs/PHASE2_STEP3_EXPERIMENT_REPORT.md).
+Machine-readable results are in
+[behavior_summary.json](experiments/r16p19_libero_phase2/behavior_summary.json)
+and [mechanism_mediation.json](experiments/r16p19_libero_phase2/mechanism_mediation.json).
 
-## Experiment scope
+## Phase-2 scope
+
+Phase-2 uses demo 0--29 for template extraction, demo 30--39 for calibration,
+init 40--59 for development, and untouched init 60--79 for qualification. The
+executor is deterministic and memory-independent. Its frozen input explicitly
+excludes memory state, fault identity, effect truth, reward, task success,
+future state, and init index.
+
+The complete Phase-2 protocol and terminal evidence are under
+`experiments/r16p19_libero_phase2/`; PAI artifacts and all ten failure videos
+are under `artifacts/phase2_pai/` and the experiment directory respectively.
+
+## Phase-1 predecessor scope
 
 Selected official LIBERO-10 tasks:
 
@@ -82,7 +93,19 @@ The formal scientific output directory has its own `SHA256SUMS`; the repository
 also includes `artifacts/BUNDLE_SHA256SUMS` for all uploaded run artifacts and
 checkpoints.
 
-## Exact provenance
+## Phase-2 exact provenance
+
+- Qualification source commit: `8963f8cb3b10201095a47c48cec13ce11b0832f0`
+- Frozen executor source commit: `136e8923829c0436ca27755078a609f91bcf75a5`
+- Selected executor manifest SHA-256: `384957cae10f96b6a53645a555e53d38876573a06a452fc93af0d95b4f254b6b`
+- Selected template manifest SHA-256: `6a123a334bb901da880baf3b14e72576015bc013ed1f3224e9dd2c6d3c49d431`
+- Official LIBERO commit: `8f1084e3132a39270c3a13ebe37270a43ece2a01`
+- Qualification run / JobId: `r16p19-p2-qualification-20260813-194500` / `dlceyy7m2jhmxc4o`
+- Runtime identity: `2254:2254`
+- Hardware contract: one rendering GPU; observed NVIDIA GeForce RTX 4090
+- Platform restarts / automatic fault tolerance: 0 / disabled
+
+## Phase-1 exact provenance
 
 - Formal experiment source commit: `ae362efeba68643ab4dd2a99cfd295c72a9cbdcc`
 - Initial implementation commit: `773a02e653e9b0ecf4d040e6b31891528f4825f0`
@@ -113,7 +136,7 @@ datasets, MuJoCo/robosuite dependencies, and a working EGL or OSMesa backend.
 The original experiment intentionally freezes absolute CPFS paths. Reproduce
 the same mount layout, or adapt the paths and treat that as a new experiment.
 
-The publication checkout was re-tested with six unit tests passing. The
+The latest checkout was re-tested with 23 unit tests passing. The
 synthetic checkpoint retention test passed. See
 [docs/VALIDATION.md](docs/VALIDATION.md) for exact commands, formal PAI evidence,
 and the headless-GL limitation encountered during the additional checkout
@@ -140,7 +163,11 @@ other than itself):
 
 - Original idea and planning document:
   [Feishu wiki](https://icnbwz7kd1ui.feishu.cn/wiki/AfN7wFfFWi7dBOkBBtucoroanff)
-- Final Feishu experiment report:
+- Phase-2 step3 plan:
+  [step3](https://icnbwz7kd1ui.feishu.cn/wiki/CP8qwoVcFiyPrMkLS7KcYNx4ngd)
+- Phase-2 step3 experiment report:
+  [实验报告](https://icnbwz7kd1ui.feishu.cn/wiki/IBc9wR2Mai8Cv1ks6VecHuqTnCk)
+- Phase-1 Feishu experiment report:
   [实验报告](https://icnbwz7kd1ui.feishu.cn/wiki/Wr28wjd1aivlpLkU0ovcDTWdnWf)
 - Original Step-1 protocol:
   [docs/original-phase1-protocol.txt](docs/original-phase1-protocol.txt)

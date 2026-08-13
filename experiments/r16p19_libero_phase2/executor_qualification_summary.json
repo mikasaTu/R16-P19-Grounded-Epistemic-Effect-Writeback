@@ -1,0 +1,88 @@
+{
+  "executor_manifest": {
+    "action_horizon": 8,
+    "demonstration_feedforward": true,
+    "executed_prefix": 4,
+    "executor": "RetargetedGeometricSkillExecutor",
+    "forbidden_inputs": [
+      "memory",
+      "epistemic_state",
+      "fault_identity",
+      "effect_truth",
+      "reward",
+      "task_success",
+      "future_state",
+      "init_index"
+    ],
+    "manifest_sha256": "6a123a334bb901da880baf3b14e72576015bc013ed1f3224e9dd2c6d3c49d431",
+    "monotonic_progress": false,
+    "orientation_gain": 1.5,
+    "position_gain": 6.0,
+    "position_tolerance_m": 0.015,
+    "retry_reapproach": false,
+    "template_counts": {
+      "bowl_drawer/BOTTOM_DRAWER_CLOSED": 1,
+      "bowl_drawer/BOWL_GRASPED": 1,
+      "bowl_drawer/BOWL_IN_BOTTOM_DRAWER": 1,
+      "bowl_drawer/BOWL_RELEASED_IN_DRAWER": 3,
+      "stove_moka/MOKA_GRASPED": 1,
+      "stove_moka/MOKA_ON_STOVE": 3,
+      "stove_moka/MOKA_RELEASED_ON_STOVE": 3,
+      "stove_moka/STOVE_TURNED_ON": 1
+    },
+    "variant": "add_receding_horizon_and_preregistered_retry_offsets"
+  },
+  "failure_video_count": 10,
+  "full_task_success_rate": 0.75,
+  "gate_name": "qualification",
+  "init_indices": [
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "maximum_repeated_action_loop_rate": 0.1,
+  "mean_action_steps": 288.125,
+  "min_per_effect_success": 0.7,
+  "minimum_full_task_success_each_task_threshold": 0.8,
+  "minimum_per_effect_threshold": 0.9,
+  "pass": false,
+  "per_effect_success": {
+    "bowl_drawer": {
+      "BOTTOM_DRAWER_CLOSED": 0.7,
+      "BOWL_GRASPED": 0.8,
+      "BOWL_IN_BOTTOM_DRAWER": 0.75,
+      "BOWL_RELEASED_IN_DRAWER": 0.75
+    },
+    "stove_moka": {
+      "MOKA_GRASPED": 0.8,
+      "MOKA_ON_STOVE": 0.8,
+      "MOKA_RELEASED_ON_STOVE": 0.8,
+      "STOVE_TURNED_ON": 0.85
+    }
+  },
+  "per_task_full_success": {
+    "bowl_drawer": 0.7,
+    "stove_moka": 0.8
+  },
+  "repeated_action_loop_rate": 0.25,
+  "rollout_count": 40,
+  "selection_used_gate_results": false,
+  "status": "CLEAN_GATE_COMPLETE"
+}

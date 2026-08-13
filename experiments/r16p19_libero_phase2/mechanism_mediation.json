@@ -1,0 +1,470 @@
+{
+  "causal_scope_conclusion": "The qualification failure occurs before memory is activated, so Phase-2 does not identify whether B6 improves behavior over B3/B5.",
+  "development_component_ablations": [
+    {
+      "account": "Changing coordinate frame without feedback did not create behavioral competence: both arms had zero full success and unit loop rate. Frame covariance alone cannot correct stale open-loop actions after contact or pose error.",
+      "after": {
+        "full_task_success_rate": 0.0,
+        "mean_action_steps": 365.75,
+        "min_per_effect_success": 0.0,
+        "repeated_action_loop_rate": 1.0
+      },
+      "before": {
+        "full_task_success_rate": 0.0,
+        "mean_action_steps": 375.025,
+        "min_per_effect_success": 0.0,
+        "repeated_action_loop_rate": 1.0
+      },
+      "component": "effect_local_frame_retargeting_alone",
+      "delta": {
+        "full_task_success_rate": 0.0,
+        "mean_action_steps": -9.274999999999977,
+        "min_per_effect_success": 0.0,
+        "repeated_action_loop_rate": 0.0
+      },
+      "evidence_level": "paired_one_factor"
+    },
+    {
+      "account": "Recomputing Cartesian error made actions respond to current geometry and produced the first nonzero task/effect success.",
+      "after": {
+        "full_task_success_rate": 0.3,
+        "mean_action_steps": 337.95,
+        "min_per_effect_success": 0.2,
+        "repeated_action_loop_rate": 0.7
+      },
+      "before": {
+        "full_task_success_rate": 0.0,
+        "mean_action_steps": 365.75,
+        "min_per_effect_success": 0.0,
+        "repeated_action_loop_rate": 1.0
+      },
+      "component": "closed_loop_feedback_plus_demonstrated_feedforward",
+      "delta": {
+        "full_task_success_rate": 0.3,
+        "mean_action_steps": -27.80000000000001,
+        "min_per_effect_success": 0.2,
+        "repeated_action_loop_rate": -0.30000000000000004
+      },
+      "evidence_level": "paired_one_factor"
+    },
+    {
+      "account": "The demonstrated command supplies persistent direction at constrained stove/drawer contacts; pose error alone can reach free space but often cannot actuate the contact.",
+      "after": {
+        "full_task_success_rate": 0.725,
+        "mean_action_steps": 192.1,
+        "min_per_effect_success": 0.65,
+        "repeated_action_loop_rate": 0.275
+      },
+      "before": {
+        "full_task_success_rate": 0.3,
+        "mean_action_steps": 257.4,
+        "min_per_effect_success": 0.15,
+        "repeated_action_loop_rate": 0.7
+      },
+      "component": "demonstrated_cartesian_feedforward",
+      "delta": {
+        "full_task_success_rate": 0.425,
+        "mean_action_steps": -65.29999999999998,
+        "min_per_effect_success": 0.5,
+        "repeated_action_loop_rate": -0.42499999999999993
+      },
+      "evidence_level": "paired_one_factor"
+    },
+    {
+      "account": "Both arms used one attempt, so retry offsets were inactive. Executing four rather than eight repeated actions halved the stale-command window and replanned sooner after contact.",
+      "after": {
+        "full_task_success_rate": 0.725,
+        "mean_action_steps": 192.1,
+        "min_per_effect_success": 0.65,
+        "repeated_action_loop_rate": 0.275
+      },
+      "before": {
+        "full_task_success_rate": 0.3,
+        "mean_action_steps": 337.95,
+        "min_per_effect_success": 0.2,
+        "repeated_action_loop_rate": 0.7
+      },
+      "component": "four_action_receding_horizon",
+      "delta": {
+        "full_task_success_rate": 0.425,
+        "mean_action_steps": -145.85,
+        "min_per_effect_success": 0.45,
+        "repeated_action_loop_rate": -0.42499999999999993
+      },
+      "evidence_level": "paired_one_factor"
+    },
+    {
+      "account": "The cursor prevents backward projection but can lock onto an unreachable post-contact waypoint after an earlier effect ends in an unfavorable pose; demonstrated feedforward then continues to push through that unreachable target. It was therefore frozen off.",
+      "after": {
+        "full_task_success_rate": 0.475,
+        "mean_action_steps": 173.8,
+        "min_per_effect_success": 0.4,
+        "repeated_action_loop_rate": 0.525
+      },
+      "before": {
+        "full_task_success_rate": 0.725,
+        "mean_action_steps": 192.1,
+        "min_per_effect_success": 0.65,
+        "repeated_action_loop_rate": 0.275
+      },
+      "component": "monotonic_waypoint_cursor",
+      "delta": {
+        "full_task_success_rate": -0.25,
+        "mean_action_steps": -18.299999999999983,
+        "min_per_effect_success": -0.25,
+        "repeated_action_loop_rate": 0.25
+      },
+      "evidence_level": "paired_one_factor"
+    },
+    {
+      "account": "The preregistered bottleneck metric selected 0.015 because its minimum effect rose from 0.35 to 0.40, driven by stove gains; aggregate full success fell from 0.525 to 0.45 and bowl closing fell from 0.70 to 0.40. The code advances two waypoints once position error is within tolerance, so the precision/coverage tradeoff is code-consistent; the contact mediator remains a hypothesis.",
+      "after": {
+        "full_task_success_rate": 0.45,
+        "mean_action_steps": 200.3,
+        "min_per_effect_success": 0.4,
+        "repeated_action_loop_rate": 0.55
+      },
+      "before": {
+        "full_task_success_rate": 0.525,
+        "mean_action_steps": 184.225,
+        "min_per_effect_success": 0.35,
+        "repeated_action_loop_rate": 0.475
+      },
+      "component": "position_tolerance_0p010_to_0p015",
+      "delta": {
+        "full_task_success_rate": -0.07500000000000001,
+        "mean_action_steps": 16.075000000000017,
+        "min_per_effect_success": 0.050000000000000044,
+        "repeated_action_loop_rate": 0.07500000000000007
+      },
+      "evidence_level": "paired_one_factor",
+      "per_effect_after": {
+        "bowl_drawer": {
+          "BOTTOM_DRAWER_CLOSED": 0.4,
+          "BOWL_GRASPED": 0.7,
+          "BOWL_IN_BOTTOM_DRAWER": 0.7,
+          "BOWL_RELEASED_IN_DRAWER": 0.7
+        },
+        "stove_moka": {
+          "MOKA_GRASPED": 0.5,
+          "MOKA_ON_STOVE": 0.5,
+          "MOKA_RELEASED_ON_STOVE": 0.5,
+          "STOVE_TURNED_ON": 0.85
+        }
+      },
+      "per_effect_before": {
+        "bowl_drawer": {
+          "BOTTOM_DRAWER_CLOSED": 0.7,
+          "BOWL_GRASPED": 0.8,
+          "BOWL_IN_BOTTOM_DRAWER": 0.8,
+          "BOWL_RELEASED_IN_DRAWER": 0.8
+        },
+        "stove_moka": {
+          "MOKA_GRASPED": 0.35,
+          "MOKA_ON_STOVE": 0.35,
+          "MOKA_RELEASED_ON_STOVE": 0.35,
+          "STOVE_TURNED_ON": 0.45
+        }
+      }
+    }
+  ],
+  "evidence_levels": {
+    "hypothesis": "code-consistent account requiring a future preregistered test",
+    "paired_one_factor": "causal component evidence on init 40-59",
+    "trace_video_supported": "qualification mechanism localization, not a causal ablation"
+  },
+  "qualification_failure_decomposition": {
+    "all_failures_are_repeated_loops": true,
+    "all_failures_exhausted_three_retries": true,
+    "contact_establishment_failures": 8,
+    "failed_cells": [
+      {
+        "action_steps": 700,
+        "attempt_indices_seen": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "failure_type": "MAX_ACTION_STEPS",
+        "failure_video": "qualification_failure_videos/qualification_stove_moka_init_63.mp4",
+        "first_failed_effect": "MOKA_GRASPED",
+        "init_index": 63,
+        "repeated_action_loop": true,
+        "retry_count": 3,
+        "task_key": "stove_moka",
+        "template_sha256_seen": [
+          "4e7b4b2802d378fbf01645a2037e864c94fe8f5251a743bc06aa32d312728e39"
+        ],
+        "terminal_target_orientation_error_rad": 0.02185853582730561,
+        "terminal_target_position_error_m": 0.0761876255273819,
+        "terminal_target_waypoint": 47,
+        "terminal_waypoint_count": 48
+      },
+      {
+        "action_steps": 640,
+        "attempt_indices_seen": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "failure_type": "EFFECT_CHUNK_LIMIT:STOVE_TURNED_ON",
+        "failure_video": "qualification_failure_videos/qualification_stove_moka_init_72.mp4",
+        "first_failed_effect": "STOVE_TURNED_ON",
+        "init_index": 72,
+        "repeated_action_loop": true,
+        "retry_count": 3,
+        "task_key": "stove_moka",
+        "template_sha256_seen": [
+          "7932ae6aa99b0362066f78c18380d213e982b3d9e0ae038a73be486e919a4a17"
+        ],
+        "terminal_target_orientation_error_rad": 0.1535522797023158,
+        "terminal_target_position_error_m": 0.01146032102406025,
+        "terminal_target_waypoint": 23,
+        "terminal_waypoint_count": 27
+      },
+      {
+        "action_steps": 640,
+        "attempt_indices_seen": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "failure_type": "EFFECT_CHUNK_LIMIT:STOVE_TURNED_ON",
+        "failure_video": "qualification_failure_videos/qualification_stove_moka_init_77.mp4",
+        "first_failed_effect": "STOVE_TURNED_ON",
+        "init_index": 77,
+        "repeated_action_loop": true,
+        "retry_count": 3,
+        "task_key": "stove_moka",
+        "template_sha256_seen": [
+          "7932ae6aa99b0362066f78c18380d213e982b3d9e0ae038a73be486e919a4a17"
+        ],
+        "terminal_target_orientation_error_rad": 0.15503254088859805,
+        "terminal_target_position_error_m": 0.012293859384953976,
+        "terminal_target_waypoint": 23,
+        "terminal_waypoint_count": 27
+      },
+      {
+        "action_steps": 640,
+        "attempt_indices_seen": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "failure_type": "EFFECT_CHUNK_LIMIT:STOVE_TURNED_ON",
+        "failure_video": "qualification_failure_videos/qualification_stove_moka_init_79.mp4",
+        "first_failed_effect": "STOVE_TURNED_ON",
+        "init_index": 79,
+        "repeated_action_loop": true,
+        "retry_count": 3,
+        "task_key": "stove_moka",
+        "template_sha256_seen": [
+          "7932ae6aa99b0362066f78c18380d213e982b3d9e0ae038a73be486e919a4a17"
+        ],
+        "terminal_target_orientation_error_rad": 0.155709940546413,
+        "terminal_target_position_error_m": 0.012397056445479393,
+        "terminal_target_waypoint": 23,
+        "terminal_waypoint_count": 27
+      },
+      {
+        "action_steps": 699,
+        "attempt_indices_seen": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "failure_type": "EFFECT_CHUNK_LIMIT:BOWL_IN_BOTTOM_DRAWER",
+        "failure_video": "qualification_failure_videos/qualification_bowl_drawer_init_66.mp4",
+        "first_failed_effect": "BOWL_IN_BOTTOM_DRAWER",
+        "init_index": 66,
+        "repeated_action_loop": true,
+        "retry_count": 3,
+        "task_key": "bowl_drawer",
+        "template_sha256_seen": [
+          "cddd0478f2bb94509f875f3ca2b48203e77ed45c0a7b3f79ffa056a4a18f48fe"
+        ],
+        "terminal_target_orientation_error_rad": 0.033339663394228565,
+        "terminal_target_position_error_m": 0.047648441046476364,
+        "terminal_target_waypoint": 26,
+        "terminal_waypoint_count": 27
+      },
+      {
+        "action_steps": 640,
+        "attempt_indices_seen": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "failure_type": "EFFECT_CHUNK_LIMIT:BOWL_GRASPED",
+        "failure_video": "qualification_failure_videos/qualification_bowl_drawer_init_68.mp4",
+        "first_failed_effect": "BOWL_GRASPED",
+        "init_index": 68,
+        "repeated_action_loop": true,
+        "retry_count": 3,
+        "task_key": "bowl_drawer",
+        "template_sha256_seen": [
+          "82a341fafb3f15f054944187899e25730cf0117ef1c54caffc4ae20d25410610"
+        ],
+        "terminal_target_orientation_error_rad": 0.058952869659173505,
+        "terminal_target_position_error_m": 0.035035353153944016,
+        "terminal_target_waypoint": 27,
+        "terminal_waypoint_count": 28
+      },
+      {
+        "action_steps": 700,
+        "attempt_indices_seen": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "failure_type": "MAX_ACTION_STEPS",
+        "failure_video": "qualification_failure_videos/qualification_bowl_drawer_init_71.mp4",
+        "first_failed_effect": "BOTTOM_DRAWER_CLOSED",
+        "init_index": 71,
+        "repeated_action_loop": true,
+        "retry_count": 3,
+        "task_key": "bowl_drawer",
+        "template_sha256_seen": [
+          "1c2c9ec7d23ebbef2cc4c77b1ea783a22009c835f5ad8d1b0a51b51395ebee64"
+        ],
+        "terminal_target_orientation_error_rad": 0.047058834779676574,
+        "terminal_target_position_error_m": 0.029979974031448364,
+        "terminal_target_waypoint": 26,
+        "terminal_waypoint_count": 31
+      },
+      {
+        "action_steps": 640,
+        "attempt_indices_seen": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "failure_type": "EFFECT_CHUNK_LIMIT:BOWL_GRASPED",
+        "failure_video": "qualification_failure_videos/qualification_bowl_drawer_init_72.mp4",
+        "first_failed_effect": "BOWL_GRASPED",
+        "init_index": 72,
+        "repeated_action_loop": true,
+        "retry_count": 3,
+        "task_key": "bowl_drawer",
+        "template_sha256_seen": [
+          "82a341fafb3f15f054944187899e25730cf0117ef1c54caffc4ae20d25410610"
+        ],
+        "terminal_target_orientation_error_rad": 0.24584222726767088,
+        "terminal_target_position_error_m": 0.09166362136602402,
+        "terminal_target_waypoint": 19,
+        "terminal_waypoint_count": 28
+      },
+      {
+        "action_steps": 640,
+        "attempt_indices_seen": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "failure_type": "EFFECT_CHUNK_LIMIT:BOWL_GRASPED",
+        "failure_video": "qualification_failure_videos/qualification_bowl_drawer_init_74.mp4",
+        "first_failed_effect": "BOWL_GRASPED",
+        "init_index": 74,
+        "repeated_action_loop": true,
+        "retry_count": 3,
+        "task_key": "bowl_drawer",
+        "template_sha256_seen": [
+          "82a341fafb3f15f054944187899e25730cf0117ef1c54caffc4ae20d25410610"
+        ],
+        "terminal_target_orientation_error_rad": 0.25603230434815116,
+        "terminal_target_position_error_m": 0.11930641531944275,
+        "terminal_target_waypoint": 18,
+        "terminal_waypoint_count": 28
+      },
+      {
+        "action_steps": 640,
+        "attempt_indices_seen": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "failure_type": "EFFECT_CHUNK_LIMIT:BOWL_GRASPED",
+        "failure_video": "qualification_failure_videos/qualification_bowl_drawer_init_77.mp4",
+        "first_failed_effect": "BOWL_GRASPED",
+        "init_index": 77,
+        "repeated_action_loop": true,
+        "retry_count": 3,
+        "task_key": "bowl_drawer",
+        "template_sha256_seen": [
+          "82a341fafb3f15f054944187899e25730cf0117ef1c54caffc4ae20d25410610"
+        ],
+        "terminal_target_orientation_error_rad": 0.33857336533986737,
+        "terminal_target_position_error_m": 0.15903455018997192,
+        "terminal_target_waypoint": 18,
+        "terminal_waypoint_count": 28
+      }
+    ],
+    "failure_type_counts": {
+      "EFFECT_CHUNK_LIMIT:BOWL_GRASPED": 4,
+      "EFFECT_CHUNK_LIMIT:BOWL_IN_BOTTOM_DRAWER": 1,
+      "EFFECT_CHUNK_LIMIT:STOVE_TURNED_ON": 3,
+      "MAX_ACTION_STEPS": 2
+    },
+    "failures": 10,
+    "first_failed_effect_counts": {
+      "BOTTOM_DRAWER_CLOSED": 1,
+      "BOWL_GRASPED": 4,
+      "BOWL_IN_BOTTOM_DRAWER": 1,
+      "MOKA_GRASPED": 1,
+      "STOVE_TURNED_ON": 3
+    },
+    "rollouts": 40,
+    "terminal_error_means": {
+      "BOTTOM_DRAWER_CLOSED": {
+        "orientation_rad": 0.047058834779676574,
+        "position_m": 0.029979974031448364
+      },
+      "BOWL_GRASPED": {
+        "orientation_rad": 0.22485019165371573,
+        "position_m": 0.10125998500734568
+      },
+      "BOWL_IN_BOTTOM_DRAWER": {
+        "orientation_rad": 0.033339663394228565,
+        "position_m": 0.047648441046476364
+      },
+      "MOKA_GRASPED": {
+        "orientation_rad": 0.02185853582730561,
+        "position_m": 0.0761876255273819
+      },
+      "STOVE_TURNED_ON": {
+        "orientation_rad": 0.15476492037910894,
+        "position_m": 0.012050412284831205
+      }
+    }
+  },
+  "qualification_mechanism_account": [
+    {
+      "account": "The geometric input can be close to a demonstrated waypoint while the required switch/grasp/drawer contact mode is absent. Three stove failures ended around 1.2 cm positional error but the knob predicate remained false; videos show repeated contact posture.",
+      "evidence_level": "trace_video_supported",
+      "mechanism": "contact_mode_aliasing"
+    },
+    {
+      "account": "Retries shift the same local path by fixed 1 cm offsets and then choose the nearest waypoint from the already-failed state. For effects with one retained template, all four attempts keep template rank zero. Failed grasp traces terminate in middle/late waypoints without a forced pre-grasp reset; videos show persistent miss states.",
+      "evidence_level": "trace_video_supported",
+      "mechanism": "retry_projection_skips_reacquisition"
+    },
+    {
+      "account": "Demo-30--39 calibration found only 0.40 best success for the retained moka-grasp template and 0.889 for bowl grasp. Calibration therefore selected the best available template but could not certify the 0.90 qualification requirement.",
+      "evidence_level": "trace_video_supported",
+      "mechanism": "finite_template_contact_coverage"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Reverse explanation of observed increases/decreases; no new idea or post-qualification executor proposal.",
+  "terminal_status": "BLOCKED_BY_EXECUTOR_V3"
+}

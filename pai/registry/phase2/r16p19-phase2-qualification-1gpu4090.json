@@ -1,0 +1,113 @@
+{
+  "schema_version": 2,
+  "kind": "pytorchjob",
+  "name_prefix": "r16p19-phase2-qualification",
+  "description": "R16-P19 Phase-2 frozen geometric-executor qualification on LIBERO init 60-79 with all failure videos retained",
+  "resource_alias": "rtx4090-general-1gpu",
+  "workspace_id": "179169",
+  "provenance": {
+    "contract_source_job_id": "dlcg57bpmp6cxq9p",
+    "resource_source_job_id": "dlcg57bpmp6cxq9p",
+    "submission_method": "cli_create",
+    "pai_clone_performed": false,
+    "source_role": "readback_reference"
+  },
+  "network": {},
+  "storage": {
+    "data_sources": [
+      {
+        "id": "d-mkixtohdn75dp8x9tb",
+        "version": "v1",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+        "options": ""
+      },
+      {
+        "id": "d-36p023eg0f2vuqny8y",
+        "version": "v1",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+        "options": ""
+      },
+      {
+        "id": "d-ejgj2ej7io1t2t32uc",
+        "version": "v1",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+        "options": ""
+      }
+    ],
+    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase2/pai-control"
+  },
+  "worker": {
+    "count": 1,
+    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+    "gpu": 1,
+    "cpu": 14,
+    "memory": "120Gi",
+    "shared_memory": "120Gi"
+  },
+  "runtime": {
+    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry/launchers/r16p19_phase2_qualification_1gpu4090.sh",
+    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
+    "uid": 2254,
+    "gid": 2254,
+    "pod_env": {
+      "NVIDIA_DRIVER_CAPABILITIES": "compute,utility,graphics"
+    },
+    "secret_env_names": [],
+    "write_paths": [
+      "{{ARTIFACT_DIR}}",
+      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase2/qualification-8963f8c"
+    ],
+    "output_mode": "resume",
+    "create_artifact_dir": true,
+    "recursive_repair": false,
+    "payload_transport": "base64"
+  },
+  "fault_tolerance": {
+    "aimaster_args": "",
+    "maximum_platform_restarts": 0,
+    "expected_platform_restarts": 0,
+    "launcher_attempts": 1,
+    "pai_automatic_fault_tolerance": false
+  },
+  "evidence": {
+    "kind": "r16p19_phase2_qualification",
+    "workload_type": "deterministic_non_neural_evaluation",
+    "resource_contract": "single_rtx4090_rendering_gpu_v1",
+    "source_commit": "8963f8cb3b10201095a47c48cec13ce11b0832f0",
+    "source_tree": "92a38b5ec8ecedd91f8f14d1432e8f787916cc17",
+    "launcher_sha256": "0735af1ae9193811976c0785ac3e4a201a893319b49c861044f7bc8d150146ea",
+    "payload_launcher_sha256": "86b38cce27cf430d62d2b4f60abd53426e87a2283987c405de3f55730677d5d4",
+    "selected_executor_manifest_sha256": "384957cae10f96b6a53645a555e53d38876573a06a452fc93af0d95b4f254b6b",
+    "selected_template_manifest_sha256": "6a123a334bb901da880baf3b14e72576015bc013ed1f3224e9dd2c6d3c49d431",
+    "libero_source_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "formal_python_sha256": "903441582909636b4316667ee22beb1e6e2726991584ea9265c765ac8388abd1",
+    "qualification_init_indices": "60-79",
+    "qualification_rollout_count": 40,
+    "formal_init_access": 0,
+    "save_all_failure_videos": true,
+    "minimum_per_effect_threshold": 0.9,
+    "minimum_per_task_full_success_threshold": 0.8,
+    "maximum_repeated_action_loop_rate": 0.1,
+    "application_resume_unit": "one_fsynced_jsonl_clean_rollout",
+    "first_work_evidence_path": "{{ARTIFACT_DIR}}/FIRST_COMPLETED_CELL.json",
+    "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
+    "wandb_mode": "disabled_non_neural_task_local_artifacts",
+    "second_idle_gpu_forbidden": true,
+    "expected_first_work_uid": 2254,
+    "expected_first_work_gid": 2254
+  },
+  "submission": {
+    "priority": 9,
+    "disable_ecs_stock_check": false,
+    "job_reserved_policy": "",
+    "job_reserved_minutes": 0,
+    "job_max_running_time_minutes": 0,
+    "tags": {
+      "managed_by": "pai-job-registry",
+      "purpose": "r16p19-phase2-qualification",
+      "task": "libero10-two-task-geometric-executor",
+      "hardware": "1xrtx4090",
+      "experiment_role": "frozen-init60-79-qualification"
+    }
+  }
+}

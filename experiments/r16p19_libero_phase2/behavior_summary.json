@@ -1,0 +1,68 @@
+{
+  "closed_loop_matrix": "NOT_RUN_QUALIFICATION_FAILED",
+  "closed_loop_rollout_count": 0,
+  "first_divergence_replay_count": 0,
+  "formal_executor_gate": "NOT_RUN_QUALIFICATION_FAILED",
+  "formal_rollout_count": 0,
+  "memory_mechanism_identified": false,
+  "pai": {
+    "aimaster_enabled": false,
+    "automatic_fault_tolerance": false,
+    "duration_seconds": 231,
+    "gpu_count": 1,
+    "job_id": "dlceyy7m2jhmxc4o",
+    "job_status": "Succeeded",
+    "oversold_type": "ForbiddenQuotaOverSold",
+    "platform_restart_count": 0,
+    "pod_uids": [
+      "a849b067-d9c3-45e7-8f95-bd75e9154027"
+    ],
+    "run_id": "r16p19-p2-qualification-20260813-194500",
+    "worker_count": 1
+  },
+  "paired_bootstrap_repetitions_completed": 0,
+  "qualification": {
+    "failure_video_count": 10,
+    "full_task_success_rate": 0.75,
+    "gate_checks": {
+      "each_task_full_at_least_0p80": false,
+      "minimum_per_effect_at_least_0p90": false,
+      "repeated_loop_at_most_0p10": false
+    },
+    "mean_action_steps": 288.125,
+    "min_per_effect_success": 0.7,
+    "pass": false,
+    "per_effect_success": {
+      "bowl_drawer": {
+        "BOTTOM_DRAWER_CLOSED": 0.7,
+        "BOWL_GRASPED": 0.8,
+        "BOWL_IN_BOTTOM_DRAWER": 0.75,
+        "BOWL_RELEASED_IN_DRAWER": 0.75
+      },
+      "stove_moka": {
+        "MOKA_GRASPED": 0.8,
+        "MOKA_ON_STOVE": 0.8,
+        "MOKA_RELEASED_ON_STOVE": 0.8,
+        "STOVE_TURNED_ON": 0.85
+      }
+    },
+    "per_task_full_success": {
+      "bowl_drawer": 0.7,
+      "stove_moka": 0.8
+    },
+    "repeated_action_loop_rate": 0.25,
+    "rollout_count": 40
+  },
+  "readiness": "LEARNED_EFFECT_VERIFIER_BLOCKED",
+  "schema_version": 1,
+  "source": {
+    "executor_source_commit": "136e8923829c0436ca27755078a609f91bcf75a5",
+    "executor_source_sha256": "ee37fdc8d39ccd24f2dae00fc2e886435b84e0c7c3af6d3a29fdba7c7ac37d36",
+    "official_libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "qualification_commit": "8963f8cb3b10201095a47c48cec13ce11b0832f0",
+    "qualification_tree": "92a38b5ec8ecedd91f8f14d1432e8f787916cc17",
+    "selected_executor_manifest_sha256": "384957cae10f96b6a53645a555e53d38876573a06a452fc93af0d95b4f254b6b",
+    "selected_template_manifest_sha256": "6a123a334bb901da880baf3b14e72576015bc013ed1f3224e9dd2c6d3c49d431"
+  },
+  "terminal_status": "BLOCKED_BY_EXECUTOR_V3"
+}

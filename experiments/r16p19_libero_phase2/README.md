@@ -4,6 +4,15 @@ Phase-2 tests the frozen R16-P19 memory mechanism under exactly one competent,
 deterministic, non-neural, memory-independent executor. The entry status is
 `BLOCKED_BY_ACTOR_V2`; this phase is not another learned-actor search.
 
+## Terminal outcome
+
+The frozen executor completed qualification but failed the preregistered gates:
+minimum per-effect success 0.70 (<0.90), per-task full success 0.80/0.70
+(both required >=0.80), and repeated-loop rate 0.25 (>0.10). The exact terminal
+status is `BLOCKED_BY_EXECUTOR_V3`. Formal init 0--19, the 800-cell matrix,
+causal replay, and bootstrap were not run. See `FINAL_DECISION.md`,
+`behavior_summary.json`, and `failure_cases.md`.
+
 This directory was committed before template extraction, executor
 implementation, access to init 40--79, or any Phase-2 access to formal init
 0--19. The six files here freeze the executor family and input boundary, demo

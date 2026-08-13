@@ -1,0 +1,13 @@
+{
+  "authorized": false,
+  "blocker": "BLOCKED_BY_EXECUTOR_V3",
+  "formal_init_indices_accessed": [],
+  "qualification_pass": false,
+  "qualification_summary_path": "experiments/r16p19_libero_phase2/executor_qualification_summary.json",
+  "qualification_summary_sha256": "dd4a1b8e4deb2e0d13b9e61985332c1a65faa33c8bfc11013dee6f69df272da7",
+  "required_minimum_per_effect_success": 0.8,
+  "rollout_count": 0,
+  "schema_version": 1,
+  "stage": "formal_executor_gate",
+  "status": "NOT_RUN_QUALIFICATION_FAILED"
+}

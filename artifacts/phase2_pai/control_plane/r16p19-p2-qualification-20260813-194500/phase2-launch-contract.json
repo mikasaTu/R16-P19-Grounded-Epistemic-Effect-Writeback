@@ -1,0 +1,12 @@
+{
+  "application_resume_unit": "completed_rollout_or_calibration_cell",
+  "expected_source_commit": "8963f8cb3b10201095a47c48cec13ce11b0832f0",
+  "gpu_inventory": "NVIDIA GeForce RTX 4090, GPU-ee040b23-2a5b-62df-953a-8544ffffc6f4",
+  "hardware_contract": "exactly_one_rendering_gpu",
+  "pai_automatic_fault_tolerance": false,
+  "platform_restart_limit": 0,
+  "run_id": "r16p19-p2-qualification-20260813-194500",
+  "stage": "qualification",
+  "uid_gid": "2254:2254",
+  "work_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase2/qualification-8963f8c"
+}

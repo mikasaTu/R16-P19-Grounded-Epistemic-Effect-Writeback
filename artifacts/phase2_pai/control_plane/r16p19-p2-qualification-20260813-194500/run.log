@@ -1,0 +1,48 @@
+.......                                                                  [100%]
+7 passed in 1.08s
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=60 full=True steps=143 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=61 full=True steps=156 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=62 full=True steps=144 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=63 full=False steps=700 failure=MAX_ACTION_STEPS
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=64 full=True steps=148 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=65 full=True steps=140 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=66 full=True steps=149 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=67 full=True steps=140 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=68 full=True steps=156 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=69 full=True steps=156 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=70 full=True steps=134 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=71 full=True steps=141 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=72 full=False steps=640 failure=EFFECT_CHUNK_LIMIT:STOVE_TURNED_ON
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=73 full=True steps=148 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=74 full=True steps=142 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=75 full=True steps=148 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=76 full=True steps=446 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=77 full=False steps=640 failure=EFFECT_CHUNK_LIMIT:STOVE_TURNED_ON
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=78 full=True steps=152 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=stove_moka init=79 full=False steps=640 failure=EFFECT_CHUNK_LIMIT:STOVE_TURNED_ON
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=60 full=True steps=151 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=61 full=True steps=148 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=62 full=True steps=154 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=63 full=True steps=146 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=64 full=True steps=150 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=65 full=True steps=153 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=66 full=False steps=699 failure=EFFECT_CHUNK_LIMIT:BOWL_IN_BOTTOM_DRAWER
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=67 full=True steps=154 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=68 full=False steps=640 failure=EFFECT_CHUNK_LIMIT:BOWL_GRASPED
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=69 full=True steps=234 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=70 full=True steps=208 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=71 full=False steps=700 failure=MAX_ACTION_STEPS
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=72 full=False steps=640 failure=EFFECT_CHUNK_LIMIT:BOWL_GRASPED
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=73 full=True steps=210 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=74 full=False steps=640 failure=EFFECT_CHUNK_LIMIT:BOWL_GRASPED
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=75 full=True steps=155 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=76 full=True steps=144 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=77 full=False steps=640 failure=EFFECT_CHUNK_LIMIT:BOWL_GRASPED
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=78 full=True steps=149 failure=None
+PHASE2_ROLLOUT_PERSISTED gate=qualification task=bowl_drawer init=79 full=True steps=147 failure=None
+PHASE2_CLEAN_GATE gate=qualification min_per_effect=0.700 full=0.750 loop=0.250 pass=False
+PHASE2_STAGE_TERMINAL stage=qualification pass=False summary=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase2/qualification-8963f8c/qualification_summary.json
+R16P19_PHASE2_STAGE_COMPLETE run_id=r16p19-p2-qualification-20260813-194500 stage=qualification

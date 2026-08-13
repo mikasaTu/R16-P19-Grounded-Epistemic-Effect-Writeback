@@ -89,3 +89,18 @@ be chosen only from demo 30--39 using the already frozen rule in
 `template_calibration_rule.json`.  Inferred-transition episodes are excluded
 for the affected effect.  The job is cell-resumable and runs on a single PAI
 rendering GPU.  Init 40--59 diagnostics do not enter that selection score.
+
+The PAI calibration completed 237 usable template/demo cells and retained 14
+templates.  Its interrupted-finalization/resume sequence is preserved under
+`artifacts/phase2_pai/`: all 237 cells were fsynced before a relative-path
+aggregation error, and the corrected job skipped those cells and completed in
+34 seconds.  The selected manifest was frozen before qualification.
+
+## Qualification boundary and terminal result
+
+The frozen executor was evaluated once on both tasks and init 60--79.  It
+reached 30/40 full-task successes, minimum per-effect success 0.70, per-task
+full success 0.80/0.70, and repeated-loop rate 0.25.  All ten failures exhausted
+three retries and all ten failure videos are retained.  The preregistered stop
+rule therefore yields `BLOCKED_BY_EXECUTOR_V3`; no qualification outcome was
+used to modify this executor, and formal init 0--19 was not accessed.

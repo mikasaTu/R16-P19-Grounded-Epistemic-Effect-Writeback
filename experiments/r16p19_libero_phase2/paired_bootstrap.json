@@ -1,0 +1,9 @@
+{
+  "blocker": "BLOCKED_BY_EXECUTOR_V3",
+  "bootstrap_seed": 1619,
+  "completed_repetitions": 0,
+  "formal_init_indices_accessed": [],
+  "planned_repetitions": 10000,
+  "schema_version": 1,
+  "status": "NOT_RUN_QUALIFICATION_FAILED"
+}
