@@ -19,6 +19,8 @@
     "qualification_or_formal_results_used_for_selection": false,
     "fabricated_absent_class_samples": false
   },
-  "restart_policy": "Rerun all eight fallback actors from step 0 in a new checkpoint and output namespace; never mix the five partial failed-run actors with the corrected run.",
+  "restart_policy": "Rerun all eight fallback actors from step 0 in the isolated v2 checkpoint and output namespace; never mix the five partial failed-run actors with the corrected run.",
+  "restart_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
+  "restart_checkpoint_root": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2",
   "failed_run_artifacts_retained": true
 }

@@ -8,8 +8,8 @@ LEON_UID=2254
 LEON_GID=2254
 LIBERO_ROOT="$NEW_ROOT/USERS/leon/code/LIBERO-r16p19-official-8f1084e"
 PYTHON="$NEW_ROOT/USERS/leon/envs/libero-original/bin/python"
-OUTPUT_ROOT="$NEW_ROOT/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment"
-CHECKPOINT_ROOT="$NEW_ROOT/CKPT/leon/torch/r16p19_libero_phase1b/v1"
+OUTPUT_ROOT="${R16P19_PHASE1B_OUTPUT_ROOT:-$NEW_ROOT/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment}"
+CHECKPOINT_ROOT="${R16P19_PHASE1B_CHECKPOINT_ROOT:-$NEW_ROOT/CKPT/leon/torch/r16p19_libero_phase1b/v1}"
 
 : "${PAI_CANARY_RUN_ID:?registry run ID is required}"
 : "${PAI_CANARY_RUN_DIR:?registry run directory is required}"
