@@ -17,6 +17,7 @@ from r16p19.phase1b_actor import (
     canonical_state_history,
 )
 from r16p19.phase1b_data import (
+    ActorDataset,
     ActorNormalization,
     BalancedEffectSampler,
     _bounded_action_chunk,
@@ -163,6 +164,35 @@ def test_real_data_builder_matches_frozen_audit_counts_and_balancing():
     normalization = ActorNormalization.from_training_data(train)
     assert normalization.gripper_positive_count > 0
     assert normalization.gripper_negative_count > 0
+
+
+@pytest.mark.parametrize("gripper_value", [-1.0, 1.0])
+def test_single_class_per_effect_gripper_uses_finite_unweighted_bce(gripper_value):
+    state_histories = np.zeros((2, 4, MAX_STATE_DIM), dtype=np.float32)
+    action_chunks = np.zeros((2, 8, ACTION_DIM), dtype=np.float32)
+    action_chunks[..., -1] = gripper_value
+    dataset = ActorDataset(
+        state_histories=state_histories,
+        action_chunks=action_chunks,
+        task_indices=np.zeros((2,), dtype=np.int64),
+        effect_indices=np.zeros((2,), dtype=np.int64),
+        refs=[None, None],
+    )
+    normalization = ActorNormalization.from_training_data(dataset)
+    assert normalization.gripper_positive_weight == 1.0
+    assert normalization.gripper_positive_count == (16 if gripper_value > 0 else 0)
+    assert normalization.gripper_negative_count == (0 if gripper_value > 0 else 16)
+
+    model = synthetic_model()
+    model.gripper_positive_weight.fill_(normalization.gripper_positive_weight)
+    losses = model.loss_components(
+        torch.zeros((2, 4, MAX_STATE_DIM), dtype=torch.float32),
+        torch.zeros((2,), dtype=torch.long),
+        torch.zeros((2,), dtype=torch.long),
+        torch.zeros((2,), dtype=torch.long),
+        torch.from_numpy(action_chunks),
+    )
+    assert torch.isfinite(losses["gripper_weighted_bce"])
 
 
 def test_paired_prefix_audit_allows_divergence_only_after_memory_decision():

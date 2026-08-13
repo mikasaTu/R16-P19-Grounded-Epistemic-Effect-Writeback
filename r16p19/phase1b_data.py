@@ -93,8 +93,11 @@ class ActorNormalization:
         gripper = dataset.action_chunks[..., ACTION_DIM - 1].reshape(-1)
         positive = int(np.sum(gripper > 0.0))
         negative = int(np.sum(gripper <= 0.0))
-        if positive == 0 or negative == 0:
-            raise ValueError("both gripper classes are required")
+        # Inverse-frequency weighting is undefined for a single-class
+        # per-effect dataset.  Standard BCE is the unique finite fallback that
+        # preserves the observed class loss without fabricating samples from
+        # the absent class.
+        positive_weight = 1.0 if positive == 0 or negative == 0 else negative / positive
         return cls(
             state_mean=states.mean(axis=0).astype(np.float32),
             state_std=np.maximum(states.std(axis=0), 1e-4).astype(np.float32),
@@ -102,7 +105,7 @@ class ActorNormalization:
             continuous_action_std=np.maximum(continuous.std(axis=0), 1e-4).astype(
                 np.float32
             ),
-            gripper_positive_weight=float(negative / positive),
+            gripper_positive_weight=float(positive_weight),
             gripper_positive_count=positive,
             gripper_negative_count=negative,
         )
