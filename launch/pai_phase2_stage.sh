@@ -59,6 +59,7 @@ test "$(stat -c '%u:%g' "$WORK_ROOT")" = "$LEON_UID:$LEON_GID"
 test "$(stat -c '%u:%g' "$EVIDENCE_DIR")" = "$LEON_UID:$LEON_GID"
 
 export PYTHONPATH="$SOURCE_ROOT:$LIBERO_ROOT${PYTHONPATH:+:$PYTHONPATH}"
+export LIBERO_CONFIG_PATH="$SOURCE_ROOT/experiments/r16p19_libero_phase1/libero_config"
 export CUDA_VISIBLE_DEVICES=0
 export MUJOCO_GL=egl
 export PYOPENGL_PLATFORM=egl
