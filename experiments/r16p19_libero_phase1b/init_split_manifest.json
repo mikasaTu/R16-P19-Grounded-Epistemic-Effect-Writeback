@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-08-13T06:46:10Z",
+  "split_unit": "official_initial_state_index",
+  "qualification_indices": [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+  "formal_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "unused_indices": {"first": 40, "last": 99, "count": 60},
+  "formal_access_policy": "Actor outcomes on formal indices are evaluated exactly once only after source, normalization, and selected checkpoint SHA-256 are frozen.",
+  "tasks": {
+    "stove_moka": {
+      "available_initial_states": 100,
+      "shape": [100, 47],
+      "init_sha256": "8519d4638868ce661a20d331495d97e0521f8e1535479dd26ba875d5cc06b88f"
+    },
+    "bowl_drawer": {
+      "available_initial_states": 100,
+      "shape": [100, 51],
+      "init_sha256": "7eba1f68f9d3a553b14e99a437356fbcc91ba1a531ac2475fc858c1e9bcbe2fc"
+    }
+  },
+  "overlap_counts": {
+    "qualification_vs_formal": 0,
+    "qualification_vs_unused": 0,
+    "formal_vs_unused": 0
+  }
+}

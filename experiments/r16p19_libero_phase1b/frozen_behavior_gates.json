@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-08-13T06:46:10Z",
+  "source": "experiments/r16p19_libero_phase1/preregistration.yaml",
+  "correctness_gates": {
+    "evidence_alias_acceptance": 0,
+    "dangling_parent_count": 0,
+    "duplicate_contradiction_idempotency": 1,
+    "contradicted_realized_has_recovery": 1,
+    "resident_slot_count_max": 32,
+    "B6_outperforms_B4_and_B5_on_contradiction_recovery": true,
+    "degenerate_safe_decision_policy_forbidden": true
+  },
+  "behavior_gates": {
+    "B6_false_completion_relative_reduction_vs_B3_min": 0.50,
+    "B6_contradiction_recovery_recall_min": 0.80,
+    "B6_target_fault_success_strictly_exceeds": ["B3", "B5"],
+    "paired_bootstrap_B6_minus_B3_95ci_lower_bound_exclusive": 0.0,
+    "clean_success_degradation_vs_B3_max": 0.03,
+    "B6_statistically_distinguishable_from_B2": true
+  },
+  "closed_loop_matrix": {
+    "tasks": ["stove_moka", "bowl_drawer"],
+    "formal_init_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "conditions": ["C0", "C1", "C2", "C3", "C7"],
+    "memory_arms": ["B2", "B3", "B5", "B6"],
+    "expected_rollouts": 800
+  },
+  "statistics": {
+    "paired_unit": "task_and_initial_state_index",
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 1619
+  },
+  "immutable": true
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "PREREGISTERED_NOT_YET_EXECUTED",
+  "frozen_audit_scope": {
+    "tasks": ["stove_moka", "bowl_drawer"],
+    "effects": {
+      "stove_moka": ["STOVE_TURNED_ON", "MOKA_GRASPED", "MOKA_ON_STOVE", "MOKA_RELEASED_ON_STOVE"],
+      "bowl_drawer": ["BOWL_GRASPED", "BOWL_IN_BOTTOM_DRAWER", "BOWL_RELEASED_IN_DRAWER", "BOTTOM_DRAWER_CLOSED"]
+    },
+    "required_outputs": [
+      "training_frames_per_effect",
+      "valid_action_chunks_per_effect",
+      "state_action_alignment",
+      "transition_boundaries",
+      "action_dimension_mean_std",
+      "gripper_class_balance",
+      "effect_chunk_length_distribution",
+      "episode_split_disjointness",
+      "baseline_actor_failure_video_inventory",
+      "baseline_actor_failure_effect_distribution"
+    ]
+  },
+  "dataset_identity": {
+    "stove_moka_sha256": "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
+    "bowl_drawer_sha256": "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"
+  },
+  "source_episode_split": {
+    "train": "demo_0..demo_29",
+    "calibration": "demo_30..demo_39",
+    "trace_test": "demo_40..demo_49"
+  },
+  "baseline_actor": {
+    "actor": "retrieval_augmented_tiny_mlp",
+    "formal_phase1_full_task_success": 0.60,
+    "formal_phase1_minimum_per_effect_success": 0.45,
+    "formal_phase1_failure_videos_available": 0,
+    "note": "The Phase-1 run did not persist competence videos; Phase-1B qualification must persist every failure video."
+  }
+}

@@ -1,0 +1,55 @@
+schema_version: 1
+frozen_at_utc: "2026-08-13T06:46:10Z"
+search_policy: finite_ordered_candidates_no_unbounded_search
+
+candidates:
+  - order: 1
+    candidate_id: primary_shared_effect_conditioned_state_act_v1
+    activation: always_first
+    model_scope: one_shared_actor
+    architecture:
+      state_history: 4
+      padded_state_dim: 64
+      hidden_dim: 256
+      transformer_layers: 4
+      attention_heads: 8
+      dropout: 0.1
+      action_horizon: 8
+      executed_prefix: 4
+    training:
+      seed: 1619
+      max_optimizer_steps: 20000
+      batch_size: 256
+      learning_rate: 0.0003
+      checkpoint_interval_steps: 2500
+    selection: lowest_macro_effect_calibration_loss_then_earliest_step
+
+  - order: 2
+    candidate_id: fallback_per_effect_state_act_v1
+    activation: primary_qualification_min_per_effect_below_0_80
+    model_scope: eight_task_effect_actors
+    architecture_per_actor:
+      state_history: 4
+      padded_state_dim: 64
+      hidden_dim: 128
+      transformer_layers: 2
+      attention_heads: 4
+      dropout: 0.1
+      action_horizon: 8
+      executed_prefix: 4
+    training_per_actor:
+      seed_base: 2619
+      max_optimizer_steps: 10000
+      batch_size: 64
+      learning_rate: 0.0003
+      checkpoint_interval_steps: 2500
+    selection: lowest_corresponding_effect_calibration_loss_then_earliest_step
+
+forbidden:
+  - third_actor_candidate
+  - tuning_on_formal_init_0_19
+  - checkpoint_selection_from_qualification_success
+  - memory_summary_input
+  - epistemic_state_input
+  - oracle_effect_truth_input
+  - future_state_input

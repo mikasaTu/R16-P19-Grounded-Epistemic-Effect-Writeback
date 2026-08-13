@@ -1,0 +1,203 @@
+schema_version: 1
+frozen_at_utc: "2026-08-13T06:46:10Z"
+preregistration_state: frozen_before_phase1b_actor_data_audit_and_training
+experiment_id: r16p19_libero_phase1b_v1
+idea: grounded_epistemic_effect_writeback
+scientific_terminal_status_at_entry: BLOCKED_BY_ACTOR
+
+source_identity:
+  preregistration_parent_commit: 80825fc10ba0e57bb14edb3c54837ce95d8eabf1
+  preregistration_parent_tree: fb1ae79c39903cd08048d8faa7587831a71b749b
+  original_formal_experiment_commit: ae362efeba68643ab4dd2a99cfd295c72a9cbdcc
+  original_implementation_commit: 773a02e653e9b0ecf4d040e6b31891528f4825f0
+  official_libero_commit: 8f1084e3132a39270c3a13ebe37270a43ece2a01
+  protected_semantics_sha256:
+    r16p19_memory_py: 4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5
+    effect_ontology_json: 1a8ee265bc23d714b38603617bb3d7cf426a50981d90f343745b281277dd6160
+    fault_matrix_json: 6ba25e31add729a5e623b3c18014190aa947d85586034dc4d38a2dc843e44797
+    split_manifest_json: f60640dc65c7a403c560ff9cf6a1e9eef0e1b09240ba60ba77f8bb6cbdf3d343
+
+evidence_boundary:
+  goal: >-
+    Qualify one small memory-independent actor and, only if it passes the
+    frozen actor gate, evaluate the frozen R16-P19 memory mechanism in the
+    preregistered 800-rollout closed-loop matrix.
+  excluded:
+    - Pi0.5
+    - DINO-WM
+    - visual ACT
+    - large VLA
+    - Mem-0
+    - a third actor family
+    - modification of memory semantics or behavior thresholds
+
+benchmark:
+  name: LIBERO
+  suite: libero_10
+  tasks:
+    stove_moka:
+      task_id: KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it
+      dataset_sha256: 6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9
+      init_sha256: 8519d4638868ce661a20d331495d97e0521f8e1535479dd26ba875d5cc06b88f
+      available_initial_states: 100
+    bowl_drawer:
+      task_id: KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it
+      dataset_sha256: 703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638
+      init_sha256: 7eba1f68f9d3a553b14e99a437356fbcc91ba1a531ac2475fc858c1e9bcbe2fc
+      available_initial_states: 100
+  source_episode_split:
+    train: demo_0..demo_29
+    calibration: demo_30..demo_39
+    trace_test: demo_40..demo_49
+  actor_qualification_init: 20..39
+  formal_actor_and_memory_init: 0..19
+  unused_init: 40..99
+  split_unit: source_episode
+  duplicate_episode_across_splits: forbidden
+
+actor_memory_decoupling:
+  required_interface: SkillActor.action_chunk(state_history, task_id, effect_id, execution_mode)
+  execution_modes: [EXECUTE, RETRY]
+  actor_allowed_inputs:
+    - four most recent padded simulator states
+    - task identity
+    - effect identity
+    - execution mode
+  actor_forbidden_inputs:
+    - memory summary
+    - epistemic state
+    - simulator effect truth
+    - future state
+    - reward or task success
+    - camera privileged labels
+  memory_decisions:
+    ADVANCE_TO_NEXT_SUBTASK: switch_to_next_effect_skill
+    RETRY_CURRENT_EFFECT: execute_current_effect_with_RETRY
+    REOBSERVE: fixed_arm_independent_eight_step_noop_observation
+    ROLLBACK_OR_REPLAN: reset_actor_history_and_execute_current_effect_with_RETRY
+    SAFE_STOP: terminate_episode
+  paired_prefix_invariant: >-
+    Before the first high-level decision divergence, actor input hashes and
+    action bytes must be identical for B2, B3, B5, and B6.
+
+primary_actor:
+  family: effect_conditioned_state_act
+  shared_across_tasks_effects_and_memory_arms: true
+  train_seed: 1619
+  actor_seed: 1619
+  history_length: 4
+  state_padding_dim: 64
+  predicted_action_horizon: 8
+  executed_prefix: 4
+  action_dim: 7
+  hidden_dim: 256
+  transformer_layers: 4
+  attention_heads: 8
+  dropout: 0.1
+  parameter_limit: 10000000
+  optimizer: AdamW
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  batch_size: 256
+  gradient_clip_norm: 1.0
+  max_optimizer_steps: 20000
+  min_optimizer_steps: 10000
+  validation_interval_steps: 500
+  early_stopping_patience_validations: 10
+  full_state_checkpoint_interval_steps: 2500
+  checkpoint_retention: retain_every_complete_phase1b_candidate_checkpoint
+  scheduler: cosine_decay_to_zero
+  continuous_action_loss: smooth_l1_on_first_6_dimensions
+  gripper_loss: inverse_frequency_weighted_binary_cross_entropy
+  balanced_sampling_unit: eight_effects
+  normalization_source: train_demos_only
+  candidate_selection_metric: macro_mean_calibration_total_loss_across_eight_effects
+  candidate_tie_break: earliest_optimizer_step
+  qualification_results_used_for_checkpoint_selection: false
+
+fallback_actor:
+  activation_condition: primary_actor_fails_qualification_gate
+  family: per_effect_state_act
+  actor_count: 8
+  train_seed: 2619
+  actor_seed: 2619
+  history_length: 4
+  state_padding_dim: 64
+  predicted_action_horizon: 8
+  executed_prefix: 4
+  hidden_dim: 128
+  transformer_layers: 2
+  attention_heads: 4
+  dropout: 0.1
+  optimizer: AdamW
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  batch_size_per_effect: 64
+  gradient_clip_norm: 1.0
+  max_optimizer_steps_per_actor: 10000
+  min_optimizer_steps_per_actor: 5000
+  validation_interval_steps: 500
+  early_stopping_patience_validations: 8
+  full_state_checkpoint_interval_steps: 2500
+  checkpoint_retention: retain_every_complete_phase1b_candidate_checkpoint
+  continuous_action_loss: smooth_l1_on_first_6_dimensions
+  gripper_loss: inverse_frequency_weighted_binary_cross_entropy
+  normalization_source: corresponding_effect_train_samples_only
+  candidate_selection_metric: calibration_total_loss_for_corresponding_effect
+  candidate_tie_break: earliest_optimizer_step
+  qualification_results_used_for_checkpoint_selection: false
+  third_actor_family_allowed: false
+
+actor_gate:
+  qualification_init_indices: [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+  formal_init_indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+  clean_rollouts_per_task: 20
+  minimum_per_effect_success: 0.80
+  max_episode_action_steps: 700
+  repeated_action_chunk_limit_per_effect: 30
+  qualification_attempts_per_actor_family: 1
+  formal_gate_attempts_after_actor_freeze: 1
+  formal_results_may_not_trigger_actor_changes: true
+
+closed_loop:
+  activation: formal_actor_gate_pass_only
+  tasks: 2
+  formal_init_per_task: 20
+  conditions: [C0, C1, C2, C3, C7]
+  memory_arms: [B2, B3, B5, B6]
+  expected_rollouts: 800
+  max_episode_action_steps: 700
+  reobserve_noop_steps: 8
+  actor_checkpoint_shared_across_all_cells: true
+  actor_source_shared_across_all_cells: true
+  actor_normalization_shared_across_all_cells: true
+  pairing_fields:
+    - task
+    - initial_state
+    - fault_target_effect
+    - fault_schedule
+    - actor_seed
+    - max_steps
+    - reobserve_duration
+    - recovery_mapping
+  paired_bootstrap_repetitions: 10000
+  bootstrap_seed: 1619
+
+final_status_vocabulary:
+  - PASS_PHASE1_BEHAVIOR
+  - REJECT_CORE_MECHANISM
+  - BLOCKED_BY_ACTOR_V2
+  - BLOCKED_BY_IMPLEMENTATION
+
+execution:
+  development_machine: static_checks_cpu_tests_and_bounded_gpu_smoke_only
+  formal_training_qualification_and_evaluation: Alibaba_PAI_DLC
+  pai_probe_created: false
+  storage_namespace: /mnt/cpfs/zbl-cpfs-new
+  runtime_uid_gid: "2254:2254"
+  resource_contract: two_A800_one_active_one_reserved_idle
+  pai_automatic_fault_tolerance: false
+  platform_restarts: 0
+  application_auto_resume: true
+  checkpoint_contract: model_optimizer_scheduler_rng_global_step
+  wandb_entity: chen_jian-cj-workspace
