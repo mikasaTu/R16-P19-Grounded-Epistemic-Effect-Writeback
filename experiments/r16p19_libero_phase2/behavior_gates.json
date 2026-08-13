@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-08-13T18:03:49Z",
+  "immutable": true,
+  "qualification": {
+    "expected_clean_rollouts": 40,
+    "minimum_per_effect_success": 0.90,
+    "minimum_full_task_success_each_task": 0.80,
+    "maximum_repeated_action_loop_rate": 0.10,
+    "memory_or_fault_leakage_count": 0,
+    "identical_input_action_bytes": true
+  },
+  "formal_competence": {
+    "activation": "qualification_pass_only",
+    "expected_clean_rollouts": 40,
+    "minimum_per_effect_success": 0.80,
+    "attempts": 1
+  },
+  "original_correctness_gates": {
+    "evidence_alias_acceptance": 0,
+    "dangling_parent_count": 0,
+    "duplicate_contradiction_idempotency": 1,
+    "contradicted_realized_has_recovery": 1,
+    "resident_slot_count_max": 32,
+    "B6_outperforms_B4_and_B5_on_contradiction_recovery": true,
+    "degenerate_safe_decision_policy_forbidden": true
+  },
+  "original_behavior_gates": {
+    "B6_false_completion_relative_reduction_vs_B3_min": 0.50,
+    "B6_contradiction_recovery_recall_min": 0.80,
+    "B6_target_fault_success_strictly_exceeds": ["B3", "B5"],
+    "paired_bootstrap_B6_minus_B3_95ci_lower_bound_exclusive": 0.0,
+    "clean_success_degradation_vs_B3_max": 0.03,
+    "B6_statistically_distinguishable_from_B2": true
+  },
+  "phase2_additional_behavior_gates": {
+    "B6_faulted_success_minus_max_B3_B5_min": 0.10,
+    "decision_causal_win_rate_min": 0.70,
+    "B6_clean_unnecessary_recovery_rate_max": 0.10,
+    "B6_clean_safe_stop_rate": 0.0
+  },
+  "closed_loop_matrix": {
+    "tasks": ["stove_moka", "bowl_drawer"],
+    "formal_init_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "conditions": ["C0", "C1", "C2", "C3", "C7"],
+    "memory_arms": ["B2", "B3", "B5", "B6"],
+    "expected_rollouts": 800
+  },
+  "statistics": {
+    "paired_unit": "task_and_initial_state_index",
+    "paired_bootstrap_repetitions": 10000,
+    "bootstrap_seed": 1619,
+    "paired_binary_test": "McNemar",
+    "report_effect_sizes": true,
+    "report_95_percent_confidence_intervals": true
+  }
+}

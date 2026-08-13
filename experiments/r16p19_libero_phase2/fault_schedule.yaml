@@ -1,0 +1,54 @@
+schema_version: 1
+schedule_scope: formal_800_cell_matrix
+target_effect_rule: sha256(task_key, init_index, condition) modulo effect_count
+attempt_relative: true
+event_relative: true
+wall_clock_or_absolute_action_index_scheduling: forbidden
+
+conditions:
+  C0:
+    name: clean
+    mutation: none
+  C1:
+    name: command_noop
+    trigger: first physical execution attempt for the selected target effect
+    mutation: command event is emitted but every actuator command in that first attempt is replaced by no-op
+    consumption: immediately after the first target attempt terminates
+    legitimate_retry: executes normally with the frozen executor
+  C2:
+    name: delayed_realization
+    trigger: first physical execution attempt for the selected target effect
+    mutation: physical actuator commands execute normally but positive observation, verification, and realization receipts are withheld
+    delay_decision_cycles: 3
+    release: emit the byte-identical delayed receipts after the fixed third decision cycle
+  C3:
+    name: post_realization_reversal
+    trigger: after target effect verification and realization, before the next dependent effect executes
+    mutation: restore the deterministic pre-realization physical state of only the selected target effect and emit contradictory negative receipts
+    reset_executor_history_after_physical_mutation: true
+  C7:
+    name: imagined_success_then_observed_failure
+    trigger: before the first target command
+    imagined_event: identical high-confidence imagined-success event for B2, B3, B5, and B6
+    physical_mutation: suppress the first target physical attempt exactly as C1
+    later_evidence: byte-identical observed-failure receipt stream for every arm
+
+fairness:
+  same_target_effect_across_arms: true
+  same_fault_seed_across_arms: true
+  same_executor_source_templates_and_parameters_across_arms: true
+  same_executor_inputs_and_action_bytes_before_first_memory_decision_divergence: true
+  executor_never_receives_condition_or_fault_identity: true
+  fault_consumption_is_shared_schedule_state_not_executor_input: true
+
+first_divergence_causal_replay:
+  arms: [B3, B5, B6]
+  detect: first high_level_memory_decision_divergence
+  snapshot: complete pre_decision_simulator_state_and_arm_independent_executor_state
+  replay: each_distinct_decision_under_identical_executor_fault_seed_and_horizon
+  fixed_horizon_action_steps: 120
+  outcomes:
+    - immediate_target_effect_completion
+    - recoverability_at_horizon
+    - irreversible_failure
+    - extra_action_steps

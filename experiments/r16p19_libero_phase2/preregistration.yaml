@@ -1,0 +1,166 @@
+schema_version: 1
+frozen_at_utc: "2026-08-13T18:03:49Z"
+preregistration_state: frozen_before_template_extraction_or_executor_implementation
+experiment_id: r16p19_libero_phase2_v1
+idea: grounded_epistemic_effect_writeback
+scientific_terminal_status_at_entry: BLOCKED_BY_ACTOR_V2
+
+source_identity:
+  preregistration_parent_commit: 91f843c050bf8de54ea4dbcd78284f9cb61f960e
+  preregistration_parent_tree: 38e89be3957129bfdffcdfcc9539596ca0601fad
+  original_formal_experiment_commit: ae362efeba68643ab4dd2a99cfd295c72a9cbdcc
+  phase1b_terminal_evidence_commit: 91f843c050bf8de54ea4dbcd78284f9cb61f960e
+  official_libero_commit: 8f1084e3132a39270c3a13ebe37270a43ece2a01
+  phase2_plan_sha256: b653ebc77d9ac7e6b2e1214d5c509627be837aebe60d9c66b5fcb4d75726d2d6
+  protected_semantics_sha256:
+    r16p19_memory_py: 4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5
+    effect_ontology_json: 1a8ee265bc23d714b38603617bb3d7cf426a50981d90f343745b281277dd6160
+    fault_matrix_json: 6ba25e31add729a5e623b3c18014190aa947d85586034dc4d38a2dc843e44797
+    original_split_manifest_json: f60640dc65c7a403c560ff9cf6a1e9eef0e1b09240ba60ba77f8bb6cbdf3d343
+    phase1b_behavior_gates_json: 68b03463d2ee87f988f621065584a969dba42d59e84d370f12076094a8cb7320
+    frozen_demo_effect_labels_jsonl: c270626b4e777495a93d04e428850b35f3fd55bd23e2ad5ec071ca4556a72c51
+
+scientific_question: >-
+  Under one competent deterministic executor whose inputs are independent of
+  memory state and fault identity, does the frozen R16-P19 B6 memory mechanism
+  causally improve faulted LIBERO behavior over B3 and B5 without harming clean
+  execution?
+
+evidence_boundary:
+  goal: >-
+    Replace the inadequate learned Phase-1B actor with exactly one
+    preregistered RetargetedGeometricSkillExecutor, qualify it on untouched
+    init 60..79, view formal init 0..19 only after the executor is frozen, and
+    run the original 800-cell oracle-receipt matrix only if both competence
+    gates pass.
+  excluded:
+    - a third neural BC, ACT, or VLA actor
+    - a second executor family
+    - visual policy or publication-level performance claims
+    - changes to memory, ontology, receipts, fault meanings, behavior gates, or bootstrap
+    - post-qualification or post-formal executor tuning
+    - formal activation, encryption, or excessive integrity infrastructure
+
+benchmark:
+  name: LIBERO
+  suite: libero_10
+  tasks:
+    stove_moka:
+      task_id: KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it
+      dataset_sha256: 6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9
+      init_sha256: 8519d4638868ce661a20d331495d97e0521f8e1535479dd26ba875d5cc06b88f
+      effects: [STOVE_TURNED_ON, MOKA_GRASPED, MOKA_ON_STOVE, MOKA_RELEASED_ON_STOVE]
+    bowl_drawer:
+      task_id: KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it
+      dataset_sha256: 703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638
+      init_sha256: 7eba1f68f9d3a553b14e99a437356fbcc91ba1a531ac2475fc858c1e9bcbe2fc
+      effects: [BOWL_GRASPED, BOWL_IN_BOTTOM_DRAWER, BOWL_RELEASED_IN_DRAWER, BOTTOM_DRAWER_CLOSED]
+
+executor:
+  family: RetargetedGeometricSkillExecutor
+  learned_parameters: 0
+  interface: SkillExecutor.action_chunk(state_history, task_id, effect_id, execution_mode, retry_index)
+  output_shape: [8, 7]
+  executed_prefix: 4
+  max_action_steps_per_episode: 700
+  max_chunks_per_effect: 40
+  deterministic: true
+  template_count_per_effect_max: 3
+  extraction_demos: demo_0..demo_29
+  calibration_demos: demo_30..demo_39
+  diagnostic_demos: demo_40..demo_49
+  development_init: 40..59
+  qualification_init: 60..79
+  formal_init: 0..19
+  selection_or_tuning_uses_qualification_or_formal_results: false
+
+development_protocol:
+  allowed_data:
+    - successful effect segments from demo 0..29 for deterministic template extraction
+    - demo 30..39 for controller calibration only
+    - init 40..59 for executor development, debugging, and mechanism ablations
+  fixed_component_ablation_order:
+    - world_frame_open_loop_template
+    - add_effect_local_frame_retargeting
+    - add_closed_loop_cartesian_tracking
+    - add_receding_horizon_and_preregistered_retry_offsets
+  ablation_role: mechanism_diagnosis_only_not_executor_family_selection
+  comparison_unit: paired_task_and_init_index_on_init_40..59
+  reverse_explanation_policy: >-
+    Attribute any increase or decrease only after a one-factor paired ablation,
+    trace-level geometric diagnostics, and failure-component mediation. Label
+    unsupported accounts as hypotheses; do not generate a new research idea.
+
+freeze_gate:
+  required_before_qualification:
+    - executor source SHA256
+    - template manifest and every template SHA256
+    - gains, thresholds, retry order, retry offsets, horizons, and seeds
+    - allowed-input schema and forbidden-import audit
+    - deterministic identical-input byte test
+  freeze_is_irreversible_for_this_phase: true
+
+qualification_gate:
+  init_indices: [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
+  clean_rollouts_per_task: 20
+  expected_rollouts: 40
+  minimum_per_effect_success: 0.90
+  minimum_full_task_success_per_task: 0.80
+  maximum_repeated_action_loop_rate: 0.10
+  required_regressions:
+    memory_import_count: 0
+    fault_identity_input_count: 0
+    formal_init_access_before_freeze: 0
+    identical_input_action_bytes: true
+  failure_status: BLOCKED_BY_EXECUTOR_V3
+  alternate_executor_after_failure_allowed: false
+
+formal_competence_gate:
+  activation: qualification_gate_pass_only
+  init_indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+  clean_rollouts_per_task: 20
+  expected_rollouts: 40
+  minimum_per_effect_success: 0.80
+  attempts: 1
+  formal_results_may_trigger_executor_changes: false
+  failure_status: BLOCKED_BY_EXECUTOR_V3
+
+closed_loop:
+  activation: formal_competence_gate_pass_only
+  tasks: [stove_moka, bowl_drawer]
+  formal_init_per_task: 20
+  conditions: [C0, C1, C2, C3, C7]
+  memory_arms: [B2, B3, B5, B6]
+  expected_rollouts: 800
+  pairing_fields:
+    - task
+    - initial_state
+    - target_effect
+    - fault_schedule
+    - executor_source_and_template_hashes
+    - controller_parameters
+    - max_steps
+    - reobserve_duration
+  required_first_divergence_replay_arms: [B3, B5, B6]
+  paired_bootstrap_repetitions: 10000
+  bootstrap_seed: 1619
+
+final_status_vocabulary:
+  - PASS_PHASE2_ORACLE_BEHAVIOR
+  - REJECT_CORE_MECHANISM
+  - BLOCKED_BY_EXECUTOR_V3
+  - BLOCKED_BY_IMPLEMENTATION
+
+execution:
+  development_machine: static_checks_cpu_tests_and_bounded_gpu_smoke_only
+  formal_qualification_and_evaluation: Alibaba_PAI_DLC
+  workload_type: evaluation
+  persistent_resume_unit: completed_rollout_cell_with_atomic_marker
+  training_checkpoint_cadence: not_applicable_non_neural_executor
+  pai_probe_created: false
+  storage_namespace: /mnt/cpfs/zbl-cpfs-new
+  runtime_uid_gid: "2254:2254"
+  gpu_contract: at_most_one_A800_only_if_headless_rendering_requires_it
+  second_idle_gpu_forbidden: true
+  pai_automatic_fault_tolerance_on_dedicated_pool: false
+  platform_restarts_on_dedicated_pool: 0

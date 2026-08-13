@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-08-13T18:03:49Z",
+  "demo_split_unit": "official_source_episode",
+  "demo_splits": {
+    "template_extraction": {"first": 0, "last": 29, "count": 30},
+    "controller_calibration": {"first": 30, "last": 39, "count": 10},
+    "untouched_diagnostic_receipt_test": {"first": 40, "last": 49, "count": 10}
+  },
+  "init_split_unit": "official_initial_state_index",
+  "init_splits": {
+    "formal_competence_and_memory_evaluation": {"first": 0, "last": 19, "count": 20},
+    "phase1b_archival_only": {"first": 20, "last": 39, "count": 20},
+    "executor_development_and_smoke": {"first": 40, "last": 59, "count": 20},
+    "frozen_executor_qualification": {"first": 60, "last": 79, "count": 20},
+    "reserved_future_stress_ood": {"first": 80, "last": 99, "count": 20}
+  },
+  "tasks": {
+    "stove_moka": {
+      "available_initial_states": 100,
+      "state_shape": [100, 47],
+      "init_sha256": "8519d4638868ce661a20d331495d97e0521f8e1535479dd26ba875d5cc06b88f"
+    },
+    "bowl_drawer": {
+      "available_initial_states": 100,
+      "state_shape": [100, 51],
+      "init_sha256": "7eba1f68f9d3a553b14e99a437356fbcc91ba1a531ac2475fc858c1e9bcbe2fc"
+    }
+  },
+  "all_pairwise_overlap_counts": 0,
+  "formal_access_policy": "No Phase-2 load, rollout, visualization, aggregate, or per-init metric on init 0..19 before executor source, templates, controller constants, and hashes are frozen. After qualification passes, formal competence is run exactly once; its result cannot trigger tuning.",
+  "qualification_access_policy": "Init 60..79 are untouched until the executor freeze manifest is sealed and are evaluated once.",
+  "reserved_access_policy": "Init 80..99 remain unused in Phase-2.",
+  "applies_identically_to_tasks": ["stove_moka", "bowl_drawer"]
+}

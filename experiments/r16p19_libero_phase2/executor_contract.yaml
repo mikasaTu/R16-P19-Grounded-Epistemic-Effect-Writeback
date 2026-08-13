@@ -1,0 +1,142 @@
+schema_version: 1
+executor_name: RetargetedGeometricSkillExecutor
+executor_family_count: 1
+learned_parameters: 0
+deterministic: true
+
+interface:
+  signature: SkillExecutor.action_chunk(state_history, task_id, effect_id, execution_mode, retry_index)
+  execution_modes: [EXECUTE, RETRY]
+  retry_index_type: nonnegative_integer
+  output:
+    dtype: float32
+    shape: [8, 7]
+    bounds: [-1.0, 1.0]
+    action_schema: [dx, dy, dz, d_axis_angle_x, d_axis_angle_y, d_axis_angle_z, gripper]
+  executed_prefix: 4
+
+allowed_inputs:
+  - current and recent end-effector position and quaternion
+  - current and recent robot joint positions and gripper joint positions
+  - current task identity
+  - current effect identity
+  - EXECUTE or RETRY
+  - retry index
+  - current pose of the object or fixture geometrically required by the current effect
+  - frozen skill templates and controller constants
+
+forbidden_inputs:
+  - memory object, memory summary, epistemic state, or memory decision history
+  - fault condition, fault identity, target-fault flag, or fault-consumed flag
+  - simulator effect truth, LIBERO predicates, reward, task success, or full success predicate
+  - next effect identity, future state, future action, or oracle next-effect target
+  - init index or demonstration identity at runtime
+  - camera labels or evidence receipts
+
+state_schema:
+  history_length: 4
+  scalar_dtype: float32
+  fields:
+    eef_position: 3
+    eef_quaternion_xyzw: 4
+    robot_joint_position: 7
+    gripper_joint_position: 2
+    effect_object_position: 3
+    effect_object_quaternion_xyzw: 4
+    effect_fixture_position: 3
+    effect_fixture_quaternion_xyzw: 4
+    effect_fixture_joint_position: 1
+  unavailable_optional_field_policy: deterministic_zero_with_presence_bit
+  canonical_bytes: little_endian_float32_plus_task_effect_mode_retry_header
+
+template_extraction:
+  source_episodes: demo_0..demo_29
+  source_effect_labels: artifacts/formal/r16p19-libero-phase1-20260813-013200/experiment/demo_effect_labels.jsonl
+  successful_segment_only: true
+  inferred_grasp_transition_policy: exclude_that_episode_for_the_affected_grasp_template
+  maximum_templates_per_effect: 3
+  waypoint_sampling:
+    translation_arc_length_m: 0.015
+    maximum_waypoints: 48
+    always_keep_segment_start_and_final_stable_transition: true
+  gripper_schedule: copy_transition_order_then_quantize_to_minus_or_plus_one
+  local_frames:
+    STOVE_TURNED_ON: flat_stove_1_fixture_frame
+    MOKA_GRASPED: moka_pot_1_object_frame_at_segment_start
+    MOKA_ON_STOVE: flat_stove_1_cook_region_fixture_frame
+    MOKA_RELEASED_ON_STOVE: flat_stove_1_cook_region_fixture_frame
+    BOWL_GRASPED: akita_black_bowl_1_object_frame_at_segment_start
+    BOWL_IN_BOTTOM_DRAWER: white_cabinet_1_bottom_region_fixture_frame
+    BOWL_RELEASED_IN_DRAWER: white_cabinet_1_bottom_region_fixture_frame
+    BOTTOM_DRAWER_CLOSED: white_cabinet_1_bottom_drawer_handle_frame
+  representative_selection:
+    algorithm: deterministic_farthest_first_medoid
+    seed: 1619
+    descriptor: normalized_eef_start_pose_and_effect_endpoint_pose_in_local_frame
+    tie_break: lexical_episode_id
+
+runtime_template_selection:
+  uses_current_geometry_only: true
+  descriptor: normalized_current_eef_pose_relative_to_current_effect_frame
+  ordering: ascending_descriptor_distance_then_template_sha256
+  execute_template_rank: 0
+  retry_template_rank: retry_index_modulo_available_template_count
+
+retargeting:
+  translation: apply_current_effect_frame_SE3_to_local_waypoint
+  orientation: quaternion_compose_current_frame_with_local_waypoint
+  carried_object_targeting: use_current_fixture_frame_and_preserve_frozen_grasp_transform
+  online_oracle_target_update: forbidden
+
+controller:
+  type: deterministic_closed_loop_cartesian_delta_OSC_POSE
+  action_horizon: 8
+  executed_prefix: 4
+  position_gain: 8.0
+  orientation_gain: 2.0
+  position_action_clip: 1.0
+  orientation_action_clip: 1.0
+  position_waypoint_tolerance_m: 0.010
+  orientation_waypoint_tolerance_rad: 0.12
+  final_hold_steps: 4
+  maximum_chunks_per_effect: 40
+  maximum_action_steps_per_episode: 700
+  no_effect_truth_termination_inside_executor: true
+
+retry_offsets_m:
+  default:
+    - [0.000, 0.000, 0.000]
+    - [0.000, 0.000, 0.010]
+    - [0.010, 0.000, 0.005]
+    - [-0.010, 0.000, 0.005]
+  STOVE_TURNED_ON:
+    - [0.000, 0.000, 0.000]
+    - [0.000, 0.010, 0.000]
+    - [0.000, -0.010, 0.000]
+    - [0.000, 0.000, 0.010]
+  BOTTOM_DRAWER_CLOSED:
+    - [0.000, 0.000, 0.000]
+    - [0.010, 0.000, 0.000]
+    - [-0.010, 0.000, 0.000]
+    - [0.000, 0.000, 0.010]
+  offset_frame: current_effect_local_frame
+  order_is_frozen: true
+
+calibration:
+  demo_indices: 30..39
+  development_init_indices: 40..59
+  candidate_position_gains: [6.0, 8.0, 10.0]
+  candidate_orientation_gains: [1.5, 2.0, 3.0]
+  candidate_position_tolerances_m: [0.008, 0.010, 0.015]
+  search_rule: one_factor_at_a_time_in_list_order_from_the_declared_defaults
+  selection_metric: minimum_per_effect_success_then_full_task_success_then_mean_action_steps
+  tie_break: smaller_gain_then_larger_tolerance
+  qualification_or_formal_data_allowed: false
+
+required_regressions:
+  identical_canonical_input_produces_identical_action_bytes: true
+  memory_module_imports: 0
+  fault_identity_branches: 0
+  effect_truth_calls_inside_executor: 0
+  input_schema_rejects_extra_fields: true
+  pre_divergence_executor_input_and_action_byte_identity: true
