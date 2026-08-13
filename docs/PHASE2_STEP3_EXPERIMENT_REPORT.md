@@ -182,6 +182,10 @@ qualification 三个 gate 中有三个未全部满足，协议要求立即停止
 
 `https://github.com/mikasaTu/R16-P19-Grounded-Epistemic-Effect-Writeback`
 
+Phase-2 结果与证据发布提交为
+`b60ec1654088234446f9bd2f32a87be1f16026b8`，对应 tree 为
+`bc3d73c209a817b16c10de5085dfcc0789726273`。
+
 核心路径：
 
 - `experiments/r16p19_libero_phase2/executor_qualification_results.jsonl`
