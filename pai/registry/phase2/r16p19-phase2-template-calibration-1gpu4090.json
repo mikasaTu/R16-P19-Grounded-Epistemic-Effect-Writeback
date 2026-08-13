@@ -1,0 +1,108 @@
+{
+  "schema_version": 2,
+  "kind": "pytorchjob",
+  "name_prefix": "r16p19-phase2-template-calibration",
+  "description": "R16-P19 Phase-2 deterministic LIBERO geometric-template calibration on demo 30-39 with one rendering GPU and completed-cell resume",
+  "resource_alias": "rtx4090-general-1gpu",
+  "workspace_id": "179169",
+  "provenance": {
+    "contract_source_job_id": "dlcg57bpmp6cxq9p",
+    "resource_source_job_id": "dlcg57bpmp6cxq9p",
+    "submission_method": "cli_create",
+    "pai_clone_performed": false,
+    "source_role": "readback_reference"
+  },
+  "network": {},
+  "storage": {
+    "data_sources": [
+      {
+        "id": "d-mkixtohdn75dp8x9tb",
+        "version": "v1",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+        "options": ""
+      },
+      {
+        "id": "d-36p023eg0f2vuqny8y",
+        "version": "v1",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+        "options": ""
+      },
+      {
+        "id": "d-ejgj2ej7io1t2t32uc",
+        "version": "v1",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+        "options": ""
+      }
+    ],
+    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase2/pai-control"
+  },
+  "worker": {
+    "count": 1,
+    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+    "gpu": 1,
+    "cpu": 14,
+    "memory": "120Gi",
+    "shared_memory": "120Gi"
+  },
+  "runtime": {
+    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry/launchers/r16p19_phase2_template_calibration_1gpu4090.sh",
+    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
+    "uid": 2254,
+    "gid": 2254,
+    "pod_env": {
+      "NVIDIA_DRIVER_CAPABILITIES": "compute,utility,graphics"
+    },
+    "secret_env_names": [],
+    "write_paths": [
+      "{{ARTIFACT_DIR}}",
+      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase2/template-calibration-1a96b3b"
+    ],
+    "output_mode": "resume",
+    "create_artifact_dir": true,
+    "recursive_repair": false,
+    "payload_transport": "base64"
+  },
+  "fault_tolerance": {
+    "aimaster_args": "",
+    "maximum_platform_restarts": 0,
+    "expected_platform_restarts": 0,
+    "launcher_attempts": 1,
+    "pai_automatic_fault_tolerance": false
+  },
+  "evidence": {
+    "kind": "r16p19_phase2_template_calibration",
+    "workload_type": "deterministic_non_neural_evaluation",
+    "resource_contract": "single_rtx4090_rendering_gpu_v1",
+    "source_commit": "136e8923829c0436ca27755078a609f91bcf75a5",
+    "source_tree": "cd07fe24cb6ef30b2c085b29da65cc82b5a44e44",
+    "launcher_sha256": "641194c533ebfbb836bcd7047218e67bd527b49b8c368c751dfec58a6631dbcf",
+    "payload_launcher_sha256": "86b38cce27cf430d62d2b4f60abd53426e87a2283987c405de3f55730677d5d4",
+    "libero_source_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "formal_python_sha256": "903441582909636b4316667ee22beb1e6e2726991584ea9265c765ac8388abd1",
+    "calibration_demo_indices": "30-39",
+    "qualification_init_access": 0,
+    "formal_init_access": 0,
+    "expected_maximum_cells": 240,
+    "application_resume_unit": "one_fsynced_jsonl_template_demo_cell",
+    "first_work_evidence_path": "{{ARTIFACT_DIR}}/FIRST_COMPLETED_CELL.json",
+    "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
+    "wandb_mode": "disabled_non_neural_task_local_artifacts",
+    "second_idle_gpu_forbidden": true,
+    "expected_first_work_uid": 2254,
+    "expected_first_work_gid": 2254
+  },
+  "submission": {
+    "priority": 9,
+    "disable_ecs_stock_check": false,
+    "job_reserved_policy": "",
+    "job_reserved_minutes": 0,
+    "job_max_running_time_minutes": 0,
+    "tags": {
+      "managed_by": "pai-job-registry",
+      "purpose": "r16p19-phase2-template-calibration",
+      "task": "libero10-two-task-geometric-executor",
+      "hardware": "1xrtx4090",
+      "experiment_role": "demo30-39-template-calibration"
+    }
+  }
+}

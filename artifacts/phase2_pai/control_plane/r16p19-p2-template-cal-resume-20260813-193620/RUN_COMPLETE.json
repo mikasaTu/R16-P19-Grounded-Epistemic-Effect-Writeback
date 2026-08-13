@@ -1,0 +1,9 @@
+{
+  "completed_at_unix": 1786649855.9400728,
+  "gid": 2254,
+  "run_complete": true,
+  "run_id": "r16p19-p2-template-cal-resume-20260813-193620",
+  "stage": "template-calibration",
+  "uid": 2254,
+  "work_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase2/template-calibration-1a96b3b"
+}

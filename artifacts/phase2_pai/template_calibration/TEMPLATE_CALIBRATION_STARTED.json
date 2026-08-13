@@ -1,0 +1,24 @@
+{
+  "calibration_episodes": [
+    "demo_30",
+    "demo_31",
+    "demo_32",
+    "demo_33",
+    "demo_34",
+    "demo_35",
+    "demo_36",
+    "demo_37",
+    "demo_38",
+    "demo_39"
+  ],
+  "calibration_rule_sha256": "4fb0cf5604b64c77c3b590267b8ec57d5b55b61440c6575a2d3dc25c6d694486",
+  "controller": {
+    "orientation_gain": 2.0,
+    "position_gain": 8.0,
+    "position_tolerance_m": 0.01
+  },
+  "executed_prefix": 4,
+  "extraction_manifest_sha256": "4e66cbcf85a161dd9d63434abd6185c74b5374c2e0f48e20cacb15a117da6479",
+  "maximum_chunks": 40,
+  "schema_version": 1
+}

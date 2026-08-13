@@ -1,0 +1,259 @@
+{
+  "calibration_rollout_count": 237,
+  "extracted_template_count": 24,
+  "selected_manifest_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase2/template-calibration-1a96b3b/skill_template_manifest.json",
+  "selected_manifest_sha256": "6a123a334bb901da880baf3b14e72576015bc013ed1f3224e9dd2c6d3c49d431",
+  "selected_template_count": 14,
+  "summary": {
+    "bowl_drawer": {
+      "BOTTOM_DRAWER_CLOSED": {
+        "best_success_rate": 0.9,
+        "candidates": [
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 56.44444444444444,
+            "success_rate": 0.9,
+            "template_id": "bowl_drawer__BOTTOM_DRAWER_CLOSED__demo_26",
+            "template_sha256": "1c2c9ec7d23ebbef2cc4c77b1ea783a22009c835f5ad8d1b0a51b51395ebee64"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 61.5,
+            "success_rate": 0.8,
+            "template_id": "bowl_drawer__BOTTOM_DRAWER_CLOSED__demo_22",
+            "template_sha256": "5fe91ebdccad96990d37cb024f4bb9289b930c6117bdc2ab1764b2cde17cb1a9"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 47.125,
+            "success_rate": 0.8,
+            "template_id": "bowl_drawer__BOTTOM_DRAWER_CLOSED__demo_2",
+            "template_sha256": "a9ef0893b811985e5944f56891cf9ffcf45704bcfe1b312a8455a6292fb1807d"
+          }
+        ],
+        "retained_template_sha256": [
+          "1c2c9ec7d23ebbef2cc4c77b1ea783a22009c835f5ad8d1b0a51b51395ebee64"
+        ],
+        "retention_threshold": 0.9
+      },
+      "BOWL_GRASPED": {
+        "best_success_rate": 0.8888888888888888,
+        "candidates": [
+          {
+            "calibration_count": 9,
+            "mean_success_action_steps": 94.0,
+            "success_rate": 0.5555555555555556,
+            "template_id": "bowl_drawer__BOWL_GRASPED__demo_20",
+            "template_sha256": "31cab22ec06f22a17449830b9275e20e26bc66a779a62d9d415fa52721788c45"
+          },
+          {
+            "calibration_count": 9,
+            "mean_success_action_steps": null,
+            "success_rate": 0.0,
+            "template_id": "bowl_drawer__BOWL_GRASPED__demo_14",
+            "template_sha256": "357d93675f92859c36b0ab118ab23455d13e0d3a279975372de50539a80c0757"
+          },
+          {
+            "calibration_count": 9,
+            "mean_success_action_steps": 63.25,
+            "success_rate": 0.8888888888888888,
+            "template_id": "bowl_drawer__BOWL_GRASPED__demo_15",
+            "template_sha256": "82a341fafb3f15f054944187899e25730cf0117ef1c54caffc4ae20d25410610"
+          }
+        ],
+        "retained_template_sha256": [
+          "82a341fafb3f15f054944187899e25730cf0117ef1c54caffc4ae20d25410610"
+        ],
+        "retention_threshold": 0.7888888888888889
+      },
+      "BOWL_IN_BOTTOM_DRAWER": {
+        "best_success_rate": 1.0,
+        "candidates": [
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 0.0,
+            "success_rate": 0.1,
+            "template_id": "bowl_drawer__BOWL_IN_BOTTOM_DRAWER__demo_29",
+            "template_sha256": "b306f4bb482db854b3ea7d6defaee3694188b38a17663fcfd53940d6d6132089"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 53.8,
+            "success_rate": 1.0,
+            "template_id": "bowl_drawer__BOWL_IN_BOTTOM_DRAWER__demo_1",
+            "template_sha256": "cddd0478f2bb94509f875f3ca2b48203e77ed45c0a7b3f79ffa056a4a18f48fe"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 33.833333333333336,
+            "success_rate": 0.6,
+            "template_id": "bowl_drawer__BOWL_IN_BOTTOM_DRAWER__demo_27",
+            "template_sha256": "d02c3aabac8413a64681d4f02bbe503caf8a44fb0c99bdb38ba2ae117fce0a3e"
+          }
+        ],
+        "retained_template_sha256": [
+          "cddd0478f2bb94509f875f3ca2b48203e77ed45c0a7b3f79ffa056a4a18f48fe"
+        ],
+        "retention_threshold": 0.9
+      },
+      "BOWL_RELEASED_IN_DRAWER": {
+        "best_success_rate": 1.0,
+        "candidates": [
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 6.4,
+            "success_rate": 1.0,
+            "template_id": "bowl_drawer__BOWL_RELEASED_IN_DRAWER__demo_7",
+            "template_sha256": "34a5f8616fb1fc6ef49bae8a0d977f6546d203ba9c98b3e22f90e34383855c76"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 6.3,
+            "success_rate": 1.0,
+            "template_id": "bowl_drawer__BOWL_RELEASED_IN_DRAWER__demo_22",
+            "template_sha256": "58945f5e88f6e9cae512f5c65b57daeb0d55f9f55e7041c7479c317d76023ea2"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 9.222222222222221,
+            "success_rate": 0.9,
+            "template_id": "bowl_drawer__BOWL_RELEASED_IN_DRAWER__demo_11",
+            "template_sha256": "91c14d3abb1bd393514af58bbfac7ecddb6e8662e63cc434a7bc05da9612cfab"
+          }
+        ],
+        "retained_template_sha256": [
+          "58945f5e88f6e9cae512f5c65b57daeb0d55f9f55e7041c7479c317d76023ea2",
+          "34a5f8616fb1fc6ef49bae8a0d977f6546d203ba9c98b3e22f90e34383855c76",
+          "91c14d3abb1bd393514af58bbfac7ecddb6e8662e63cc434a7bc05da9612cfab"
+        ],
+        "retention_threshold": 0.9
+      }
+    },
+    "stove_moka": {
+      "MOKA_GRASPED": {
+        "best_success_rate": 0.4,
+        "candidates": [
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": null,
+            "success_rate": 0.0,
+            "template_id": "stove_moka__MOKA_GRASPED__demo_19",
+            "template_sha256": "15b7ae8b0a196e895e95a6e61a7e0cfa3421f9c0a29e4633f1f1fa27d031e153"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 77.0,
+            "success_rate": 0.4,
+            "template_id": "stove_moka__MOKA_GRASPED__demo_15",
+            "template_sha256": "4e7b4b2802d378fbf01645a2037e864c94fe8f5251a743bc06aa32d312728e39"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": null,
+            "success_rate": 0.0,
+            "template_id": "stove_moka__MOKA_GRASPED__demo_12",
+            "template_sha256": "b275a033f14b77f0e7724db25f5fa883816386d231a1cd3444cb4e83d06b982a"
+          }
+        ],
+        "retained_template_sha256": [
+          "4e7b4b2802d378fbf01645a2037e864c94fe8f5251a743bc06aa32d312728e39"
+        ],
+        "retention_threshold": 0.30000000000000004
+      },
+      "MOKA_ON_STOVE": {
+        "best_success_rate": 1.0,
+        "candidates": [
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 38.111111111111114,
+            "success_rate": 0.9,
+            "template_id": "stove_moka__MOKA_ON_STOVE__demo_23",
+            "template_sha256": "05267b4e4a5d5a2f954c255e19943bcc27985b8ba46d1c9a05951efbf13abadb"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 38.333333333333336,
+            "success_rate": 0.9,
+            "template_id": "stove_moka__MOKA_ON_STOVE__demo_4",
+            "template_sha256": "2180d56fbf5817043a14ba113f9be72ffb85976ceb3493a9ff675965bd0adb56"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 23.8,
+            "success_rate": 1.0,
+            "template_id": "stove_moka__MOKA_ON_STOVE__demo_26",
+            "template_sha256": "68086202f1d00c1f89512c0eb504782efb6b38543eb469f5bb28026381bb84e0"
+          }
+        ],
+        "retained_template_sha256": [
+          "68086202f1d00c1f89512c0eb504782efb6b38543eb469f5bb28026381bb84e0",
+          "05267b4e4a5d5a2f954c255e19943bcc27985b8ba46d1c9a05951efbf13abadb",
+          "2180d56fbf5817043a14ba113f9be72ffb85976ceb3493a9ff675965bd0adb56"
+        ],
+        "retention_threshold": 0.9
+      },
+      "MOKA_RELEASED_ON_STOVE": {
+        "best_success_rate": 1.0,
+        "candidates": [
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 0.5,
+            "success_rate": 1.0,
+            "template_id": "stove_moka__MOKA_RELEASED_ON_STOVE__demo_7",
+            "template_sha256": "5c944fb499bbb905b9c78589c7ff08db29af8d51e05d5e4a7f79bf32ca0b35b3"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 0.0,
+            "success_rate": 1.0,
+            "template_id": "stove_moka__MOKA_RELEASED_ON_STOVE__demo_28",
+            "template_sha256": "ac23aab9c1c2e5f6871531628803541513afc6752cec9678df1a066e440dc4d7"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 0.0,
+            "success_rate": 1.0,
+            "template_id": "stove_moka__MOKA_RELEASED_ON_STOVE__demo_4",
+            "template_sha256": "e991936a796f9ec66a699349d83cc56a01dfb7d817fcbec44b2bab99e20bad55"
+          }
+        ],
+        "retained_template_sha256": [
+          "ac23aab9c1c2e5f6871531628803541513afc6752cec9678df1a066e440dc4d7",
+          "e991936a796f9ec66a699349d83cc56a01dfb7d817fcbec44b2bab99e20bad55",
+          "5c944fb499bbb905b9c78589c7ff08db29af8d51e05d5e4a7f79bf32ca0b35b3"
+        ],
+        "retention_threshold": 0.9
+      },
+      "STOVE_TURNED_ON": {
+        "best_success_rate": 1.0,
+        "candidates": [
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": null,
+            "success_rate": 0.0,
+            "template_id": "stove_moka__STOVE_TURNED_ON__demo_15",
+            "template_sha256": "3249f8323764c692f231054b7758ba5862aa65c6ce26e80e164967b6f579a1bf"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 60.4,
+            "success_rate": 1.0,
+            "template_id": "stove_moka__STOVE_TURNED_ON__demo_9",
+            "template_sha256": "7932ae6aa99b0362066f78c18380d213e982b3d9e0ae038a73be486e919a4a17"
+          },
+          {
+            "calibration_count": 10,
+            "mean_success_action_steps": 62.5,
+            "success_rate": 0.6,
+            "template_id": "stove_moka__STOVE_TURNED_ON__demo_25",
+            "template_sha256": "ff882b152f1edafcf3574ef7727082a93a8116e298b3f080bd88afe26680acb1"
+          }
+        ],
+        "retained_template_sha256": [
+          "7932ae6aa99b0362066f78c18380d213e982b3d9e0ae038a73be486e919a4a17"
+        ],
+        "retention_threshold": 0.9
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "freeze_status": "FROZEN_BEFORE_QUALIFICATION",
+  "frozen_at_utc": "2026-08-13T19:40:45.003092+00:00",
+  "parameters": {
+    "action_horizon": 8,
+    "demonstration_feedforward": true,
+    "executed_prefix": 4,
+    "maximum_action_steps": 700,
+    "maximum_attempts_per_effect": 4,
+    "maximum_chunks_per_attempt": 40,
+    "monotonic_progress": false,
+    "orientation_gain": 1.5,
+    "position_gain": 6.0,
+    "position_tolerance_m": 0.015,
+    "retry_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "retry_reapproach": false,
+    "rollout_seed_rule": "1619 + 1000 * task_ordinal + init_index",
+    "variant": "add_receding_horizon_and_preregistered_retry_offsets"
+  },
+  "post_freeze_tuning_allowed": false,
+  "regression_gates": {
+    "effect_truth_call_inside_executor_count": 0,
+    "fault_identity_input_count": 0,
+    "identical_input_action_bytes": true,
+    "memory_import_count": 0,
+    "seeded_rollout_byte_identity": true
+  },
+  "runtime_manifest": {
+    "action_horizon": 8,
+    "demonstration_feedforward": true,
+    "executed_prefix": 4,
+    "executor": "RetargetedGeometricSkillExecutor",
+    "forbidden_inputs": [
+      "memory",
+      "epistemic_state",
+      "fault_identity",
+      "effect_truth",
+      "reward",
+      "task_success",
+      "future_state",
+      "init_index"
+    ],
+    "manifest_sha256": "6a123a334bb901da880baf3b14e72576015bc013ed1f3224e9dd2c6d3c49d431",
+    "monotonic_progress": false,
+    "orientation_gain": 1.5,
+    "position_gain": 6.0,
+    "position_tolerance_m": 0.015,
+    "retry_reapproach": false,
+    "template_counts": {
+      "bowl_drawer/BOTTOM_DRAWER_CLOSED": 1,
+      "bowl_drawer/BOWL_GRASPED": 1,
+      "bowl_drawer/BOWL_IN_BOTTOM_DRAWER": 1,
+      "bowl_drawer/BOWL_RELEASED_IN_DRAWER": 3,
+      "stove_moka/MOKA_GRASPED": 1,
+      "stove_moka/MOKA_ON_STOVE": 3,
+      "stove_moka/MOKA_RELEASED_ON_STOVE": 3,
+      "stove_moka/STOVE_TURNED_ON": 1
+    },
+    "variant": "add_receding_horizon_and_preregistered_retry_offsets"
+  },
+  "schema_version": 1,
+  "selection_boundary": {
+    "development_evidence": [
+      {
+        "path": "artifacts/phase2_seeded/calibration/gain_g10_o2_t010/gain_g10_o2_t010_summary.json",
+        "sha256": "bf9166b512dac3748812616b7fcd5a80892a3fc4daea76be3bb259e4f278571e"
+      },
+      {
+        "path": "artifacts/phase2_seeded/calibration/gain_g6_o1p5_t008/gain_g6_o1p5_t008_summary.json",
+        "sha256": "ae56beb299e188b820ab2a43adad8184000bd79a033371292f9e77196c052787"
+      },
+      {
+        "path": "artifacts/phase2_seeded/calibration/gain_g6_o1p5_t010/gain_g6_o1p5_t010_summary.json",
+        "sha256": "856a4e9357fa3c417ae15ea33a541a82ec08c6aabbf5945adcb6ea3a60804ec3"
+      },
+      {
+        "path": "artifacts/phase2_seeded/calibration/gain_g6_o1p5_t015/gain_g6_o1p5_t015_summary.json",
+        "sha256": "0b02b0603dd687b568dd0d98abb1506a3182d287d13130308699376962fcefc2"
+      },
+      {
+        "path": "artifacts/phase2_seeded/calibration/gain_g6_o2_t010/gain_g6_o2_t010_summary.json",
+        "sha256": "9ea265f965492d9a93c735eb69ea1c4f88f23833415ecb357456244a178685e6"
+      },
+      {
+        "path": "artifacts/phase2_seeded/calibration/gain_g6_o3_t010/gain_g6_o3_t010_summary.json",
+        "sha256": "d9c6e51709698ee31fa8f36019e7ac6ad48a6a9c6f832cbe5e2667c1d610051f"
+      },
+      {
+        "path": "artifacts/phase2_seeded/calibration/gain_g8_o2_t010/gain_g8_o2_t010_summary.json",
+        "sha256": "1e9c988741568367deb16ef3f0aa73a0fbd97af7bb4629620f23cc518c43b93a"
+      },
+      {
+        "path": "artifacts/phase2_seeded/cursor_diagnostic/cursor_g10_o2_t015_retry4/cursor_g10_o2_t015_retry4_summary.json",
+        "sha256": "80e05807d7a6e84326abb21b742832412a89ee2b04959d87bd32f0104ff0b924"
+      },
+      {
+        "path": "artifacts/phase2_seeded/cursor_diagnostic/cursor_g10_o2_t015_single/cursor_g10_o2_t015_single_summary.json",
+        "sha256": "4960e0ce5c7794fc95311b8dbc8e1e4695f4c900482acd2a675ce6ccff71968e"
+      },
+      {
+        "path": "artifacts/phase2_seeded/dev_ablation/a0_world_open/a0_world_open_summary.json",
+        "sha256": "26533d6f87dfe984fb70face3b60e6ce34213ae418cfa081595bbfcf799c9795"
+      },
+      {
+        "path": "artifacts/phase2_seeded/dev_ablation/a1_local_open/a1_local_open_summary.json",
+        "sha256": "598c1786b6cbeb5b372104f2adbdf20a88f10d4b9d3cb20ef65fd698e03b77bd"
+      },
+      {
+        "path": "artifacts/phase2_seeded/dev_ablation/a2_local_closed/a2_local_closed_summary.json",
+        "sha256": "1058b29a422298f30e42a80b5f35f71028dda99d33f09af3786fd91348ae9d97"
+      },
+      {
+        "path": "artifacts/phase2_seeded/dev_ablation/a3_frozen_full/a3_frozen_full_summary.json",
+        "sha256": "125c03d5489305f03354622a93942cd4014793aa1e77692382cff9df121de7b7"
+      },
+      {
+        "path": "artifacts/phase2_seeded/feedforward_diagnostic/pose_feedback_only_seeded_g10_o2_t015/pose_feedback_only_seeded_g10_o2_t015_summary.json",
+        "sha256": "ea01c7f2b9f28b223288867167c0663c29f340ce9064ffce7b707fac422d566c"
+      },
+      {
+        "path": "artifacts/phase2_seeded/retry_diagnostic/retry4_full_g10_o2_t015/retry4_full_g10_o2_t015_summary.json",
+        "sha256": "3c719d0079f32efcc63adab1690ccbdbeb6310eb85056d8a0ecdbac9553c5068"
+      },
+      {
+        "path": "artifacts/phase2_seeded/retry_order_diagnostic/frozen_order_g10_o2_t015_retry4/frozen_order_g10_o2_t015_retry4_summary.json",
+        "sha256": "c7d89ef4427c3e369246b0dbe73fedac8b2d9ec17f8cc8251536308523164596"
+      },
+      {
+        "path": "artifacts/phase2_seeded/retry_reapproach_diagnostic/retry_reapproach_failed_subset/retry_reapproach_failed_subset_summary.json",
+        "sha256": "b826301204226e0d21eebd27bf0530ff1686fc8cc24102ac35bf53915000a3ad"
+      }
+    ],
+    "development_init_indices": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "formal_init_indices_accessed": [],
+    "formal_rollout_count_before_freeze": 0,
+    "qualification_init_indices_accessed": [],
+    "selection_metric": "minimum_per_effect_success_then_full_task_success_then_mean_action_steps"
+  },
+  "source": {
+    "path": "r16p19/phase2_executor.py",
+    "sha256": "ee37fdc8d39ccd24f2dae00fc2e886435b84e0c7c3af6d3a29fdba7c7ac37d36"
+  },
+  "source_commit": "136e8923829c0436ca27755078a609f91bcf75a5",
+  "source_tree": "cd07fe24cb6ef30b2c085b29da65cc82b5a44e44",
+  "templates": {
+    "file_sha256": {
+      "skill_templates/bowl_drawer__BOTTOM_DRAWER_CLOSED__demo_26.json": "1c2c9ec7d23ebbef2cc4c77b1ea783a22009c835f5ad8d1b0a51b51395ebee64",
+      "skill_templates/bowl_drawer__BOWL_GRASPED__demo_15.json": "82a341fafb3f15f054944187899e25730cf0117ef1c54caffc4ae20d25410610",
+      "skill_templates/bowl_drawer__BOWL_IN_BOTTOM_DRAWER__demo_1.json": "cddd0478f2bb94509f875f3ca2b48203e77ed45c0a7b3f79ffa056a4a18f48fe",
+      "skill_templates/bowl_drawer__BOWL_RELEASED_IN_DRAWER__demo_11.json": "91c14d3abb1bd393514af58bbfac7ecddb6e8662e63cc434a7bc05da9612cfab",
+      "skill_templates/bowl_drawer__BOWL_RELEASED_IN_DRAWER__demo_22.json": "58945f5e88f6e9cae512f5c65b57daeb0d55f9f55e7041c7479c317d76023ea2",
+      "skill_templates/bowl_drawer__BOWL_RELEASED_IN_DRAWER__demo_7.json": "34a5f8616fb1fc6ef49bae8a0d977f6546d203ba9c98b3e22f90e34383855c76",
+      "skill_templates/stove_moka__MOKA_GRASPED__demo_15.json": "4e7b4b2802d378fbf01645a2037e864c94fe8f5251a743bc06aa32d312728e39",
+      "skill_templates/stove_moka__MOKA_ON_STOVE__demo_23.json": "05267b4e4a5d5a2f954c255e19943bcc27985b8ba46d1c9a05951efbf13abadb",
+      "skill_templates/stove_moka__MOKA_ON_STOVE__demo_26.json": "68086202f1d00c1f89512c0eb504782efb6b38543eb469f5bb28026381bb84e0",
+      "skill_templates/stove_moka__MOKA_ON_STOVE__demo_4.json": "2180d56fbf5817043a14ba113f9be72ffb85976ceb3493a9ff675965bd0adb56",
+      "skill_templates/stove_moka__MOKA_RELEASED_ON_STOVE__demo_28.json": "ac23aab9c1c2e5f6871531628803541513afc6752cec9678df1a066e440dc4d7",
+      "skill_templates/stove_moka__MOKA_RELEASED_ON_STOVE__demo_4.json": "e991936a796f9ec66a699349d83cc56a01dfb7d817fcbec44b2bab99e20bad55",
+      "skill_templates/stove_moka__MOKA_RELEASED_ON_STOVE__demo_7.json": "5c944fb499bbb905b9c78589c7ff08db29af8d51e05d5e4a7f79bf32ca0b35b3",
+      "skill_templates/stove_moka__STOVE_TURNED_ON__demo_9.json": "7932ae6aa99b0362066f78c18380d213e982b3d9e0ae038a73be486e919a4a17"
+    },
+    "manifest_path": "experiments/r16p19_libero_phase2/skill_template_manifest.json",
+    "manifest_sha256": "6a123a334bb901da880baf3b14e72576015bc013ed1f3224e9dd2c6d3c49d431"
+  }
+}

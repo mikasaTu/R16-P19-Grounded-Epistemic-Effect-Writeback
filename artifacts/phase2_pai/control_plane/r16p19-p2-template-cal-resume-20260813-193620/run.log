@@ -1,0 +1,7 @@
+.......                                                                  [100%]
+7 passed in 0.56s
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+PHASE2_TEMPLATE_CALIBRATION_COMPLETE rollouts=237 selected=14 manifest=6a123a334bb901da880baf3b14e72576015bc013ed1f3224e9dd2c6d3c49d431
+R16P19_PHASE2_STAGE_COMPLETE run_id=r16p19-p2-template-cal-resume-20260813-193620 stage=template-calibration
