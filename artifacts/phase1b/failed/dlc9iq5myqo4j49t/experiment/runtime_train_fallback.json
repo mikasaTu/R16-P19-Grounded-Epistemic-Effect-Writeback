@@ -1,0 +1,38 @@
+{
+  "actor_candidates_sha256": "dad0dc25bbb5752432bd37e76b83f0b8c2b71f0d78cc2a96eb38c9197ef639cd",
+  "dataset_identity": {
+    "bowl_drawer": {
+      "dataset_sha256": "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638",
+      "init_sha256": "7eba1f68f9d3a553b14e99a437356fbcc91ba1a531ac2475fc858c1e9bcbe2fc"
+    },
+    "stove_moka": {
+      "dataset_sha256": "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
+      "init_sha256": "8519d4638868ce661a20d331495d97e0521f8e1535479dd26ba875d5cc06b88f"
+    }
+  },
+  "dependencies": {
+    "h5py": "3.11.0",
+    "mujoco": "2.3.7",
+    "numpy": "1.22.4",
+    "robomimic": "0.2.0",
+    "robosuite": "1.4.0",
+    "torch": "1.11.0+cu113"
+  },
+  "experiment_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
+  "frozen_labels_sha256": "c270626b4e777495a93d04e428850b35f3fd55bd23e2ad5ec071ca4556a72c51",
+  "official_libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "pai_automatic_fault_tolerance": "0",
+  "preregistration_sha256": "8226c2ae023c821b3bc9c59e0750f340655b09bb9e2d94eb5825b2885a88113c",
+  "protected_semantics_sha256": {
+    "experiments/r16p19_libero_phase1/effect_ontology.json": "1a8ee265bc23d714b38603617bb3d7cf426a50981d90f343745b281277dd6160",
+    "experiments/r16p19_libero_phase1/fault_matrix.json": "6ba25e31add729a5e623b3c18014190aa947d85586034dc4d38a2dc843e44797",
+    "experiments/r16p19_libero_phase1/split_manifest.json": "f60640dc65c7a403c560ff9cf6a1e9eef0e1b09240ba60ba77f8bb6cbdf3d343",
+    "r16p19/memory.py": "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5"
+  },
+  "runtime_uid_gid": "2254:2254",
+  "torch_cuda_available": true,
+  "visible_gpu_count": 1,
+  "visible_gpu_names": [
+    "NVIDIA A800-SXM4-80GB"
+  ]
+}

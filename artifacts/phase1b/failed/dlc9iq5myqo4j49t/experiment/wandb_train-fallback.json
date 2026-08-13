@@ -1,0 +1,8 @@
+{
+  "credential_source": "controller_injected_private_config",
+  "entity": "chen_jian-cj-workspace",
+  "project": "r16p19-libero-phase1b",
+  "run_id": "jh2v9bhf",
+  "run_name": "r16p19-phase1b-train-fallback-20260813-160100-train-fallback",
+  "url": "https://wandb.ai/chen_jian-cj-workspace/r16p19-libero-phase1b/runs/jh2v9bhf"
+}

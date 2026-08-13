@@ -1,0 +1,468 @@
+From 877a6d37c81d9fec917ddc73218778afba91e641 Mon Sep 17 00:00:00 2001
+From: Codex <codex@openai.com>
+Date: Thu, 13 Aug 2026 16:15:05 +0800
+Subject: [PATCH] Isolate Phase-1B fallback implementation rerun
+
+---
+ bin/pai-job                                    | 18 ++++++++++--------
+ launchers/r16p19_libero_phase1b_closed_loop.sh |  8 +++++---
+ launchers/r16p19_libero_phase1b_formal_gate.sh |  8 +++++---
+ .../r16p19_libero_phase1b_qualify_fallback.sh  |  8 +++++---
+ .../r16p19_libero_phase1b_qualify_primary.sh   |  8 +++++---
+ .../r16p19_libero_phase1b_train_fallback.sh    |  8 +++++---
+ .../r16p19_libero_phase1b_train_primary.sh     |  8 +++++---
+ ...hase1b-closed-loop-exp-efficiency-2gpu.json | 14 +++++++-------
+ ...hase1b-formal-gate-exp-efficiency-2gpu.json | 14 +++++++-------
+ ...b-qualify-fallback-exp-efficiency-2gpu.json | 14 +++++++-------
+ ...1b-qualify-primary-exp-efficiency-2gpu.json | 14 +++++++-------
+ ...e1b-train-fallback-exp-efficiency-2gpu.json | 14 +++++++-------
+ ...se1b-train-primary-exp-efficiency-2gpu.json | 14 +++++++-------
+ 13 files changed, 82 insertions(+), 68 deletions(-)
+
+diff --git a/bin/pai-job b/bin/pai-job
+index 24baa739..221f2177 100755
+--- a/bin/pai-job
++++ b/bin/pai-job
+@@ -179,15 +179,15 @@ R16P19_LIBERO_PHASE1_EVIDENCE_KIND = (
+ )
+ R16P19_LIBERO_PHASE1_OUTPUT_ROOT = Path(
+     "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/"
+-    "r16p19_libero_phase1b/v1/pai"
++    "r16p19_libero_phase1b/v2/pai"
+ )
+ R16P19_LIBERO_PHASE1_CHECKPOINT_ROOT = Path(
+     "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/"
+-    "r16p19_libero_phase1b/v1"
++    "r16p19_libero_phase1b/v2"
+ )
+ R16P19_LIBERO_PHASE1_SCIENTIFIC_OUTPUT_ROOT = Path(
+     "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/"
+-    "r16p19_libero_phase1b/v1/experiment"
++    "r16p19_libero_phase1b/v2/experiment"
+ )
+ WALLX_WHERE_REAL_NPZ_E2E_EVIDENCE_KIND = (
+     "wallx_three_view_where_real_npz_full_forward_backward_regression"
+@@ -5594,13 +5594,13 @@ def validate_r16p19_libero_phase1_profile(
+         "model_id": "effect_conditioned_state_act_or_preregistered_per_effect_fallback",
+         "model_run_id": "r16p19_libero_phase1b_v1",
+         "success_gate": success_gate,
+-        "validation_method": "14_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
++        "validation_method": "16_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
+         "validation_status": "passed; local EGL unavailable; no PAI probe created",
+         "pai_probe_created": False,
+         "first_work_evidence_path": str(artifact_dir / "phase1b-launch-contract.json"),
+         "completed_evidence_path": str(artifact_dir / "RUN_COMPLETE.json"),
+         "contract_ready": True,
+-        "source_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
++        "source_commit": "49e2bfe240c4f7d9dcc425c1ab35426ee95e7301",
+         "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+         "dataset_sha256": [
+             "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
+@@ -5664,9 +5664,11 @@ def validate_r16p19_libero_phase1_profile(
+         raise Refused("R16P19 launcher payload must be UTF-8") from exc
+     required_fragments = (
+         "export R16P19_PHASE1B_STAGE=%s" % stage,
+-        "export R16P19_EXPECTED_COMMIT=bf06ef5b2e8ddeb3a528491ddb27525d28853432",
+-        "export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5",
+-        "exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5/launch/pai_phase1b_stage.sh",
++        "export R16P19_EXPECTED_COMMIT=49e2bfe240c4f7d9dcc425c1ab35426ee95e7301",
++        "export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe",
++        "export R16P19_PHASE1B_OUTPUT_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
++        "export R16P19_PHASE1B_CHECKPOINT_ROOT=/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2",
++        "exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe/launch/pai_phase1b_stage.sh",
+     )
+     for fragment in required_fragments:
+         if payload_text.count(fragment) != 1:
+diff --git a/launchers/r16p19_libero_phase1b_closed_loop.sh b/launchers/r16p19_libero_phase1b_closed_loop.sh
+index 536063c6..e89c821a 100755
+--- a/launchers/r16p19_libero_phase1b_closed_loop.sh
++++ b/launchers/r16p19_libero_phase1b_closed_loop.sh
+@@ -1,6 +1,8 @@
+ #!/usr/bin/env bash
+ set -Eeuo pipefail
+ export R16P19_PHASE1B_STAGE=closed-loop
+-export R16P19_EXPECTED_COMMIT=bf06ef5b2e8ddeb3a528491ddb27525d28853432
+-export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5
+-exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5/launch/pai_phase1b_stage.sh "$@"
++export R16P19_EXPECTED_COMMIT=49e2bfe240c4f7d9dcc425c1ab35426ee95e7301
++export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe
++export R16P19_PHASE1B_OUTPUT_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment
++export R16P19_PHASE1B_CHECKPOINT_ROOT=/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2
++exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe/launch/pai_phase1b_stage.sh "$@"
+diff --git a/launchers/r16p19_libero_phase1b_formal_gate.sh b/launchers/r16p19_libero_phase1b_formal_gate.sh
+index 0981ea01..1291285e 100755
+--- a/launchers/r16p19_libero_phase1b_formal_gate.sh
++++ b/launchers/r16p19_libero_phase1b_formal_gate.sh
+@@ -1,6 +1,8 @@
+ #!/usr/bin/env bash
+ set -Eeuo pipefail
+ export R16P19_PHASE1B_STAGE=formal-gate
+-export R16P19_EXPECTED_COMMIT=bf06ef5b2e8ddeb3a528491ddb27525d28853432
+-export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5
+-exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5/launch/pai_phase1b_stage.sh "$@"
++export R16P19_EXPECTED_COMMIT=49e2bfe240c4f7d9dcc425c1ab35426ee95e7301
++export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe
++export R16P19_PHASE1B_OUTPUT_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment
++export R16P19_PHASE1B_CHECKPOINT_ROOT=/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2
++exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe/launch/pai_phase1b_stage.sh "$@"
+diff --git a/launchers/r16p19_libero_phase1b_qualify_fallback.sh b/launchers/r16p19_libero_phase1b_qualify_fallback.sh
+index cdabe84b..7cbc0546 100755
+--- a/launchers/r16p19_libero_phase1b_qualify_fallback.sh
++++ b/launchers/r16p19_libero_phase1b_qualify_fallback.sh
+@@ -1,6 +1,8 @@
+ #!/usr/bin/env bash
+ set -Eeuo pipefail
+ export R16P19_PHASE1B_STAGE=qualify-fallback
+-export R16P19_EXPECTED_COMMIT=bf06ef5b2e8ddeb3a528491ddb27525d28853432
+-export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5
+-exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5/launch/pai_phase1b_stage.sh "$@"
++export R16P19_EXPECTED_COMMIT=49e2bfe240c4f7d9dcc425c1ab35426ee95e7301
++export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe
++export R16P19_PHASE1B_OUTPUT_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment
++export R16P19_PHASE1B_CHECKPOINT_ROOT=/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2
++exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe/launch/pai_phase1b_stage.sh "$@"
+diff --git a/launchers/r16p19_libero_phase1b_qualify_primary.sh b/launchers/r16p19_libero_phase1b_qualify_primary.sh
+index 1d98a2c1..8b297cdb 100755
+--- a/launchers/r16p19_libero_phase1b_qualify_primary.sh
++++ b/launchers/r16p19_libero_phase1b_qualify_primary.sh
+@@ -1,6 +1,8 @@
+ #!/usr/bin/env bash
+ set -Eeuo pipefail
+ export R16P19_PHASE1B_STAGE=qualify-primary
+-export R16P19_EXPECTED_COMMIT=bf06ef5b2e8ddeb3a528491ddb27525d28853432
+-export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5
+-exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5/launch/pai_phase1b_stage.sh "$@"
++export R16P19_EXPECTED_COMMIT=49e2bfe240c4f7d9dcc425c1ab35426ee95e7301
++export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe
++export R16P19_PHASE1B_OUTPUT_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment
++export R16P19_PHASE1B_CHECKPOINT_ROOT=/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2
++exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe/launch/pai_phase1b_stage.sh "$@"
+diff --git a/launchers/r16p19_libero_phase1b_train_fallback.sh b/launchers/r16p19_libero_phase1b_train_fallback.sh
+index 52e6e10a..6bccac1b 100755
+--- a/launchers/r16p19_libero_phase1b_train_fallback.sh
++++ b/launchers/r16p19_libero_phase1b_train_fallback.sh
+@@ -1,6 +1,8 @@
+ #!/usr/bin/env bash
+ set -Eeuo pipefail
+ export R16P19_PHASE1B_STAGE=train-fallback
+-export R16P19_EXPECTED_COMMIT=bf06ef5b2e8ddeb3a528491ddb27525d28853432
+-export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5
+-exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5/launch/pai_phase1b_stage.sh "$@"
++export R16P19_EXPECTED_COMMIT=49e2bfe240c4f7d9dcc425c1ab35426ee95e7301
++export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe
++export R16P19_PHASE1B_OUTPUT_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment
++export R16P19_PHASE1B_CHECKPOINT_ROOT=/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2
++exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe/launch/pai_phase1b_stage.sh "$@"
+diff --git a/launchers/r16p19_libero_phase1b_train_primary.sh b/launchers/r16p19_libero_phase1b_train_primary.sh
+index 902235bf..145a428d 100755
+--- a/launchers/r16p19_libero_phase1b_train_primary.sh
++++ b/launchers/r16p19_libero_phase1b_train_primary.sh
+@@ -1,6 +1,8 @@
+ #!/usr/bin/env bash
+ set -Eeuo pipefail
+ export R16P19_PHASE1B_STAGE=train-primary
+-export R16P19_EXPECTED_COMMIT=bf06ef5b2e8ddeb3a528491ddb27525d28853432
+-export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5
+-exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-bf06ef5/launch/pai_phase1b_stage.sh "$@"
++export R16P19_EXPECTED_COMMIT=49e2bfe240c4f7d9dcc425c1ab35426ee95e7301
++export R16P19_PHASE1B_CODE_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe
++export R16P19_PHASE1B_OUTPUT_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment
++export R16P19_PHASE1B_CHECKPOINT_ROOT=/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2
++exec /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-libero-phase1b-49e2bfe/launch/pai_phase1b_stage.sh "$@"
+diff --git a/templates/r16p19-libero-phase1b-closed-loop-exp-efficiency-2gpu.json b/templates/r16p19-libero-phase1b-closed-loop-exp-efficiency-2gpu.json
+index 6b4b25b7..dbb78e90 100644
+--- a/templates/r16p19-libero-phase1b-closed-loop-exp-efficiency-2gpu.json
++++ b/templates/r16p19-libero-phase1b-closed-loop-exp-efficiency-2gpu.json
+@@ -21,7 +21,7 @@
+       {"id": "d-ejgj2ej7io1t2t32uc", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon", "options": ""},
+       {"id": "d-7fi8hehav247qi6x5o", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/", "options": ""}
+     ],
+-    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/pai"
++    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/pai"
+   },
+   "worker": {
+     "count": 1,
+@@ -47,8 +47,8 @@
+     },
+     "write_paths": [
+       "{{ARTIFACT_DIR}}",
+-      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
+-      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1"
++      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
++      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2"
+     ],
+     "output_mode": "resume",
+     "create_artifact_dir": true,
+@@ -74,20 +74,20 @@
+     "model_id": "effect_conditioned_state_act_or_preregistered_per_effect_fallback",
+     "model_run_id": "r16p19_libero_phase1b_v1",
+     "success_gate": "formal_actor_gate_pass_then_complete_800_rollouts_and_final_status",
+-    "validation_method": "14_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
++    "validation_method": "16_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
+     "validation_status": "passed; local EGL unavailable; no PAI probe created",
+     "pai_probe_created": false,
+     "first_work_evidence_path": "{{ARTIFACT_DIR}}/phase1b-launch-contract.json",
+     "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
+     "contract_ready": true,
+-    "source_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
++    "source_commit": "49e2bfe240c4f7d9dcc425c1ab35426ee95e7301",
+     "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+     "dataset_sha256": ["6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9", "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"],
+     "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
+     "checkpoint_retention": "retain_every_complete_phase1b_candidate_checkpoint",
+     "checkpoint_interval_steps": 2500,
+-    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1",
+-    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2",
++    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
+     "expected_primary_max_optimizer_step": 20000,
+     "expected_fallback_max_optimizer_step_per_effect": 10000,
+     "policy": "memory_independent_effect_conditioned_state_act",
+diff --git a/templates/r16p19-libero-phase1b-formal-gate-exp-efficiency-2gpu.json b/templates/r16p19-libero-phase1b-formal-gate-exp-efficiency-2gpu.json
+index a271bc99..9bc255e6 100644
+--- a/templates/r16p19-libero-phase1b-formal-gate-exp-efficiency-2gpu.json
++++ b/templates/r16p19-libero-phase1b-formal-gate-exp-efficiency-2gpu.json
+@@ -21,7 +21,7 @@
+       {"id": "d-ejgj2ej7io1t2t32uc", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon", "options": ""},
+       {"id": "d-7fi8hehav247qi6x5o", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/", "options": ""}
+     ],
+-    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/pai"
++    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/pai"
+   },
+   "worker": {
+     "count": 1,
+@@ -47,8 +47,8 @@
+     },
+     "write_paths": [
+       "{{ARTIFACT_DIR}}",
+-      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
+-      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1"
++      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
++      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2"
+     ],
+     "output_mode": "resume",
+     "create_artifact_dir": true,
+@@ -74,20 +74,20 @@
+     "model_id": "effect_conditioned_state_act_or_preregistered_per_effect_fallback",
+     "model_run_id": "r16p19_libero_phase1b_v1",
+     "success_gate": "frozen_actor_complete_init0_19_gate_exactly_once",
+-    "validation_method": "14_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
++    "validation_method": "16_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
+     "validation_status": "passed; local EGL unavailable; no PAI probe created",
+     "pai_probe_created": false,
+     "first_work_evidence_path": "{{ARTIFACT_DIR}}/phase1b-launch-contract.json",
+     "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
+     "contract_ready": true,
+-    "source_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
++    "source_commit": "49e2bfe240c4f7d9dcc425c1ab35426ee95e7301",
+     "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+     "dataset_sha256": ["6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9", "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"],
+     "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
+     "checkpoint_retention": "retain_every_complete_phase1b_candidate_checkpoint",
+     "checkpoint_interval_steps": 2500,
+-    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1",
+-    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2",
++    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
+     "expected_primary_max_optimizer_step": 20000,
+     "expected_fallback_max_optimizer_step_per_effect": 10000,
+     "policy": "memory_independent_effect_conditioned_state_act",
+diff --git a/templates/r16p19-libero-phase1b-qualify-fallback-exp-efficiency-2gpu.json b/templates/r16p19-libero-phase1b-qualify-fallback-exp-efficiency-2gpu.json
+index 7ac6db4b..5a7c855b 100644
+--- a/templates/r16p19-libero-phase1b-qualify-fallback-exp-efficiency-2gpu.json
++++ b/templates/r16p19-libero-phase1b-qualify-fallback-exp-efficiency-2gpu.json
+@@ -21,7 +21,7 @@
+       {"id": "d-ejgj2ej7io1t2t32uc", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon", "options": ""},
+       {"id": "d-7fi8hehav247qi6x5o", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/", "options": ""}
+     ],
+-    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/pai"
++    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/pai"
+   },
+   "worker": {
+     "count": 1,
+@@ -47,8 +47,8 @@
+     },
+     "write_paths": [
+       "{{ARTIFACT_DIR}}",
+-      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
+-      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1"
++      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
++      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2"
+     ],
+     "output_mode": "resume",
+     "create_artifact_dir": true,
+@@ -74,20 +74,20 @@
+     "model_id": "effect_conditioned_state_act_or_preregistered_per_effect_fallback",
+     "model_run_id": "r16p19_libero_phase1b_v1",
+     "success_gate": "persisted_first_rollout_and_complete_init20_39_actor_gate",
+-    "validation_method": "14_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
++    "validation_method": "16_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
+     "validation_status": "passed; local EGL unavailable; no PAI probe created",
+     "pai_probe_created": false,
+     "first_work_evidence_path": "{{ARTIFACT_DIR}}/phase1b-launch-contract.json",
+     "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
+     "contract_ready": true,
+-    "source_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
++    "source_commit": "49e2bfe240c4f7d9dcc425c1ab35426ee95e7301",
+     "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+     "dataset_sha256": ["6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9", "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"],
+     "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
+     "checkpoint_retention": "retain_every_complete_phase1b_candidate_checkpoint",
+     "checkpoint_interval_steps": 2500,
+-    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1",
+-    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2",
++    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
+     "expected_primary_max_optimizer_step": 20000,
+     "expected_fallback_max_optimizer_step_per_effect": 10000,
+     "policy": "memory_independent_effect_conditioned_state_act",
+diff --git a/templates/r16p19-libero-phase1b-qualify-primary-exp-efficiency-2gpu.json b/templates/r16p19-libero-phase1b-qualify-primary-exp-efficiency-2gpu.json
+index 35750be1..c95fb0f5 100644
+--- a/templates/r16p19-libero-phase1b-qualify-primary-exp-efficiency-2gpu.json
++++ b/templates/r16p19-libero-phase1b-qualify-primary-exp-efficiency-2gpu.json
+@@ -21,7 +21,7 @@
+       {"id": "d-ejgj2ej7io1t2t32uc", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon", "options": ""},
+       {"id": "d-7fi8hehav247qi6x5o", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/", "options": ""}
+     ],
+-    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/pai"
++    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/pai"
+   },
+   "worker": {
+     "count": 1,
+@@ -47,8 +47,8 @@
+     },
+     "write_paths": [
+       "{{ARTIFACT_DIR}}",
+-      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
+-      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1"
++      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
++      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2"
+     ],
+     "output_mode": "resume",
+     "create_artifact_dir": true,
+@@ -74,20 +74,20 @@
+     "model_id": "effect_conditioned_state_act_or_preregistered_per_effect_fallback",
+     "model_run_id": "r16p19_libero_phase1b_v1",
+     "success_gate": "persisted_first_rollout_and_complete_init20_39_actor_gate",
+-    "validation_method": "14_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
++    "validation_method": "16_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
+     "validation_status": "passed; local EGL unavailable; no PAI probe created",
+     "pai_probe_created": false,
+     "first_work_evidence_path": "{{ARTIFACT_DIR}}/phase1b-launch-contract.json",
+     "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
+     "contract_ready": true,
+-    "source_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
++    "source_commit": "49e2bfe240c4f7d9dcc425c1ab35426ee95e7301",
+     "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+     "dataset_sha256": ["6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9", "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"],
+     "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
+     "checkpoint_retention": "retain_every_complete_phase1b_candidate_checkpoint",
+     "checkpoint_interval_steps": 2500,
+-    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1",
+-    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2",
++    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
+     "expected_primary_max_optimizer_step": 20000,
+     "expected_fallback_max_optimizer_step_per_effect": 10000,
+     "policy": "memory_independent_effect_conditioned_state_act",
+diff --git a/templates/r16p19-libero-phase1b-train-fallback-exp-efficiency-2gpu.json b/templates/r16p19-libero-phase1b-train-fallback-exp-efficiency-2gpu.json
+index 8983a10a..15b92e9c 100644
+--- a/templates/r16p19-libero-phase1b-train-fallback-exp-efficiency-2gpu.json
++++ b/templates/r16p19-libero-phase1b-train-fallback-exp-efficiency-2gpu.json
+@@ -21,7 +21,7 @@
+       {"id": "d-ejgj2ej7io1t2t32uc", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon", "options": ""},
+       {"id": "d-7fi8hehav247qi6x5o", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/", "options": ""}
+     ],
+-    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/pai"
++    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/pai"
+   },
+   "worker": {
+     "count": 1,
+@@ -47,8 +47,8 @@
+     },
+     "write_paths": [
+       "{{ARTIFACT_DIR}}",
+-      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
+-      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1"
++      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
++      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2"
+     ],
+     "output_mode": "resume",
+     "create_artifact_dir": true,
+@@ -74,20 +74,20 @@
+     "model_id": "effect_conditioned_state_act_or_preregistered_per_effect_fallback",
+     "model_run_id": "r16p19_libero_phase1b_v1",
+     "success_gate": "primary_gate_failed_then_eight_selected_complete_checkpoints",
+-    "validation_method": "14_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
++    "validation_method": "16_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
+     "validation_status": "passed; local EGL unavailable; no PAI probe created",
+     "pai_probe_created": false,
+     "first_work_evidence_path": "{{ARTIFACT_DIR}}/phase1b-launch-contract.json",
+     "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
+     "contract_ready": true,
+-    "source_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
++    "source_commit": "49e2bfe240c4f7d9dcc425c1ab35426ee95e7301",
+     "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+     "dataset_sha256": ["6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9", "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"],
+     "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
+     "checkpoint_retention": "retain_every_complete_phase1b_candidate_checkpoint",
+     "checkpoint_interval_steps": 2500,
+-    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1",
+-    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2",
++    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
+     "expected_primary_max_optimizer_step": 20000,
+     "expected_fallback_max_optimizer_step_per_effect": 10000,
+     "policy": "memory_independent_effect_conditioned_state_act",
+diff --git a/templates/r16p19-libero-phase1b-train-primary-exp-efficiency-2gpu.json b/templates/r16p19-libero-phase1b-train-primary-exp-efficiency-2gpu.json
+index 9869f0de..4548e72d 100644
+--- a/templates/r16p19-libero-phase1b-train-primary-exp-efficiency-2gpu.json
++++ b/templates/r16p19-libero-phase1b-train-primary-exp-efficiency-2gpu.json
+@@ -21,7 +21,7 @@
+       {"id": "d-ejgj2ej7io1t2t32uc", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon", "options": ""},
+       {"id": "d-7fi8hehav247qi6x5o", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/", "options": ""}
+     ],
+-    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/pai"
++    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/pai"
+   },
+   "worker": {
+     "count": 1,
+@@ -47,8 +47,8 @@
+     },
+     "write_paths": [
+       "{{ARTIFACT_DIR}}",
+-      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
+-      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1"
++      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
++      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2"
+     ],
+     "output_mode": "resume",
+     "create_artifact_dir": true,
+@@ -74,20 +74,20 @@
+     "model_id": "effect_conditioned_state_act_or_preregistered_per_effect_fallback",
+     "model_run_id": "r16p19_libero_phase1b_v1",
+     "success_gate": "persisted_optimizer_step_loss_and_selected_complete_checkpoint",
+-    "validation_method": "14_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
++    "validation_method": "16_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
+     "validation_status": "passed; local EGL unavailable; no PAI probe created",
+     "pai_probe_created": false,
+     "first_work_evidence_path": "{{ARTIFACT_DIR}}/phase1b-launch-contract.json",
+     "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
+     "contract_ready": true,
+-    "source_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
++    "source_commit": "49e2bfe240c4f7d9dcc425c1ab35426ee95e7301",
+     "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+     "dataset_sha256": ["6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9", "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"],
+     "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
+     "checkpoint_retention": "retain_every_complete_phase1b_candidate_checkpoint",
+     "checkpoint_interval_steps": 2500,
+-    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1",
+-    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2",
++    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
+     "expected_primary_max_optimizer_step": 20000,
+     "expected_fallback_max_optimizer_step_per_effect": 10000,
+     "policy": "memory_independent_effect_conditioned_state_act",
+-- 
+2.34.1
+
