@@ -32,7 +32,11 @@ def make_env(task: TaskSpec, camera_obs: bool = False):
     )
 
 
-def reset_to_state(env, state: np.ndarray):
+def reset_to_state(env, state: np.ndarray, seed: int = None):
+    if seed is not None:
+        seed = int(seed)
+        np.random.seed(seed)
+        env.seed(seed)
     env.reset()
     observation = env.set_init_state(np.asarray(state, dtype=np.float64))
     controller = env.robots[0].controller

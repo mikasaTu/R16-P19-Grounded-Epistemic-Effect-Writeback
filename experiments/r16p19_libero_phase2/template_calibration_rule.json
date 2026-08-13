@@ -1,0 +1,20 @@
+{
+  "calibration_demo_indices": [30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+  "calibration_unit": "task_effect_source_template_demo_episode",
+  "effect_truth_use": "evaluation_only_outside_executor",
+  "episode_exclusion": "exclude_an_episode_for_an_effect_when_its_transition_was_inferred",
+  "executor_attempts_per_unit": 1,
+  "executed_prefix": 4,
+  "maximum_chunks_per_unit": 40,
+  "minimum_retained_success_when_best_reaches_0_90": 0.9,
+  "pruning_rule": "retain_each_template_with_success_rate_at_least_max(best_success_minus_0_10,minimum_retained_success_if_applicable)",
+  "schema_version": 1,
+  "selection_data_excludes": [
+    "demo_40_to_49",
+    "init_40_to_59",
+    "qualification_init_60_to_79",
+    "formal_init_0_to_19"
+  ],
+  "selection_tie_break": "mean_success_steps_then_template_sha256",
+  "selection_uses_only_demo_30_to_39": true
+}

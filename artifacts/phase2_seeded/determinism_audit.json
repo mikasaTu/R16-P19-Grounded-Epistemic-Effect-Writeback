@@ -1,0 +1,25 @@
+{
+  "audit_status": "PASS",
+  "comparison_ignored_fields": [
+    "gate_name"
+  ],
+  "independent_execution_count": 2,
+  "rollout_seed_rule": "1619 + 1000 * task_ordinal + init_index",
+  "rows": [
+    {
+      "canonical_row_sha256": "400d42db19705a82d7d0373decfc728971cbde38f37a95ff71e4f4b6253bfd1e",
+      "init_index": 40,
+      "task_key": "stove_moka"
+    },
+    {
+      "canonical_row_sha256": "05d91939dc985679921b8370c9f0a32d4049241d546340339f8a6a7ae60b49e8",
+      "init_index": 40,
+      "task_key": "bowl_drawer"
+    }
+  ],
+  "schema_version": 1,
+  "source_paths": [
+    "artifacts/phase2/determinism/seed_repeat_a/seed_repeat_a_rollouts.jsonl",
+    "artifacts/phase2/determinism/seed_repeat_b/seed_repeat_b_rollouts.jsonl"
+  ]
+}

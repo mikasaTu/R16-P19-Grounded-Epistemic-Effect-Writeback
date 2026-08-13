@@ -1,0 +1,81 @@
+{
+  "executor_manifest": {
+    "action_horizon": 8,
+    "executed_prefix": 4,
+    "executor": "RetargetedGeometricSkillExecutor",
+    "forbidden_inputs": [
+      "memory",
+      "epistemic_state",
+      "fault_identity",
+      "effect_truth",
+      "reward",
+      "task_success",
+      "future_state",
+      "init_index"
+    ],
+    "manifest_sha256": "a8ad2858789ffb1db5bc0c77d54cc515a94c4ae709e713660f3f41c08717c916",
+    "orientation_gain": 2.0,
+    "position_gain": 10.0,
+    "position_tolerance_m": 0.015,
+    "template_counts": {
+      "bowl_drawer/BOTTOM_DRAWER_CLOSED": 3,
+      "bowl_drawer/BOWL_GRASPED": 3,
+      "bowl_drawer/BOWL_IN_BOTTOM_DRAWER": 3,
+      "bowl_drawer/BOWL_RELEASED_IN_DRAWER": 3,
+      "stove_moka/MOKA_GRASPED": 3,
+      "stove_moka/MOKA_ON_STOVE": 3,
+      "stove_moka/MOKA_RELEASED_ON_STOVE": 3,
+      "stove_moka/STOVE_TURNED_ON": 3
+    },
+    "variant": "add_effect_local_frame_retargeting"
+  },
+  "failure_video_count": 0,
+  "full_task_success_rate": 0.0,
+  "gate_name": "a1_local_open",
+  "init_indices": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+  ],
+  "mean_action_steps": 366.55,
+  "min_per_effect_success": 0.0,
+  "per_effect_success": {
+    "bowl_drawer": {
+      "BOTTOM_DRAWER_CLOSED": 0.0,
+      "BOWL_GRASPED": 0.05,
+      "BOWL_IN_BOTTOM_DRAWER": 0.0,
+      "BOWL_RELEASED_IN_DRAWER": 0.0
+    },
+    "stove_moka": {
+      "MOKA_GRASPED": 0.0,
+      "MOKA_ON_STOVE": 0.0,
+      "MOKA_RELEASED_ON_STOVE": 0.0,
+      "STOVE_TURNED_ON": 1.0
+    }
+  },
+  "per_task_full_success": {
+    "bowl_drawer": 0.0,
+    "stove_moka": 0.0
+  },
+  "repeated_action_loop_rate": 1.0,
+  "rollout_count": 40,
+  "selection_used_gate_results": false,
+  "status": "CLEAN_GATE_COMPLETE"
+}
