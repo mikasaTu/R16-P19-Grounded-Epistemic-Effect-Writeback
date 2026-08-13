@@ -1,0 +1,19 @@
+{
+  "action_horizon": 8,
+  "causal_history": "current_and_past_states_only_left_padded_with_episode_first",
+  "chunk_boundary": "never_cross_current_effect_segment_stop",
+  "effect_counts": {
+    "BOTTOM_DRAWER_CLOSED": 869,
+    "BOWL_GRASPED": 1058,
+    "BOWL_IN_BOTTOM_DRAWER": 551,
+    "BOWL_RELEASED_IN_DRAWER": 230,
+    "MOKA_GRASPED": 1204,
+    "MOKA_ON_STOVE": 531,
+    "MOKA_RELEASED_ON_STOVE": 75,
+    "STOVE_TURNED_ON": 886
+  },
+  "history_length": 4,
+  "missing_effect_policy": "excluded_without_fabrication",
+  "sample_count": 5404,
+  "split": "calibration"
+}

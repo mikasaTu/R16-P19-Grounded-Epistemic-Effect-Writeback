@@ -1,0 +1,663 @@
+{
+  "all_complete_steps": [
+    2500,
+    5000,
+    7500,
+    10000,
+    12500,
+    15000
+  ],
+  "calibration_samples": 5404,
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "calibration": {
+        "macro": {
+          "continuous_smooth_l1": 0.13664129840352346,
+          "gripper_weighted_bce": 0.9753942348152211,
+          "total": 1.1120355211712118
+        },
+        "per_effect": {
+          "BOTTOM_DRAWER_CLOSED": {
+            "continuous_smooth_l1": 0.24813960282554287,
+            "gripper_weighted_bce": 0.2540223629774378,
+            "sample_mode_pairs": 1738,
+            "total": 0.5021619658029807
+          },
+          "BOWL_GRASPED": {
+            "continuous_smooth_l1": 0.1187388102729965,
+            "gripper_weighted_bce": 0.15955831147096558,
+            "sample_mode_pairs": 2116,
+            "total": 0.27829711789895545
+          },
+          "BOWL_IN_BOTTOM_DRAWER": {
+            "continuous_smooth_l1": 0.11608692762288121,
+            "gripper_weighted_bce": 0.0058418784833045925,
+            "sample_mode_pairs": 1102,
+            "total": 0.12192880587412311
+          },
+          "BOWL_RELEASED_IN_DRAWER": {
+            "continuous_smooth_l1": 0.16268619149923325,
+            "gripper_weighted_bce": 1.3422276973724365,
+            "sample_mode_pairs": 460,
+            "total": 1.5049139261245728
+          },
+          "MOKA_GRASPED": {
+            "continuous_smooth_l1": 0.14286205272787433,
+            "gripper_weighted_bce": 0.5502591919265316,
+            "sample_mode_pairs": 2408,
+            "total": 0.6931212415726874
+          },
+          "MOKA_ON_STOVE": {
+            "continuous_smooth_l1": 0.10896388514286605,
+            "gripper_weighted_bce": 0.2846980638198709,
+            "sample_mode_pairs": 1062,
+            "total": 0.39366194443065117
+          },
+          "MOKA_RELEASED_ON_STOVE": {
+            "continuous_smooth_l1": 0.10889900475740433,
+            "gripper_weighted_bce": 4.804461479187012,
+            "sample_mode_pairs": 150,
+            "total": 4.913360357284546
+          },
+          "STOVE_TURNED_ON": {
+            "continuous_smooth_l1": 0.08675391237938915,
+            "gripper_weighted_bce": 0.40208489328421,
+            "sample_mode_pairs": 1772,
+            "total": 0.48883881038117893
+          }
+        }
+      },
+      "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1/primary_shared/step_000010000",
+      "checkpoint_sha256": "22f6079221f8e6bf3c8858ce41406848f0e26e595a0ae2f2c0ae36dd7d232c15",
+      "complete_state_keys": [
+        "global_step",
+        "model",
+        "optimizer",
+        "rng",
+        "scheduler"
+      ],
+      "global_step": 10000,
+      "model_config": {
+        "action_dim": 7,
+        "action_horizon": 8,
+        "attention_heads": 8,
+        "dropout": 0.1,
+        "executed_prefix": 4,
+        "feedforward_multiplier": 4,
+        "hidden_dim": 256,
+        "history_length": 4,
+        "state_dim": 64,
+        "transformer_layers": 4
+      },
+      "model_manifest": {
+        "actor_forbidden_inputs": [
+          "memory_summary",
+          "epistemic_state",
+          "simulator_effect_truth",
+          "future_state"
+        ],
+        "architecture": {
+          "action_dim": 7,
+          "action_horizon": 8,
+          "attention_heads": 8,
+          "dropout": 0.1,
+          "executed_prefix": 4,
+          "feedforward_multiplier": 4,
+          "hidden_dim": 256,
+          "history_length": 4,
+          "state_dim": 64,
+          "transformer_layers": 4
+        },
+        "effect_keys": [
+          "STOVE_TURNED_ON",
+          "MOKA_GRASPED",
+          "MOKA_ON_STOVE",
+          "MOKA_RELEASED_ON_STOVE",
+          "BOWL_GRASPED",
+          "BOWL_IN_BOTTOM_DRAWER",
+          "BOWL_RELEASED_IN_DRAWER",
+          "BOTTOM_DRAWER_CLOSED"
+        ],
+        "execution_modes": [
+          "EXECUTE",
+          "RETRY"
+        ],
+        "parameter_count": 3186951,
+        "task_keys": [
+          "stove_moka",
+          "bowl_drawer"
+        ]
+      },
+      "normalization_sha256": "9725c1da980f0416ca3f421f2e4bb2202ca248e608e0658854ecd874c4eac0c8",
+      "selection_metric": 1.1120355211712118
+    },
+    {
+      "calibration": {
+        "macro": {
+          "continuous_smooth_l1": 0.13804423397026647,
+          "gripper_weighted_bce": 1.0433770092492023,
+          "total": 1.1814212355420715
+        },
+        "per_effect": {
+          "BOTTOM_DRAWER_CLOSED": {
+            "continuous_smooth_l1": 0.2502539098194197,
+            "gripper_weighted_bce": 0.27324309276354736,
+            "sample_mode_pairs": 1738,
+            "total": 0.5234970201419878
+          },
+          "BOWL_GRASPED": {
+            "continuous_smooth_l1": 0.11724336773495142,
+            "gripper_weighted_bce": 0.18802753293671995,
+            "sample_mode_pairs": 2116,
+            "total": 0.3052709071645214
+          },
+          "BOWL_IN_BOTTOM_DRAWER": {
+            "continuous_smooth_l1": 0.11523363678403428,
+            "gripper_weighted_bce": 0.009557626632133678,
+            "sample_mode_pairs": 1102,
+            "total": 0.12479125709017695
+          },
+          "BOWL_RELEASED_IN_DRAWER": {
+            "continuous_smooth_l1": 0.16645709425210953,
+            "gripper_weighted_bce": 1.3550904989242554,
+            "sample_mode_pairs": 460,
+            "total": 1.521547555923462
+          },
+          "MOKA_GRASPED": {
+            "continuous_smooth_l1": 0.1426096693968456,
+            "gripper_weighted_bce": 0.6135977243268212,
+            "sample_mode_pairs": 2408,
+            "total": 0.7562073964217176
+          },
+          "MOKA_ON_STOVE": {
+            "continuous_smooth_l1": 0.1117468343840705,
+            "gripper_weighted_bce": 0.27013159247216983,
+            "sample_mode_pairs": 1062,
+            "total": 0.3818784253969929
+          },
+          "MOKA_RELEASED_ON_STOVE": {
+            "continuous_smooth_l1": 0.11112574487924576,
+            "gripper_weighted_bce": 5.181505918502808,
+            "sample_mode_pairs": 150,
+            "total": 5.29263162612915
+          },
+          "STOVE_TURNED_ON": {
+            "continuous_smooth_l1": 0.08968361451145489,
+            "gripper_weighted_bce": 0.45586208743516266,
+            "sample_mode_pairs": 1772,
+            "total": 0.5455456960685635
+          }
+        }
+      },
+      "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1/primary_shared/step_000012500",
+      "checkpoint_sha256": "10b6c8f0dc6c09e2ce9848a359877de3a4603835cff391aa68ea4536dd28105b",
+      "complete_state_keys": [
+        "global_step",
+        "model",
+        "optimizer",
+        "rng",
+        "scheduler"
+      ],
+      "global_step": 12500,
+      "model_config": {
+        "action_dim": 7,
+        "action_horizon": 8,
+        "attention_heads": 8,
+        "dropout": 0.1,
+        "executed_prefix": 4,
+        "feedforward_multiplier": 4,
+        "hidden_dim": 256,
+        "history_length": 4,
+        "state_dim": 64,
+        "transformer_layers": 4
+      },
+      "model_manifest": {
+        "actor_forbidden_inputs": [
+          "memory_summary",
+          "epistemic_state",
+          "simulator_effect_truth",
+          "future_state"
+        ],
+        "architecture": {
+          "action_dim": 7,
+          "action_horizon": 8,
+          "attention_heads": 8,
+          "dropout": 0.1,
+          "executed_prefix": 4,
+          "feedforward_multiplier": 4,
+          "hidden_dim": 256,
+          "history_length": 4,
+          "state_dim": 64,
+          "transformer_layers": 4
+        },
+        "effect_keys": [
+          "STOVE_TURNED_ON",
+          "MOKA_GRASPED",
+          "MOKA_ON_STOVE",
+          "MOKA_RELEASED_ON_STOVE",
+          "BOWL_GRASPED",
+          "BOWL_IN_BOTTOM_DRAWER",
+          "BOWL_RELEASED_IN_DRAWER",
+          "BOTTOM_DRAWER_CLOSED"
+        ],
+        "execution_modes": [
+          "EXECUTE",
+          "RETRY"
+        ],
+        "parameter_count": 3186951,
+        "task_keys": [
+          "stove_moka",
+          "bowl_drawer"
+        ]
+      },
+      "normalization_sha256": "9725c1da980f0416ca3f421f2e4bb2202ca248e608e0658854ecd874c4eac0c8",
+      "selection_metric": 1.1814212355420715
+    },
+    {
+      "calibration": {
+        "macro": {
+          "continuous_smooth_l1": 0.13787441870191963,
+          "gripper_weighted_bce": 1.2028905931414566,
+          "total": 1.3407650072742547
+        },
+        "per_effect": {
+          "BOTTOM_DRAWER_CLOSED": {
+            "continuous_smooth_l1": 0.25037411836129203,
+            "gripper_weighted_bce": 0.2818380822400778,
+            "sample_mode_pairs": 1738,
+            "total": 0.5322121975405444
+          },
+          "BOWL_GRASPED": {
+            "continuous_smooth_l1": 0.1183432199638372,
+            "gripper_weighted_bce": 0.24759071434377947,
+            "sample_mode_pairs": 2116,
+            "total": 0.3659339435609843
+          },
+          "BOWL_IN_BOTTOM_DRAWER": {
+            "continuous_smooth_l1": 0.11638722976436416,
+            "gripper_weighted_bce": 0.004107606372394561,
+            "sample_mode_pairs": 1102,
+            "total": 0.1204948357210077
+          },
+          "BOWL_RELEASED_IN_DRAWER": {
+            "continuous_smooth_l1": 0.16356249153614044,
+            "gripper_weighted_bce": 1.5101856589317322,
+            "sample_mode_pairs": 460,
+            "total": 1.6737481355667114
+          },
+          "MOKA_GRASPED": {
+            "continuous_smooth_l1": 0.14366431766966253,
+            "gripper_weighted_bce": 0.7500185275394655,
+            "sample_mode_pairs": 2408,
+            "total": 0.8936828483774812
+          },
+          "MOKA_ON_STOVE": {
+            "continuous_smooth_l1": 0.10994964431122423,
+            "gripper_weighted_bce": 0.28763203162931456,
+            "sample_mode_pairs": 1062,
+            "total": 0.39758167473385336
+          },
+          "MOKA_RELEASED_ON_STOVE": {
+            "continuous_smooth_l1": 0.11019256711006165,
+            "gripper_weighted_bce": 6.020728588104248,
+            "sample_mode_pairs": 150,
+            "total": 6.130921125411987
+          },
+          "STOVE_TURNED_ON": {
+            "continuous_smooth_l1": 0.09052176089877469,
+            "gripper_weighted_bce": 0.5210235359706406,
+            "sample_mode_pairs": 1772,
+            "total": 0.6115452972814677
+          }
+        }
+      },
+      "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1/primary_shared/step_000015000",
+      "checkpoint_sha256": "8100567862913e5152e263f9f34f7e4a634d3a7fa5c7e06edbfbd4b366a31557",
+      "complete_state_keys": [
+        "global_step",
+        "model",
+        "optimizer",
+        "rng",
+        "scheduler"
+      ],
+      "global_step": 15000,
+      "model_config": {
+        "action_dim": 7,
+        "action_horizon": 8,
+        "attention_heads": 8,
+        "dropout": 0.1,
+        "executed_prefix": 4,
+        "feedforward_multiplier": 4,
+        "hidden_dim": 256,
+        "history_length": 4,
+        "state_dim": 64,
+        "transformer_layers": 4
+      },
+      "model_manifest": {
+        "actor_forbidden_inputs": [
+          "memory_summary",
+          "epistemic_state",
+          "simulator_effect_truth",
+          "future_state"
+        ],
+        "architecture": {
+          "action_dim": 7,
+          "action_horizon": 8,
+          "attention_heads": 8,
+          "dropout": 0.1,
+          "executed_prefix": 4,
+          "feedforward_multiplier": 4,
+          "hidden_dim": 256,
+          "history_length": 4,
+          "state_dim": 64,
+          "transformer_layers": 4
+        },
+        "effect_keys": [
+          "STOVE_TURNED_ON",
+          "MOKA_GRASPED",
+          "MOKA_ON_STOVE",
+          "MOKA_RELEASED_ON_STOVE",
+          "BOWL_GRASPED",
+          "BOWL_IN_BOTTOM_DRAWER",
+          "BOWL_RELEASED_IN_DRAWER",
+          "BOTTOM_DRAWER_CLOSED"
+        ],
+        "execution_modes": [
+          "EXECUTE",
+          "RETRY"
+        ],
+        "parameter_count": 3186951,
+        "task_keys": [
+          "stove_moka",
+          "bowl_drawer"
+        ]
+      },
+      "normalization_sha256": "9725c1da980f0416ca3f421f2e4bb2202ca248e608e0658854ecd874c4eac0c8",
+      "selection_metric": 1.3407650072742547
+    }
+  ],
+  "effect_index": null,
+  "family": "primary_shared",
+  "final_complete_step": 15000,
+  "normalization": {
+    "continuous_action_mean": [
+      0.04458199441432953,
+      0.08010368049144745,
+      -0.10359037667512894,
+      0.016272569075226784,
+      0.00043757876846939325,
+      0.013260637409985065
+    ],
+    "continuous_action_std": [
+      0.24422937631607056,
+      0.32188063859939575,
+      0.3625654876232147,
+      0.04300294443964958,
+      0.06113288179039955,
+      0.1154274269938469
+    ],
+    "gripper_negative_count": 73043,
+    "gripper_positive_count": 52645,
+    "gripper_positive_weight": 1.3874631968847944,
+    "state_mean": [
+      0.006782010663300753,
+      0.5327888131141663,
+      0.06496550142765045,
+      -1.889121651649475,
+      0.13109518587589264,
+      2.4050045013427734,
+      0.7789624929428101,
+      0.027039386332035065,
+      -0.026313913986086845,
+      -0.017691897228360176,
+      -0.10647998750209808,
+      0.9170849919319153,
+      0.7207428812980652,
+      0.002133813453838229,
+      0.008757593110203743,
+      0.6889471411705017,
+      -0.050031937658786774,
+      0.0316285640001297,
+      0.9419675469398499,
+      -0.00974140502512455,
+      -0.00030278819031082094,
+      -0.0015667248517274857,
+      0.9987607002258301,
+      0.4249591827392578,
+      -0.0030752094462513924,
+      -0.03611386939883232,
+      0.010584617033600807,
+      0.07521301507949829,
+      0.025166664272546768,
+      0.04869956150650978,
+      -0.06699275970458984,
+      -0.006707814522087574,
+      0.04269661009311676,
+      -4.8522026190767065e-05,
+      -3.4946178857353516e-06,
+      -0.001772593124769628,
+      0.013057027012109756,
+      -0.0005783627857454121,
+      -0.001529006171040237,
+      -0.00365567859262228,
+      0.0021593975834548473,
+      0.0005631194799207151,
+      -0.00211336393840611,
+      0.00041798874735832214,
+      0.012889265082776546,
+      0.05564107745885849,
+      -1.1943017170779058e-06,
+      1.9938832338084467e-05,
+      6.082752952352166e-05,
+      0.005424067843705416,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "state_std": [
+      0.12748631834983826,
+      0.3023637533187866,
+      0.11060509830713272,
+      0.40288329124450684,
+      0.3146032392978668,
+      0.3287445902824402,
+      1.2856606245040894,
+      0.015265953727066517,
+      0.015715572983026505,
+      0.042694926261901855,
+      0.1659289002418518,
+      0.04049054905772209,
+      0.04067680612206459,
+      0.02339003048837185,
+      0.035015277564525604,
+      0.04717487096786499,
+      0.09806733578443527,
+      0.04760122671723366,
+      0.046974774450063705,
+      0.04199133440852165,
+      0.015404672361910343,
+      0.019141875207424164,
+      0.0049250246956944466,
+      0.5807192921638489,
+      0.06941733509302139,
+      0.1682046800851822,
+      0.10450206696987152,
+      0.22729720175266266,
+      0.1862415224313736,
+      0.262067973613739,
+      0.33055177330970764,
+      0.1865716278553009,
+      0.1987823098897934,
+      0.017768265679478645,
+      0.01661112904548645,
+      0.019086625427007675,
+      0.039342038333415985,
+      0.04531753435730934,
+      0.28009510040283203,
+      0.21424171328544617,
+      0.23372699320316315,
+      0.029154399409890175,
+      0.08790749311447144,
+      0.11015287786722183,
+      0.13229213654994965,
+      0.16241313517093658,
+      0.005401556845754385,
+      0.0010434185387566686,
+      0.0013798020081594586,
+      0.026583626866340637,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05,
+      9.999999747378752e-05
+    ]
+  },
+  "resumed_from_step": 0,
+  "selected_checkpoint": {
+    "calibration": {
+      "macro": {
+        "continuous_smooth_l1": 0.13664129840352346,
+        "gripper_weighted_bce": 0.9753942348152211,
+        "total": 1.1120355211712118
+      },
+      "per_effect": {
+        "BOTTOM_DRAWER_CLOSED": {
+          "continuous_smooth_l1": 0.24813960282554287,
+          "gripper_weighted_bce": 0.2540223629774378,
+          "sample_mode_pairs": 1738,
+          "total": 0.5021619658029807
+        },
+        "BOWL_GRASPED": {
+          "continuous_smooth_l1": 0.1187388102729965,
+          "gripper_weighted_bce": 0.15955831147096558,
+          "sample_mode_pairs": 2116,
+          "total": 0.27829711789895545
+        },
+        "BOWL_IN_BOTTOM_DRAWER": {
+          "continuous_smooth_l1": 0.11608692762288121,
+          "gripper_weighted_bce": 0.0058418784833045925,
+          "sample_mode_pairs": 1102,
+          "total": 0.12192880587412311
+        },
+        "BOWL_RELEASED_IN_DRAWER": {
+          "continuous_smooth_l1": 0.16268619149923325,
+          "gripper_weighted_bce": 1.3422276973724365,
+          "sample_mode_pairs": 460,
+          "total": 1.5049139261245728
+        },
+        "MOKA_GRASPED": {
+          "continuous_smooth_l1": 0.14286205272787433,
+          "gripper_weighted_bce": 0.5502591919265316,
+          "sample_mode_pairs": 2408,
+          "total": 0.6931212415726874
+        },
+        "MOKA_ON_STOVE": {
+          "continuous_smooth_l1": 0.10896388514286605,
+          "gripper_weighted_bce": 0.2846980638198709,
+          "sample_mode_pairs": 1062,
+          "total": 0.39366194443065117
+        },
+        "MOKA_RELEASED_ON_STOVE": {
+          "continuous_smooth_l1": 0.10889900475740433,
+          "gripper_weighted_bce": 4.804461479187012,
+          "sample_mode_pairs": 150,
+          "total": 4.913360357284546
+        },
+        "STOVE_TURNED_ON": {
+          "continuous_smooth_l1": 0.08675391237938915,
+          "gripper_weighted_bce": 0.40208489328421,
+          "sample_mode_pairs": 1772,
+          "total": 0.48883881038117893
+        }
+      }
+    },
+    "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1/primary_shared/step_000010000",
+    "checkpoint_sha256": "22f6079221f8e6bf3c8858ce41406848f0e26e595a0ae2f2c0ae36dd7d232c15",
+    "complete_state_keys": [
+      "global_step",
+      "model",
+      "optimizer",
+      "rng",
+      "scheduler"
+    ],
+    "global_step": 10000,
+    "model_config": {
+      "action_dim": 7,
+      "action_horizon": 8,
+      "attention_heads": 8,
+      "dropout": 0.1,
+      "executed_prefix": 4,
+      "feedforward_multiplier": 4,
+      "hidden_dim": 256,
+      "history_length": 4,
+      "state_dim": 64,
+      "transformer_layers": 4
+    },
+    "model_manifest": {
+      "actor_forbidden_inputs": [
+        "memory_summary",
+        "epistemic_state",
+        "simulator_effect_truth",
+        "future_state"
+      ],
+      "architecture": {
+        "action_dim": 7,
+        "action_horizon": 8,
+        "attention_heads": 8,
+        "dropout": 0.1,
+        "executed_prefix": 4,
+        "feedforward_multiplier": 4,
+        "hidden_dim": 256,
+        "history_length": 4,
+        "state_dim": 64,
+        "transformer_layers": 4
+      },
+      "effect_keys": [
+        "STOVE_TURNED_ON",
+        "MOKA_GRASPED",
+        "MOKA_ON_STOVE",
+        "MOKA_RELEASED_ON_STOVE",
+        "BOWL_GRASPED",
+        "BOWL_IN_BOTTOM_DRAWER",
+        "BOWL_RELEASED_IN_DRAWER",
+        "BOTTOM_DRAWER_CLOSED"
+      ],
+      "execution_modes": [
+        "EXECUTE",
+        "RETRY"
+      ],
+      "parameter_count": 3186951,
+      "task_keys": [
+        "stove_moka",
+        "bowl_drawer"
+      ]
+    },
+    "normalization_sha256": "9725c1da980f0416ca3f421f2e4bb2202ca248e608e0658854ecd874c4eac0c8",
+    "selection_metric": 1.1120355211712118
+  },
+  "selection_used_qualification_results": false,
+  "status": "TRAINING_COMPLETE",
+  "stop_reason": "preregistered_early_stopping",
+  "training_samples": 15711
+}

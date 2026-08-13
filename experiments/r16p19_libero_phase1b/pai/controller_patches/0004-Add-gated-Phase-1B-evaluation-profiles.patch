@@ -1,0 +1,437 @@
+From f1ecb7206be8aa2de749517c465eb240af7912d3 Mon Sep 17 00:00:00 2001
+From: Codex <codex@openai.com>
+Date: Thu, 13 Aug 2026 15:41:18 +0800
+Subject: [PATCH 4/4] Add gated Phase-1B evaluation profiles
+
+---
+ ...ase1b-closed-loop-exp-efficiency-2gpu.json | 134 ++++++++++++++++++
+ ...ase1b-formal-gate-exp-efficiency-2gpu.json | 134 ++++++++++++++++++
+ ...-qualify-fallback-exp-efficiency-2gpu.json | 134 ++++++++++++++++++
+ 3 files changed, 402 insertions(+)
+ create mode 100644 templates/r16p19-libero-phase1b-closed-loop-exp-efficiency-2gpu.json
+ create mode 100644 templates/r16p19-libero-phase1b-formal-gate-exp-efficiency-2gpu.json
+ create mode 100644 templates/r16p19-libero-phase1b-qualify-fallback-exp-efficiency-2gpu.json
+
+diff --git a/templates/r16p19-libero-phase1b-closed-loop-exp-efficiency-2gpu.json b/templates/r16p19-libero-phase1b-closed-loop-exp-efficiency-2gpu.json
+new file mode 100644
+index 00000000..6b4b25b7
+--- /dev/null
++++ b/templates/r16p19-libero-phase1b-closed-loop-exp-efficiency-2gpu.json
+@@ -0,0 +1,134 @@
++{
++  "schema_version": 2,
++  "kind": "pytorchjob",
++  "name_prefix": "r16p19-phase1b-closed-loop",
++  "description": "R16-P19 LIBERO Phase-1B frozen 800-rollout behavior matrix, only after the one-shot formal actor gate passes; GPU0 active and GPU1 contract-reserved idle",
++  "resource_alias": "exp-efficiency-a800-2gpu",
++  "workspace_id": "179169",
++  "provenance": {
++    "contract_source_job_id": "dlcfp1szuc2cgqfp",
++    "resource_source_job_id": "dlc1j2p8ui63ulps",
++    "submission_method": "cli_create",
++    "pai_clone_performed": false,
++    "source_role": "readback_reference"
++  },
++  "network": {},
++  "storage": {
++    "data_sources": [
++      {"id": "d-mkixtohdn75dp8x9tb", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon", "options": ""},
++      {"id": "d-lg9t2b6xajpukeqqeb", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon", "options": ""},
++      {"id": "d-36p023eg0f2vuqny8y", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon", "options": ""},
++      {"id": "d-ejgj2ej7io1t2t32uc", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon", "options": ""},
++      {"id": "d-7fi8hehav247qi6x5o", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/", "options": ""}
++    ],
++    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/pai"
++  },
++  "worker": {
++    "count": 1,
++    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
++    "gpu": 2,
++    "cpu": 12,
++    "memory": "200Gi",
++    "shared_memory": "200Gi"
++  },
++  "runtime": {
++    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry-r16p19-libero-phase1b-20260813/launchers/r16p19_libero_phase1b_closed_loop.sh",
++    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
++    "uid": 2254,
++    "gid": 2254,
++    "pod_env": {},
++    "secret_env_names": ["WANDB_API_KEY", "WANDB_ENTITY"],
++    "wandb_entity_contract": {
++      "entity": "chen_jian-cj-workspace",
++      "source": "explicit_user_contract",
++      "allow_identity_inference": false,
++      "require_live_membership_write_gate": true,
++      "forbidden_viewers": ["shiyanpei0826"]
++    },
++    "write_paths": [
++      "{{ARTIFACT_DIR}}",
++      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1"
++    ],
++    "output_mode": "resume",
++    "create_artifact_dir": true,
++    "recursive_repair": false,
++    "payload_transport": "base64"
++  },
++  "fault_tolerance": {
++    "aimaster_args": "",
++    "maximum_platform_restarts": 0,
++    "expected_platform_restarts": 0,
++    "launcher_attempts": 1,
++    "retry_sleep_seconds": 30,
++    "complete_state_save_interval_steps": 2500,
++    "application_auto_resume": true,
++    "pai_automatic_fault_tolerance": false
++  },
++  "evidence": {
++    "kind": "r16p19_libero_phase1b_actor_upgrade_formal",
++    "stage": "closed-loop",
++    "resource_contract": "dedicated_2gpu_one_active_one_idle_v1",
++    "workload_type": "evaluation",
++    "task_id": "libero10_stove_moka_plus_bowl_bottom_drawer",
++    "model_id": "effect_conditioned_state_act_or_preregistered_per_effect_fallback",
++    "model_run_id": "r16p19_libero_phase1b_v1",
++    "success_gate": "formal_actor_gate_pass_then_complete_800_rollouts_and_final_status",
++    "validation_method": "14_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
++    "validation_status": "passed; local EGL unavailable; no PAI probe created",
++    "pai_probe_created": false,
++    "first_work_evidence_path": "{{ARTIFACT_DIR}}/phase1b-launch-contract.json",
++    "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
++    "contract_ready": true,
++    "source_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
++    "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
++    "dataset_sha256": ["6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9", "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"],
++    "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
++    "checkpoint_retention": "retain_every_complete_phase1b_candidate_checkpoint",
++    "checkpoint_interval_steps": 2500,
++    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1",
++    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++    "expected_primary_max_optimizer_step": 20000,
++    "expected_fallback_max_optimizer_step_per_effect": 10000,
++    "policy": "memory_independent_effect_conditioned_state_act",
++    "action_horizon": 8,
++    "executed_prefix": 4,
++    "qualification_init_indices": "20-39",
++    "formal_init_indices": "0-19_once_after_freeze",
++    "closed_loop_conditions": ["C0", "C1", "C2", "C3", "C7"],
++    "memory_arms": ["B2", "B3", "B5", "B6"],
++    "closed_loop_factorial_rollouts_if_competent": 800,
++    "platform_restart_limit": 0,
++    "launcher_attempts": 1,
++    "application_resume_semantics": "model_optimizer_scheduler_rng_global_step",
++    "expected_first_work_uid": 2254,
++    "expected_first_work_gid": 2254,
++    "require_post_launch_real_loss": true,
++    "require_first_completed_rollout_for_evaluation": true,
++    "reserved_idle_gpu_ordinal": 1,
++    "reserved_idle_gpu_telemetry": "nvidia-smi-dmon-pucm-10s",
++    "wandb_mode": "online_new_formal_run",
++    "wandb_entity": "chen_jian-cj-workspace",
++    "wandb_project": "r16p19-libero-phase1b",
++    "evidence_boundary": "Small low-dimensional actor qualification and gated R16-P19 LIBERO behavior validation only; not Pi0.5, Mem-0, visual ACT, or a large VLA",
++    "superseded_failed_jobs": [],
++    "deleted_superseded_jobs": []
++  },
++  "submission": {
++    "priority": 9,
++    "disable_ecs_stock_check": false,
++    "job_reserved_policy": "",
++    "job_reserved_minutes": 0,
++    "job_max_running_time_minutes": 0,
++    "tags": {
++      "managed_by": "pai-job-registry",
++      "purpose": "formal-training-evaluation",
++      "task": "r16p19-libero-phase1b-closed-loop",
++      "model": "effect-conditioned-state-act",
++      "dataset": "libero10-two-task-frozen",
++      "hardware": "2xa800-one-active-one-idle",
++      "resource_pool": "exp-efficiency",
++      "experiment_role": "r16p19-phase1b-actor-upgrade-and-gated-behavior"
++    }
++  }
++}
+diff --git a/templates/r16p19-libero-phase1b-formal-gate-exp-efficiency-2gpu.json b/templates/r16p19-libero-phase1b-formal-gate-exp-efficiency-2gpu.json
+new file mode 100644
+index 00000000..a271bc99
+--- /dev/null
++++ b/templates/r16p19-libero-phase1b-formal-gate-exp-efficiency-2gpu.json
+@@ -0,0 +1,134 @@
++{
++  "schema_version": 2,
++  "kind": "pytorchjob",
++  "name_prefix": "r16p19-phase1b-formal-gate",
++  "description": "R16-P19 LIBERO Phase-1B one-shot formal actor competence gate on frozen init 0-19, only after freezing a qualified actor; GPU0 active and GPU1 contract-reserved idle",
++  "resource_alias": "exp-efficiency-a800-2gpu",
++  "workspace_id": "179169",
++  "provenance": {
++    "contract_source_job_id": "dlcfp1szuc2cgqfp",
++    "resource_source_job_id": "dlc1j2p8ui63ulps",
++    "submission_method": "cli_create",
++    "pai_clone_performed": false,
++    "source_role": "readback_reference"
++  },
++  "network": {},
++  "storage": {
++    "data_sources": [
++      {"id": "d-mkixtohdn75dp8x9tb", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon", "options": ""},
++      {"id": "d-lg9t2b6xajpukeqqeb", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon", "options": ""},
++      {"id": "d-36p023eg0f2vuqny8y", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon", "options": ""},
++      {"id": "d-ejgj2ej7io1t2t32uc", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon", "options": ""},
++      {"id": "d-7fi8hehav247qi6x5o", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/", "options": ""}
++    ],
++    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/pai"
++  },
++  "worker": {
++    "count": 1,
++    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
++    "gpu": 2,
++    "cpu": 12,
++    "memory": "200Gi",
++    "shared_memory": "200Gi"
++  },
++  "runtime": {
++    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry-r16p19-libero-phase1b-20260813/launchers/r16p19_libero_phase1b_formal_gate.sh",
++    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
++    "uid": 2254,
++    "gid": 2254,
++    "pod_env": {},
++    "secret_env_names": ["WANDB_API_KEY", "WANDB_ENTITY"],
++    "wandb_entity_contract": {
++      "entity": "chen_jian-cj-workspace",
++      "source": "explicit_user_contract",
++      "allow_identity_inference": false,
++      "require_live_membership_write_gate": true,
++      "forbidden_viewers": ["shiyanpei0826"]
++    },
++    "write_paths": [
++      "{{ARTIFACT_DIR}}",
++      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1"
++    ],
++    "output_mode": "resume",
++    "create_artifact_dir": true,
++    "recursive_repair": false,
++    "payload_transport": "base64"
++  },
++  "fault_tolerance": {
++    "aimaster_args": "",
++    "maximum_platform_restarts": 0,
++    "expected_platform_restarts": 0,
++    "launcher_attempts": 1,
++    "retry_sleep_seconds": 30,
++    "complete_state_save_interval_steps": 2500,
++    "application_auto_resume": true,
++    "pai_automatic_fault_tolerance": false
++  },
++  "evidence": {
++    "kind": "r16p19_libero_phase1b_actor_upgrade_formal",
++    "stage": "formal-gate",
++    "resource_contract": "dedicated_2gpu_one_active_one_idle_v1",
++    "workload_type": "evaluation",
++    "task_id": "libero10_stove_moka_plus_bowl_bottom_drawer",
++    "model_id": "effect_conditioned_state_act_or_preregistered_per_effect_fallback",
++    "model_run_id": "r16p19_libero_phase1b_v1",
++    "success_gate": "frozen_actor_complete_init0_19_gate_exactly_once",
++    "validation_method": "14_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
++    "validation_status": "passed; local EGL unavailable; no PAI probe created",
++    "pai_probe_created": false,
++    "first_work_evidence_path": "{{ARTIFACT_DIR}}/phase1b-launch-contract.json",
++    "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
++    "contract_ready": true,
++    "source_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
++    "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
++    "dataset_sha256": ["6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9", "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"],
++    "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
++    "checkpoint_retention": "retain_every_complete_phase1b_candidate_checkpoint",
++    "checkpoint_interval_steps": 2500,
++    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1",
++    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++    "expected_primary_max_optimizer_step": 20000,
++    "expected_fallback_max_optimizer_step_per_effect": 10000,
++    "policy": "memory_independent_effect_conditioned_state_act",
++    "action_horizon": 8,
++    "executed_prefix": 4,
++    "qualification_init_indices": "20-39",
++    "formal_init_indices": "0-19_once_after_freeze",
++    "closed_loop_conditions": ["C0", "C1", "C2", "C3", "C7"],
++    "memory_arms": ["B2", "B3", "B5", "B6"],
++    "closed_loop_factorial_rollouts_if_competent": 800,
++    "platform_restart_limit": 0,
++    "launcher_attempts": 1,
++    "application_resume_semantics": "model_optimizer_scheduler_rng_global_step",
++    "expected_first_work_uid": 2254,
++    "expected_first_work_gid": 2254,
++    "require_post_launch_real_loss": true,
++    "require_first_completed_rollout_for_evaluation": true,
++    "reserved_idle_gpu_ordinal": 1,
++    "reserved_idle_gpu_telemetry": "nvidia-smi-dmon-pucm-10s",
++    "wandb_mode": "online_new_formal_run",
++    "wandb_entity": "chen_jian-cj-workspace",
++    "wandb_project": "r16p19-libero-phase1b",
++    "evidence_boundary": "Small low-dimensional actor qualification and gated R16-P19 LIBERO behavior validation only; not Pi0.5, Mem-0, visual ACT, or a large VLA",
++    "superseded_failed_jobs": [],
++    "deleted_superseded_jobs": []
++  },
++  "submission": {
++    "priority": 9,
++    "disable_ecs_stock_check": false,
++    "job_reserved_policy": "",
++    "job_reserved_minutes": 0,
++    "job_max_running_time_minutes": 0,
++    "tags": {
++      "managed_by": "pai-job-registry",
++      "purpose": "formal-training-evaluation",
++      "task": "r16p19-libero-phase1b-formal-gate",
++      "model": "effect-conditioned-state-act",
++      "dataset": "libero10-two-task-frozen",
++      "hardware": "2xa800-one-active-one-idle",
++      "resource_pool": "exp-efficiency",
++      "experiment_role": "r16p19-phase1b-actor-upgrade-and-gated-behavior"
++    }
++  }
++}
+diff --git a/templates/r16p19-libero-phase1b-qualify-fallback-exp-efficiency-2gpu.json b/templates/r16p19-libero-phase1b-qualify-fallback-exp-efficiency-2gpu.json
+new file mode 100644
+index 00000000..7ac6db4b
+--- /dev/null
++++ b/templates/r16p19-libero-phase1b-qualify-fallback-exp-efficiency-2gpu.json
+@@ -0,0 +1,134 @@
++{
++  "schema_version": 2,
++  "kind": "pytorchjob",
++  "name_prefix": "r16p19-phase1b-qualify-fallback",
++  "description": "R16-P19 LIBERO Phase-1B per-effect fallback clean qualification on frozen init 20-39, only after primary qualification failure; GPU0 active and GPU1 contract-reserved idle",
++  "resource_alias": "exp-efficiency-a800-2gpu",
++  "workspace_id": "179169",
++  "provenance": {
++    "contract_source_job_id": "dlcfp1szuc2cgqfp",
++    "resource_source_job_id": "dlc1j2p8ui63ulps",
++    "submission_method": "cli_create",
++    "pai_clone_performed": false,
++    "source_role": "readback_reference"
++  },
++  "network": {},
++  "storage": {
++    "data_sources": [
++      {"id": "d-mkixtohdn75dp8x9tb", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon", "options": ""},
++      {"id": "d-lg9t2b6xajpukeqqeb", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon", "options": ""},
++      {"id": "d-36p023eg0f2vuqny8y", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon", "options": ""},
++      {"id": "d-ejgj2ej7io1t2t32uc", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon", "options": ""},
++      {"id": "d-7fi8hehav247qi6x5o", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/", "options": ""}
++    ],
++    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/pai"
++  },
++  "worker": {
++    "count": 1,
++    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
++    "gpu": 2,
++    "cpu": 12,
++    "memory": "200Gi",
++    "shared_memory": "200Gi"
++  },
++  "runtime": {
++    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry-r16p19-libero-phase1b-20260813/launchers/r16p19_libero_phase1b_qualify_fallback.sh",
++    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
++    "uid": 2254,
++    "gid": 2254,
++    "pod_env": {},
++    "secret_env_names": ["WANDB_API_KEY", "WANDB_ENTITY"],
++    "wandb_entity_contract": {
++      "entity": "chen_jian-cj-workspace",
++      "source": "explicit_user_contract",
++      "allow_identity_inference": false,
++      "require_live_membership_write_gate": true,
++      "forbidden_viewers": ["shiyanpei0826"]
++    },
++    "write_paths": [
++      "{{ARTIFACT_DIR}}",
++      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++      "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1"
++    ],
++    "output_mode": "resume",
++    "create_artifact_dir": true,
++    "recursive_repair": false,
++    "payload_transport": "base64"
++  },
++  "fault_tolerance": {
++    "aimaster_args": "",
++    "maximum_platform_restarts": 0,
++    "expected_platform_restarts": 0,
++    "launcher_attempts": 1,
++    "retry_sleep_seconds": 30,
++    "complete_state_save_interval_steps": 2500,
++    "application_auto_resume": true,
++    "pai_automatic_fault_tolerance": false
++  },
++  "evidence": {
++    "kind": "r16p19_libero_phase1b_actor_upgrade_formal",
++    "stage": "qualify-fallback",
++    "resource_contract": "dedicated_2gpu_one_active_one_idle_v1",
++    "workload_type": "evaluation",
++    "task_id": "libero10_stove_moka_plus_bowl_bottom_drawer",
++    "model_id": "effect_conditioned_state_act_or_preregistered_per_effect_fallback",
++    "model_run_id": "r16p19_libero_phase1b_v1",
++    "success_gate": "persisted_first_rollout_and_complete_init20_39_actor_gate",
++    "validation_method": "14_unit_regression_tests_plus_real_data_cpu_one_batch_smoke",
++    "validation_status": "passed; local EGL unavailable; no PAI probe created",
++    "pai_probe_created": false,
++    "first_work_evidence_path": "{{ARTIFACT_DIR}}/phase1b-launch-contract.json",
++    "completed_evidence_path": "{{ARTIFACT_DIR}}/RUN_COMPLETE.json",
++    "contract_ready": true,
++    "source_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
++    "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
++    "dataset_sha256": ["6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9", "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"],
++    "checkpoint_contract": "model_optimizer_scheduler_rng_global_step",
++    "checkpoint_retention": "retain_every_complete_phase1b_candidate_checkpoint",
++    "checkpoint_interval_steps": 2500,
++    "checkpoint_base": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1",
++    "scientific_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v1/experiment",
++    "expected_primary_max_optimizer_step": 20000,
++    "expected_fallback_max_optimizer_step_per_effect": 10000,
++    "policy": "memory_independent_effect_conditioned_state_act",
++    "action_horizon": 8,
++    "executed_prefix": 4,
++    "qualification_init_indices": "20-39",
++    "formal_init_indices": "0-19_once_after_freeze",
++    "closed_loop_conditions": ["C0", "C1", "C2", "C3", "C7"],
++    "memory_arms": ["B2", "B3", "B5", "B6"],
++    "closed_loop_factorial_rollouts_if_competent": 800,
++    "platform_restart_limit": 0,
++    "launcher_attempts": 1,
++    "application_resume_semantics": "model_optimizer_scheduler_rng_global_step",
++    "expected_first_work_uid": 2254,
++    "expected_first_work_gid": 2254,
++    "require_post_launch_real_loss": true,
++    "require_first_completed_rollout_for_evaluation": true,
++    "reserved_idle_gpu_ordinal": 1,
++    "reserved_idle_gpu_telemetry": "nvidia-smi-dmon-pucm-10s",
++    "wandb_mode": "online_new_formal_run",
++    "wandb_entity": "chen_jian-cj-workspace",
++    "wandb_project": "r16p19-libero-phase1b",
++    "evidence_boundary": "Small low-dimensional actor qualification and gated R16-P19 LIBERO behavior validation only; not Pi0.5, Mem-0, visual ACT, or a large VLA",
++    "superseded_failed_jobs": [],
++    "deleted_superseded_jobs": []
++  },
++  "submission": {
++    "priority": 9,
++    "disable_ecs_stock_check": false,
++    "job_reserved_policy": "",
++    "job_reserved_minutes": 0,
++    "job_max_running_time_minutes": 0,
++    "tags": {
++      "managed_by": "pai-job-registry",
++      "purpose": "formal-training-evaluation",
++      "task": "r16p19-libero-phase1b-qualify-fallback",
++      "model": "effect-conditioned-state-act",
++      "dataset": "libero10-two-task-frozen",
++      "hardware": "2xa800-one-active-one-idle",
++      "resource_pool": "exp-efficiency",
++      "experiment_role": "r16p19-phase1b-actor-upgrade-and-gated-behavior"
++    }
++  }
++}
+-- 
+2.34.1
+
