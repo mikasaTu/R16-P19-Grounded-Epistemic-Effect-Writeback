@@ -1,39 +1,860 @@
 {
-  "schema_version": 1,
-  "status": "PREREGISTERED_NOT_YET_EXECUTED",
-  "frozen_audit_scope": {
-    "tasks": ["stove_moka", "bowl_drawer"],
-    "effects": {
-      "stove_moka": ["STOVE_TURNED_ON", "MOKA_GRASPED", "MOKA_ON_STOVE", "MOKA_RELEASED_ON_STOVE"],
-      "bowl_drawer": ["BOWL_GRASPED", "BOWL_IN_BOTTOM_DRAWER", "BOWL_RELEASED_IN_DRAWER", "BOTTOM_DRAWER_CLOSED"]
-    },
-    "required_outputs": [
-      "training_frames_per_effect",
-      "valid_action_chunks_per_effect",
-      "state_action_alignment",
-      "transition_boundaries",
-      "action_dimension_mean_std",
-      "gripper_class_balance",
-      "effect_chunk_length_distribution",
-      "episode_split_disjointness",
-      "baseline_actor_failure_video_inventory",
-      "baseline_actor_failure_effect_distribution"
-    ]
+  "actor_training_sample_policy": {
+    "action_horizon": 8,
+    "cross_split_episode_copying": false,
+    "effect_segment_start": "previous_effect_transition_minus_executed_prefix_or_episode_start",
+    "effect_segment_stop": "current_effect_transition_plus_one_exclusive",
+    "executed_prefix": 4,
+    "history_length": 4,
+    "missing_effect_policy": "exclude_missing_effect_segment_without_fabrication",
+    "short_segment_policy": "pad_action_chunk_with_last_action_inside_same_effect_segment"
   },
-  "dataset_identity": {
-    "stove_moka_sha256": "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
-    "bowl_drawer_sha256": "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"
+  "audit_source": {
+    "audit_script": "scripts/audit_phase1b_data.py",
+    "audit_script_sha256": "864966a2447be84eaaba0443b3c3b7550fa4029ae321099bd9a241557348b714",
+    "baseline_actor_results": "artifacts/formal/r16p19-libero-phase1-20260813-013200/experiment/state_bc_results.jsonl",
+    "baseline_actor_results_sha256": "d9234e87d468a4a4a31d003472cae3849866ca3b6393c48a1ec71439d5326560",
+    "frozen_demo_labels": "artifacts/formal/r16p19-libero-phase1-20260813-013200/experiment/demo_effect_labels.jsonl",
+    "frozen_demo_labels_sha256": "c270626b4e777495a93d04e428850b35f3fd55bd23e2ad5ec071ca4556a72c51"
   },
-  "source_episode_split": {
-    "train": "demo_0..demo_29",
-    "calibration": "demo_30..demo_39",
-    "trace_test": "demo_40..demo_49"
-  },
-  "baseline_actor": {
+  "baseline_actor_failures": {
     "actor": "retrieval_augmented_tiny_mlp",
-    "formal_phase1_full_task_success": 0.60,
-    "formal_phase1_minimum_per_effect_success": 0.45,
-    "formal_phase1_failure_videos_available": 0,
-    "note": "The Phase-1 run did not persist competence videos; Phase-1B qualification must persist every failure video."
+    "effect_failure_count": {
+      "BOTTOM_DRAWER_CLOSED": 11,
+      "BOWL_GRASPED": 2,
+      "BOWL_IN_BOTTOM_DRAWER": 7,
+      "BOWL_RELEASED_IN_DRAWER": 8,
+      "MOKA_GRASPED": 4,
+      "MOKA_ON_STOVE": 5,
+      "MOKA_RELEASED_ON_STOVE": 5
+    },
+    "failed_full_task_rollouts": 16,
+    "failure_video_inventory": {
+      "count": 0,
+      "interpretation": "Phase-1 did not persist competence videos",
+      "paths": []
+    },
+    "first_failed_effect_count": {
+      "BOTTOM_DRAWER_CLOSED": 3,
+      "BOWL_GRASPED": 2,
+      "BOWL_IN_BOTTOM_DRAWER": 5,
+      "BOWL_RELEASED_IN_DRAWER": 1,
+      "MOKA_GRASPED": 4,
+      "MOKA_ON_STOVE": 1
+    },
+    "rollout_count": 40
+  },
+  "episode_split_disjointness": {
+    "all_pairwise_disjoint": true,
+    "calibration_count": 10,
+    "overlaps": {
+      "calibration_trace_test": [],
+      "train_calibration": [],
+      "train_trace_test": []
+    },
+    "trace_test_count": 10,
+    "train_count": 30
+  },
+  "schema_version": 1,
+  "status": "COMPLETE",
+  "tasks": {
+    "bowl_drawer": {
+      "available_initial_states": 100,
+      "dataset_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_demo.hdf5",
+      "dataset_sha256": "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638",
+      "init_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/init_files/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.init",
+      "init_sha256": "7eba1f68f9d3a553b14e99a437356fbcc91ba1a531ac2475fc858c1e9bcbe2fc",
+      "initial_state_shape": [
+        100,
+        51
+      ],
+      "splits": {
+        "calibration": {
+          "effect_segment_length_distribution": {
+            "BOTTOM_DRAWER_CLOSED": {
+              "count": 10,
+              "max": 161,
+              "mean": 86.9,
+              "median": 76.0,
+              "min": 62,
+              "p25": 74.0,
+              "p75": 82.0
+            },
+            "BOWL_GRASPED": {
+              "count": 10,
+              "max": 168,
+              "mean": 105.8,
+              "median": 92.0,
+              "min": 81,
+              "p25": 89.25,
+              "p75": 108.25
+            },
+            "BOWL_IN_BOTTOM_DRAWER": {
+              "count": 9,
+              "max": 84,
+              "mean": 61.22222222222222,
+              "median": 58.0,
+              "min": 49,
+              "p25": 56.0,
+              "p75": 64.0
+            },
+            "BOWL_RELEASED_IN_DRAWER": {
+              "count": 10,
+              "max": 58,
+              "mean": 23.0,
+              "median": 18.0,
+              "min": 5,
+              "p25": 12.75,
+              "p75": 30.5
+            }
+          },
+          "episode_count": 10,
+          "full_horizon_action_chunks_per_effect": {
+            "BOTTOM_DRAWER_CLOSED": 799,
+            "BOWL_GRASPED": 988,
+            "BOWL_IN_BOTTOM_DRAWER": 488,
+            "BOWL_RELEASED_IN_DRAWER": 162
+          },
+          "padded_action_chunks_per_effect": {
+            "BOTTOM_DRAWER_CLOSED": 869,
+            "BOWL_GRASPED": 1058,
+            "BOWL_IN_BOTTOM_DRAWER": 551,
+            "BOWL_RELEASED_IN_DRAWER": 230
+          },
+          "state_action_alignment": {
+            "aligned_episode_count": 10,
+            "mismatch_count": 0,
+            "mismatches": []
+          },
+          "training_frames_per_effect": {
+            "BOTTOM_DRAWER_CLOSED": 869,
+            "BOWL_GRASPED": 1058,
+            "BOWL_IN_BOTTOM_DRAWER": 551,
+            "BOWL_RELEASED_IN_DRAWER": 230
+          },
+          "transition_boundaries": {
+            "BOTTOM_DRAWER_CLOSED": {
+              "count": 10,
+              "max": 306,
+              "mean": 252.6,
+              "median": 252.0,
+              "min": 207,
+              "missing_episodes": [],
+              "p25": 225.25,
+              "p75": 275.25
+            },
+            "BOWL_GRASPED": {
+              "count": 10,
+              "max": 167,
+              "mean": 104.8,
+              "median": 91.0,
+              "min": 80,
+              "missing_episodes": [],
+              "p25": 88.25,
+              "p75": 107.25
+            },
+            "BOWL_IN_BOTTOM_DRAWER": {
+              "count": 10,
+              "max": 200,
+              "mean": 152.7,
+              "median": 144.5,
+              "min": 133,
+              "missing_episodes": [
+                "demo_32"
+              ],
+              "p25": 139.25,
+              "p75": 161.75
+            },
+            "BOWL_RELEASED_IN_DRAWER": {
+              "count": 10,
+              "max": 215,
+              "mean": 170.7,
+              "median": 163.0,
+              "min": 139,
+              "missing_episodes": [],
+              "p25": 150.0,
+              "p75": 191.75
+            }
+          }
+        },
+        "trace_test": {
+          "effect_segment_length_distribution": {
+            "BOTTOM_DRAWER_CLOSED": {
+              "count": 10,
+              "max": 110,
+              "mean": 85.8,
+              "median": 82.0,
+              "min": 70,
+              "p25": 75.0,
+              "p75": 91.0
+            },
+            "BOWL_GRASPED": {
+              "count": 10,
+              "max": 184,
+              "mean": 108.0,
+              "median": 94.0,
+              "min": 82,
+              "p25": 91.0,
+              "p75": 101.5
+            },
+            "BOWL_IN_BOTTOM_DRAWER": {
+              "count": 10,
+              "max": 61,
+              "mean": 48.1,
+              "median": 55.0,
+              "min": 4,
+              "p25": 50.0,
+              "p75": 58.75
+            },
+            "BOWL_RELEASED_IN_DRAWER": {
+              "count": 10,
+              "max": 32,
+              "mean": 17.3,
+              "median": 15.0,
+              "min": 5,
+              "p25": 13.25,
+              "p75": 22.5
+            }
+          },
+          "episode_count": 10,
+          "full_horizon_action_chunks_per_effect": {
+            "BOTTOM_DRAWER_CLOSED": 788,
+            "BOWL_GRASPED": 1010,
+            "BOWL_IN_BOTTOM_DRAWER": 414,
+            "BOWL_RELEASED_IN_DRAWER": 105
+          },
+          "padded_action_chunks_per_effect": {
+            "BOTTOM_DRAWER_CLOSED": 858,
+            "BOWL_GRASPED": 1080,
+            "BOWL_IN_BOTTOM_DRAWER": 481,
+            "BOWL_RELEASED_IN_DRAWER": 173
+          },
+          "state_action_alignment": {
+            "aligned_episode_count": 10,
+            "mismatch_count": 0,
+            "mismatches": []
+          },
+          "training_frames_per_effect": {
+            "BOTTOM_DRAWER_CLOSED": 858,
+            "BOWL_GRASPED": 1080,
+            "BOWL_IN_BOTTOM_DRAWER": 481,
+            "BOWL_RELEASED_IN_DRAWER": 173
+          },
+          "transition_boundaries": {
+            "BOTTOM_DRAWER_CLOSED": {
+              "count": 10,
+              "max": 295,
+              "mean": 243.2,
+              "median": 240.5,
+              "min": 205,
+              "missing_episodes": [],
+              "p25": 225.75,
+              "p75": 249.0
+            },
+            "BOWL_GRASPED": {
+              "count": 10,
+              "max": 183,
+              "mean": 107.0,
+              "median": 93.0,
+              "min": 81,
+              "missing_episodes": [],
+              "p25": 90.0,
+              "p75": 100.5
+            },
+            "BOWL_IN_BOTTOM_DRAWER": {
+              "count": 10,
+              "max": 206,
+              "mean": 150.1,
+              "median": 143.5,
+              "min": 126,
+              "missing_episodes": [],
+              "p25": 141.0,
+              "p75": 156.5
+            },
+            "BOWL_RELEASED_IN_DRAWER": {
+              "count": 10,
+              "max": 214,
+              "mean": 162.4,
+              "median": 159.0,
+              "min": 126,
+              "missing_episodes": [],
+              "p25": 152.5,
+              "p75": 174.0
+            }
+          }
+        },
+        "train": {
+          "effect_segment_length_distribution": {
+            "BOTTOM_DRAWER_CLOSED": {
+              "count": 30,
+              "max": 101,
+              "mean": 77.2,
+              "median": 75.0,
+              "min": 65,
+              "p25": 69.5,
+              "p75": 84.0
+            },
+            "BOWL_GRASPED": {
+              "count": 30,
+              "max": 158,
+              "mean": 97.8,
+              "median": 93.5,
+              "min": 77,
+              "p25": 89.25,
+              "p75": 97.5
+            },
+            "BOWL_IN_BOTTOM_DRAWER": {
+              "count": 30,
+              "max": 69,
+              "mean": 52.3,
+              "median": 54.5,
+              "min": 11,
+              "p25": 51.25,
+              "p75": 61.75
+            },
+            "BOWL_RELEASED_IN_DRAWER": {
+              "count": 30,
+              "max": 46,
+              "mean": 19.566666666666666,
+              "median": 16.0,
+              "min": 5,
+              "p25": 13.0,
+              "p75": 21.75
+            }
+          },
+          "episode_count": 30,
+          "full_horizon_action_chunks_per_effect": {
+            "BOTTOM_DRAWER_CLOSED": 2106,
+            "BOWL_GRASPED": 2724,
+            "BOWL_IN_BOTTOM_DRAWER": 1359,
+            "BOWL_RELEASED_IN_DRAWER": 379
+          },
+          "padded_action_chunks_per_effect": {
+            "BOTTOM_DRAWER_CLOSED": 2316,
+            "BOWL_GRASPED": 2934,
+            "BOWL_IN_BOTTOM_DRAWER": 1569,
+            "BOWL_RELEASED_IN_DRAWER": 587
+          },
+          "state_action_alignment": {
+            "aligned_episode_count": 30,
+            "mismatch_count": 0,
+            "mismatches": []
+          },
+          "training_frames_per_effect": {
+            "BOTTOM_DRAWER_CLOSED": 2316,
+            "BOWL_GRASPED": 2934,
+            "BOWL_IN_BOTTOM_DRAWER": 1569,
+            "BOWL_RELEASED_IN_DRAWER": 587
+          },
+          "transition_boundaries": {
+            "BOTTOM_DRAWER_CLOSED": {
+              "count": 30,
+              "max": 258,
+              "mean": 230.86666666666667,
+              "median": 230.0,
+              "min": 188,
+              "missing_episodes": [],
+              "p25": 218.25,
+              "p75": 241.75
+            },
+            "BOWL_GRASPED": {
+              "count": 30,
+              "max": 157,
+              "mean": 96.8,
+              "median": 92.5,
+              "min": 76,
+              "missing_episodes": [],
+              "p25": 88.25,
+              "p75": 96.5
+            },
+            "BOWL_IN_BOTTOM_DRAWER": {
+              "count": 30,
+              "max": 163,
+              "mean": 144.1,
+              "median": 144.0,
+              "min": 119,
+              "missing_episodes": [],
+              "p25": 138.25,
+              "p75": 152.0
+            },
+            "BOWL_RELEASED_IN_DRAWER": {
+              "count": 30,
+              "max": 197,
+              "mean": 158.66666666666666,
+              "median": 156.0,
+              "min": 128,
+              "missing_episodes": [],
+              "p25": 149.25,
+              "p75": 166.75
+            }
+          }
+        }
+      }
+    },
+    "stove_moka": {
+      "available_initial_states": 100,
+      "dataset_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_demo.hdf5",
+      "dataset_sha256": "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
+      "init_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/init_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it.init",
+      "init_sha256": "8519d4638868ce661a20d331495d97e0521f8e1535479dd26ba875d5cc06b88f",
+      "initial_state_shape": [
+        100,
+        47
+      ],
+      "splits": {
+        "calibration": {
+          "effect_segment_length_distribution": {
+            "MOKA_GRASPED": {
+              "count": 10,
+              "max": 145,
+              "mean": 120.4,
+              "median": 117.5,
+              "min": 98,
+              "p25": 106.0,
+              "p75": 137.0
+            },
+            "MOKA_ON_STOVE": {
+              "count": 10,
+              "max": 69,
+              "mean": 53.1,
+              "median": 52.5,
+              "min": 37,
+              "p25": 49.25,
+              "p75": 58.0
+            },
+            "MOKA_RELEASED_ON_STOVE": {
+              "count": 10,
+              "max": 15,
+              "mean": 7.5,
+              "median": 7.0,
+              "min": 5,
+              "p25": 6.0,
+              "p75": 7.75
+            },
+            "STOVE_TURNED_ON": {
+              "count": 10,
+              "max": 108,
+              "mean": 88.6,
+              "median": 85.5,
+              "min": 78,
+              "p25": 83.0,
+              "p75": 90.0
+            }
+          },
+          "episode_count": 10,
+          "full_horizon_action_chunks_per_effect": {
+            "MOKA_GRASPED": 1134,
+            "MOKA_ON_STOVE": 461,
+            "MOKA_RELEASED_ON_STOVE": 11,
+            "STOVE_TURNED_ON": 816
+          },
+          "padded_action_chunks_per_effect": {
+            "MOKA_GRASPED": 1204,
+            "MOKA_ON_STOVE": 531,
+            "MOKA_RELEASED_ON_STOVE": 75,
+            "STOVE_TURNED_ON": 886
+          },
+          "state_action_alignment": {
+            "aligned_episode_count": 10,
+            "mismatch_count": 0,
+            "mismatches": []
+          },
+          "training_frames_per_effect": {
+            "MOKA_GRASPED": 1204,
+            "MOKA_ON_STOVE": 531,
+            "MOKA_RELEASED_ON_STOVE": 75,
+            "STOVE_TURNED_ON": 886
+          },
+          "transition_boundaries": {
+            "MOKA_GRASPED": {
+              "count": 10,
+              "max": 247,
+              "mean": 203.0,
+              "median": 194.0,
+              "min": 175,
+              "missing_episodes": [],
+              "p25": 183.25,
+              "p75": 220.25
+            },
+            "MOKA_ON_STOVE": {
+              "count": 10,
+              "max": 301,
+              "mean": 251.1,
+              "median": 241.5,
+              "min": 217,
+              "missing_episodes": [],
+              "p25": 230.5,
+              "p75": 274.5
+            },
+            "MOKA_RELEASED_ON_STOVE": {
+              "count": 10,
+              "max": 303,
+              "mean": 253.6,
+              "median": 244.5,
+              "min": 218,
+              "missing_episodes": [],
+              "p25": 234.25,
+              "p75": 276.25
+            },
+            "STOVE_TURNED_ON": {
+              "count": 10,
+              "max": 107,
+              "mean": 87.6,
+              "median": 84.5,
+              "min": 77,
+              "missing_episodes": [],
+              "p25": 82.0,
+              "p75": 89.0
+            }
+          }
+        },
+        "trace_test": {
+          "effect_segment_length_distribution": {
+            "MOKA_GRASPED": {
+              "count": 10,
+              "max": 166,
+              "mean": 128.6,
+              "median": 122.5,
+              "min": 98,
+              "p25": 108.25,
+              "p75": 152.25
+            },
+            "MOKA_ON_STOVE": {
+              "count": 10,
+              "max": 64,
+              "mean": 45.2,
+              "median": 48.5,
+              "min": 2,
+              "p25": 43.5,
+              "p75": 57.0
+            },
+            "MOKA_RELEASED_ON_STOVE": {
+              "count": 10,
+              "max": 9,
+              "mean": 5.4,
+              "median": 5.0,
+              "min": 5,
+              "p25": 5.0,
+              "p75": 5.0
+            },
+            "STOVE_TURNED_ON": {
+              "count": 10,
+              "max": 96,
+              "mean": 84.4,
+              "median": 83.5,
+              "min": 74,
+              "p25": 77.0,
+              "p75": 92.0
+            }
+          },
+          "episode_count": 10,
+          "full_horizon_action_chunks_per_effect": {
+            "MOKA_GRASPED": 1216,
+            "MOKA_ON_STOVE": 387,
+            "MOKA_RELEASED_ON_STOVE": 2,
+            "STOVE_TURNED_ON": 774
+          },
+          "padded_action_chunks_per_effect": {
+            "MOKA_GRASPED": 1286,
+            "MOKA_ON_STOVE": 452,
+            "MOKA_RELEASED_ON_STOVE": 54,
+            "STOVE_TURNED_ON": 844
+          },
+          "state_action_alignment": {
+            "aligned_episode_count": 10,
+            "mismatch_count": 0,
+            "mismatches": []
+          },
+          "training_frames_per_effect": {
+            "MOKA_GRASPED": 1286,
+            "MOKA_ON_STOVE": 452,
+            "MOKA_RELEASED_ON_STOVE": 54,
+            "STOVE_TURNED_ON": 844
+          },
+          "transition_boundaries": {
+            "MOKA_GRASPED": {
+              "count": 10,
+              "max": 249,
+              "mean": 207.0,
+              "median": 205.5,
+              "min": 177,
+              "missing_episodes": [],
+              "p25": 186.0,
+              "p75": 224.0
+            },
+            "MOKA_ON_STOVE": {
+              "count": 10,
+              "max": 275,
+              "mean": 247.2,
+              "median": 248.0,
+              "min": 229,
+              "missing_episodes": [],
+              "p25": 238.25,
+              "p75": 251.75
+            },
+            "MOKA_RELEASED_ON_STOVE": {
+              "count": 10,
+              "max": 279,
+              "mean": 247.6,
+              "median": 248.0,
+              "min": 229,
+              "missing_episodes": [],
+              "p25": 238.25,
+              "p75": 251.75
+            },
+            "STOVE_TURNED_ON": {
+              "count": 10,
+              "max": 95,
+              "mean": 83.4,
+              "median": 82.5,
+              "min": 73,
+              "missing_episodes": [],
+              "p25": 76.0,
+              "p75": 91.0
+            }
+          }
+        },
+        "train": {
+          "effect_segment_length_distribution": {
+            "MOKA_GRASPED": {
+              "count": 30,
+              "max": 192,
+              "mean": 124.73333333333333,
+              "median": 122.0,
+              "min": 95,
+              "p25": 114.25,
+              "p75": 129.0
+            },
+            "MOKA_ON_STOVE": {
+              "count": 30,
+              "max": 107,
+              "mean": 54.766666666666666,
+              "median": 50.5,
+              "min": 4,
+              "p25": 47.0,
+              "p75": 60.25
+            },
+            "MOKA_RELEASED_ON_STOVE": {
+              "count": 27,
+              "max": 14,
+              "mean": 7.62962962962963,
+              "median": 7.0,
+              "min": 5,
+              "p25": 5.0,
+              "p75": 10.0
+            },
+            "STOVE_TURNED_ON": {
+              "count": 30,
+              "max": 114,
+              "mean": 90.46666666666667,
+              "median": 88.0,
+              "min": 74,
+              "p25": 81.0,
+              "p75": 99.0
+            }
+          },
+          "episode_count": 30,
+          "full_horizon_action_chunks_per_effect": {
+            "MOKA_GRASPED": 3532,
+            "MOKA_ON_STOVE": 1436,
+            "MOKA_RELEASED_ON_STOVE": 40,
+            "STOVE_TURNED_ON": 2504
+          },
+          "padded_action_chunks_per_effect": {
+            "MOKA_GRASPED": 3742,
+            "MOKA_ON_STOVE": 1643,
+            "MOKA_RELEASED_ON_STOVE": 206,
+            "STOVE_TURNED_ON": 2714
+          },
+          "state_action_alignment": {
+            "aligned_episode_count": 30,
+            "mismatch_count": 0,
+            "mismatches": []
+          },
+          "training_frames_per_effect": {
+            "MOKA_GRASPED": 3742,
+            "MOKA_ON_STOVE": 1643,
+            "MOKA_RELEASED_ON_STOVE": 206,
+            "STOVE_TURNED_ON": 2714
+          },
+          "transition_boundaries": {
+            "MOKA_GRASPED": {
+              "count": 30,
+              "max": 283,
+              "mean": 209.2,
+              "median": 206.5,
+              "min": 168,
+              "missing_episodes": [],
+              "p25": 192.5,
+              "p75": 221.0
+            },
+            "MOKA_ON_STOVE": {
+              "count": 30,
+              "max": 329,
+              "mean": 258.96666666666664,
+              "median": 259.5,
+              "min": 208,
+              "missing_episodes": [],
+              "p25": 233.25,
+              "p75": 281.5
+            },
+            "MOKA_RELEASED_ON_STOVE": {
+              "count": 27,
+              "max": 329,
+              "mean": 262.18518518518516,
+              "median": 261.0,
+              "min": 214,
+              "missing_episodes": [
+                "demo_11",
+                "demo_12",
+                "demo_16"
+              ],
+              "p25": 239.5,
+              "p75": 281.0
+            },
+            "STOVE_TURNED_ON": {
+              "count": 30,
+              "max": 113,
+              "mean": 89.46666666666667,
+              "median": 87.0,
+              "min": 73,
+              "missing_episodes": [],
+              "p25": 80.0,
+              "p75": 98.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "train_action_statistics": {
+    "combined_train": {
+      "action_count": 15350,
+      "dimension_labels": [
+        "dx",
+        "dy",
+        "dz",
+        "droll",
+        "dpitch",
+        "dyaw",
+        "gripper"
+      ],
+      "gripper_class_balance": {
+        "inverse_frequency_binary_loss_weights": {
+          "negative": 0.8027402991318899,
+          "positive": 1.3257902919329763
+        },
+        "negative_count": 9561,
+        "negative_fraction": 0.6228664495114007,
+        "neutral_count": 0,
+        "neutral_fraction": 0.0,
+        "positive_count": 5789,
+        "positive_fraction": 0.37713355048859937
+      },
+      "mean": [
+        0.045993252675663225,
+        0.08625837598883157,
+        -0.09696620521172672,
+        0.016640507212656818,
+        -0.0008310376919497515,
+        0.01054404374127476,
+        -0.2457328990228013
+      ],
+      "std": [
+        0.2467559963059317,
+        0.3295021688898929,
+        0.3575666373402611,
+        0.043391913640407107,
+        0.061464425373966416,
+        0.11152408973621399,
+        0.9693375791425248
+      ]
+    },
+    "per_task": {
+      "bowl_drawer": {
+        "action_count": 7256,
+        "dimension_labels": [
+          "dx",
+          "dy",
+          "dz",
+          "droll",
+          "dpitch",
+          "dyaw",
+          "gripper"
+        ],
+        "gripper_class_balance": {
+          "inverse_frequency_binary_loss_weights": {
+            "negative": 0.7594724722629265,
+            "positive": 1.463493344090359
+          },
+          "negative_count": 4777,
+          "negative_fraction": 0.6583517089305403,
+          "neutral_count": 0,
+          "neutral_fraction": 0.0,
+          "positive_count": 2479,
+          "positive_fraction": 0.34164829106945976
+        },
+        "mean": [
+          0.05532785674909421,
+          0.11967891104898334,
+          -0.09820234977949277,
+          0.021783696251378045,
+          0.004353490707197957,
+          -0.045963931327768166,
+          -0.31670341786108047
+        ],
+        "std": [
+          0.23198699358798777,
+          0.3506057144378589,
+          0.34181504636622967,
+          0.050526332462907955,
+          0.06239208271927276,
+          0.0929563561907718,
+          0.948524614923163
+        ]
+      },
+      "stove_moka": {
+        "action_count": 8094,
+        "dimension_labels": [
+          "dx",
+          "dy",
+          "dz",
+          "droll",
+          "dpitch",
+          "dyaw",
+          "gripper"
+        ],
+        "gripper_class_balance": {
+          "inverse_frequency_binary_loss_weights": {
+            "negative": 0.8459448160535117,
+            "positive": 1.2226586102719033
+          },
+          "negative_count": 4784,
+          "negative_fraction": 0.5910551025450951,
+          "neutral_count": 0,
+          "neutral_fraction": 0.0,
+          "positive_count": 3310,
+          "positive_fraction": 0.40894489745490487
+        },
+        "mean": [
+          0.03762509266123046,
+          0.056297985280101485,
+          -0.0958580429948112,
+          0.012029810441596912,
+          -0.005478793815524744,
+          0.06120155141374516,
+          -0.18211020509019027
+        ],
+        "std": [
+          0.2589959446325202,
+          0.3062777465591768,
+          0.3711160369829805,
+          0.03517394893724923,
+          0.060242648935104615,
+          0.1020418307049904,
+          0.9832781260671211
+        ]
+      }
+    }
   }
 }
