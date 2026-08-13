@@ -147,7 +147,10 @@ def calibrate(
     output_manifest_path: Path,
     output_dir: Path,
 ) -> dict:
-    extraction_manifest_path = Path(extraction_manifest_path)
+    # The PAI launcher intentionally passes a repository-relative path.  Resolve it
+    # once before both reading and recording repository provenance; Path.relative_to
+    # rejects a relative left operand even when it names a file under PROJECT_ROOT.
+    extraction_manifest_path = Path(extraction_manifest_path).resolve()
     output_manifest_path = Path(output_manifest_path)
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

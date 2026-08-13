@@ -173,3 +173,13 @@ def test_executor_module_has_no_memory_or_effect_truth_dependency():
     assert "import memory" not in source
     assert "effect_truths(" not in source
     assert "fault_identity" not in source.split("class RetargetedGeometricSkillExecutor", 1)[0]
+
+
+def test_calibration_resolves_relative_manifest_before_project_provenance():
+    source = (
+        Path(__file__).resolve().parents[1]
+        / "scripts"
+        / "calibrate_phase2_templates.py"
+    ).read_text(encoding="utf-8")
+    assert "Path(extraction_manifest_path).resolve()" in source
+    assert "extraction_manifest_path.relative_to(PROJECT_ROOT)" in source
