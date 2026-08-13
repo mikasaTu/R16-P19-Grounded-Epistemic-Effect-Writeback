@@ -23,3 +23,28 @@ Execution order is fail closed:
 
 Allowed final statuses are `PASS_PHASE1_BEHAVIOR`, `REJECT_CORE_MECHANISM`,
 `BLOCKED_BY_ACTOR_V2`, and `BLOCKED_BY_IMPLEMENTATION`.
+
+## Implementation entry point
+
+`phase1b_pipeline.py` is the only Phase-1B stage entry point. The stages are
+deliberately separate so the fallback and 800-rollout matrix remain fail
+closed:
+
+```text
+static-check
+cpu-smoke
+gpu-sim-smoke                 # bounded untrained shape/EGL/video smoke only
+train-primary
+qualify --family primary
+train-fallback                  # primary qualification failure only
+qualify --family fallback       # primary qualification failure only
+formal-gate                     # frozen actor only, init 0--19 once
+closed-loop                     # formal actor gate pass only
+```
+
+The low-level contract lives in `r16p19/phase1b_actor.py`. Its public method is
+exactly `SkillActor.action_chunk(state_history, task_id, effect_id,
+execution_mode)`, where the mode is only `EXECUTE` or `RETRY`. The module does
+not import memory state. `r16p19/phase1b_closed_loop.py` separately maps frozen
+memory decisions to actor behavior and fails if actor inputs or action bytes
+diverge before the first paired memory-decision divergence.
