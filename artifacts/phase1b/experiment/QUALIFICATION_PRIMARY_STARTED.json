@@ -1,0 +1,30 @@
+{
+  "actor": "primary_shared_effect_conditioned_state_act_v1",
+  "checkpoint_sha256": "22f6079221f8e6bf3c8858ce41406848f0e26e595a0ae2f2c0ae36dd7d232c15",
+  "executed_prefix": 4,
+  "gate_name": "qualification_primary",
+  "init_indices": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "max_action_steps": 700,
+  "max_chunks_per_effect": 30
+}

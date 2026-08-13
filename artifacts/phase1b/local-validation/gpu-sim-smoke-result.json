@@ -1,0 +1,13 @@
+{
+  "status": "DEVELOPMENT_GPU_SIM_SMOKE_BLOCKED_BY_LOCAL_EGL",
+  "scientific_result": false,
+  "training_started": false,
+  "rollout_persisted": false,
+  "exit_code": 1,
+  "failure_phase": "simulator_import_before_environment_creation",
+  "error_type": "RuntimeError",
+  "error": "MUJOCO_EGL_DEVICE_ID=0 is invalid because the development host exposes zero EGL devices",
+  "interpretation": "The development host can run CPU checks and CUDA tensor code but cannot create the EGL-backed LIBERO simulator. Authoritative PAI qualification uses the pinned image and has completed real simulator rollouts, so this local graphics limitation is not an experiment implementation failure.",
+  "source_commit": "bf06ef5b2e8ddeb3a528491ddb27525d28853432",
+  "full_log": "gpu-sim-smoke.log"
+}

@@ -1,0 +1,11 @@
+{
+  "actor": "development_untrained_primary_shape_smoke",
+  "checkpoint_sha256": "development-smoke-untrained",
+  "executed_prefix": 4,
+  "gate_name": "development_gpu_sim_smoke",
+  "init_indices": [
+    20
+  ],
+  "max_action_steps": 4,
+  "max_chunks_per_effect": 30
+}

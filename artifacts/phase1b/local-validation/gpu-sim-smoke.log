@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "phase1b_pipeline.py", line 685, in <module>
+    raise SystemExit(main())
+  File "phase1b_pipeline.py", line 670, in main
+    gpu_sim_smoke(args.output_dir)
+  File "phase1b_pipeline.py", line 614, in gpu_sim_smoke
+    rows, summary = run_actor_gate(
+  File "/workspace/leon/R16-P19-Grounded-Epistemic-Effect-Writeback/r16p19/phase1b_evaluation.py", line 160, in run_actor_gate
+    env = make_env(task, camera_obs=True)
+  File "/workspace/leon/R16-P19-Grounded-Epistemic-Effect-Writeback/r16p19/simulator.py", line 18, in make_env
+    from libero.libero.envs.env_wrapper import ControlEnv
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/envs/__init__.py", line 1, in <module>
+    from .bddl_base_domain import TASK_MAPPING
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/envs/bddl_base_domain.py", line 3, in <module>
+    import robosuite.utils.transform_utils as T
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/robosuite/__init__.py", line 11, in <module>
+    from robosuite.environments.base import make
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/robosuite/environments/__init__.py", line 1, in <module>
+    from .base import REGISTERED_ENVS, MujocoEnv
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/robosuite/environments/base.py", line 12, in <module>
+    from robosuite.utils.binding_utils import MjRenderContextOffscreen, MjSim
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/robosuite/utils/binding_utils.py", line 12, in <module>
+    import mujoco
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/mujoco/__init__.py", line 47, in <module>
+    from mujoco.gl_context import *
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/mujoco/gl_context.py", line 41, in <module>
+    from mujoco.egl import GLContext as _GLContext
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/mujoco/egl/__init__.py", line 65, in <module>
+    EGL_DISPLAY = create_initialized_egl_device_display()
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/mujoco/egl/__init__.py", line 44, in create_initialized_egl_device_display
+    raise RuntimeError(
+RuntimeError: The MUJOCO_EGL_DEVICE_ID environment variable must be an integer between 0 and -1 (inclusive), got 0.

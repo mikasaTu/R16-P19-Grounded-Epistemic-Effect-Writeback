@@ -1,0 +1,115 @@
+{
+  "actor": "primary_shared_effect_conditioned_state_act_v1",
+  "checkpoint_identity": {
+    "actor_family": "primary_shared_effect_conditioned_state_act_v1",
+    "actor_seed": 1619,
+    "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v1/primary_shared/step_000010000",
+    "checkpoint_sha256": "22f6079221f8e6bf3c8858ce41406848f0e26e595a0ae2f2c0ae36dd7d232c15",
+    "complete_state_keys": [
+      "global_step",
+      "model",
+      "optimizer",
+      "rng",
+      "scheduler"
+    ],
+    "global_step": 10000,
+    "model_config": {
+      "action_dim": 7,
+      "action_horizon": 8,
+      "attention_heads": 8,
+      "dropout": 0.1,
+      "executed_prefix": 4,
+      "feedforward_multiplier": 4,
+      "hidden_dim": 256,
+      "history_length": 4,
+      "state_dim": 64,
+      "transformer_layers": 4
+    },
+    "model_manifest": {
+      "actor_forbidden_inputs": [
+        "memory_summary",
+        "epistemic_state",
+        "simulator_effect_truth",
+        "future_state"
+      ],
+      "architecture": {
+        "action_dim": 7,
+        "action_horizon": 8,
+        "attention_heads": 8,
+        "dropout": 0.1,
+        "executed_prefix": 4,
+        "feedforward_multiplier": 4,
+        "hidden_dim": 256,
+        "history_length": 4,
+        "state_dim": 64,
+        "transformer_layers": 4
+      },
+      "effect_keys": [
+        "STOVE_TURNED_ON",
+        "MOKA_GRASPED",
+        "MOKA_ON_STOVE",
+        "MOKA_RELEASED_ON_STOVE",
+        "BOWL_GRASPED",
+        "BOWL_IN_BOTTOM_DRAWER",
+        "BOWL_RELEASED_IN_DRAWER",
+        "BOTTOM_DRAWER_CLOSED"
+      ],
+      "execution_modes": [
+        "EXECUTE",
+        "RETRY"
+      ],
+      "parameter_count": 3186951,
+      "task_keys": [
+        "stove_moka",
+        "bowl_drawer"
+      ]
+    },
+    "normalization_sha256": "9725c1da980f0416ca3f421f2e4bb2202ca248e608e0658854ecd874c4eac0c8",
+    "qualification_results_used": false,
+    "selection_source": "calibration_loss_only"
+  },
+  "failure_video_count": 22,
+  "full_task_success_rate": 0.45,
+  "init_indices": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "min_per_effect_success": 0.4,
+  "pass": false,
+  "per_effect_success": {
+    "bowl_drawer": {
+      "BOTTOM_DRAWER_CLOSED": 0.5,
+      "BOWL_GRASPED": 0.85,
+      "BOWL_IN_BOTTOM_DRAWER": 0.8,
+      "BOWL_RELEASED_IN_DRAWER": 0.8
+    },
+    "stove_moka": {
+      "MOKA_GRASPED": 0.4,
+      "MOKA_ON_STOVE": 0.4,
+      "MOKA_RELEASED_ON_STOVE": 0.4,
+      "STOVE_TURNED_ON": 1.0
+    }
+  },
+  "rollout_count": 40,
+  "selection_used_gate_results": false,
+  "status": "ACTOR_GATE_COMPLETE",
+  "threshold": 0.8
+}
