@@ -1,0 +1,105 @@
+{
+  "closed_loop_rollout_count": 0,
+  "fallback_qualification": {
+    "failure_video_count": 16,
+    "full_task_success_count": 24,
+    "full_task_success_rate": 0.6,
+    "mean_action_steps": 210.85,
+    "minimum_per_effect_success": 0.5,
+    "pass": false,
+    "repeated_action_loop_count": 16,
+    "repeated_action_loop_rate": 0.4,
+    "rollout_count": 40,
+    "tasks": {
+      "bowl_drawer": {
+        "failure_types": {
+          "EFFECT_CHUNK_LIMIT:BOWL_GRASPED": 5,
+          "EFFECT_CHUNK_LIMIT:BOWL_IN_BOTTOM_DRAWER": 1
+        },
+        "full_task_success_count": 14,
+        "full_task_success_rate": 0.7,
+        "mean_action_steps": 195.65,
+        "per_effect_success": {
+          "BOTTOM_DRAWER_CLOSED": 0.7,
+          "BOWL_GRASPED": 0.75,
+          "BOWL_IN_BOTTOM_DRAWER": 0.7,
+          "BOWL_RELEASED_IN_DRAWER": 0.7
+        },
+        "rollout_count": 20
+      },
+      "stove_moka": {
+        "failure_types": {
+          "EFFECT_CHUNK_LIMIT:MOKA_GRASPED": 9,
+          "EFFECT_CHUNK_LIMIT:STOVE_TURNED_ON": 1
+        },
+        "full_task_success_count": 10,
+        "full_task_success_rate": 0.5,
+        "mean_action_steps": 226.05,
+        "per_effect_success": {
+          "MOKA_GRASPED": 0.5,
+          "MOKA_ON_STOVE": 0.5,
+          "MOKA_RELEASED_ON_STOVE": 0.5,
+          "STOVE_TURNED_ON": 0.95
+        },
+        "rollout_count": 20
+      }
+    },
+    "threshold": 0.8
+  },
+  "final_status": "BLOCKED_BY_ACTOR_V2",
+  "formal_actor_gate": "NOT_RUN",
+  "paired_bootstrap": "NOT_RUN",
+  "primary_qualification": {
+    "failure_video_count": 22,
+    "full_task_success_count": 18,
+    "full_task_success_rate": 0.45,
+    "mean_action_steps": 227.275,
+    "minimum_per_effect_success": 0.4,
+    "pass": false,
+    "repeated_action_loop_count": 22,
+    "repeated_action_loop_rate": 0.55,
+    "rollout_count": 40,
+    "tasks": {
+      "bowl_drawer": {
+        "failure_types": {
+          "EFFECT_CHUNK_LIMIT:BOTTOM_DRAWER_CLOSED": 6,
+          "EFFECT_CHUNK_LIMIT:BOWL_GRASPED": 3,
+          "EFFECT_CHUNK_LIMIT:BOWL_IN_BOTTOM_DRAWER": 1
+        },
+        "full_task_success_count": 10,
+        "full_task_success_rate": 0.5,
+        "mean_action_steps": 220.3,
+        "per_effect_success": {
+          "BOTTOM_DRAWER_CLOSED": 0.5,
+          "BOWL_GRASPED": 0.85,
+          "BOWL_IN_BOTTOM_DRAWER": 0.8,
+          "BOWL_RELEASED_IN_DRAWER": 0.8
+        },
+        "rollout_count": 20
+      },
+      "stove_moka": {
+        "failure_types": {
+          "EFFECT_CHUNK_LIMIT:MOKA_GRASPED": 12
+        },
+        "full_task_success_count": 8,
+        "full_task_success_rate": 0.4,
+        "mean_action_steps": 234.25,
+        "per_effect_success": {
+          "MOKA_GRASPED": 0.4,
+          "MOKA_ON_STOVE": 0.4,
+          "MOKA_RELEASED_ON_STOVE": 0.4,
+          "STOVE_TURNED_ON": 1.0
+        },
+        "rollout_count": 20
+      }
+    },
+    "threshold": 0.8
+  },
+  "prior_actor_free_trace_gate": {
+    "B3_false_completion": 0.5,
+    "B6_contradiction_recovery_recall": 1.0,
+    "B6_false_completion": 0.0,
+    "interpretation": "mechanism-level evidence only; not behavior-level PASS",
+    "status": "PASS"
+  }
+}

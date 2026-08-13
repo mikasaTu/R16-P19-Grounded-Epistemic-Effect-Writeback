@@ -1,0 +1,30 @@
+{
+  "actor": "fallback_per_effect_state_act_v1",
+  "checkpoint_sha256": "41f86b8b14a3f578ac33727814f7aafbad62c7797ee20240c21ce99ef4c63d36",
+  "executed_prefix": 4,
+  "gate_name": "qualification_fallback",
+  "init_indices": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "max_action_steps": 700,
+  "max_chunks_per_effect": 30
+}

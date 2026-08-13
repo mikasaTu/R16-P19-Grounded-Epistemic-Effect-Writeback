@@ -1,0 +1,18 @@
+{
+  "application_auto_resume": true,
+  "checkpoint_contract": [
+    "model",
+    "optimizer",
+    "scheduler",
+    "rng",
+    "global_step"
+  ],
+  "checkpoint_interval_steps": 2500,
+  "expected_source_commit": "49e2bfe240c4f7d9dcc425c1ab35426ee95e7301",
+  "hardware": "2xA800_gpu0_active_gpu1_reserved_idle",
+  "pai_automatic_fault_tolerance": false,
+  "platform_restart_limit": 0,
+  "run_id": "r16p19-phase1b-train-fallback-fix1-20260813-161800",
+  "stage": "train-fallback",
+  "wandb_entity": "chen_jian-cj-workspace"
+}

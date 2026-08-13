@@ -1,0 +1,589 @@
+{
+  "actor": "fallback_per_effect_state_act_v1",
+  "checkpoint_identity": {
+    "actor_family": "fallback_per_effect_state_act_v1",
+    "actor_seed": 2619,
+    "checkpoint_sha256": "41f86b8b14a3f578ac33727814f7aafbad62c7797ee20240c21ce99ef4c63d36",
+    "effects": {
+      "BOTTOM_DRAWER_CLOSED": {
+        "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2/fallback_per_effect/BOTTOM_DRAWER_CLOSED/step_000005000",
+        "checkpoint_sha256": "1d5cc5df9ec53c5464036b6ae303d89abdd041d0603d0990bd27213b2f541907",
+        "complete_state_keys": [
+          "global_step",
+          "model",
+          "optimizer",
+          "rng",
+          "scheduler"
+        ],
+        "global_step": 5000,
+        "model_config": {
+          "action_dim": 7,
+          "action_horizon": 8,
+          "attention_heads": 4,
+          "dropout": 0.1,
+          "executed_prefix": 4,
+          "feedforward_multiplier": 4,
+          "hidden_dim": 128,
+          "history_length": 4,
+          "state_dim": 64,
+          "transformer_layers": 2
+        },
+        "model_manifest": {
+          "actor_forbidden_inputs": [
+            "memory_summary",
+            "epistemic_state",
+            "simulator_effect_truth",
+            "future_state"
+          ],
+          "architecture": {
+            "action_dim": 7,
+            "action_horizon": 8,
+            "attention_heads": 4,
+            "dropout": 0.1,
+            "executed_prefix": 4,
+            "feedforward_multiplier": 4,
+            "hidden_dim": 128,
+            "history_length": 4,
+            "state_dim": 64,
+            "transformer_layers": 2
+          },
+          "effect_keys": [
+            "STOVE_TURNED_ON",
+            "MOKA_GRASPED",
+            "MOKA_ON_STOVE",
+            "MOKA_RELEASED_ON_STOVE",
+            "BOWL_GRASPED",
+            "BOWL_IN_BOTTOM_DRAWER",
+            "BOWL_RELEASED_IN_DRAWER",
+            "BOTTOM_DRAWER_CLOSED"
+          ],
+          "execution_modes": [
+            "EXECUTE",
+            "RETRY"
+          ],
+          "parameter_count": 410503,
+          "task_keys": [
+            "stove_moka",
+            "bowl_drawer"
+          ]
+        },
+        "normalization_sha256": "021cc8f8d8f468134cc5d3c173913b4c7fd4a916f3613da69288c3daeb2dd1b9"
+      },
+      "BOWL_GRASPED": {
+        "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2/fallback_per_effect/BOWL_GRASPED/step_000005000",
+        "checkpoint_sha256": "1a698af86f2cc49b1a42d28e823bcdadf9dc754a517962bfa34e05637d6b6852",
+        "complete_state_keys": [
+          "global_step",
+          "model",
+          "optimizer",
+          "rng",
+          "scheduler"
+        ],
+        "global_step": 5000,
+        "model_config": {
+          "action_dim": 7,
+          "action_horizon": 8,
+          "attention_heads": 4,
+          "dropout": 0.1,
+          "executed_prefix": 4,
+          "feedforward_multiplier": 4,
+          "hidden_dim": 128,
+          "history_length": 4,
+          "state_dim": 64,
+          "transformer_layers": 2
+        },
+        "model_manifest": {
+          "actor_forbidden_inputs": [
+            "memory_summary",
+            "epistemic_state",
+            "simulator_effect_truth",
+            "future_state"
+          ],
+          "architecture": {
+            "action_dim": 7,
+            "action_horizon": 8,
+            "attention_heads": 4,
+            "dropout": 0.1,
+            "executed_prefix": 4,
+            "feedforward_multiplier": 4,
+            "hidden_dim": 128,
+            "history_length": 4,
+            "state_dim": 64,
+            "transformer_layers": 2
+          },
+          "effect_keys": [
+            "STOVE_TURNED_ON",
+            "MOKA_GRASPED",
+            "MOKA_ON_STOVE",
+            "MOKA_RELEASED_ON_STOVE",
+            "BOWL_GRASPED",
+            "BOWL_IN_BOTTOM_DRAWER",
+            "BOWL_RELEASED_IN_DRAWER",
+            "BOTTOM_DRAWER_CLOSED"
+          ],
+          "execution_modes": [
+            "EXECUTE",
+            "RETRY"
+          ],
+          "parameter_count": 410503,
+          "task_keys": [
+            "stove_moka",
+            "bowl_drawer"
+          ]
+        },
+        "normalization_sha256": "12a2c3cbc4867ed13bd4e099d7c2a65334c50fe18651382197a2769b70133d68"
+      },
+      "BOWL_IN_BOTTOM_DRAWER": {
+        "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2/fallback_per_effect/BOWL_IN_BOTTOM_DRAWER/step_000005000",
+        "checkpoint_sha256": "90405192f24361fe64a6a2aaaff58804685fcb00b666207f48aff36718e37b53",
+        "complete_state_keys": [
+          "global_step",
+          "model",
+          "optimizer",
+          "rng",
+          "scheduler"
+        ],
+        "global_step": 5000,
+        "model_config": {
+          "action_dim": 7,
+          "action_horizon": 8,
+          "attention_heads": 4,
+          "dropout": 0.1,
+          "executed_prefix": 4,
+          "feedforward_multiplier": 4,
+          "hidden_dim": 128,
+          "history_length": 4,
+          "state_dim": 64,
+          "transformer_layers": 2
+        },
+        "model_manifest": {
+          "actor_forbidden_inputs": [
+            "memory_summary",
+            "epistemic_state",
+            "simulator_effect_truth",
+            "future_state"
+          ],
+          "architecture": {
+            "action_dim": 7,
+            "action_horizon": 8,
+            "attention_heads": 4,
+            "dropout": 0.1,
+            "executed_prefix": 4,
+            "feedforward_multiplier": 4,
+            "hidden_dim": 128,
+            "history_length": 4,
+            "state_dim": 64,
+            "transformer_layers": 2
+          },
+          "effect_keys": [
+            "STOVE_TURNED_ON",
+            "MOKA_GRASPED",
+            "MOKA_ON_STOVE",
+            "MOKA_RELEASED_ON_STOVE",
+            "BOWL_GRASPED",
+            "BOWL_IN_BOTTOM_DRAWER",
+            "BOWL_RELEASED_IN_DRAWER",
+            "BOTTOM_DRAWER_CLOSED"
+          ],
+          "execution_modes": [
+            "EXECUTE",
+            "RETRY"
+          ],
+          "parameter_count": 410503,
+          "task_keys": [
+            "stove_moka",
+            "bowl_drawer"
+          ]
+        },
+        "normalization_sha256": "cd6ffc2069044a71eb57d193e07465adc58664b0c93cb9dea4b5619e8a269b26"
+      },
+      "BOWL_RELEASED_IN_DRAWER": {
+        "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2/fallback_per_effect/BOWL_RELEASED_IN_DRAWER/step_000005000",
+        "checkpoint_sha256": "b108b13bf8b50c707f7dec61561ce1a306710833a5905c52d863831f4869fbbc",
+        "complete_state_keys": [
+          "global_step",
+          "model",
+          "optimizer",
+          "rng",
+          "scheduler"
+        ],
+        "global_step": 5000,
+        "model_config": {
+          "action_dim": 7,
+          "action_horizon": 8,
+          "attention_heads": 4,
+          "dropout": 0.1,
+          "executed_prefix": 4,
+          "feedforward_multiplier": 4,
+          "hidden_dim": 128,
+          "history_length": 4,
+          "state_dim": 64,
+          "transformer_layers": 2
+        },
+        "model_manifest": {
+          "actor_forbidden_inputs": [
+            "memory_summary",
+            "epistemic_state",
+            "simulator_effect_truth",
+            "future_state"
+          ],
+          "architecture": {
+            "action_dim": 7,
+            "action_horizon": 8,
+            "attention_heads": 4,
+            "dropout": 0.1,
+            "executed_prefix": 4,
+            "feedforward_multiplier": 4,
+            "hidden_dim": 128,
+            "history_length": 4,
+            "state_dim": 64,
+            "transformer_layers": 2
+          },
+          "effect_keys": [
+            "STOVE_TURNED_ON",
+            "MOKA_GRASPED",
+            "MOKA_ON_STOVE",
+            "MOKA_RELEASED_ON_STOVE",
+            "BOWL_GRASPED",
+            "BOWL_IN_BOTTOM_DRAWER",
+            "BOWL_RELEASED_IN_DRAWER",
+            "BOTTOM_DRAWER_CLOSED"
+          ],
+          "execution_modes": [
+            "EXECUTE",
+            "RETRY"
+          ],
+          "parameter_count": 410503,
+          "task_keys": [
+            "stove_moka",
+            "bowl_drawer"
+          ]
+        },
+        "normalization_sha256": "9b1e3e1fe80a8e7c81eb80e686f949903b2ae9f85baa6ffac5cc51e512b79dcc"
+      },
+      "MOKA_GRASPED": {
+        "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2/fallback_per_effect/MOKA_GRASPED/step_000005000",
+        "checkpoint_sha256": "c4626eab2e68f10f800fd3b109a4e2a1c1a55f1cc8aa94e1d5187e295792618a",
+        "complete_state_keys": [
+          "global_step",
+          "model",
+          "optimizer",
+          "rng",
+          "scheduler"
+        ],
+        "global_step": 5000,
+        "model_config": {
+          "action_dim": 7,
+          "action_horizon": 8,
+          "attention_heads": 4,
+          "dropout": 0.1,
+          "executed_prefix": 4,
+          "feedforward_multiplier": 4,
+          "hidden_dim": 128,
+          "history_length": 4,
+          "state_dim": 64,
+          "transformer_layers": 2
+        },
+        "model_manifest": {
+          "actor_forbidden_inputs": [
+            "memory_summary",
+            "epistemic_state",
+            "simulator_effect_truth",
+            "future_state"
+          ],
+          "architecture": {
+            "action_dim": 7,
+            "action_horizon": 8,
+            "attention_heads": 4,
+            "dropout": 0.1,
+            "executed_prefix": 4,
+            "feedforward_multiplier": 4,
+            "hidden_dim": 128,
+            "history_length": 4,
+            "state_dim": 64,
+            "transformer_layers": 2
+          },
+          "effect_keys": [
+            "STOVE_TURNED_ON",
+            "MOKA_GRASPED",
+            "MOKA_ON_STOVE",
+            "MOKA_RELEASED_ON_STOVE",
+            "BOWL_GRASPED",
+            "BOWL_IN_BOTTOM_DRAWER",
+            "BOWL_RELEASED_IN_DRAWER",
+            "BOTTOM_DRAWER_CLOSED"
+          ],
+          "execution_modes": [
+            "EXECUTE",
+            "RETRY"
+          ],
+          "parameter_count": 410503,
+          "task_keys": [
+            "stove_moka",
+            "bowl_drawer"
+          ]
+        },
+        "normalization_sha256": "b4a80ab6aab05721b6e37fa74300853b12c162292cce51c1a09a4c3f8ec7bf24"
+      },
+      "MOKA_ON_STOVE": {
+        "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2/fallback_per_effect/MOKA_ON_STOVE/step_000005000",
+        "checkpoint_sha256": "d968f318b93220f7290bb075ebb966355d58f36826284c28a135493beb0a7100",
+        "complete_state_keys": [
+          "global_step",
+          "model",
+          "optimizer",
+          "rng",
+          "scheduler"
+        ],
+        "global_step": 5000,
+        "model_config": {
+          "action_dim": 7,
+          "action_horizon": 8,
+          "attention_heads": 4,
+          "dropout": 0.1,
+          "executed_prefix": 4,
+          "feedforward_multiplier": 4,
+          "hidden_dim": 128,
+          "history_length": 4,
+          "state_dim": 64,
+          "transformer_layers": 2
+        },
+        "model_manifest": {
+          "actor_forbidden_inputs": [
+            "memory_summary",
+            "epistemic_state",
+            "simulator_effect_truth",
+            "future_state"
+          ],
+          "architecture": {
+            "action_dim": 7,
+            "action_horizon": 8,
+            "attention_heads": 4,
+            "dropout": 0.1,
+            "executed_prefix": 4,
+            "feedforward_multiplier": 4,
+            "hidden_dim": 128,
+            "history_length": 4,
+            "state_dim": 64,
+            "transformer_layers": 2
+          },
+          "effect_keys": [
+            "STOVE_TURNED_ON",
+            "MOKA_GRASPED",
+            "MOKA_ON_STOVE",
+            "MOKA_RELEASED_ON_STOVE",
+            "BOWL_GRASPED",
+            "BOWL_IN_BOTTOM_DRAWER",
+            "BOWL_RELEASED_IN_DRAWER",
+            "BOTTOM_DRAWER_CLOSED"
+          ],
+          "execution_modes": [
+            "EXECUTE",
+            "RETRY"
+          ],
+          "parameter_count": 410503,
+          "task_keys": [
+            "stove_moka",
+            "bowl_drawer"
+          ]
+        },
+        "normalization_sha256": "273fde9008f2be3c938d1b306fbcfd59578dbc25777b49df0cf5e6e75f4291d9"
+      },
+      "MOKA_RELEASED_ON_STOVE": {
+        "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2/fallback_per_effect/MOKA_RELEASED_ON_STOVE/step_000005000",
+        "checkpoint_sha256": "3dddeae3fd326f5c176891b60d51fd59f1963d96b5413296f9e856b5179e223d",
+        "complete_state_keys": [
+          "global_step",
+          "model",
+          "optimizer",
+          "rng",
+          "scheduler"
+        ],
+        "global_step": 5000,
+        "model_config": {
+          "action_dim": 7,
+          "action_horizon": 8,
+          "attention_heads": 4,
+          "dropout": 0.1,
+          "executed_prefix": 4,
+          "feedforward_multiplier": 4,
+          "hidden_dim": 128,
+          "history_length": 4,
+          "state_dim": 64,
+          "transformer_layers": 2
+        },
+        "model_manifest": {
+          "actor_forbidden_inputs": [
+            "memory_summary",
+            "epistemic_state",
+            "simulator_effect_truth",
+            "future_state"
+          ],
+          "architecture": {
+            "action_dim": 7,
+            "action_horizon": 8,
+            "attention_heads": 4,
+            "dropout": 0.1,
+            "executed_prefix": 4,
+            "feedforward_multiplier": 4,
+            "hidden_dim": 128,
+            "history_length": 4,
+            "state_dim": 64,
+            "transformer_layers": 2
+          },
+          "effect_keys": [
+            "STOVE_TURNED_ON",
+            "MOKA_GRASPED",
+            "MOKA_ON_STOVE",
+            "MOKA_RELEASED_ON_STOVE",
+            "BOWL_GRASPED",
+            "BOWL_IN_BOTTOM_DRAWER",
+            "BOWL_RELEASED_IN_DRAWER",
+            "BOTTOM_DRAWER_CLOSED"
+          ],
+          "execution_modes": [
+            "EXECUTE",
+            "RETRY"
+          ],
+          "parameter_count": 410503,
+          "task_keys": [
+            "stove_moka",
+            "bowl_drawer"
+          ]
+        },
+        "normalization_sha256": "cb767dbdbf50c982d383648ecb97569bede1eb409edad6983ddf07337eb4a07b"
+      },
+      "STOVE_TURNED_ON": {
+        "checkpoint": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2/fallback_per_effect/STOVE_TURNED_ON/step_000005000",
+        "checkpoint_sha256": "f5a486c6621f6e9bd13da7e0576f5c6a63838ff07bf466a7b5f5a44685569599",
+        "complete_state_keys": [
+          "global_step",
+          "model",
+          "optimizer",
+          "rng",
+          "scheduler"
+        ],
+        "global_step": 5000,
+        "model_config": {
+          "action_dim": 7,
+          "action_horizon": 8,
+          "attention_heads": 4,
+          "dropout": 0.1,
+          "executed_prefix": 4,
+          "feedforward_multiplier": 4,
+          "hidden_dim": 128,
+          "history_length": 4,
+          "state_dim": 64,
+          "transformer_layers": 2
+        },
+        "model_manifest": {
+          "actor_forbidden_inputs": [
+            "memory_summary",
+            "epistemic_state",
+            "simulator_effect_truth",
+            "future_state"
+          ],
+          "architecture": {
+            "action_dim": 7,
+            "action_horizon": 8,
+            "attention_heads": 4,
+            "dropout": 0.1,
+            "executed_prefix": 4,
+            "feedforward_multiplier": 4,
+            "hidden_dim": 128,
+            "history_length": 4,
+            "state_dim": 64,
+            "transformer_layers": 2
+          },
+          "effect_keys": [
+            "STOVE_TURNED_ON",
+            "MOKA_GRASPED",
+            "MOKA_ON_STOVE",
+            "MOKA_RELEASED_ON_STOVE",
+            "BOWL_GRASPED",
+            "BOWL_IN_BOTTOM_DRAWER",
+            "BOWL_RELEASED_IN_DRAWER",
+            "BOTTOM_DRAWER_CLOSED"
+          ],
+          "execution_modes": [
+            "EXECUTE",
+            "RETRY"
+          ],
+          "parameter_count": 410503,
+          "task_keys": [
+            "stove_moka",
+            "bowl_drawer"
+          ]
+        },
+        "normalization_sha256": "012059368db161e04d04c720c490ae6272dd840e05c99b791b4f568c1a642065"
+      }
+    },
+    "normalization_sha256": "7934b0fc17c7f793795fad2551e3fa2e5a5b80137803c11be22ec3209be1b0f0",
+    "per_effect_checkpoint_sha256": {
+      "BOTTOM_DRAWER_CLOSED": "1d5cc5df9ec53c5464036b6ae303d89abdd041d0603d0990bd27213b2f541907",
+      "BOWL_GRASPED": "1a698af86f2cc49b1a42d28e823bcdadf9dc754a517962bfa34e05637d6b6852",
+      "BOWL_IN_BOTTOM_DRAWER": "90405192f24361fe64a6a2aaaff58804685fcb00b666207f48aff36718e37b53",
+      "BOWL_RELEASED_IN_DRAWER": "b108b13bf8b50c707f7dec61561ce1a306710833a5905c52d863831f4869fbbc",
+      "MOKA_GRASPED": "c4626eab2e68f10f800fd3b109a4e2a1c1a55f1cc8aa94e1d5187e295792618a",
+      "MOKA_ON_STOVE": "d968f318b93220f7290bb075ebb966355d58f36826284c28a135493beb0a7100",
+      "MOKA_RELEASED_ON_STOVE": "3dddeae3fd326f5c176891b60d51fd59f1963d96b5413296f9e856b5179e223d",
+      "STOVE_TURNED_ON": "f5a486c6621f6e9bd13da7e0576f5c6a63838ff07bf466a7b5f5a44685569599"
+    },
+    "per_effect_normalization_sha256": {
+      "BOTTOM_DRAWER_CLOSED": "021cc8f8d8f468134cc5d3c173913b4c7fd4a916f3613da69288c3daeb2dd1b9",
+      "BOWL_GRASPED": "12a2c3cbc4867ed13bd4e099d7c2a65334c50fe18651382197a2769b70133d68",
+      "BOWL_IN_BOTTOM_DRAWER": "cd6ffc2069044a71eb57d193e07465adc58664b0c93cb9dea4b5619e8a269b26",
+      "BOWL_RELEASED_IN_DRAWER": "9b1e3e1fe80a8e7c81eb80e686f949903b2ae9f85baa6ffac5cc51e512b79dcc",
+      "MOKA_GRASPED": "b4a80ab6aab05721b6e37fa74300853b12c162292cce51c1a09a4c3f8ec7bf24",
+      "MOKA_ON_STOVE": "273fde9008f2be3c938d1b306fbcfd59578dbc25777b49df0cf5e6e75f4291d9",
+      "MOKA_RELEASED_ON_STOVE": "cb767dbdbf50c982d383648ecb97569bede1eb409edad6983ddf07337eb4a07b",
+      "STOVE_TURNED_ON": "012059368db161e04d04c720c490ae6272dd840e05c99b791b4f568c1a642065"
+    },
+    "qualification_results_used": false,
+    "selection_source": "per_effect_calibration_loss_only"
+  },
+  "failure_video_count": 16,
+  "full_task_success_rate": 0.6,
+  "init_indices": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "min_per_effect_success": 0.5,
+  "pass": false,
+  "per_effect_success": {
+    "bowl_drawer": {
+      "BOTTOM_DRAWER_CLOSED": 0.7,
+      "BOWL_GRASPED": 0.75,
+      "BOWL_IN_BOTTOM_DRAWER": 0.7,
+      "BOWL_RELEASED_IN_DRAWER": 0.7
+    },
+    "stove_moka": {
+      "MOKA_GRASPED": 0.5,
+      "MOKA_ON_STOVE": 0.5,
+      "MOKA_RELEASED_ON_STOVE": 0.5,
+      "STOVE_TURNED_ON": 0.95
+    }
+  },
+  "rollout_count": 40,
+  "selection_used_gate_results": false,
+  "status": "ACTOR_GATE_COMPLETE",
+  "threshold": 0.8
+}

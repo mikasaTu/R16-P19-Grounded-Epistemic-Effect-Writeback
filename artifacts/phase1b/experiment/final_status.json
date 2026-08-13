@@ -1,0 +1,5 @@
+{
+  "closed_loop_800_started": false,
+  "final_status": "BLOCKED_BY_ACTOR_V2",
+  "reason": "fallback qualification minimum per-effect success below 0.80"
+}

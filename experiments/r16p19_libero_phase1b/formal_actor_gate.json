@@ -1,0 +1,30 @@
+{
+  "actor_frozen": false,
+  "closed_loop_800_authorized": false,
+  "formal_init_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "formal_init_indices_seen": [],
+  "qualification_threshold": 0.8,
+  "reason": "primary and the only preregistered fallback failed qualification",
+  "status": "NOT_RUN"
+}

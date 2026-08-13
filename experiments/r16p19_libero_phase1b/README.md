@@ -48,3 +48,21 @@ execution_mode)`, where the mode is only `EXECUTE` or `RETRY`. The module does
 not import memory state. `r16p19/phase1b_closed_loop.py` separately maps frozen
 memory decisions to actor behavior and fails if actor inputs or action bytes
 diverge before the first paired memory-decision divergence.
+
+## Terminal result
+
+Phase-1B terminated as `BLOCKED_BY_ACTOR_V2`.
+
+- The shared primary actor completed 40 qualification rollouts on init 20--39,
+  with 18/40 full-task success and minimum per-effect success 0.40.
+- The only preregistered per-effect fallback completed a separate 40-rollout
+  qualification matrix on the same frozen init range, with 24/40 full-task
+  success and minimum per-effect success 0.50.
+- Both minima are below the frozen 0.80 threshold. No actor was frozen.
+- Formal init 0--19 received zero actor rollouts. The 800-rollout
+  memory-conditioned matrix and 10,000-repetition paired bootstrap were not
+  authorized and remain `NOT_RUN`.
+
+The machine-readable result is in `behavior_summary.json`; the exact gate
+decision is in `FINAL_DECISION.md`. `SHA256SUMS` covers every final
+deliverable in this directory.

@@ -1,0 +1,20 @@
+{
+  "B6_recovery_chain_reason": "closed-loop matrix not authorized",
+  "B6_recovery_chains": [],
+  "clean_qualification_failure_decomposition": {
+    "actor_skill_failure": 16,
+    "effect_verifier_failure": 0,
+    "failure_types": {
+      "EFFECT_CHUNK_LIMIT:BOWL_GRASPED": 5,
+      "EFFECT_CHUNK_LIMIT:BOWL_IN_BOTTOM_DRAWER": 1,
+      "EFFECT_CHUNK_LIMIT:MOKA_GRASPED": 9,
+      "EFFECT_CHUNK_LIMIT:STOVE_TURNED_ON": 1
+    },
+    "fault_injector_failure": 0,
+    "memory_decision_failure": 0,
+    "scope_note": "clean actor gates contain no memory arm and no injected fault",
+    "timeout_or_repeated_loop": 16
+  },
+  "reason": "no actor passed qualification, so memory-conditioned behavior was forbidden",
+  "status": "NOT_ESTIMABLE"
+}

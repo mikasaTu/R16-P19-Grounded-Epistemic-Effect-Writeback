@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "failed_job_id": "dlc9iq5myqo4j49t",
+  "failed_run_id": "r16p19-phase1b-train-fallback-20260813-160100",
+  "failure_stage": "train-fallback",
+  "failure_effect": "BOWL_IN_BOTTOM_DRAWER",
+  "failure": "ActorNormalization.from_training_data rejected a single-class gripper target",
+  "observed_train_gripper_counts": {
+    "positive": 12552,
+    "negative": 0
+  },
+  "fix": "Use positive_weight=1.0 (standard unweighted BCE) when either gripper class is absent; retain inverse-frequency weighting when both classes are observed.",
+  "scientific_scope": {
+    "architecture_changed": false,
+    "hyperparameters_changed": false,
+    "data_or_split_changed": false,
+    "memory_semantics_changed": false,
+    "gate_or_threshold_changed": false,
+    "qualification_or_formal_results_used_for_selection": false,
+    "fabricated_absent_class_samples": false
+  },
+  "restart_policy": "Rerun all eight fallback actors from step 0 in the isolated v2 checkpoint and output namespace; never mix the five partial failed-run actors with the corrected run.",
+  "restart_output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase1b/v2/experiment",
+  "restart_checkpoint_root": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon/torch/r16p19_libero_phase1b/v2",
+  "failed_run_artifacts_retained": true
+}

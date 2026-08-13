@@ -1,0 +1,7 @@
+{
+  "error_type": "Refused",
+  "finished_at_utc": "2026-08-13T08:15:29Z",
+  "started_at_utc": "2026-08-13T08:15:20Z",
+  "state": "preflight_failed_sealed",
+  "unique_name": "r1-r16p19-phase1b-train-fallback-fix1-20260813-161700-n88563fdb"
+}
