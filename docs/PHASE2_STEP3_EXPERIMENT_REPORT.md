@@ -1,4 +1,6 @@
-# R16-P19 step3 实验报告：Phase-2 Competent-Executor Causal Behavior Validation
+# 实验报告
+
+## R16-P19 step3：Phase-2 Competent-Executor Causal Behavior Validation
 
 ## 结论先行
 
