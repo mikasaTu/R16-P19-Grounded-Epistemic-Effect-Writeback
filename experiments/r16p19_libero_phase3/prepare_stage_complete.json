@@ -1,0 +1,7 @@
+{
+  "qualification_replay_count": 400,
+  "selected_chain_manifest_sha256": "53c6a9fa448267b3b77a9fa4458552e9383fda8b1a63fcf127acf80fe4904677",
+  "snapshot_segment_count": 320,
+  "source_head": "a04f3c3ac809b37ed4b70dce5a6bbec3c08a9088",
+  "status": "PREPARE_STAGE_COMPLETE"
+}

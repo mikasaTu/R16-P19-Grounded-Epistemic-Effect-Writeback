@@ -1,0 +1,692 @@
+{
+  "analysis_continuation_chain_ids": [
+    "S2_MOKA_GRASP_TO_ON_STOVE",
+    "B1_BOWL_GRASP_TO_DRAWER",
+    "B2_BOWL_IN_TO_RELEASED"
+  ],
+  "budgets": {
+    "action_budget_formula": "4*sum(segment_action_lengths)+8*4*effect_count",
+    "maximum_decision_ticks_per_two_effect_chain": 32,
+    "maximum_initial_plus_retry_attempts_per_effect": 3,
+    "maximum_reobserve_operations_per_effect": 4,
+    "maximum_rollback_replays_per_effect": 1
+  },
+  "continuation_is_diagnostic": true,
+  "formal_analysis_chain_ids": [
+    "S2_MOKA_GRASP_TO_ON_STOVE",
+    "B1_BOWL_GRASP_TO_DRAWER",
+    "B2_BOWL_IN_TO_RELEASED"
+  ],
+  "formal_chain_count": 3,
+  "formal_demo_40_49_unopened_at_freeze": true,
+  "freeze_status": "FROZEN_BEFORE_FORMAL_DEMO_ACCESS",
+  "implementation_source_head": "a04f3c3ac809b37ed4b70dce5a6bbec3c08a9088",
+  "planned_ablation_rollout_count": 90,
+  "planned_delayed_receipt_rollout_count": 180,
+  "planned_main_rollout_count": 900,
+  "qualification_pass": false,
+  "qualification_replay_results_sha256": "dd1afcfd4d796e888192ffde51c57a495766534dcb36afa9895d72e1f44c3613",
+  "qualification_replay_summary_sha256": "f1fdb6242cc53d272a64466656fa757ca2e30628d599615187882cf75844ba8c",
+  "qualification_snapshot_and_action_hashes": [
+    {
+      "action_count": 0,
+      "action_segment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "effect_id": "BOWL_GRASPED",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_30:BOWL_GRASPED",
+      "snapshot_sha256": "3c23ba523217dce5bb85cee8ba66e30eed319169a0de0291ef4bb41f3084a241",
+      "source_episode": "demo_30",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": false
+    },
+    {
+      "action_count": 143,
+      "action_segment_sha256": "b6eb737a1a424b0bffbeb4e02d8228bc0563e7a16dc454596d62d6b686ff5156",
+      "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_30:BOWL_IN_BOTTOM_DRAWER",
+      "snapshot_sha256": "b01de9098f5daa4f738d6dcb959728a22494fd9bb39095f551bfeae7ebb9ca4e",
+      "source_episode": "demo_30",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": false
+    },
+    {
+      "action_count": 4,
+      "action_segment_sha256": "0809baf0a0b96a8cecfd393429645bbfbf8ea5537cfb27d9efc7859a8d03ffef",
+      "effect_id": "BOWL_RELEASED_IN_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_30:BOWL_RELEASED_IN_DRAWER",
+      "snapshot_sha256": "d71b7d365b9f077dff7018713cb5e22dfebc7996ec9991beb8a03441f801fccf",
+      "source_episode": "demo_30",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": false
+    },
+    {
+      "action_count": 89,
+      "action_segment_sha256": "14071b88cc993eabec095ef0080bbde89dfa48e54f411c4acceff28d80af939b",
+      "effect_id": "BOWL_GRASPED",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_31:BOWL_GRASPED",
+      "snapshot_sha256": "6472d7fadb83c92f790c2b56607c5c1fe27a0bc333ccd554358a35825af35fef",
+      "source_episode": "demo_31",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 65,
+      "action_segment_sha256": "75fbc1b55a65ea654a6739900e1240ea45b7a25d3784673be9dba3fdf893e370",
+      "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_31:BOWL_IN_BOTTOM_DRAWER",
+      "snapshot_sha256": "3e981c6a5c64ed6ef3308e5f49c42c67dceb4d055afb2d4d3bb9b2790140fd05",
+      "source_episode": "demo_31",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 18,
+      "action_segment_sha256": "84d9ce33fc5d64084e867dfed3b45c4e128a4f16ac77ce00b8a5dae8d8566089",
+      "effect_id": "BOWL_RELEASED_IN_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_31:BOWL_RELEASED_IN_DRAWER",
+      "snapshot_sha256": "4286bc9f5f59181f38cc7c550941ac3b00cec346554d04eb449708ff6d72214a",
+      "source_episode": "demo_31",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 101,
+      "action_segment_sha256": "81aa949fd7bf91cf73044b96eb1f317fd324f2db6e1a8dd2c203e52a7fc9f771",
+      "effect_id": "BOWL_GRASPED",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_32:BOWL_GRASPED",
+      "snapshot_sha256": "f6c5f8374988c587b0ef6ea550e344ec39b4ed4d1a35bb7c2cefc1806ee5827f",
+      "source_episode": "demo_32",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 48,
+      "action_segment_sha256": "5875cc1be0681806c629143e855a1a879b9b0b65ed52c3ccb1015e9f3c8a523a",
+      "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_32:BOWL_IN_BOTTOM_DRAWER",
+      "snapshot_sha256": "3ab693795ca820794cc15995a887f4883c37ed2e85c78bbfaee1a4eaef47f345",
+      "source_episode": "demo_32",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 8,
+      "action_segment_sha256": "7d35883ecb5c0400a86d37efa0688d142f5c2275a7c8f3aea51e4af37d3851c5",
+      "effect_id": "BOWL_RELEASED_IN_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_32:BOWL_RELEASED_IN_DRAWER",
+      "snapshot_sha256": "77b191aac73e04e16f43005bdeb9d86ed5c3363ea0d04369742a38df02eeeb9a",
+      "source_episode": "demo_32",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": false
+    },
+    {
+      "action_count": 86,
+      "action_segment_sha256": "488a7e5a1039cec211b393778e4bfda9ec3392a2b9e3e0229ee0cc03ea336f14",
+      "effect_id": "BOWL_GRASPED",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_33:BOWL_GRASPED",
+      "snapshot_sha256": "92bcac38b176c8064d8e04c10961db39e993cdd9d0b839fa4a4a7fa41c991617",
+      "source_episode": "demo_33",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 60,
+      "action_segment_sha256": "02cdb26fb84b6923717bedb3049c2d2d39f87390c57b624c0cc39b6fa34d7592",
+      "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_33:BOWL_IN_BOTTOM_DRAWER",
+      "snapshot_sha256": "2d09c0f689fae86d53768a40626ef117abbe91879bddb0f394370e6ff3f40834",
+      "source_episode": "demo_33",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 6,
+      "action_segment_sha256": "5f94dcc6c01539b72934dd9a8c9b40658048a6cb8b4af55fbdb678ca134e71f6",
+      "effect_id": "BOWL_RELEASED_IN_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_33:BOWL_RELEASED_IN_DRAWER",
+      "snapshot_sha256": "91258b4812cd37d97f8253c03c57f059507dab7294b9d00fd4a5c9ea761b01f2",
+      "source_episode": "demo_33",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": false
+    },
+    {
+      "action_count": 85,
+      "action_segment_sha256": "ea2c221d530788a3050a1d71c7e27ed4b555975303153d2451d1aa8068e9228b",
+      "effect_id": "BOWL_GRASPED",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_34:BOWL_GRASPED",
+      "snapshot_sha256": "92ea7585679b9c42a0dad575a789f0d56573755b6cdf3ed6fa53319013d6a966",
+      "source_episode": "demo_34",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 0,
+      "action_segment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_34:BOWL_IN_BOTTOM_DRAWER",
+      "snapshot_sha256": "6977d82d7b637f6526de1951e3372deba43a65b169af50c906888b363e38e0f9",
+      "source_episode": "demo_34",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": false
+    },
+    {
+      "action_count": 0,
+      "action_segment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "effect_id": "BOWL_RELEASED_IN_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_34:BOWL_RELEASED_IN_DRAWER",
+      "snapshot_sha256": "dd0994669963f53e81f07b75fc674f1b18cf7d81e4adb7a6520979666f791d42",
+      "source_episode": "demo_34",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": false
+    },
+    {
+      "action_count": 96,
+      "action_segment_sha256": "757f82c345f0e896bd3fb793590b256cd0b877344530e62a285b9a522605586a",
+      "effect_id": "BOWL_GRASPED",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_35:BOWL_GRASPED",
+      "snapshot_sha256": "0f7c678e9b3ca59647d7ba2ea39b178de0925dd70b47ee16215dfd22a016c8d3",
+      "source_episode": "demo_35",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 56,
+      "action_segment_sha256": "fc694428e603d315c0ae0acad64c66e0c3d5b4cf48a39d0848bd854c134e44ec",
+      "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_35:BOWL_IN_BOTTOM_DRAWER",
+      "snapshot_sha256": "13e02a1380daf4f0049bf5e687bc2c60744bf287fb34d30ef43c32a70f39b7ac",
+      "source_episode": "demo_35",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 15,
+      "action_segment_sha256": "eca823ad3bed160c76af2470c51f1dce6e8f754c76fe402b52148590cc036607",
+      "effect_id": "BOWL_RELEASED_IN_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_35:BOWL_RELEASED_IN_DRAWER",
+      "snapshot_sha256": "448c8e181c5f18d5d48d2a82ae73efd82ee520329c7c589b5232ca17667e186b",
+      "source_episode": "demo_35",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 93,
+      "action_segment_sha256": "64f5621d849c277d09f9eb4d1a8a9d0ba4c2cfde434eabe387da613e12f8a2f9",
+      "effect_id": "BOWL_GRASPED",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_36:BOWL_GRASPED",
+      "snapshot_sha256": "f5304b7bf553771f9da9e882050a4605a3e8d280ee6cc1a5a04e7d896c05de08",
+      "source_episode": "demo_36",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 48,
+      "action_segment_sha256": "80db1e89624368e51ca8ca95a9fcc530993d138596cdbc5e9e5ab8745c4e692e",
+      "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_36:BOWL_IN_BOTTOM_DRAWER",
+      "snapshot_sha256": "17589a7196669572397f7f35896996e9b700672e748ffdab0cc5c74e59740e0a",
+      "source_episode": "demo_36",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 14,
+      "action_segment_sha256": "1279a5e7bef9156966f1962d6eb45ade3685eeadb5c81c58ece486d1ca4f5dea",
+      "effect_id": "BOWL_RELEASED_IN_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_36:BOWL_RELEASED_IN_DRAWER",
+      "snapshot_sha256": "424f0c790c1d180a3faf79a626fc1307497795c3c3781e502b3d15f7c680c99b",
+      "source_episode": "demo_36",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 98,
+      "action_segment_sha256": "909017b4704092adf68b3e8191d3404e220d06f4c5d6ab93f20d76ef7c7b3753",
+      "effect_id": "BOWL_GRASPED",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_37:BOWL_GRASPED",
+      "snapshot_sha256": "46bb80b9531e6400743400daa26491b4b569cd579f9292a557ff608f04027c21",
+      "source_episode": "demo_37",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 56,
+      "action_segment_sha256": "5a178542ca95ec699294e46b04ffb7345dbaa9bf205e7fa0bb0c744aeb656949",
+      "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_37:BOWL_IN_BOTTOM_DRAWER",
+      "snapshot_sha256": "d08a99f2709e6885a2cd10447e5040866835f2569fd9b3d5f51a511b5ba2ccb5",
+      "source_episode": "demo_37",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 18,
+      "action_segment_sha256": "5d64678a4ff92eb915fdc969232b6f8f4fc6a8e1b542362335c1f57e0d622b6b",
+      "effect_id": "BOWL_RELEASED_IN_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_37:BOWL_RELEASED_IN_DRAWER",
+      "snapshot_sha256": "bb3ae78d8d44a3bf669c3318af44ce62a1f4a20d091ae9bfe2a277f80b282beb",
+      "source_episode": "demo_37",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 96,
+      "action_segment_sha256": "758df7a1f676318ec218b6d5db3c968b5f7eea27b3a753c338ec7abdd1757d0d",
+      "effect_id": "BOWL_GRASPED",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_38:BOWL_GRASPED",
+      "snapshot_sha256": "ea8cd37caf5a2ac35c3d0a342d342a58487da5997be651ccb2a60a3c5b3433cc",
+      "source_episode": "demo_38",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 82,
+      "action_segment_sha256": "5f5bca3d37fc12c8400beb1f671ddb4e5478ce246a4fdb70bfc036b3a8050d05",
+      "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_38:BOWL_IN_BOTTOM_DRAWER",
+      "snapshot_sha256": "07993048bb20b505fa7d4c2a2687a416203b7b5a69766a010a7bbd7756860345",
+      "source_episode": "demo_38",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 4,
+      "action_segment_sha256": "49bfb15386c79c86e6017167855f2ad30f28143035b90d639268639c65d6fc1c",
+      "effect_id": "BOWL_RELEASED_IN_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_38:BOWL_RELEASED_IN_DRAWER",
+      "snapshot_sha256": "2c17833b297e560a1a2994437ceddf3a269040fcc68df8a97cdbbabe96bc6afa",
+      "source_episode": "demo_38",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": false
+    },
+    {
+      "action_count": 116,
+      "action_segment_sha256": "4df146d31edff1a7a8d68515ce6b3c643d3cb4d5a84b1c819440ae59cf26d7fe",
+      "effect_id": "BOWL_GRASPED",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_39:BOWL_GRASPED",
+      "snapshot_sha256": "783e28500da2a03015ab38410aa89b2b5cf6e16f92767cf055afae1900ae7469",
+      "source_episode": "demo_39",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 68,
+      "action_segment_sha256": "4d4b678323a9138b4224b4a6afd46d9c951ec3535c1de5f75ac296c98a10a5ea",
+      "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_39:BOWL_IN_BOTTOM_DRAWER",
+      "snapshot_sha256": "af1951975345a5e834a5ce336ae520c98e0c66d6c10df11a2e2fc875c19391a7",
+      "source_episode": "demo_39",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 17,
+      "action_segment_sha256": "42d2200a8b0b0c51d3fd09f62780319b478f00346c9b5731c9032af77742411e",
+      "effect_id": "BOWL_RELEASED_IN_DRAWER",
+      "entry_snapshot_id": "qualification:bowl_drawer:demo_39:BOWL_RELEASED_IN_DRAWER",
+      "snapshot_sha256": "aef6ae1b298dc6b105502de27a24546452ea81593d571b00c9e187134370fb0f",
+      "source_episode": "demo_39",
+      "split": "qualification",
+      "task_key": "bowl_drawer",
+      "valid": true
+    },
+    {
+      "action_count": 122,
+      "action_segment_sha256": "cd8e17af1cfe99edb68ce903ddbfcda55a245fb29f74f13269456ca2111e7fbf",
+      "effect_id": "MOKA_GRASPED",
+      "entry_snapshot_id": "qualification:stove_moka:demo_30:MOKA_GRASPED",
+      "snapshot_sha256": "89684c5f09f7974af9f941ca3d35ccd1c7bf958b438abf99c7cbf064db93a309",
+      "source_episode": "demo_30",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 52,
+      "action_segment_sha256": "2f19fe0e4e6433260986de8fb7d3f3b5f68e0ad268a89ab6f5846dce9d28b3da",
+      "effect_id": "MOKA_ON_STOVE",
+      "entry_snapshot_id": "qualification:stove_moka:demo_30:MOKA_ON_STOVE",
+      "snapshot_sha256": "c061c2f1351a8da22eebe019ff18bc7a2d65a653c1247da31bcc067ccb80c127",
+      "source_episode": "demo_30",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 99,
+      "action_segment_sha256": "9cc29803dd85d62439ff3fc8f446be1a2ddb14902356a9f7e227137063b7c553",
+      "effect_id": "MOKA_GRASPED",
+      "entry_snapshot_id": "qualification:stove_moka:demo_31:MOKA_GRASPED",
+      "snapshot_sha256": "0ea094fd87d67bc0f94f4abd1ac8481e63fd46f8c9f55f5b96045d37f636088b",
+      "source_episode": "demo_31",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 38,
+      "action_segment_sha256": "ae223de62c3336edd8691c0097ee5af95bb8c9812b0301a3a8db295d562377b6",
+      "effect_id": "MOKA_ON_STOVE",
+      "entry_snapshot_id": "qualification:stove_moka:demo_31:MOKA_ON_STOVE",
+      "snapshot_sha256": "75a2b79492c5eea4309fbd7c054b23dc7ea1a16cb496dd35cbdc9820c2a4dd5c",
+      "source_episode": "demo_31",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 0,
+      "action_segment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "effect_id": "MOKA_GRASPED",
+      "entry_snapshot_id": "qualification:stove_moka:demo_32:MOKA_GRASPED",
+      "snapshot_sha256": "4e6a30a37df609cd2002c1d29d26633c6cf528e5f9965a91ecd62215d493beef",
+      "source_episode": "demo_32",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": false
+    },
+    {
+      "action_count": 0,
+      "action_segment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "effect_id": "MOKA_ON_STOVE",
+      "entry_snapshot_id": "qualification:stove_moka:demo_32:MOKA_ON_STOVE",
+      "snapshot_sha256": "85f9b043ba76c045c0c0a8453feabfd780eb1db895d5c536e845bd5a9e597d44",
+      "source_episode": "demo_32",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": false
+    },
+    {
+      "action_count": 104,
+      "action_segment_sha256": "cd3ba0ef1a5655bf0b640b9bc1277104c5377fa6855c4969fbba64ba3fea83aa",
+      "effect_id": "MOKA_GRASPED",
+      "entry_snapshot_id": "qualification:stove_moka:demo_33:MOKA_GRASPED",
+      "snapshot_sha256": "c4f77bb485d0bc477ff8f346b1c48785bea53751077fe427650f72495bd73a77",
+      "source_episode": "demo_33",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 53,
+      "action_segment_sha256": "aed7cdca17e213504cef60b4dd87b55f4f46cc92030b5d6fb2992cc4a0ec7ef9",
+      "effect_id": "MOKA_ON_STOVE",
+      "entry_snapshot_id": "qualification:stove_moka:demo_33:MOKA_ON_STOVE",
+      "snapshot_sha256": "c1305537cfe10ad1b92996737d7d92b3c44a1c6f47221220a90e40b5f8138325",
+      "source_episode": "demo_33",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 104,
+      "action_segment_sha256": "c10d14541f6d279dab2e1109bbd2e50243ff9ef8e5914c518c954c70c18188a7",
+      "effect_id": "MOKA_GRASPED",
+      "entry_snapshot_id": "qualification:stove_moka:demo_34:MOKA_GRASPED",
+      "snapshot_sha256": "e3c4bbcf49adb73250f91ac9a31e1c8346fd21868054b3e1fefa9837c251b38a",
+      "source_episode": "demo_34",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 50,
+      "action_segment_sha256": "300334ea23ffda371dffad2ea1315aef2613be246fbc7f74094c966b2d31205f",
+      "effect_id": "MOKA_ON_STOVE",
+      "entry_snapshot_id": "qualification:stove_moka:demo_34:MOKA_ON_STOVE",
+      "snapshot_sha256": "3c0949ebb73e6d57e128b9653f1d3dd9f0056297af04e21ffe528b8dca8ac727",
+      "source_episode": "demo_34",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 132,
+      "action_segment_sha256": "a9e700d6ed2790ae59387deb418c8cd44f7359130efa1d89d7b887447e2403e3",
+      "effect_id": "MOKA_GRASPED",
+      "entry_snapshot_id": "qualification:stove_moka:demo_35:MOKA_GRASPED",
+      "snapshot_sha256": "b04705fae5b2d5d424f203d269327d7f804677495309a74e62105c47bf4c2f19",
+      "source_episode": "demo_35",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 50,
+      "action_segment_sha256": "f4bf24b3a5ed39f1e7fb076e263311a03c4a3d901bb83e042c3976c35c817530",
+      "effect_id": "MOKA_ON_STOVE",
+      "entry_snapshot_id": "qualification:stove_moka:demo_35:MOKA_ON_STOVE",
+      "snapshot_sha256": "75197f31ce65936f575434d196889512f475ab67413d8dd13610d2fade48401d",
+      "source_episode": "demo_35",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 137,
+      "action_segment_sha256": "c7f52e318fc7548aa8c5edbe0e9acea7b5c1eb891447ef9e8cbdf8998ed0b176",
+      "effect_id": "MOKA_GRASPED",
+      "entry_snapshot_id": "qualification:stove_moka:demo_36:MOKA_GRASPED",
+      "snapshot_sha256": "8068c0297391d8fce77edeb1d98e551fceb5497b93f47f5a663239dc021334f8",
+      "source_episode": "demo_36",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 48,
+      "action_segment_sha256": "c75581e1349b1c7413eba7a7ce9c6d57c6d3b3c3ad4849f1b7efc080def9eca2",
+      "effect_id": "MOKA_ON_STOVE",
+      "entry_snapshot_id": "qualification:stove_moka:demo_36:MOKA_ON_STOVE",
+      "snapshot_sha256": "d449376ab7a7ff80e461f01fb9ac75865734dcb15d62dbc0e379e7f4d889258e",
+      "source_episode": "demo_36",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 98,
+      "action_segment_sha256": "8dbf551b953dfeb8c0055ffb8093046e8b0a70c021c75cece346f540ce83bcef",
+      "effect_id": "MOKA_GRASPED",
+      "entry_snapshot_id": "qualification:stove_moka:demo_37:MOKA_GRASPED",
+      "snapshot_sha256": "4dfae45d810aadf19a3395ceb05750b40748245108bb317cef0aec09b2686dce",
+      "source_episode": "demo_37",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 53,
+      "action_segment_sha256": "9bd493f3e3c0c760d0c65295728b59f9735cb9bff53e6973829ce4214beb6866",
+      "effect_id": "MOKA_ON_STOVE",
+      "entry_snapshot_id": "qualification:stove_moka:demo_37:MOKA_ON_STOVE",
+      "snapshot_sha256": "33303748cccdb62f75d8700f10e550519017b03381023854503421c91b10ca99",
+      "source_episode": "demo_37",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 113,
+      "action_segment_sha256": "70b51d1579ea6a9d4cc439de3ebd580f536e68e969f2fdd67acca4123151621f",
+      "effect_id": "MOKA_GRASPED",
+      "entry_snapshot_id": "qualification:stove_moka:demo_38:MOKA_GRASPED",
+      "snapshot_sha256": "4669dbd05556862411c30ab985364625d60f3d7e1cad8b7b2b791e9026fffe00",
+      "source_episode": "demo_38",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 51,
+      "action_segment_sha256": "0979b2c9e90588a643e53085afbcb69b9b2edd019611fbde06beeb2dc71c60ad",
+      "effect_id": "MOKA_ON_STOVE",
+      "entry_snapshot_id": "qualification:stove_moka:demo_38:MOKA_ON_STOVE",
+      "snapshot_sha256": "960416764ada0f9e92f673f9a63f1a5de20f62df2007b2898cc6016c9765c6f3",
+      "source_episode": "demo_38",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 130,
+      "action_segment_sha256": "65b28917f4310d5c6f3e2202b27505f3704523df55938d62060119195ff67acf",
+      "effect_id": "MOKA_GRASPED",
+      "entry_snapshot_id": "qualification:stove_moka:demo_39:MOKA_GRASPED",
+      "snapshot_sha256": "506b3e730eadf6c8bc33fdb61ca7f2a92dac8d9863a1741e6802969b1c24a14f",
+      "source_episode": "demo_39",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    },
+    {
+      "action_count": 68,
+      "action_segment_sha256": "4deb3eddc77b84de74f360c7686b67c9b762644494daaa1cb56b0850e2eb1b6a",
+      "effect_id": "MOKA_ON_STOVE",
+      "entry_snapshot_id": "qualification:stove_moka:demo_39:MOKA_ON_STOVE",
+      "snapshot_sha256": "ccb70e03eee2658c2193f79a8f16eff2f15141414f4712cba8f514e71af719ed",
+      "source_episode": "demo_39",
+      "split": "qualification",
+      "task_key": "stove_moka",
+      "valid": true
+    }
+  ],
+  "schema_version": 1,
+  "selected_confirmatory_chain_ids": [],
+  "selected_persistence_k": 2,
+  "selection_rows": [
+    {
+      "chain_id": "S1_STOVE_TO_MOKA_GRASP",
+      "chain_success": 0.3,
+      "cumulative_chain_reach": [
+        0.56,
+        0.3
+      ],
+      "effects": [
+        "STOVE_TURNED_ON",
+        "MOKA_GRASPED"
+      ],
+      "eligible": false,
+      "mean_action_steps": 102.84210526315789,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "stove_moka"
+    },
+    {
+      "chain_id": "S2_MOKA_GRASP_TO_ON_STOVE",
+      "chain_success": 0.44,
+      "cumulative_chain_reach": [
+        0.44,
+        0.44
+      ],
+      "effects": [
+        "MOKA_GRASPED",
+        "MOKA_ON_STOVE"
+      ],
+      "eligible": false,
+      "mean_action_steps": 83.44444444444444,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "stove_moka"
+    },
+    {
+      "chain_id": "S3_MOKA_ON_TO_RELEASED",
+      "chain_success": 0.1,
+      "cumulative_chain_reach": [
+        0.88,
+        0.1
+      ],
+      "effects": [
+        "MOKA_ON_STOVE",
+        "MOKA_RELEASED_ON_STOVE"
+      ],
+      "eligible": false,
+      "mean_action_steps": 47.2,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "stove_moka"
+    },
+    {
+      "chain_id": "B1_BOWL_GRASP_TO_DRAWER",
+      "chain_success": 0.68,
+      "cumulative_chain_reach": [
+        0.9,
+        0.68
+      ],
+      "effects": [
+        "BOWL_GRASPED",
+        "BOWL_IN_BOTTOM_DRAWER"
+      ],
+      "eligible": false,
+      "mean_action_steps": 79.0,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "bowl_drawer"
+    },
+    {
+      "chain_id": "B2_BOWL_IN_TO_RELEASED",
+      "chain_success": 0.32,
+      "cumulative_chain_reach": [
+        0.68,
+        0.32
+      ],
+      "effects": [
+        "BOWL_IN_BOTTOM_DRAWER",
+        "BOWL_RELEASED_IN_DRAWER"
+      ],
+      "eligible": false,
+      "mean_action_steps": 43.46153846153846,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "bowl_drawer"
+    },
+    {
+      "chain_id": "B3_BOWL_RELEASED_TO_CLOSED",
+      "chain_success": 0.0,
+      "cumulative_chain_reach": [
+        0.44,
+        0.0
+      ],
+      "effects": [
+        "BOWL_RELEASED_IN_DRAWER",
+        "BOTTOM_DRAWER_CLOSED"
+      ],
+      "eligible": false,
+      "mean_action_steps": 16.4,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "bowl_drawer"
+    }
+  ],
+  "source_hashes": {
+    "r16p19/phase3_analysis.py": "13f0c2d3ca3d1dc04571a786e98cba8ba90fa6e9c5007a442b69ccd38abf6583",
+    "r16p19/phase3_baselines.py": "d81be4daaac84c428e0fa8af4f83b6f788307758a5b36aa7bd2423fcb139eb7f",
+    "r16p19/phase3_event_broker.py": "c518d8145deb28fe7dbb3790e5fd3940a551dfb1a1babae2d7eb39d302f4986a",
+    "r16p19/phase3_replay_backend.py": "0001b644758093752b88b5d59834537c5f7bf37e013a790ffd33f4464ca29d1a",
+    "r16p19/phase3_runner.py": "805d9dd9abf8aa3d3f63f89f3683af7b192bc8f1f45d79f200d011e8071eb518",
+    "r16p19/phase3_snapshot_bank.py": "e80add0f2b286d100714388b3edd59b5bd85665c26a7673f57d7c957de4de465"
+  },
+  "status": "BACKEND_CHAINS_BUDGETS_AND_PERSISTENCE_FROZEN"
+}

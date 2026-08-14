@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "stage": "prepare",
+  "successful_run_id": "r16p19-phase3-prepare-20260814-v5",
+  "successful_job_id": "dlc6j1afexrn1am1",
+  "successful_job_status": "Succeeded",
+  "successful_job_duration_seconds": 1988,
+  "source_head": "a04f3c3ac809b37ed4b70dce5a6bbec3c08a9088",
+  "source_tree": "80837231e7fda9db6081cffb89e94877d7896244",
+  "launcher_sha256": "79595973e25cd5075ccb364a2f28c44758237c641d8796ac49277775eeab8861",
+  "resource_id": "quotakzri8a5wqcp",
+  "allocated_gpu_count": 2,
+  "scientific_visible_gpu_count": 1,
+  "pai_automatic_fault_tolerance": false,
+  "wandb_mode": "disabled_non_neural_evaluation",
+  "pytest_passed": 35,
+  "pytest_failed": 0,
+  "first_completed_cell": "cells/development/stove_moka/demo_0.json",
+  "application_complete_sha256": "5f304097398f160bdec0bb2b9af9aa3837db9246348a9a8a45ceec1c193c1b3d",
+  "selected_chain_manifest_sha256": "53c6a9fa448267b3b77a9fa4458552e9383fda8b1a63fcf127acf80fe4904677",
+  "attempts": [
+    {
+      "run_id": "r16p19-phase3-prepare-20260814-v1",
+      "job_id": null,
+      "status": "preflight_failed_sealed",
+      "reason": "resume application root did not yet exist"
+    },
+    {
+      "run_id": "r16p19-phase3-prepare-20260814-v2",
+      "job_id": null,
+      "status": "preflight_failed_sealed",
+      "reason": "registry artifact output parent did not yet exist"
+    },
+    {
+      "run_id": "r16p19-phase3-prepare-20260814-v3",
+      "job_id": "dlc3r2jgqc8lu2p1",
+      "status": "Failed",
+      "application_cells_written": 0,
+      "reason": "controller env -i omitted the frozen R16P19_PHASE3 workload environment"
+    },
+    {
+      "run_id": "r16p19-phase3-prepare-20260814-v4",
+      "job_id": "dlc1xieb62snpwdv",
+      "status": "Failed",
+      "application_cells_written": 0,
+      "reason": "the top-level LIBERO namespace package has no __file__; the source assertion was made against an importable official submodule"
+    },
+    {
+      "run_id": "r16p19-phase3-prepare-20260814-v5",
+      "job_id": "dlc6j1afexrn1am1",
+      "status": "Succeeded",
+      "application_cells_written": 80,
+      "reason": null
+    }
+  ]
+}

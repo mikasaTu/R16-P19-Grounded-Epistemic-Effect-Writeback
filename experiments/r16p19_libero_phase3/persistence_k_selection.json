@@ -1,0 +1,43 @@
+{
+  "candidate_k": [
+    2,
+    4,
+    8
+  ],
+  "candidates": [
+    {
+      "backend_failure_count": 40,
+      "false_completion_rate": 0.0,
+      "k": 2,
+      "mean_action_steps": 193.22666666666666,
+      "mean_chain_success": 0.22,
+      "rollout_count": 150
+    },
+    {
+      "backend_failure_count": 40,
+      "false_completion_rate": 0.0,
+      "k": 4,
+      "mean_action_steps": 202.81333333333333,
+      "mean_chain_success": 0.12666666666666668,
+      "rollout_count": 150
+    },
+    {
+      "backend_failure_count": 40,
+      "false_completion_rate": 0.0,
+      "k": 8,
+      "mean_action_steps": 148.96,
+      "mean_chain_success": 0.0,
+      "rollout_count": 150
+    }
+  ],
+  "schema_version": 1,
+  "selected_k": 2,
+  "selection_order": [
+    "descending_mean_chain_success",
+    "ascending_false_completion_rate",
+    "ascending_mean_action_steps",
+    "ascending_k"
+  ],
+  "selection_split": "qualification",
+  "status": "PERSISTENCE_K_FROZEN_BEFORE_FORMAL_DEMO_ACCESS"
+}

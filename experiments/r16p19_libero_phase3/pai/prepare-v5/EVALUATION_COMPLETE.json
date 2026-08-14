@@ -1,0 +1,10 @@
+{
+  "application_complete_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase3/application/prepare_stage_complete.json",
+  "application_complete_sha256": "5f304097398f160bdec0bb2b9af9aa3837db9246348a9a8a45ceec1c193c1b3d",
+  "completed_at_unix": 1786689884.17221,
+  "gid": 2254,
+  "run_id": "r16p19-phase3-prepare-20260814-v5",
+  "stage": "prepare",
+  "status": "complete",
+  "uid": 2254
+}

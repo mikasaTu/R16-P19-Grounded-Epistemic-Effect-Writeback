@@ -1,0 +1,134 @@
+{
+  "action_steps_per_effect": {
+    "bowl_drawer": {
+      "BOTTOM_DRAWER_CLOSED": null,
+      "BOWL_GRASPED": 95.55555555555556,
+      "BOWL_IN_BOTTOM_DRAWER": 60.375,
+      "BOWL_RELEASED_IN_DRAWER": 16.4
+    },
+    "stove_moka": {
+      "MOKA_GRASPED": 115.44444444444444,
+      "MOKA_ON_STOVE": 51.44444444444444,
+      "MOKA_RELEASED_ON_STOVE": 9.0,
+      "STOVE_TURNED_ON": 91.5
+    }
+  },
+  "chains": [
+    {
+      "chain_id": "S1_STOVE_TO_MOKA_GRASP",
+      "chain_success": 0.3,
+      "cumulative_chain_reach": [
+        0.56,
+        0.3
+      ],
+      "effects": [
+        "STOVE_TURNED_ON",
+        "MOKA_GRASPED"
+      ],
+      "eligible": false,
+      "mean_action_steps": 102.84210526315789,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "stove_moka"
+    },
+    {
+      "chain_id": "S2_MOKA_GRASP_TO_ON_STOVE",
+      "chain_success": 0.44,
+      "cumulative_chain_reach": [
+        0.44,
+        0.44
+      ],
+      "effects": [
+        "MOKA_GRASPED",
+        "MOKA_ON_STOVE"
+      ],
+      "eligible": false,
+      "mean_action_steps": 83.44444444444444,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "stove_moka"
+    },
+    {
+      "chain_id": "S3_MOKA_ON_TO_RELEASED",
+      "chain_success": 0.1,
+      "cumulative_chain_reach": [
+        0.88,
+        0.1
+      ],
+      "effects": [
+        "MOKA_ON_STOVE",
+        "MOKA_RELEASED_ON_STOVE"
+      ],
+      "eligible": false,
+      "mean_action_steps": 47.2,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "stove_moka"
+    },
+    {
+      "chain_id": "B1_BOWL_GRASP_TO_DRAWER",
+      "chain_success": 0.68,
+      "cumulative_chain_reach": [
+        0.9,
+        0.68
+      ],
+      "effects": [
+        "BOWL_GRASPED",
+        "BOWL_IN_BOTTOM_DRAWER"
+      ],
+      "eligible": false,
+      "mean_action_steps": 79.0,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "bowl_drawer"
+    },
+    {
+      "chain_id": "B2_BOWL_IN_TO_RELEASED",
+      "chain_success": 0.32,
+      "cumulative_chain_reach": [
+        0.68,
+        0.32
+      ],
+      "effects": [
+        "BOWL_IN_BOTTOM_DRAWER",
+        "BOWL_RELEASED_IN_DRAWER"
+      ],
+      "eligible": false,
+      "mean_action_steps": 43.46153846153846,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "bowl_drawer"
+    },
+    {
+      "chain_id": "B3_BOWL_RELEASED_TO_CLOSED",
+      "chain_success": 0.0,
+      "cumulative_chain_reach": [
+        0.44,
+        0.0
+      ],
+      "effects": [
+        "BOWL_RELEASED_IN_DRAWER",
+        "BOTTOM_DRAWER_CLOSED"
+      ],
+      "eligible": false,
+      "mean_action_steps": 16.4,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "bowl_drawer"
+    }
+  ],
+  "conditional_effect_success_given_entry": {
+    "bowl_drawer": {
+      "BOTTOM_DRAWER_CLOSED": 0.0,
+      "BOWL_GRASPED": 0.9,
+      "BOWL_IN_BOTTOM_DRAWER": 0.68,
+      "BOWL_RELEASED_IN_DRAWER": 0.44
+    },
+    "stove_moka": {
+      "MOKA_GRASPED": 0.44,
+      "MOKA_ON_STOVE": 0.88,
+      "MOKA_RELEASED_ON_STOVE": 0.1,
+      "STOVE_TURNED_ON": 0.56
+    }
+  },
+  "effect_replay_count": 400,
+  "eligible_chain_count": 0,
+  "repetitions_per_source_segment": 5,
+  "schema_version": 1,
+  "split": "qualification",
+  "status": "REPLAY_QUALIFICATION_COMPLETE"
+}
