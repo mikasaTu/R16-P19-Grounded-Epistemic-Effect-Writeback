@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "attempted_at_utc": "2026-08-14T05:25:10Z",
+  "scope": "development_machine_environment_initialization_only",
+  "formal_demo_groups_accessed": 0,
+  "development_demo_groups_accessed": 0,
+  "unit_tests": {
+    "phase3_tests": "12_passed",
+    "full_repository_tests": "35_passed"
+  },
+  "egl_attempt": {
+    "status": "ENVIRONMENT_INITIALIZATION_FAILED_BEFORE_HDF5_ACCESS",
+    "exception_type": "ImportError",
+    "error": "Cannot initialize an EGL device display; PLATFORM_DEVICE extension unavailable"
+  },
+  "osmesa_attempt": {
+    "status": "ENVIRONMENT_INITIALIZATION_FAILED_BEFORE_HDF5_ACCESS",
+    "exception_type": "AttributeError",
+    "error": "OSMesa OpenGL loader returned no GL object"
+  },
+  "disposition": "Run the real simulator smoke and all batch evaluation in the formal PAI A800 job; do not expand development-machine execution.",
+  "pai_probe_created": false
+}
