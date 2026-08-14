@@ -98,13 +98,17 @@ import subprocess
 import sys
 
 import torch
-import libero
+import libero.libero.benchmark as libero_benchmark
 
 target = pathlib.Path(sys.argv[1])
 source = pathlib.Path("/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e")
 assert os.getuid() == 2254 and os.getgid() == 2254
 assert torch.cuda.device_count() == 1
-assert pathlib.Path(libero.__file__).resolve().is_relative_to(source)
+libero_import = pathlib.Path(libero_benchmark.__file__).resolve()
+try:
+    libero_import.relative_to(source)
+except ValueError as exc:
+    raise AssertionError("LIBERO import escaped the pinned source tree") from exc
 value = {
     "allocated_gpu_count": 2,
     "application_resume_unit": "one_fsynced_rollout_or_replay_cell",
@@ -112,7 +116,7 @@ value = {
     "gpu_inventory": subprocess.check_output(
         ["nvidia-smi", "--query-gpu=name,uuid", "--format=csv,noheader"], text=True
     ).strip().splitlines(),
-    "libero_import": libero.__file__,
+    "libero_import": str(libero_import),
     "pai_automatic_fault_tolerance": False,
     "pai_probe_created": False,
     "run_id": os.environ["PAI_CANARY_RUN_ID"],
