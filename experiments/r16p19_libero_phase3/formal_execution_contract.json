@@ -1,0 +1,28 @@
+{
+  "continuation_authority": {
+    "confirmatory_claims_allowed": false,
+    "reason": "The frozen replay-qualification gate failed; the user explicitly required every downstream experiment to run independently of gate outcome.",
+    "scope": "diagnostic_full_matrix_d1_causal_replays_and_mechanism_ablations"
+  },
+  "formal_analysis_chain_ids": [
+    "S2_MOKA_GRASP_TO_ON_STOVE",
+    "B1_BOWL_GRASP_TO_DRAWER",
+    "B2_BOWL_IN_TO_RELEASED"
+  ],
+  "formal_demo_access_policy": "OPEN_DEMOS_40_49_ONLY_AFTER_THIS_CONTRACT_IS_COMMITTED",
+  "prepare_evidence_commit": "857be7c9bee9bc344f9336dd2e6c57ed48a78df1",
+  "protected_b6_sha256": "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5",
+  "qualification_pass": false,
+  "schema_version": 1,
+  "selected_chain_manifest_sha256": "53c6a9fa448267b3b77a9fa4458552e9383fda8b1a63fcf127acf80fe4904677",
+  "selected_persistence_k": 2,
+  "source_hashes": {
+    "r16p19/phase3_analysis.py": "13f0c2d3ca3d1dc04571a786e98cba8ba90fa6e9c5007a442b69ccd38abf6583",
+    "r16p19/phase3_baselines.py": "d81be4daaac84c428e0fa8af4f83b6f788307758a5b36aa7bd2423fcb139eb7f",
+    "r16p19/phase3_event_broker.py": "c518d8145deb28fe7dbb3790e5fd3940a551dfb1a1babae2d7eb39d302f4986a",
+    "r16p19/phase3_replay_backend.py": "0001b644758093752b88b5d59834537c5f7bf37e013a790ffd33f4464ca29d1a",
+    "r16p19/phase3_runner.py": "805d9dd9abf8aa3d3f63f89f3683af7b192bc8f1f45d79f200d011e8071eb518",
+    "r16p19/phase3_snapshot_bank.py": "e80add0f2b286d100714388b3edd59b5bd85665c26a7673f57d7c957de4de465"
+  },
+  "status": "FORMAL_DIAGNOSTIC_EXECUTION_CONTRACT_FROZEN"
+}
