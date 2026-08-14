@@ -1,0 +1,43 @@
+schema_version: 1
+primary_endpoint: mean_chain_success_over_C1_C3_C4_C7
+primary_comparison: B6_FULL_minus_best_observed_strong_baseline
+best_strong_baseline_candidates:
+  - POSTCHECK_RECOVERY
+  - PERSISTENCE_RECOVERY
+  - TYPED_MATCHED_RECOVERY
+best_baseline_tie_order:
+  - TYPED_MATCHED_RECOVERY
+  - PERSISTENCE_RECOVERY
+  - POSTCHECK_RECOVERY
+
+cluster_unit: source_demonstration_episode_index
+chains_from_same_episode_are_not_independent: true
+bootstrap:
+  repetitions: 10000
+  seed: 1619
+  method: paired_cluster_bootstrap_with_episode_resampling
+  confidence_interval: percentile_95
+
+paired_tests:
+  binary_test: exact_two_sided_McNemar
+  comparisons:
+    - B6_FULL_vs_POSTCHECK_RECOVERY
+    - B6_FULL_vs_PERSISTENCE_RECOVERY
+    - B6_FULL_vs_TYPED_MATCHED_RECOVERY
+  multiple_testing: Holm_step_down
+  familywise_alpha: 0.05
+
+reporting:
+  paired_absolute_success_differences: true
+  per_condition_effect_sizes: true
+  per_chain_effect_sizes: true
+  uncorrected_and_Holm_adjusted_p_values: true
+  missing_or_invalid_cells: explicit_no_imputation
+  diagnostic_results_after_failed_replay_gate: separately_labeled_nonconfirmatory
+
+decision_precedence:
+  BLOCKED_BY_IMPLEMENTATION: invalid_or_incomplete_matrix_due_code_or_simulator_fault
+  BLOCKED_BY_REPLAY_BACKEND: qualification_or_formal_replay_gate_failed_even_if_diagnostic_matrix_completed
+  PASS_PHASE3_STRONG_CONTROLLED: all_nine_frozen_primary_gates_pass
+  WEAK_BASELINE_ONLY: beats_B2_and_B3_but_not_all_strong_baseline_requirements
+  REJECT_PHASE3_INCREMENTAL_VALUE: replay_gates_pass_and_complete_matrix_shows_no_incremental_value_or_excess_conservatism

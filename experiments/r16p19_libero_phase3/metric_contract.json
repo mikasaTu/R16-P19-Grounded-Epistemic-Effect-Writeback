@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "backend_metrics": ["conditional_effect_success_given_entry", "cumulative_chain_reach", "replay_chain_success", "action_steps_per_effect"],
+  "behavior_metrics": ["chain_success", "current_effect_success", "next_effect_success", "faulted_chain_success", "clean_chain_success", "recovery_success", "repeated_loop_rate"],
+  "memory_metrics": ["grounded_advance_precision", "grounded_advance_recall", "false_completion_rate", "premature_advance_rate", "contradiction_detection_recall", "contradiction_recovery_recall", "single_view_false_positive_advance_rate", "imagined_as_realized_rate", "invalidated_realization_accuracy"],
+  "cost_metrics": ["retry_count", "reobserve_count", "rollback_count", "unnecessary_retry_rate", "unnecessary_recovery_rate", "safe_stop_rate", "action_steps", "completion_latency"],
+  "causal_metrics": ["decision_causal_win_rate", "effect_completion_after_first_divergence", "chain_completion_after_first_divergence"],
+  "failure_types": ["MEMORY_DECISION_ERROR", "REPLAY_BACKEND_FAILURE", "RECEIPT_BROKER_ERROR", "FAULT_INJECTOR_ERROR", "TIMEOUT", "PREMATURE_ADVANCE", "OVERCONSERVATIVE_STOP"],
+  "primary_endpoint": "mean_chain_success_over_C1_C3_C4_C7",
+  "primary_arm": "B6_FULL",
+  "strong_baselines": ["POSTCHECK_RECOVERY", "PERSISTENCE_RECOVERY", "TYPED_MATCHED_RECOVERY"],
+  "primary_gates": {
+    "faulted_chain_success_margin_vs_best_strong_min": 0.10,
+    "cluster_bootstrap_B6_minus_best_95ci_lower_exclusive": 0.0,
+    "grounded_advance_precision_min": 0.95,
+    "C3_contradiction_recovery_recall_min": 0.80,
+    "C4_false_positive_advance_rate_max": 0.05,
+    "clean_success_degradation_vs_best_strong_max": 0.02,
+    "clean_action_step_overhead_vs_best_strong_max_fraction": 0.15,
+    "decision_causal_win_rate_min": 0.70,
+    "all_provenance_and_resident_memory_correctness_gates": true
+  },
+  "correctness_gates": {
+    "dangling_parent_count": 0,
+    "resident_slot_count_max": 32,
+    "event_prefix_byte_identity": true,
+    "protected_b6_source_hash_match": true,
+    "fault_or_truth_leakage_count": 0
+  }
+}

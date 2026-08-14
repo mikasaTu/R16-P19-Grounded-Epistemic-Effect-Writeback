@@ -1,0 +1,75 @@
+schema_version: 1
+phase: r16p19_libero_phase3_effect_boundary_replay
+frozen_at_utc: "2026-08-14T04:51:01Z"
+base_source_commit: 981ad1a64936b4e970e1f934be2d354497b5fc8e
+base_source_tree: 4ccaaf95f38775e1c5da39b531e81b86f2a424c3
+branch: phase3-effect-boundary-replay
+plan_sha256: 6ffac905c7063300124e9f416a9a007cb3dcd9c4264beec7e6f1ae57efadc83a
+official_libero_commit: 8f1084e3132a39270c3a13ebe37270a43ece2a01
+protected_b6_source:
+  path: r16p19/memory.py
+  sha256: 4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5
+protected_ontology_sha256: 1a8ee265bc23d714b38603617bb3d7cf426a50981d90f343745b281277dd6160
+
+objective: >-
+  Controlled behavior-level causal validation of the frozen original B6 memory
+  decisions using exact same-demonstration effect-entry snapshots and action
+  segments, not a general low-level policy.
+
+hard_boundaries:
+  modify_b6_semantics_or_bytes: forbidden
+  modify_effect_ontology_or_receipt_provenance: forbidden
+  modify_phase1_or_phase2_artifacts: forbidden
+  simulator_init_0_19_access: forbidden
+  new_actor_vla_world_model_effect_verifier_training: forbidden
+  action_retargeting_or_waypoint_tuning: forbidden
+  formal_demo_access_before_freeze: forbidden
+  formal_demo_indices: [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+  formal_demo_access_count: exactly_once_after_backend_and_chain_freeze
+
+user_override_frozen_before_formal_access:
+  source: explicit_user_instruction_2026_08_14
+  rule: >-
+    Compute every preregistered gate, but do not stop subsequent experiments
+    when a replay or behavioral gate fails. Always run the formal replay gate,
+    complete matrix, D1 diagnostic, first-divergence replay, statistics, and
+    both mechanism ablations. Gate failures keep their specified terminal
+    meaning and make downstream results diagnostic rather than confirmatory.
+  replacement_executor_after_gate_failure: forbidden
+  post_gate_retuning: forbidden
+
+execution_order:
+  - preregistration_commit
+  - development_and_calibration_snapshot_bank_demo_0_29
+  - replay_qualification_demo_30_39
+  - freeze_backend_chains_budgets_and_persistence_k
+  - formal_snapshot_and_replay_gate_demo_40_49_once
+  - nonformal_12_cell_smoke
+  - full_main_matrix_even_if_replay_gate_fails
+  - delayed_receipt_matrix
+  - first_divergence_replays
+  - cluster_bootstrap_paired_tests
+  - both_mechanism_ablations_even_if_primary_gate_fails
+  - final_decision_and_report
+
+resource_policy:
+  workload_type: deterministic_non_neural_rollout_evaluation
+  preferred: cpu_simulation
+  maximum_rendering_gpus: 1
+  pai_probe_created: false
+  wandb: disabled
+  runtime_uid_gid: "2254:2254"
+  application_resume_unit: one_fsynced_rollout_or_replay_cell
+  training_checkpoint_policy: not_applicable_no_training
+
+terminal_status_precedence:
+  - BLOCKED_BY_IMPLEMENTATION
+  - BLOCKED_BY_REPLAY_BACKEND
+  - PASS_PHASE3_STRONG_CONTROLLED
+  - WEAK_BASELINE_ONLY
+  - REJECT_PHASE3_INCREMENTAL_VALUE
+
+claim_boundary:
+  before_complete_matrix: no_claim_about_b6
+  formal_demo_bank: controlled_confirmation_not_independent_external_validation
+  learned_effect_verifier_readiness_only: true

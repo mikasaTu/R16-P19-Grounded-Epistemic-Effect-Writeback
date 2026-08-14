@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "frozen_before_formal_access": true,
+  "task_keys": ["stove_moka", "bowl_drawer"],
+  "development_demo_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "boundary_action_calibration_demo_indices": [20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+  "replay_qualification_demo_indices": [30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+  "formal_effect_boundary_demo_indices": [40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
+  "reserved_simulator_init_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "formal_demo_access_before_preregistration": false,
+  "formal_demo_access_before_backend_freeze": false,
+  "formal_demo_access_mode": "one_sequential_snapshot_build_and_replay_gate_pass",
+  "formal_demo_prior_use_disclosure": "Previously used by trace-level work; controlled confirmation only.",
+  "datasets": {
+    "stove_moka": {
+      "sha256": "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9"
+    },
+    "bowl_drawer": {
+      "sha256": "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638"
+    }
+  }
+}

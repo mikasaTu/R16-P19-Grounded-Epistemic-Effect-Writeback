@@ -1,0 +1,61 @@
+schema_version: 1
+name: FrozenEffectReplayBackend
+role: exact_same_demonstration_effect_segment_replayer_not_general_policy
+source_file: r16p19/phase3_replay_backend.py
+memory_import_forbidden: true
+epistemic_state_input_forbidden: true
+fault_identity_input_forbidden: true
+memory_decision_history_input_forbidden: true
+
+snapshot_extraction:
+  reset_count_before_trajectory_replay: 1
+  initial_state: official_demo_state_0
+  subsequent_transition: normal_env_step_only
+  direct_success_or_object_state_mutation: forbidden
+  candidate_label_role: search_window_hint_only
+  stable_truth_steps: 5
+  action_dtype: float32_little_endian
+  simulator_state_dtype: float64_little_endian
+  segment_start_rule: >-
+    Effect zero starts at action zero. Later effects start four actions before
+    the independently replayed stable completion of the prior effect, clipped
+    to zero. The candidate label may bound the search but cannot supply truth.
+  segment_stop_rule: first_index_after_five_step_stable_completion
+  invalid_segment_rule: missing_stable_truth_or_precondition_or_minimum_two_actions
+
+execute_effect_interface:
+  arguments: [task_key, source_episode, effect_id, entry_snapshot_id, execution_mode]
+  modes: [EXECUTE, RETRY, ROLLBACK_REPLAY, REOBSERVE]
+  reobserve_zero_action_steps: 8
+  execute_and_retry: reset_exact_entry_then_execute_exact_frozen_segment
+  rollback_replay: reset_exact_entry_then_execute_exact_frozen_segment
+  effect_truth_output_destination: event_broker_and_evaluation_only
+
+decision_mapping:
+  ADVANCE_TO_NEXT_SUBTASK:
+    physical_truth_required: true
+    false_truth_result: PREMATURE_ADVANCE
+    true_truth_transition: frozen_next_effect_entry_snapshot
+  RETRY_CURRENT_EFFECT: replay_current_frozen_action_segment
+  REOBSERVE: eight_zero_action_steps
+  ROLLBACK_OR_REPLAN: restore_entry_and_replay_current_segment
+  SAFE_STOP: terminate_failure
+
+fair_budgets:
+  maximum_initial_plus_retry_attempts_per_effect: 3
+  maximum_reobserve_operations_per_effect: 4
+  maximum_rollback_replays_per_effect: 1
+  maximum_decision_ticks_per_two_effect_chain: 32
+  paired_action_budget_formula: "4 * sum(segment_action_lengths) + 8 * 4 * effect_count"
+  budgets_identical_across_arms: true
+
+determinism:
+  seed_formula: "1619 + task_ordinal*100000 + source_demo_index*1000 + chain_ordinal*100 + condition_ordinal"
+  same_snapshot_actions_fault_schedule_and_reset_across_arms: true
+  array_hash: sha256_little_endian_contiguous_bytes
+  resumable_cell: one_fsynced_jsonl_record
+
+video_policy:
+  every_failure: true
+  every_first_decision_divergence: true
+  representative_successful_recoveries_per_condition_and_arm_minimum: 5

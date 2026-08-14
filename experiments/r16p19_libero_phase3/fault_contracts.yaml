@@ -1,0 +1,43 @@
+schema_version: 1
+schedule_reference: effect_attempt_and_physical_event_not_wall_clock
+main_conditions: [C0, C1, C3, C4, C7]
+secondary_conditions: [D1]
+conditions:
+  C0:
+    name: CLEAN
+    mutation: none
+  C1:
+    name: COMMAND_NOOP
+    trigger: first_attempt_only
+    command_event_emitted: true
+    physical_actions: all_zero
+    cleared_after_legitimate_retry: true
+  C3:
+    name: POST_REALIZATION_REVERSAL
+    trigger: after_positive_verification_and_realization
+    mutation: restore_current_effect_entry_snapshot_then_emit_contradiction
+    recovery_required_before_advance: true
+  C4:
+    name: SINGLE_VIEW_FALSE_POSITIVE
+    physical_effect: false
+    agentview_receipt: positive
+    wrist_receipt: no_confirmation
+    valid_realization_witness: false
+  C7:
+    name: IMAGINED_SUCCESS_OBSERVED_FAILURE
+    shared_imagined_event: identical_high_confidence_event
+    first_physical_attempt: suppressed
+    subsequent_evidence: negative_observed
+  D1:
+    name: DELAYED_RECEIPT
+    physical_effect: normal
+    positive_receipt_delay_decision_cycles: 3
+    decisions_during_delay_are_executed: true
+    gate_role: cost_and_calibration_only
+
+fairness:
+  same_source_episode_chain_snapshot_action_segment_and_target_effect: true
+  same_event_broker_and_fault_state: true
+  same_reset_policy_and_budgets: true
+  byte_identical_events_before_first_memory_decision_divergence: true
+  simulator_truth_direct_to_memory: forbidden

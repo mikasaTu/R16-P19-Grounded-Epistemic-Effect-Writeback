@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "candidate_chains": [
+    {"chain_id": "S1_STOVE_TO_MOKA_GRASP", "task_key": "stove_moka", "effects": ["STOVE_TURNED_ON", "MOKA_GRASPED"]},
+    {"chain_id": "S2_MOKA_GRASP_TO_ON_STOVE", "task_key": "stove_moka", "effects": ["MOKA_GRASPED", "MOKA_ON_STOVE"]},
+    {"chain_id": "S3_MOKA_ON_TO_RELEASED", "task_key": "stove_moka", "effects": ["MOKA_ON_STOVE", "MOKA_RELEASED_ON_STOVE"]},
+    {"chain_id": "B1_BOWL_GRASP_TO_DRAWER", "task_key": "bowl_drawer", "effects": ["BOWL_GRASPED", "BOWL_IN_BOTTOM_DRAWER"]},
+    {"chain_id": "B2_BOWL_IN_TO_RELEASED", "task_key": "bowl_drawer", "effects": ["BOWL_IN_BOTTOM_DRAWER", "BOWL_RELEASED_IN_DRAWER"]},
+    {"chain_id": "B3_BOWL_RELEASED_TO_CLOSED", "task_key": "bowl_drawer", "effects": ["BOWL_RELEASED_IN_DRAWER", "BOTTOM_DRAWER_CLOSED"]}
+  ],
+  "qualification_replays_per_effect_segment": 5,
+  "qualification_effect_threshold": 0.95,
+  "qualification_chain_threshold": 0.90,
+  "minimum_eligible_chains": 3,
+  "maximum_selected_chains": 4,
+  "require_both_task_families": true,
+  "formal_valid_units_per_selected_chain_minimum": 8,
+  "selection_order": [
+    "eligible_only",
+    "best_chain_per_task_family",
+    "descending_chain_success",
+    "descending_minimum_segment_success",
+    "ascending_mean_action_steps",
+    "candidate_chain_order"
+  ],
+  "continuation_if_fewer_than_three_eligible": {
+    "terminal_gate": "BLOCKED_BY_REPLAY_BACKEND",
+    "continue_experiments": true,
+    "analysis_chain_count": 3,
+    "rule": "best qualification chain from each task family, then best remaining chain using the frozen selection order",
+    "interpretation": "diagnostic_only_not_confirmatory"
+  },
+  "formal_selection_mutation": "forbidden",
+  "formal_replay_segment_threshold": 0.90,
+  "formal_replay_chain_threshold": 0.85,
+  "planned_main_rollouts_by_chain_count": {"3": 900, "4": 1200},
+  "planned_delayed_receipt_rollouts_by_chain_count": {"3": 180, "4": 240},
+  "planned_ablation_rollouts_by_chain_count": {"3": 90, "4": 120}
+}

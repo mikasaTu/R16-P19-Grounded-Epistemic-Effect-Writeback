@@ -1,0 +1,53 @@
+schema_version: 1
+arms:
+  B2_COMMAND_PROGRESS:
+    implementation: existing_r16p19.memory.MemoryArm_B2_unchanged
+    semantics: command_marks_realized
+  B3_MONOLITHIC:
+    implementation: existing_r16p19.memory.MemoryArm_B3_unchanged
+    semantics: request_imagine_command_or_positive_evidence_marks_realized
+  POSTCHECK_RECOVERY:
+    state_space: [UNKNOWN, TRUE, FALSE]
+    positive_rule: one_current_positive_postcondition_receipt_marks_TRUE
+    negative_or_contradiction_rule: marks_FALSE
+    true_decision: ADVANCE_TO_NEXT_SUBTASK
+    false_decision: ROLLBACK_OR_REPLAN_on_contradiction_else_RETRY_CURRENT_EFFECT
+  PERSISTENCE_RECOVERY:
+    state_space: [UNKNOWN, TRUE, FALSE]
+    positive_rule: K_consecutive_positive_decision_ticks_marks_TRUE
+    candidate_k: [2, 4, 8]
+    k_selection_split: replay_qualification_demo_30_39_only
+    k_objective: >-
+      Maximize mean chain success over C0/C1/C3/C4/C7, then minimize false
+      completion, then minimize mean action steps, then choose the smaller K.
+    negative_or_contradiction_rule: reset_streak_and_mark_FALSE
+  TYPED_MATCHED_RECOVERY:
+    state_space: [REQUESTED, IMAGINED, OBSERVED, VERIFIED, REALIZED]
+    verification: two_distinct_sensor_sources
+    command_parent_provenance_requirement: false
+    invalidated_realization_lineage: false
+    contradiction_rule: generic_ROLLBACK_OR_REPLAN
+  B6_FULL:
+    implementation: existing_r16p19.memory.MemoryArm_B6_unchanged
+    protected_source_sha256: 4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5
+
+shared_strong_arm_capabilities:
+  arms: [POSTCHECK_RECOVERY, PERSISTENCE_RECOVERY, TYPED_MATCHED_RECOVERY, B6_FULL]
+  retry_limit: 2
+  reobserve_limit: 4
+  rollback_limit: 1
+  replay_backend: FrozenEffectReplayBackend
+  identical_action_and_decision_budgets: true
+  identical_fault_schedule: true
+
+mechanism_ablation_wrappers:
+  B6_NO_PROVENANCE:
+    source_edit_to_b6: false
+    wrapper_semantics: realization_witness_does_not_require_command_parent_link
+    conditions: [C4_SINGLE_VIEW_FALSE_POSITIVE, C7_IMAGINED_SUCCESS_OBSERVED_FAILURE]
+  B6_NO_INVALIDATION:
+    source_edit_to_b6: false
+    wrapper_semantics: contradiction_cannot_invalidate_an_existing_realization
+    conditions: [C3_POST_REALIZATION_REVERSAL]
+  run_policy: unconditional_user_override_diagnostic_if_primary_fails
+  paper_level_mechanism_claim_rule: primary_pass_and_corresponding_advantage_reduction_at_least_0.50
