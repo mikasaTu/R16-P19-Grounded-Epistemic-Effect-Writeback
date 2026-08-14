@@ -46,8 +46,11 @@ from r16p19.phase3_snapshot_bank import (
 )
 
 
-EXPERIMENT = PROJECT_ROOT / "experiments" / "r16p19_libero_phase3"
-CHAIN_CONTRACT = EXPERIMENT / "candidate_chain_contract.json"
+CONTRACT_ROOT = PROJECT_ROOT / "experiments" / "r16p19_libero_phase3"
+EXPERIMENT = Path(
+    os.environ.get("R16P19_PHASE3_EXPERIMENT_ROOT", str(CONTRACT_ROOT))
+).resolve()
+CHAIN_CONTRACT = CONTRACT_ROOT / "candidate_chain_contract.json"
 SNAPSHOT_MANIFEST = EXPERIMENT / "snapshot_bank_manifest.json"
 PROTECTED_B6_SHA256 = "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5"
 

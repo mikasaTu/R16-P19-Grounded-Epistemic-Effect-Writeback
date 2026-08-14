@@ -4,7 +4,8 @@ umask 077
 
 NEW_ROOT=/mnt/cpfs/zbl-cpfs-new
 SOURCE_ROOT="$NEW_ROOT/USERS/leon/code/r16p19-phase1b-publication-20260813"
-EXPERIMENT_ROOT="$SOURCE_ROOT/experiments/r16p19_libero_phase3"
+CONTRACT_ROOT="$SOURCE_ROOT/experiments/r16p19_libero_phase3"
+EXPERIMENT_ROOT=${R16P19_PHASE3_EXPERIMENT_ROOT:?R16P19_PHASE3_EXPERIMENT_ROOT is required}
 LIBERO_ROOT="$NEW_ROOT/USERS/leon/code/LIBERO-r16p19-official-8f1084e"
 PYTHON="$NEW_ROOT/USERS/leon/envs/libero-original/bin/python"
 EXPECTED_LIBERO_COMMIT=8f1084e3132a39270c3a13ebe37270a43ece2a01
@@ -58,18 +59,13 @@ test "$(sha256sum "$(realpath -e "$PYTHON")" | awk '{print $1}')" = "$EXPECTED_P
 test "$(sha256sum "$STOVE_DATASET" | awk '{print $1}')" = "$EXPECTED_STOVE_DATASET_SHA"
 test "$(sha256sum "$BOWL_DATASET" | awk '{print $1}')" = "$EXPECTED_BOWL_DATASET_SHA"
 test "$(stat -c '%u:%g' "$EVIDENCE_DIR")" = "$LEON_UID:$LEON_GID"
+test "$(realpath -e "$EXPERIMENT_ROOT")" = "$EXPERIMENT_ROOT"
+case "$EXPERIMENT_ROOT" in
+  "$NEW_ROOT/USERS/leon/logs/r16p19_libero_phase3/application") ;;
+  *) printf 'invalid Phase-3 application root: %s\n' "$EXPERIMENT_ROOT" >&2; exit 66 ;;
+esac
 test "$(stat -c '%u:%g' "$EXPERIMENT_ROOT")" = "$LEON_UID:$LEON_GID"
-
-# Generated experiment artifacts are the only permitted worktree dirt.  This
-# permits application-level resume while keeping code and old phases frozen.
-while IFS= read -r status_line; do
-  test -z "$status_line" && continue
-  path=${status_line:3}
-  case "$path" in
-    experiments/r16p19_libero_phase3/*) ;;
-    *) printf 'unexpected source worktree dirt: %s\n' "$status_line" >&2; exit 66 ;;
-  esac
-done < <(git -C "$SOURCE_ROOT" status --porcelain)
+test -z "$(git -C "$SOURCE_ROOT" status --porcelain)"
 
 export PYTHONNOUSERSITE=1
 export PYTHONPATH="$SOURCE_ROOT:$LIBERO_ROOT"
@@ -85,6 +81,7 @@ export MUJOCO_EGL_DEVICE_ID=0
 export EGL_DEVICE_ID=0
 export NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics
 export PAI_AUTOMATIC_FAULT_TOLERANCE=0
+export R16P19_PHASE3_EXPERIMENT_ROOT="$EXPERIMENT_ROOT"
 export WANDB_MODE=disabled
 export OMP_NUM_THREADS=1
 export MKL_NUM_THREADS=1
