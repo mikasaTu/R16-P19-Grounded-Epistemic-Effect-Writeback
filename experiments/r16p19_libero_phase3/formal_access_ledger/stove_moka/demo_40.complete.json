@@ -1,0 +1,7 @@
+{
+  "cell_path": "cells/formal/stove_moka/demo_40.json",
+  "cell_sha256": "de34746faf40296b6d2e4ef45fc7066ec6914630fc5599db3c437895a4f0e73c",
+  "source_episode": "demo_40",
+  "status": "FORMAL_ACCESS_COMPLETE",
+  "task_key": "stove_moka"
+}

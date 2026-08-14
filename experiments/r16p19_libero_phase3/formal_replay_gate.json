@@ -1,0 +1,471 @@
+{
+  "chain_selection_mutated_after_formal_access": false,
+  "chain_threshold": 0.85,
+  "chains": [
+    {
+      "all_segments_pass_0_90": false,
+      "chain_id": "S2_MOKA_GRASP_TO_ON_STOVE",
+      "chain_pass_0_85": false,
+      "replay_chain_success": 0.5,
+      "segments": [
+        {
+          "conditional_success": 0.4,
+          "effect_id": "MOKA_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_40"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "MOKA_ON_STOVE",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_40"
+        },
+        {
+          "conditional_success": 0.4,
+          "effect_id": "MOKA_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_41"
+        },
+        {
+          "conditional_success": 0.2,
+          "effect_id": "MOKA_ON_STOVE",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_41"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "MOKA_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_42"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "MOKA_ON_STOVE",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_42"
+        },
+        {
+          "conditional_success": 0.0,
+          "effect_id": "MOKA_GRASPED",
+          "no_backend_error": false,
+          "passes_0_90": false,
+          "source_episode": "demo_43"
+        },
+        {
+          "conditional_success": 0.0,
+          "effect_id": "MOKA_ON_STOVE",
+          "no_backend_error": false,
+          "passes_0_90": false,
+          "source_episode": "demo_43"
+        },
+        {
+          "conditional_success": 0.0,
+          "effect_id": "MOKA_GRASPED",
+          "no_backend_error": false,
+          "passes_0_90": false,
+          "source_episode": "demo_44"
+        },
+        {
+          "conditional_success": 0.0,
+          "effect_id": "MOKA_ON_STOVE",
+          "no_backend_error": false,
+          "passes_0_90": false,
+          "source_episode": "demo_44"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "MOKA_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_45"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "MOKA_ON_STOVE",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_45"
+        },
+        {
+          "conditional_success": 0.6,
+          "effect_id": "MOKA_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_46"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "MOKA_ON_STOVE",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_46"
+        },
+        {
+          "conditional_success": 0.6,
+          "effect_id": "MOKA_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_47"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "MOKA_ON_STOVE",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_47"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "MOKA_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_48"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "MOKA_ON_STOVE",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_48"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "MOKA_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_49"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "MOKA_ON_STOVE",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_49"
+        }
+      ],
+      "task_key": "stove_moka",
+      "valid_formal_units": 8,
+      "valid_formal_units_pass_8": true
+    },
+    {
+      "all_segments_pass_0_90": false,
+      "chain_id": "B1_BOWL_GRASP_TO_DRAWER",
+      "chain_pass_0_85": false,
+      "replay_chain_success": 0.48,
+      "segments": [
+        {
+          "conditional_success": 0.0,
+          "effect_id": "BOWL_GRASPED",
+          "no_backend_error": false,
+          "passes_0_90": false,
+          "source_episode": "demo_40"
+        },
+        {
+          "conditional_success": 0.0,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": false,
+          "passes_0_90": false,
+          "source_episode": "demo_40"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_41"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_41"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_42"
+        },
+        {
+          "conditional_success": 0.2,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_42"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_43"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_43"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_44"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_44"
+        },
+        {
+          "conditional_success": 0.0,
+          "effect_id": "BOWL_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_45"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_45"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_46"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_46"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_47"
+        },
+        {
+          "conditional_success": 0.2,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_47"
+        },
+        {
+          "conditional_success": 0.0,
+          "effect_id": "BOWL_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_48"
+        },
+        {
+          "conditional_success": 0.2,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_48"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_GRASPED",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_49"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_49"
+        }
+      ],
+      "task_key": "bowl_drawer",
+      "valid_formal_units": 9,
+      "valid_formal_units_pass_8": true
+    },
+    {
+      "all_segments_pass_0_90": false,
+      "chain_id": "B2_BOWL_IN_TO_RELEASED",
+      "chain_pass_0_85": false,
+      "replay_chain_success": 0.44,
+      "segments": [
+        {
+          "conditional_success": 0.0,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": false,
+          "passes_0_90": false,
+          "source_episode": "demo_40"
+        },
+        {
+          "conditional_success": 0.0,
+          "effect_id": "BOWL_RELEASED_IN_DRAWER",
+          "no_backend_error": false,
+          "passes_0_90": false,
+          "source_episode": "demo_40"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_41"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "BOWL_RELEASED_IN_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_41"
+        },
+        {
+          "conditional_success": 0.2,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_42"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_RELEASED_IN_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_42"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_43"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_RELEASED_IN_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_43"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_44"
+        },
+        {
+          "conditional_success": 0.0,
+          "effect_id": "BOWL_RELEASED_IN_DRAWER",
+          "no_backend_error": false,
+          "passes_0_90": false,
+          "source_episode": "demo_44"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_45"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_RELEASED_IN_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_45"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_46"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_RELEASED_IN_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_46"
+        },
+        {
+          "conditional_success": 0.2,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_47"
+        },
+        {
+          "conditional_success": 0.0,
+          "effect_id": "BOWL_RELEASED_IN_DRAWER",
+          "no_backend_error": false,
+          "passes_0_90": false,
+          "source_episode": "demo_47"
+        },
+        {
+          "conditional_success": 0.2,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_48"
+        },
+        {
+          "conditional_success": 0.0,
+          "effect_id": "BOWL_RELEASED_IN_DRAWER",
+          "no_backend_error": false,
+          "passes_0_90": false,
+          "source_episode": "demo_48"
+        },
+        {
+          "conditional_success": 0.8,
+          "effect_id": "BOWL_IN_BOTTOM_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": false,
+          "source_episode": "demo_49"
+        },
+        {
+          "conditional_success": 1.0,
+          "effect_id": "BOWL_RELEASED_IN_DRAWER",
+          "no_backend_error": true,
+          "passes_0_90": true,
+          "source_episode": "demo_49"
+        }
+      ],
+      "task_key": "bowl_drawer",
+      "valid_formal_units": 6,
+      "valid_formal_units_pass_8": false
+    }
+  ],
+  "downstream_experiments_continued_under_user_override": true,
+  "downstream_interpretation": "diagnostic_only",
+  "effect_segment_threshold": 0.9,
+  "minimum_valid_formal_units_per_chain": 8,
+  "passed": false,
+  "schema_version": 1,
+  "selected_chain_ids": [
+    "S2_MOKA_GRASP_TO_ON_STOVE",
+    "B1_BOWL_GRASP_TO_DRAWER",
+    "B2_BOWL_IN_TO_RELEASED"
+  ],
+  "status": "FORMAL_REPLAY_GATE_FAIL"
+}

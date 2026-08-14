@@ -1,0 +1,40 @@
+{
+  "comparisons": [
+    {
+      "B6_FULL_advantage": 0.0,
+      "B6_FULL_chain_success": 0.7166666666666667,
+      "ablated_advantage": 0.0,
+      "ablated_chain_success": 0.7166666666666667,
+      "ablation": "B6_NO_PROVENANCE",
+      "absolute_advantage_drop": 0.0,
+      "conditions": [
+        "C4",
+        "C7"
+      ],
+      "mechanism_drop_ge_50_percent": false,
+      "reference_strong_baseline": "TYPED_MATCHED_RECOVERY",
+      "reference_strong_baseline_chain_success": 0.7166666666666667,
+      "relative_advantage_drop": null
+    },
+    {
+      "B6_FULL_advantage": 0.0,
+      "B6_FULL_chain_success": 0.6666666666666666,
+      "ablated_advantage": -0.6666666666666666,
+      "ablated_chain_success": 0.0,
+      "ablation": "B6_NO_INVALIDATION",
+      "absolute_advantage_drop": 0.6666666666666666,
+      "conditions": [
+        "C3"
+      ],
+      "mechanism_drop_ge_50_percent": false,
+      "reference_strong_baseline": "TYPED_MATCHED_RECOVERY",
+      "reference_strong_baseline_chain_success": 0.6666666666666666,
+      "relative_advantage_drop": null
+    }
+  ],
+  "interpretation": "diagnostic_only_no_paper_level_mechanism_claim",
+  "paper_level_mechanism_claim_allowed": false,
+  "run_policy": "unconditional_user_override",
+  "schema_version": 1,
+  "status": "MECHANISM_ABLATIONS_COMPLETE"
+}

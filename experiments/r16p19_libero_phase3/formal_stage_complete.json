@@ -1,0 +1,11 @@
+{
+  "all_experiments_continued_independent_of_gate": true,
+  "delayed_receipt_rollout_count": 180,
+  "first_divergence_intervention_count": 176,
+  "formal_execution_contract_sha256": "a78728e6bfe0bc33ae016a974c2bafa956e8eb1c3e744bc4616e276d3a4a438f",
+  "formal_replay_gate_pass": false,
+  "main_rollout_count": 900,
+  "mechanism_ablation_rollout_count": 90,
+  "source_head": "6089341084c9e39bb76b065a3c51fa3aa53ced25",
+  "status": "FORMAL_STAGE_COMPLETE"
+}

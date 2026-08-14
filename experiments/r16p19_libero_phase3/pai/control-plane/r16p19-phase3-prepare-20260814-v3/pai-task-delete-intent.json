@@ -1,0 +1,39 @@
+{
+  "action": "DeleteJob",
+  "api_path": "/api/v1/jobs/dlc3r2jgqc8lu2p1",
+  "api_version": "2020-12-03",
+  "expected_purpose": "formal-evaluation",
+  "expected_status": "Failed",
+  "intent_at_utc": "2026-08-14T12:25:44Z",
+  "job_id": "dlc3r2jgqc8lu2p1",
+  "performed_by_gid": 2254,
+  "performed_by_uid": 2254,
+  "phase": "prepared",
+  "preflight_getjob_sha256": "4693c00dec83d9b6815034e712d13bc2579b84763af92b3b0d69e6a2a7415954",
+  "preflight_listjobs_sha256": "36592cb64e7a3b5208f762059e24ea0d35887d9ca4f4359e6541e4d35b3daa0b",
+  "preflight_summary": {
+    "DisplayName": "r16p19-phase3-prepa-r16p19-phase3-prepare-20260814-v3-nad26e889",
+    "JobId": "dlc3r2jgqc8lu2p1",
+    "ResourceId": "quotakzri8a5wqcp",
+    "Status": "Failed",
+    "Tags": {
+      "contract_source_job_id": "dlcfp1szuc2cgqfp",
+      "dataset": "libero10-two-task-demo-splits-frozen",
+      "experiment_role": "prepare",
+      "hardware": "2xa800-dedicated-single-render-visible",
+      "managed_by": "pai-job-registry",
+      "model": "frozen-effect-replay-memory-arms",
+      "nonce": "ad26e88927459449da47f1292f44cd7e",
+      "purpose": "formal-evaluation",
+      "resource_pool": "exp-efficiency",
+      "run_id": "r16p19-phase3-prepare-20260814-v3",
+      "task": "r16p19-phase3-effect-boundary-replay-20260814"
+    },
+    "UserId": "204304175653577039",
+    "WorkspaceId": "179169"
+  },
+  "preserve_cpfs_and_registry_evidence": true,
+  "run_id": "r16p19-phase3-prepare-20260814-v3",
+  "schema_version": 1,
+  "workspace_id": "179169"
+}

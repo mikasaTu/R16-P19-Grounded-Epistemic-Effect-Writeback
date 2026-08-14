@@ -1,0 +1,39 @@
+{
+  "action": "DeleteJob",
+  "api_path": "/api/v1/jobs/dlc1xieb62snpwdv",
+  "api_version": "2020-12-03",
+  "expected_purpose": "formal-evaluation",
+  "expected_status": "Failed",
+  "intent_at_utc": "2026-08-14T12:25:50Z",
+  "job_id": "dlc1xieb62snpwdv",
+  "performed_by_gid": 2254,
+  "performed_by_uid": 2254,
+  "phase": "prepared",
+  "preflight_getjob_sha256": "65069e5b7da85da88962f1a33ad54a6ed77d7ec1234ffd941713f95e8bae385e",
+  "preflight_listjobs_sha256": "19a039b304edfcf7e127e795973049e2588d9d9319cb6ed3d7c3012e40feaa74",
+  "preflight_summary": {
+    "DisplayName": "r16p19-phase3-prepa-r16p19-phase3-prepare-20260814-v4-n37db939a",
+    "JobId": "dlc1xieb62snpwdv",
+    "ResourceId": "quotakzri8a5wqcp",
+    "Status": "Failed",
+    "Tags": {
+      "contract_source_job_id": "dlcfp1szuc2cgqfp",
+      "dataset": "libero10-two-task-demo-splits-frozen",
+      "experiment_role": "prepare",
+      "hardware": "2xa800-dedicated-single-render-visible",
+      "managed_by": "pai-job-registry",
+      "model": "frozen-effect-replay-memory-arms",
+      "nonce": "37db939a9bd9c54ae9b05101f2b6ae11",
+      "purpose": "formal-evaluation",
+      "resource_pool": "exp-efficiency",
+      "run_id": "r16p19-phase3-prepare-20260814-v4",
+      "task": "r16p19-phase3-effect-boundary-replay-20260814"
+    },
+    "UserId": "204304175653577039",
+    "WorkspaceId": "179169"
+  },
+  "preserve_cpfs_and_registry_evidence": true,
+  "run_id": "r16p19-phase3-prepare-20260814-v4",
+  "schema_version": 1,
+  "workspace_id": "179169"
+}

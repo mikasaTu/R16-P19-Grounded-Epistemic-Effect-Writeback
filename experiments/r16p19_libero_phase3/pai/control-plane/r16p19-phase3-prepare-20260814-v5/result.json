@@ -1,0 +1,135 @@
+{
+  "finished_at_utc": "2026-08-14T06:11:37Z",
+  "initial_readback_at_utc": "2026-08-14T06:11:40Z",
+  "job_id": "dlc6j1afexrn1am1",
+  "name": "r16p19-phase3-prepa-r16p19-phase3-prepare-20260814-v5-n96e4e67a",
+  "returncode": 0,
+  "run_id": "r16p19-phase3-prepare-20260814-v5",
+  "stderr_job_ids": [],
+  "stdout_job_ids": [
+    "dlc6j1afexrn1am1",
+    "dlcfp1szuc2cgqfp"
+  ],
+  "submission_state": "submitted_verified",
+  "submit_parse": {
+    "job_id": "dlc6j1afexrn1am1",
+    "request_id": "019FFEE5-B778-5537-9AE6-05374ECEB3AE",
+    "request_job_ids": [
+      "dlcfp1szuc2cgqfp"
+    ],
+    "request_sha256": "2d0da5311b20dcfa846991fb4110440aa899a88fb5e127cbadee8914ad2264b0"
+  },
+  "submit_parse_error": "",
+  "submit_request_contract": {
+    "checks": {
+      "aimaster_args": true,
+      "aimaster_enabled": true,
+      "data_sources": true,
+      "disable_ecs_stock_check": true,
+      "display_name": true,
+      "empty_driver": true,
+      "empty_network": true,
+      "job_max_running_time_minutes": true,
+      "job_reserved_minutes": true,
+      "job_reserved_policy": true,
+      "job_type": true,
+      "oversold_type": true,
+      "pod_env": true,
+      "priority": true,
+      "resource_id": true,
+      "single_worker_spec": true,
+      "tags": true,
+      "user_command": true,
+      "worker_count": true,
+      "worker_cpu": true,
+      "worker_gpu": true,
+      "worker_image": true,
+      "worker_memory": true,
+      "worker_shared_memory": true,
+      "workspace_id": true
+    },
+    "complete": true,
+    "observed": {
+      "data_sources": [
+        [
+          "d-36p023eg0f2vuqny8y",
+          "v1",
+          "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+          ""
+        ],
+        [
+          "d-7fi8hehav247qi6x5o",
+          "v1",
+          "/mnt/cpfs/zbl-cpfs-new/Models",
+          ""
+        ],
+        [
+          "d-ejgj2ej7io1t2t32uc",
+          "v1",
+          "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+          ""
+        ],
+        [
+          "d-lg9t2b6xajpukeqqeb",
+          "v1",
+          "/mnt/cpfs/zbl-cpfs-new/SHARE/leon",
+          ""
+        ],
+        [
+          "d-mkixtohdn75dp8x9tb",
+          "v1",
+          "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+          ""
+        ]
+      ],
+      "display_name": "r16p19-phase3-prepa-r16p19-phase3-prepare-20260814-v5-n96e4e67a",
+      "job_max_running_time_minutes": 0,
+      "pod_env": {
+        "NVIDIA_DRIVER_CAPABILITIES": "compute,utility,graphics",
+        "R16P19_PHASE3_EXPECTED_COMMIT": "a04f3c3ac809b37ed4b70dce5a6bbec3c08a9088",
+        "R16P19_PHASE3_EXPERIMENT_ROOT": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase3/application",
+        "R16P19_PHASE3_INCLUDE_VIDEOS": "0",
+        "R16P19_PHASE3_STAGE": "prepare"
+      },
+      "priority": 9,
+      "resource_id": "quotakzri8a5wqcp",
+      "settings": {
+        "aimaster_args": null,
+        "aimaster_enabled": null,
+        "disable_ecs_stock_check": false,
+        "driver": "",
+        "job_reserved_minutes": null,
+        "job_reserved_policy": null,
+        "oversold_type": "ForbiddenQuotaOverSold",
+        "tags": {
+          "contract_source_job_id": "dlcfp1szuc2cgqfp",
+          "dataset": "libero10-two-task-demo-splits-frozen",
+          "experiment_role": "prepare",
+          "hardware": "2xa800-dedicated-single-render-visible",
+          "managed_by": "pai-job-registry",
+          "model": "frozen-effect-replay-memory-arms",
+          "nonce": "96e4e67a8044558092a9e2991f6f09d5",
+          "purpose": "formal-evaluation",
+          "resource_pool": "exp-efficiency",
+          "run_id": "r16p19-phase3-prepare-20260814-v5",
+          "task": "r16p19-phase3-effect-boundary-replay-20260814"
+        }
+      },
+      "user_command_sha256": "256c04c0c307550f4db0d948bf3ebf1e2fb1c80debbbffdac7148da794653d92",
+      "worker_spec": {
+        "EcsSpec": "",
+        "Image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+        "PodCount": 1,
+        "ResourceConfig": {
+          "CPU": "12",
+          "GPU": "2",
+          "GPUType": "",
+          "Memory": "200Gi",
+          "SharedMemory": "200Gi"
+        },
+        "Type": "Worker"
+      },
+      "workspace_id": "179169"
+    }
+  }
+}

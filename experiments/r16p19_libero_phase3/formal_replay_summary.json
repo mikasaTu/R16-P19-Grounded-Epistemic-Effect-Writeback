@@ -1,0 +1,80 @@
+{
+  "action_steps_per_effect": {
+    "bowl_drawer": {
+      "BOWL_GRASPED": 94.55555555555556,
+      "BOWL_IN_BOTTOM_DRAWER": 61.22222222222222,
+      "BOWL_RELEASED_IN_DRAWER": 18.166666666666668
+    },
+    "stove_moka": {
+      "MOKA_GRASPED": 126.875,
+      "MOKA_ON_STOVE": 48.125
+    }
+  },
+  "chains": [
+    {
+      "chain_id": "S2_MOKA_GRASP_TO_ON_STOVE",
+      "chain_success": 0.5,
+      "cumulative_chain_reach": [
+        0.6,
+        0.5
+      ],
+      "effects": [
+        "MOKA_GRASPED",
+        "MOKA_ON_STOVE"
+      ],
+      "eligible": false,
+      "mean_action_steps": 87.5,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "stove_moka"
+    },
+    {
+      "chain_id": "B1_BOWL_GRASP_TO_DRAWER",
+      "chain_success": 0.48,
+      "cumulative_chain_reach": [
+        0.7,
+        0.48
+      ],
+      "effects": [
+        "BOWL_GRASPED",
+        "BOWL_IN_BOTTOM_DRAWER"
+      ],
+      "eligible": false,
+      "mean_action_steps": 77.88888888888889,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "bowl_drawer"
+    },
+    {
+      "chain_id": "B2_BOWL_IN_TO_RELEASED",
+      "chain_success": 0.44,
+      "cumulative_chain_reach": [
+        0.58,
+        0.44
+      ],
+      "effects": [
+        "BOWL_IN_BOTTOM_DRAWER",
+        "BOWL_RELEASED_IN_DRAWER"
+      ],
+      "eligible": false,
+      "mean_action_steps": 44.0,
+      "minimum_source_segment_success": 0.0,
+      "task_key": "bowl_drawer"
+    }
+  ],
+  "conditional_effect_success_given_entry": {
+    "bowl_drawer": {
+      "BOWL_GRASPED": 0.7,
+      "BOWL_IN_BOTTOM_DRAWER": 0.58,
+      "BOWL_RELEASED_IN_DRAWER": 0.58
+    },
+    "stove_moka": {
+      "MOKA_GRASPED": 0.6,
+      "MOKA_ON_STOVE": 0.66
+    }
+  },
+  "effect_replay_count": 250,
+  "eligible_chain_count": 0,
+  "repetitions_per_source_segment": 5,
+  "schema_version": 1,
+  "split": "formal",
+  "status": "REPLAY_QUALIFICATION_COMPLETE"
+}

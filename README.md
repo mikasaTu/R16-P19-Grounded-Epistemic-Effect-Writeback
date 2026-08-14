@@ -1,24 +1,49 @@
 # R16-P19 Grounded Epistemic Effect Writeback
 
-This repository contains the complete Phase-1, Phase-1B, and Phase-2 validation
+This repository contains the complete Phase-1, Phase-1B, Phase-2, and Phase-3 validation
 bundle for Grounded Epistemic Effect Writeback on two frozen official
 LIBERO-10 tasks: frozen protocols, implementation, tests, PAI submission and
 control-plane evidence, raw JSONL, failure videos, mechanism diagnosis, and
 reports.
 
-The latest scientific terminal status is **`BLOCKED_BY_EXECUTOR_V3`**. The
-frozen deterministic, non-neural `RetargetedGeometricSkillExecutor` completed
-its 2×20 clean qualification but missed every combined competence gate: minimum
-per-effect success was 0.70 (required 0.90), bowl full-task success was 0.70
-(required 0.80), and repeated-loop rate was 0.25 (maximum 0.10). The PAI job
-succeeded; this is a scientific executor failure, not an infrastructure error.
+The latest machine-readable terminal status is **`BLOCKED_BY_IMPLEMENTATION`**.
+Phase-3 independently failed both the qualification replay and formal
+replay-only competence gates. Under the user's preregistered override, all
+downstream diagnostics nevertheless completed: 900 main rollouts, 180 delayed-
+receipt rollouts, 176 first-divergence interventions, 10,000-draw clustered
+bootstrap, exact paired tests, and 90 mechanism-ablation rollouts.
 
-The stop rule therefore kept formal init 0--19, the 800-rollout memory matrix,
-causal replay, and paired bootstrap unobserved. Phase-2 neither validates nor
-rejects the B6 memory mechanism. Earlier `BLOCKED_BY_ACTOR` and
-`BLOCKED_BY_ACTOR_V2` results remain predecessor phases, not the current status.
+B6 tied the strongest `TYPED_MATCHED_RECOVERY` baseline exactly: valid-primary
+chain success 0.9130 versus 0.9130, paired difference 0.0, clustered 95% CI
+`[0.0, 0.0]`, and McNemar `p=1.0`. In addition, 27/150 paired units violated
+the byte-identical pre-decision event/state-prefix requirement even though
+their frozen action hashes matched. The experiment therefore supports no B6
+incremental-value, VLA, benchmark-generalization, or paper-level mechanism
+claim. Phase-2 `BLOCKED_BY_EXECUTOR_V3`, Phase-1B `BLOCKED_BY_ACTOR`, and
+Phase-1 trace-level PASS remain predecessor evidence.
 
 ## Headline results
+
+| Phase-3 item | Result | Key evidence |
+|---|---:|---|
+| Qualification replay | FAIL | 0/6 candidate chains eligible |
+| Formal replay-only gate | FAIL | chain success 0.50 / 0.48 / 0.44 |
+| Full downstream execution | COMPLETE | 900 main + 180 D1 + 176 causal + 90 ablation |
+| B6 vs best strong baseline | NO ADVANTAGE | paired difference 0.0; 95% CI `[0,0]` |
+| B6 vs POSTCHECK | diagnostic improvement | +0.2391 valid-primary; isolated to C4 |
+| C3 no-invalidation ablation | diagnostic collapse | raw success 0.667 → 0.000 |
+| First-divergence causal gate | FAIL | 54/88 = 0.6136, required 0.70 |
+| Pair-prefix information fairness | FAIL | 27/150 units differed before decision |
+| Formal PAI execution | Succeeded | `dlc1o37keilxr3sr`; 18,485 s; 2×A800 carrier, GPU0 visible |
+| Video policy | diagnostic complete | 748 requests; 496 videos; 252 invalid-snapshot errors; 4 outcome mismatches |
+| Protected B6 source | PASS | frozen SHA256 `4992462e...` |
+
+The complete Phase-3 interpretation is in
+[EXPERIMENT_REPORT_ZH.md](experiments/r16p19_libero_phase3/EXPERIMENT_REPORT_ZH.md),
+with code-path causality in
+[MECHANISM_REVERSE_ENGINEERING.md](experiments/r16p19_libero_phase3/MECHANISM_REVERSE_ENGINEERING.md).
+
+## Phase-2 predecessor results
 
 | Phase-2 gate | Result | Key evidence |
 |---|---:|---|
@@ -136,8 +161,9 @@ datasets, MuJoCo/robosuite dependencies, and a working EGL or OSMesa backend.
 The original experiment intentionally freezes absolute CPFS paths. Reproduce
 the same mount layout, or adapt the paths and treat that as a new experiment.
 
-The latest checkout was re-tested with 23 unit tests passing. The
-synthetic checkpoint retention test passed. See
+The latest checkout was re-tested with the complete 35-test suite passing;
+the five specified Phase-3 test files contributed 12 passing tests. The
+synthetic checkpoint retention test also passed. See
 [docs/VALIDATION.md](docs/VALIDATION.md) for exact commands, formal PAI evidence,
 and the headless-GL limitation encountered during the additional checkout
 smoke.
@@ -157,6 +183,8 @@ other than itself):
 (cd artifacts && sha256sum -c BUNDLE_SHA256SUMS)
 (cd artifacts/formal/r16p19-libero-phase1-20260813-013200/experiment \
   && sha256sum -c SHA256SUMS)
+(cd experiments/r16p19_libero_phase3 && sha256sum -c SHA256SUMS)
+(cd experiments/r16p19_libero_phase3 && sha256sum -c BUNDLE_SHA256SUMS)
 ```
 
 ## Related records
@@ -167,6 +195,10 @@ other than itself):
   [step3](https://icnbwz7kd1ui.feishu.cn/wiki/CP8qwoVcFiyPrMkLS7KcYNx4ngd)
 - Phase-2 step3 experiment report:
   [实验报告](https://icnbwz7kd1ui.feishu.cn/wiki/IBc9wR2Mai8Cv1ks6VecHuqTnCk)
+- Phase-3 step4 plan:
+  [step4](https://icnbwz7kd1ui.feishu.cn/wiki/SqxXwnTIFiistlk1bOrcprPWnmb)
+- Phase-3 step4 experiment report:
+  [实验报告](https://icnbwz7kd1ui.feishu.cn/wiki/DvI3wxPQ7ixoSdkA9kncspgdnUc)
 - Phase-1 Feishu experiment report:
   [实验报告](https://icnbwz7kd1ui.feishu.cn/wiki/Wr28wjd1aivlpLkU0ovcDTWdnWf)
 - Original Step-1 protocol:

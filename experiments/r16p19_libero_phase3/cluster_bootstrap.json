@@ -1,0 +1,123 @@
+{
+  "best_observed_strong_baseline": "TYPED_MATCHED_RECOVERY",
+  "cluster_unit": "source_demonstration_episode_index",
+  "comparisons": {
+    "PERSISTENCE_RECOVERY": {
+      "baseline": "PERSISTENCE_RECOVERY",
+      "bootstrap_mean": 0.7201168661716135,
+      "ci_95": [
+        0.6018518518518519,
+        0.8375
+      ],
+      "cluster_count": 10,
+      "clusters": [
+        "demo_40",
+        "demo_41",
+        "demo_42",
+        "demo_43",
+        "demo_44",
+        "demo_45",
+        "demo_46",
+        "demo_47",
+        "demo_48",
+        "demo_49"
+      ],
+      "draw_sha256": "4af8169827a3bb887ee0deeb51fe635ac6e091259c270bd410d132ec211cb672",
+      "method": "paired_cluster_bootstrap_with_source_episode_resampling",
+      "observed_difference": 0.717391304347826,
+      "paired_unit_count": 92,
+      "repetitions": 10000,
+      "seed": 1619
+    },
+    "POSTCHECK_RECOVERY": {
+      "baseline": "POSTCHECK_RECOVERY",
+      "bootstrap_mean": 0.2393535811940612,
+      "ci_95": [
+        0.21739130434782608,
+        0.25
+      ],
+      "cluster_count": 10,
+      "clusters": [
+        "demo_40",
+        "demo_41",
+        "demo_42",
+        "demo_43",
+        "demo_44",
+        "demo_45",
+        "demo_46",
+        "demo_47",
+        "demo_48",
+        "demo_49"
+      ],
+      "draw_sha256": "13d23fba76732b55877181a1f28416bf8722bf8a7686921b3fc8e1b450a42d16",
+      "method": "paired_cluster_bootstrap_with_source_episode_resampling",
+      "observed_difference": 0.2391304347826087,
+      "paired_unit_count": 92,
+      "repetitions": 10000,
+      "seed": 1619
+    },
+    "TYPED_MATCHED_RECOVERY": {
+      "baseline": "TYPED_MATCHED_RECOVERY",
+      "bootstrap_mean": 0.0,
+      "ci_95": [
+        0.0,
+        0.0
+      ],
+      "cluster_count": 10,
+      "clusters": [
+        "demo_40",
+        "demo_41",
+        "demo_42",
+        "demo_43",
+        "demo_44",
+        "demo_45",
+        "demo_46",
+        "demo_47",
+        "demo_48",
+        "demo_49"
+      ],
+      "draw_sha256": "f8c784aa6b57396e7c5e094c34d079d8252473e46e2f60593a921dbebf941fcc",
+      "method": "paired_cluster_bootstrap_with_source_episode_resampling",
+      "observed_difference": 0.0,
+      "paired_unit_count": 92,
+      "repetitions": 10000,
+      "seed": 1619
+    }
+  },
+  "primary_comparison": {
+    "baseline": "TYPED_MATCHED_RECOVERY",
+    "bootstrap_mean": 0.0,
+    "ci_95": [
+      0.0,
+      0.0
+    ],
+    "cluster_count": 10,
+    "clusters": [
+      "demo_40",
+      "demo_41",
+      "demo_42",
+      "demo_43",
+      "demo_44",
+      "demo_45",
+      "demo_46",
+      "demo_47",
+      "demo_48",
+      "demo_49"
+    ],
+    "draw_sha256": "f8c784aa6b57396e7c5e094c34d079d8252473e46e2f60593a921dbebf941fcc",
+    "method": "paired_cluster_bootstrap_with_source_episode_resampling",
+    "observed_difference": 0.0,
+    "paired_unit_count": 92,
+    "repetitions": 10000,
+    "seed": 1619
+  },
+  "primary_endpoint": "mean_chain_success_over_C1_C3_C4_C7",
+  "primary_means": {
+    "B6_FULL": 0.9130434782608695,
+    "PERSISTENCE_RECOVERY": 0.1956521739130435,
+    "POSTCHECK_RECOVERY": 0.6739130434782609,
+    "TYPED_MATCHED_RECOVERY": 0.9130434782608695
+  },
+  "schema_version": 1,
+  "status": "CLUSTER_BOOTSTRAP_COMPLETE"
+}

@@ -1,0 +1,142 @@
+{
+  "description": "R16-P19 Phase-3 full diagnostic LIBERO formal matrix, D1, first-divergence interventions, mechanism ablations, statistics, and required videos after the frozen replay gate failed; 2xA800 carrier with only GPU0 visible to EGL",
+  "evidence": {
+    "allocated_gpu_count": 2,
+    "application_resume_unit": "one_fsynced_rollout_or_replay_cell",
+    "bowl_dataset_sha256": "703950f48a3c49dfde61be489ade91527f16e1449b4f29a85f2e51153cef3638",
+    "completed_evidence_path": "{{ARTIFACT_DIR}}/EVALUATION_COMPLETE.json",
+    "contract_ready": true,
+    "expected_first_work_gid": 2254,
+    "expected_first_work_uid": 2254,
+    "first_work_evidence_path": "{{ARTIFACT_DIR}}/FIRST_COMPLETED_CELL.json",
+    "formal_demo_accessed_by_stage": true,
+    "gpu_execution": "physical_gpu0_only_for_egl_gpu1_unexposed",
+    "kind": "r16p19_phase3_effect_boundary_replay_non_neural_evaluation",
+    "launcher_sha256": "79595973e25cd5075ccb364a2f28c44758237c641d8796ac49277775eeab8861",
+    "model_id": "frozen_same_demonstration_action_segments_plus_memory_arms",
+    "mount_contract": "exact_five_new_root_sources_from_live_readback",
+    "official_libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "pai_automatic_fault_tolerance": false,
+    "pai_probe_created": false,
+    "plan_sha256": "6ffac905c7063300124e9f416a9a007cb3dcd9c4264beec7e6f1ae57efadc83a",
+    "platform_restart_limit": 0,
+    "preregistration_commit": "a219eb7411d84846a43b3356b8134d9d9ceca40b",
+    "protected_b6_sha256": "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5",
+    "resource_contract": "dedicated_2gpu_carrier_single_render_gpu_v1",
+    "scientific_visible_gpu_count": 1,
+    "source_commit": "6089341084c9e39bb76b065a3c51fa3aa53ced25",
+    "source_tree": "5c8eb5e72c57d2620c0dad395e7d5c631691474c",
+    "stage": "formal",
+    "stove_dataset_sha256": "6b30906a52a5741e98ef447d27e7066d6c0be4a5f7acd7ecaf1cb7468aca4aa9",
+    "success_gate": "persisted_completed_stage_result",
+    "task_id": "r16p19-phase3-effect-boundary-replay-20260814",
+    "user_override_run_all_experiments_after_failed_gate": true,
+    "validation_method": "static_plus_35_unit_tests_then_pai_real_simulator",
+    "validation_status": "dev_render_unavailable_pai_contract_ready_no_probe",
+    "wandb_mode": "disabled_non_neural_evaluation",
+    "workload_type": "deterministic_non_neural_rollout_evaluation"
+  },
+  "fault_tolerance": {
+    "aimaster_args": "",
+    "expected_platform_restarts": 0,
+    "launcher_attempts": 1,
+    "maximum_platform_restarts": 0,
+    "pai_automatic_fault_tolerance": false,
+    "retry_sleep_seconds": 30
+  },
+  "kind": "pytorchjob",
+  "name_prefix": "r16p19-phase3-formal",
+  "network": {},
+  "provenance": {
+    "contract_source_job_id": "dlcfp1szuc2cgqfp",
+    "pai_clone_performed": false,
+    "resource_source_job_id": "dlc1j2p8ui63ulps",
+    "source_role": "readback_reference",
+    "submission_method": "cli_create"
+  },
+  "resource_alias": "exp-efficiency-r16p19-phase3-2gpu",
+  "runtime": {
+    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r16p19-phase1b-publication-20260813/launch/pai_phase3_stage.sh",
+    "create_artifact_dir": true,
+    "gid": 2254,
+    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
+    "output_mode": "resume",
+    "payload_transport": "base64",
+    "pod_env": {
+      "NVIDIA_DRIVER_CAPABILITIES": "compute,utility,graphics",
+      "R16P19_PHASE3_EXPECTED_COMMIT": "6089341084c9e39bb76b065a3c51fa3aa53ced25",
+      "R16P19_PHASE3_EXPERIMENT_ROOT": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase3/application",
+      "R16P19_PHASE3_INCLUDE_VIDEOS": "1",
+      "R16P19_PHASE3_STAGE": "formal"
+    },
+    "recursive_repair": false,
+    "secret_env_names": [],
+    "uid": 2254,
+    "write_paths": [
+      "{{ARTIFACT_DIR}}",
+      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase3/application"
+    ]
+  },
+  "schema_version": 2,
+  "storage": {
+    "data_sources": [
+      {
+        "id": "d-mkixtohdn75dp8x9tb",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-lg9t2b6xajpukeqqeb",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-36p023eg0f2vuqny8y",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-ejgj2ej7io1t2t32uc",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-7fi8hehav247qi6x5o",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/",
+        "options": "",
+        "version": "v1"
+      }
+    ],
+    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase3/pai"
+  },
+  "submission": {
+    "disable_ecs_stock_check": false,
+    "job_max_running_time_minutes": 0,
+    "job_reserved_minutes": 0,
+    "job_reserved_policy": "",
+    "priority": 9,
+    "tags": {
+      "dataset": "libero10-two-task-demo-splits-frozen",
+      "experiment_role": "formal",
+      "hardware": "2xa800-dedicated-single-render-visible",
+      "managed_by": "pai-job-registry",
+      "model": "frozen-effect-replay-memory-arms",
+      "purpose": "formal-evaluation",
+      "resource_pool": "exp-efficiency",
+      "task": "r16p19-phase3-effect-boundary-replay-20260814"
+    }
+  },
+  "worker": {
+    "count": 1,
+    "cpu": 12,
+    "gpu": 2,
+    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+    "memory": "200Gi",
+    "shared_memory": "200Gi"
+  },
+  "workspace_id": "179169"
+}

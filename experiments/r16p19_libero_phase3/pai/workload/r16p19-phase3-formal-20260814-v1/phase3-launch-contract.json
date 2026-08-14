@@ -1,0 +1,17 @@
+{
+  "allocated_gpu_count": 2,
+  "application_resume_unit": "one_fsynced_rollout_or_replay_cell",
+  "expected_source_commit": "6089341084c9e39bb76b065a3c51fa3aa53ced25",
+  "gpu_inventory": [
+    "NVIDIA A800-SXM4-80GB, GPU-06e7e447-7b8a-ec24-faee-fd6bc8d0d77d",
+    "NVIDIA A800-SXM4-80GB, GPU-bdeffaec-e39f-147b-8409-466985157bdc"
+  ],
+  "libero_import": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-r16p19-official-8f1084e/libero/libero/benchmark/__init__.py",
+  "pai_automatic_fault_tolerance": false,
+  "pai_probe_created": false,
+  "run_id": "r16p19-phase3-formal-20260814-v1",
+  "scientific_visible_gpu_count": 1,
+  "stage": "formal",
+  "uid_gid": "2254:2254",
+  "wandb": "disabled_non_neural_evaluation"
+}

@@ -1,0 +1,14 @@
+{
+  "action": "DeleteJob",
+  "api_path": "/api/v1/jobs/dlc3r2jgqc8lu2p1",
+  "api_version": "2020-12-03",
+  "expected_purpose": "formal-evaluation",
+  "http_status": 200,
+  "received_at_utc": "2026-08-14T12:25:58Z",
+  "response": {
+    "JobId": "dlc3r2jgqc8lu2p1",
+    "RequestId": "01A0003C-7AD2-589A-B033-676098709DC5"
+  },
+  "response_sha256": "aeb2a130c15c136428b11d6c590e3f5cb0da7e3c7417457ec469e9bba8ddb671",
+  "schema_version": 1
+}

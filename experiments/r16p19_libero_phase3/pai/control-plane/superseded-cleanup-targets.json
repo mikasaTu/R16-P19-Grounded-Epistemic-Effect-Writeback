@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "sealed_at_utc": "2026-08-14T12:25:18Z",
+  "workflow": {
+    "task": "r16p19-phase3-effect-boundary-replay-20260814",
+    "stage": "prepare",
+    "purpose": "formal-evaluation",
+    "dataset": "libero10-two-task-demo-splits-frozen",
+    "model": "frozen-effect-replay-memory-arms",
+    "hardware": "2xa800-dedicated-single-render-visible",
+    "resource_id": "quotakzri8a5wqcp",
+    "platform_restart_limit": 0
+  },
+  "replacement": {
+    "run_id": "r16p19-phase3-prepare-20260814-v5",
+    "job_id": "dlc6j1afexrn1am1",
+    "status": "Succeeded",
+    "source_commit": "a04f3c3ac809b37ed4b70dce5a6bbec3c08a9088",
+    "first_real_work_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase3/application/cells/development/stove_moka/demo_0.json",
+    "completion_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19_libero_phase3/application/prepare_stage_complete.json"
+  },
+  "targets": [
+    {
+      "run_id": "r16p19-phase3-prepare-20260814-v3",
+      "job_id": "dlc3r2jgqc8lu2p1",
+      "classification": "same-workflow failed formal-evaluation predecessor",
+      "terminal_status": "Failed",
+      "purpose": "formal-evaluation",
+      "source_commit": "89ec6bfc77efa3a891c73540da4efcd252a0be65",
+      "relation": "v5 repaired the same prepare-stage workload after the v3 launcher environment failure",
+      "cleanup": {
+        "deleted_at_utc": "2026-08-14T12:26:01Z",
+        "delete_request_id": "01A0003C-7AD2-589A-B033-676098709DC5",
+        "http_status": 200,
+        "verified_absent": true
+      }
+    },
+    {
+      "run_id": "r16p19-phase3-prepare-20260814-v4",
+      "job_id": "dlc1xieb62snpwdv",
+      "classification": "same-workflow failed formal-evaluation predecessor",
+      "terminal_status": "Failed",
+      "purpose": "formal-evaluation",
+      "source_commit": "89ec6bfc77efa3a891c73540da4efcd252a0be65",
+      "relation": "v5 repaired the same prepare-stage workload after the v4 pinned-LIBERO/Python preflight failure",
+      "cleanup": {
+        "deleted_at_utc": "2026-08-14T12:26:07Z",
+        "delete_request_id": "01A0003C-9AAB-5720-ACE3-B3EEF95D614D",
+        "http_status": 200,
+        "verified_absent": true
+      }
+    }
+  ],
+  "cleanup_status": "complete",
+  "preservation": "Only the two exact PAI service rows were deleted. Registry run directories, ledger entries, raw readbacks, logs, CPFS application outputs, and PAI evidence remain preserved."
+}

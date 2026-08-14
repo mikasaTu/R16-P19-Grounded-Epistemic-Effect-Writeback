@@ -1,0 +1,87 @@
+{
+  "effect_sizes": [
+    {
+      "baseline": "POSTCHECK_RECOVERY",
+      "per_chain": {
+        "B1_BOWL_GRASP_TO_DRAWER": 0.16000000000000003,
+        "B2_BOWL_IN_TO_RELEASED": 0.12,
+        "S2_MOKA_GRASP_TO_ON_STOVE": 0.15999999999999992
+      },
+      "per_condition": {
+        "C0": 0.0,
+        "C1": 0.0,
+        "C3": 0.0,
+        "C4": 0.7333333333333333,
+        "C7": 0.0
+      }
+    },
+    {
+      "baseline": "PERSISTENCE_RECOVERY",
+      "per_chain": {
+        "B1_BOWL_GRASP_TO_DRAWER": 0.6599999999999999,
+        "B2_BOWL_IN_TO_RELEASED": 0.32,
+        "S2_MOKA_GRASP_TO_ON_STOVE": 0.42
+      },
+      "per_condition": {
+        "C0": 0.1333333333333333,
+        "C1": 0.49999999999999994,
+        "C3": 0.6666666666666666,
+        "C4": 0.5666666666666667,
+        "C7": 0.4666666666666666
+      }
+    },
+    {
+      "baseline": "TYPED_MATCHED_RECOVERY",
+      "per_chain": {
+        "B1_BOWL_GRASP_TO_DRAWER": 0.0,
+        "B2_BOWL_IN_TO_RELEASED": 0.0,
+        "S2_MOKA_GRASP_TO_ON_STOVE": 0.0
+      },
+      "per_condition": {
+        "C0": 0.0,
+        "C1": 0.0,
+        "C3": 0.0,
+        "C4": 0.0,
+        "C7": 0.0
+      }
+    }
+  ],
+  "method": "exact_two_sided_McNemar_with_Holm_step_down",
+  "schema_version": 1,
+  "status": "PAIRED_TESTS_COMPLETE",
+  "tests": [
+    {
+      "absolute_success_difference": 0.2391304347826087,
+      "b6_failure_baseline_success": 0,
+      "b6_success_baseline_failure": 22,
+      "comparison": "B6_FULL_vs_POSTCHECK_RECOVERY",
+      "discordant_count": 22,
+      "exact_two_sided_p_value": 4.76837158203125e-07,
+      "holm_adjusted_p_value": 9.5367431640625e-07,
+      "holm_reject_0_05": true,
+      "paired_unit_count": 92
+    },
+    {
+      "absolute_success_difference": 0.717391304347826,
+      "b6_failure_baseline_success": 0,
+      "b6_success_baseline_failure": 66,
+      "comparison": "B6_FULL_vs_PERSISTENCE_RECOVERY",
+      "discordant_count": 66,
+      "exact_two_sided_p_value": 2.710505431213761e-20,
+      "holm_adjusted_p_value": 8.131516293641283e-20,
+      "holm_reject_0_05": true,
+      "paired_unit_count": 92
+    },
+    {
+      "absolute_success_difference": 0.0,
+      "b6_failure_baseline_success": 0,
+      "b6_success_baseline_failure": 0,
+      "comparison": "B6_FULL_vs_TYPED_MATCHED_RECOVERY",
+      "discordant_count": 0,
+      "exact_two_sided_p_value": 1.0,
+      "holm_adjusted_p_value": 1.0,
+      "holm_reject_0_05": false,
+      "paired_unit_count": 92
+    }
+  ]
+}

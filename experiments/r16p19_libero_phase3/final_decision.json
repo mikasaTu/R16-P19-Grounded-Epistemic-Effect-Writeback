@@ -1,0 +1,40 @@
+{
+  "best_observed_strong_baseline": "TYPED_MATCHED_RECOVERY",
+  "claim_boundary": "no_strong_controlled_advantage_claim",
+  "correctness_gates": {
+    "dangling_parent_count_zero": true,
+    "fault_or_truth_leakage_count_zero": true,
+    "paired_prefix_event_action_state_identity": false,
+    "protected_b6_source_hash_match": true,
+    "resident_slot_count_max_le_32": true,
+    "transition_violation_count_zero": true
+  },
+  "expected_formal_rollout_count": 900,
+  "final_status": "BLOCKED_BY_IMPLEMENTATION",
+  "formal_matrix_complete": true,
+  "formal_replay_gate_pass": false,
+  "implementation_error_count": 210,
+  "observed_formal_rollout_count": 900,
+  "observed_values": {
+    "bootstrap_ci_95_lower": 0.0,
+    "clean_action_step_overhead_fraction": 0.030862496555524865,
+    "clean_success_degradation": 0.0,
+    "decision_causal_win_rate": 0.6136363636363636,
+    "faulted_chain_success_margin": 0.0
+  },
+  "primary_gates": {
+    "C3_contradiction_recovery_recall_ge_0_80": true,
+    "C4_false_positive_advance_rate_le_0_05": true,
+    "all_provenance_and_resident_memory_correctness_gates": false,
+    "clean_action_step_overhead_le_0_15": true,
+    "clean_success_degradation_le_0_02": true,
+    "cluster_bootstrap_95ci_lower_gt_0": false,
+    "decision_causal_win_rate_ge_0_70": false,
+    "faulted_chain_success_margin_ge_0_10": false,
+    "grounded_advance_precision_ge_0_95": true
+  },
+  "qualification_replay_gate_pass": false,
+  "schema_version": 1,
+  "terminal_status_precedence_applied": true,
+  "user_override_downstream_completion_honored": true
+}
