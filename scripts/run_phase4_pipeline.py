@@ -20,6 +20,10 @@ from pathlib import Path
 from typing import Iterable, Mapping, Sequence
 
 
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 os.environ.setdefault("OMP_NUM_THREADS", "1")
 os.environ.setdefault("MKL_NUM_THREADS", "1")
 _BUNDLED_GLFW = (
@@ -47,7 +51,6 @@ from r16p19.phase4_trace_generator import generate_trace_schedules
 from r16p19.phase4_trace_oracle import run_trace_gate
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
 EXPERIMENT = PROJECT_ROOT / "experiments" / "r16p19_phase4"
 CONTRACT = EXPERIMENT / "task_condition_contract.json"
 PROTECTED_B6_SHA256 = "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5"
