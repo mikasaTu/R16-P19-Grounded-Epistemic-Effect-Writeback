@@ -1,13 +1,16 @@
 # R16-P19 Grounded Epistemic Effect Writeback
 
-This repository contains the complete Phase-1, Phase-1B, Phase-2, and Phase-3 validation
-bundle for Grounded Epistemic Effect Writeback on two frozen official
-LIBERO-10 tasks: frozen protocols, implementation, tests, PAI submission and
-control-plane evidence, raw JSONL, failure videos, mechanism diagnosis, and
-reports.
+This repository contains the complete Phase-1 through Phase-4 validation bundle for
+Grounded Epistemic Effect Writeback: frozen protocols, implementations, tests, raw
+results, paired audits, mechanism diagnoses, and reports. Phase-1 through Phase-3 use
+two frozen official LIBERO-10 tasks; Phase-4 is an isolated Linux CPU MuJoCo
+microbenchmark for the narrower Attempt-Scoped Causal Effect Ledger (ASCEL).
 
-The latest machine-readable terminal status is **`BLOCKED_BY_IMPLEMENTATION`**.
-Phase-3 independently failed both the qualification replay and formal
+The latest machine-readable terminal status remains **`BLOCKED_BY_IMPLEMENTATION`**.
+In Phase-4 all three functional ASCEL components passed, but M4's clean C0 event
+processing latency was 816,234 ns versus 395,884 ns for M0 (+106.18%), violating the
+frozen +10% clean-overhead gate. Clean success and physical action steps did not
+degrade. This does not overwrite Phase-3, which independently failed both the qualification replay and formal
 replay-only competence gates. Under the user's preregistered override, all
 downstream diagnostics nevertheless completed: 900 main rollouts, 180 delayed-
 receipt rollouts, 176 first-divergence interventions, 10,000-draw clustered
@@ -21,6 +24,25 @@ their frozen action hashes matched. The experiment therefore supports no B6
 incremental-value, VLA, benchmark-generalization, or paper-level mechanism
 claim. Phase-2 `BLOCKED_BY_EXECUTOR_V3`, Phase-1B `BLOCKED_BY_ACTOR`, and
 Phase-1 trace-level PASS remain predecessor evidence.
+
+## Phase-4 headline results
+
+| Phase-4 item | Result | Key evidence |
+|---|---:|---|
+| Deterministic trace gate | PASS | 10,000/10,000; exact attempt/support/truth gates |
+| CPU MuJoCo executor | PASS | conditional 1.0; full chain 1.0; backend errors 0 |
+| True shared-prefix fork | PASS | 1,000/1,000 units; all six identity gates exact |
+| Pilot / formal / ablations | COMPLETE | 1,000 / 5,000 / 4,000 rollouts |
+| Attempt scope | PASS | M4 1.0 vs best baseline 0.5; difference +0.50; CI `[0.50,0.50]` |
+| Support proof | PASS | M4 1.0 vs best baseline 0.5; difference +0.50; CI `[0.45,0.548223]` |
+| Truth/attribution split | PASS | A5 truth 1.0; false current-skill credit 0 |
+| Clean correctness/actions | PASS | success degradation 0; action-step overhead 0 |
+| Clean event latency | FAIL | +106.18%; frozen maximum +10% |
+| Overall | `BLOCKED_BY_IMPLEMENTATION` | functional gains cannot override clean latency failure |
+
+The full report is [FINAL_DECISION.md](experiments/r16p19_phase4/FINAL_DECISION.md),
+with code-and-ablation attribution in
+[MECHANISM_REVERSE_ENGINEERING.md](experiments/r16p19_phase4/MECHANISM_REVERSE_ENGINEERING.md).
 
 ## Headline results
 
@@ -103,6 +125,7 @@ verification without recovery, B6 full R16-P19, and B7 oracle effect ledger.
 r16p19/                     Core epistemic memory, trace gate, actor and rollout code
 tests/                      Unit tests for transitions, provenance and checkpoints
 experiments/                Frozen ontology, manifests, split, faults and preregistration
+experiments/r16p19_phase4/  Phase-4 preregistration, raw rows, audits, statistics and report
 launch/                     Exact formal PAI workload launcher
 artifacts/formal/           Successful formal run, including raw JSONL outputs and logs
 artifacts/failed/           First failed PAI attempt and root-cause evidence
@@ -161,8 +184,9 @@ datasets, MuJoCo/robosuite dependencies, and a working EGL or OSMesa backend.
 The original experiment intentionally freezes absolute CPFS paths. Reproduce
 the same mount layout, or adapt the paths and treat that as a new experiment.
 
-The latest checkout was re-tested with the complete 35-test suite passing;
-the five specified Phase-3 test files contributed 12 passing tests. The
+The latest checkout was re-tested with the complete suite passing; the seven specified
+Phase-4 test files cover attempt scope, revocation, support clauses, truth attribution,
+shared-prefix identity, CPU microenvironments, and paired statistics. The
 synthetic checkpoint retention test also passed. See
 [docs/VALIDATION.md](docs/VALIDATION.md) for exact commands, formal PAI evidence,
 and the headless-GL limitation encountered during the additional checkout
@@ -185,6 +209,7 @@ other than itself):
   && sha256sum -c SHA256SUMS)
 (cd experiments/r16p19_libero_phase3 && sha256sum -c SHA256SUMS)
 (cd experiments/r16p19_libero_phase3 && sha256sum -c BUNDLE_SHA256SUMS)
+(cd experiments/r16p19_phase4 && sha256sum -c SHA256SUMS)
 ```
 
 ## Related records

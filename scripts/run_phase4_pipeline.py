@@ -361,10 +361,12 @@ def _final_report(
                 support_best, _format_rate(effects["support_family_success_margin"]),
                 _format_rate(support_ci[0]), _format_rate(support_ci[1])
             ),
-            "- Clean：成功率退化 %s，action-step overhead %s，event-processing latency overhead %s。" % (
+            "- Clean：成功率退化 %s，action-step overhead %s，event-processing latency overhead %s（M4 %s ns vs M0 %s ns）。" % (
                 _format_rate(effects["clean_success_degradation"]),
                 _format_rate(effects["action_step_overhead_fraction"]),
                 _format_rate(effects["event_processing_latency_overhead_fraction"]),
+                _format_rate(arms["M4_ASCEL_FULL"]["clean_event_processing_time_ns"]),
+                _format_rate(arms["M0_TYPED_MATCHED"]["clean_event_processing_time_ns"]),
             ),
             "",
             "## 机制反解（基于代码与消融，不生成新 idea）",
@@ -372,13 +374,13 @@ def _final_report(
             "1. Attempt 改善来自 `AttemptScopedLedger.request()` 对旧 attempt 的 supersede、`_scope_match()` 的 attempt/command/epoch 三重绑定，以及新 request 清空当前证据池。它阻断了 A1/A2/A3 的跨尝试拼接；`negative_or_contradiction()` 在 VERIFIED 阶段撤销证据，又阻断 A4 的迟到 witness。",
             "2. Support 改善来自 `SupportProofGraph` 的“clause 内合取、clauses 间析取”。父 proof 失效时只重算引用它的 clause；只有全部 clause 失效才递归撤销 dependent。`UNTIL_*` 在约定终点 discharge，因此 S2 不误杀；替代 clause 使 S3 保留；递归仅沿新失效 proof 传播，使 S4 保持 branch locality。",
             "3. Truth/credit 改善来自 `external_realization()` 将 physical fact 置为 REALIZED，但在 attribution split 开启时保留 `attributed_attempt_id=null`。`decide()` 依据物理事实允许推进，而 capability credit 仍要求当前 attempt proof，所以 A5 能推进且不虚假记功。",
-            "4. `NO_ATTEMPT_SCOPE` 移除了 M4 attempt 优势的 %s；`NO_SUPPORT_VALIDITY` 移除了 support 优势的 %s；`NO_ATTRIBUTION_SPLIT` 使 A5 false credit 增加 %s；`NO_PRE_REALIZATION_REVOCATION` 使 A4 false realization 增加 %s。" % (
+            "4. `NO_ATTEMPT_SCOPE` 的 removed fraction 为 %s（超过 1 表示不只消除优势，还落到最强基线以下）；`NO_SUPPORT_VALIDITY` 移除了 support 优势的 %s；`NO_ATTRIBUTION_SPLIT` 使 A5 false credit 增加 %s；`NO_PRE_REALIZATION_REVOCATION` 使 A4 false realization 增加 %s。" % (
                 _format_rate(isolated["NO_ATTEMPT_SCOPE"]["attempt_advantage_removed_fraction"]),
                 _format_rate(isolated["NO_SUPPORT_VALIDITY"]["support_advantage_removed_fraction"]),
                 _format_rate(isolated["NO_ATTRIBUTION_SPLIT"]["false_skill_credit_absolute_increase"]),
                 _format_rate(isolated["NO_PRE_REALIZATION_REVOCATION"]["A4_false_realization_absolute_increase"]),
             ),
-            "5. 时延变化来自 M4 每个事件同时维护 append-only ledger、proof/clause 索引、discharge 和失效路径；它不改变物理动作数量。若冻结的 10%% overhead gate 未通过，该成本会保留为 clean failure，不能用功能收益覆盖。",
+            "5. 时延变化来自 M4 每个事件同时维护 append-only ledger、proof/clause 索引、discharge 和失效路径；它不改变物理动作数量。冻结的 10% overhead gate 未通过，因此该成本保留为 clean failure，不能用功能收益覆盖。",
             "",
             "## 证据边界",
             "",
