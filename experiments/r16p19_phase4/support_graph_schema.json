@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "r16p19/phase4/support_graph_schema.json",
+  "title": "ASCEL Discharge-Aware Support Proof Graph",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["proofs", "clauses", "invalidation_paths", "discharge_events"],
+  "properties": {
+    "proofs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["proof_id", "effect_id", "valid"],
+        "properties": {
+          "proof_id": {"type": "string"},
+          "effect_id": {"type": "string"},
+          "valid": {"type": "boolean"},
+          "invalidation_event_id": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "clauses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["clause_id", "effect_id", "references", "valid"],
+        "properties": {
+          "clause_id": {"type": "string"},
+          "effect_id": {"type": "string"},
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["parent_proof_id", "validity_type", "discharged"],
+              "properties": {
+                "parent_proof_id": {"type": "string"},
+                "validity_type": {
+                  "enum": ["PERSISTENT", "UNTIL_CHILD_REALIZED", "UNTIL_EFFECT_REALIZED"]
+                },
+                "until_effect_id": {"type": ["string", "null"]},
+                "discharged": {"type": "boolean"},
+                "discharge_event_id": {"type": ["string", "null"]}
+              }
+            }
+          },
+          "valid": {"type": "boolean"}
+        }
+      }
+    },
+    "invalidation_paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["root_proof_id", "newly_invalidated_proof_ids"],
+        "properties": {
+          "root_proof_id": {"type": "string"},
+          "newly_invalidated_proof_ids": {"type": "array", "items": {"type": "string"}},
+          "preserved_alternative_proof_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "discharge_events": {"type": "array", "items": {"type": "object"}}
+  }
+}
+

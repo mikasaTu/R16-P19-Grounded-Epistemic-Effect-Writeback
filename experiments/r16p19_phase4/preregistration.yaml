@@ -1,0 +1,165 @@
+schema_version: 1
+phase: R16-P19 Phase-4 Attempt-Scoped Causal Effect Ledger Validation
+method_name: Attempt-Scoped Causal Effect Ledger
+method_acronym: ASCEL
+frozen_at_utc: '2026-08-15'
+
+source:
+  branch: phase4-attempt-scoped-causal-ledger
+  base_head: 5592c3e0686847aea6c55e887b964078fa5bedb0
+  base_tree: 2934c8e0c945d8707a53fa04e52c3ff0690f3931
+  protected_memory_path: r16p19/memory.py
+  protected_memory_sha256: 4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5
+  protected_memory_policy: bytes_and_semantics_frozen
+
+evidence_boundary:
+  prior_status: BLOCKED_BY_IMPLEMENTATION
+  phase3_formal_matrix_complete: true
+  phase3_shared_prefix_identity_pass: false
+  phase3_differing_prefix_units: 27
+  phase3_total_paired_units: 150
+  phase3_backend_valid_b6_success: 0.9130434782608695
+  phase3_backend_valid_typed_matched_success: 0.9130434782608695
+  phase3_paired_difference: 0.0
+  phase3_paired_ci_95: [0.0, 0.0]
+  forbidden_interpretation: Phase-3 B6 has established incremental behavioral value
+
+hypotheses:
+  H_attempt_scope: >-
+    Isolating evidence, commands, and witnesses by active command attempt prevents
+    stale/cross-attempt evidence from producing current-attempt verification while
+    preserving recognition of effects that are physically true.
+  H_support_proof: >-
+    Discharge-aware disjunctive support clauses prevent both over-invalidation after
+    legitimate discharge/alternative support and under-invalidation while support is live.
+  H_truth_attribution: >-
+    Separating physical effect truth from active-attempt credit permits correct task
+    advance after incidental realization without falsely crediting the current skill.
+
+arms:
+  - M0_TYPED_MATCHED
+  - M1_B6_ORIGINAL
+  - M2_ATTEMPT_ONLY
+  - M3_SUPPORT_ONLY
+  - M4_ASCEL_FULL
+primary_comparison: M4_ASCEL_FULL_vs_best_of_M0_TYPED_MATCHED_and_M1_B6_ORIGINAL
+mechanism_ablations:
+  - NO_ATTEMPT_SCOPE
+  - NO_SUPPORT_VALIDITY
+  - NO_ATTRIBUTION_SPLIT
+  - NO_PRE_REALIZATION_REVOCATION
+
+seed_splits:
+  development_only: [0, 19]
+  calibration: [20, 39]
+  executor_qualification: [40, 59]
+  pilot: [20, 29]
+  formal: [1000, 1049]
+  reserved_ood_not_used: [2000, 2029]
+  old_libero_phase3_formal_demos_forbidden: [40, 49]
+  note: development seeds 0-19 are never used as confirmatory evidence
+
+fixed_counts:
+  trace_schedules: 10000
+  trace_schedules_per_family: 1000
+  executor_qualification_seeds: 20
+  shared_prefix_units: 1000
+  task_condition_cells: 20
+  pilot_seeds: 10
+  pilot_rollouts: 1000
+  formal_seeds: 50
+  formal_rollouts: 5000
+  bootstrap_repetitions: 10000
+
+budgets:
+  retry_limit: 2
+  reobserve_limit: 4
+  rollback_limit: 1
+  decision_limit: 32
+
+qualification_gates:
+  trace:
+    stale_evidence_accepted: 0
+    cross_attempt_verification: 0
+    superseded_witness_realization: 0
+    post_revocation_late_witness_realization: 0
+    cascade_invalidation_precision: 1.0
+    cascade_invalidation_recall: 1.0
+    over_invalidation: 0
+    under_invalidation: 0
+    incidental_effect_truth_recognition: 1.0
+    incidental_current_skill_credit: 0
+  executor:
+    conditional_effect_success_min: 0.99
+    full_chain_success_min: 0.98
+    backend_errors: 0
+  shared_prefix:
+    pre_decision_state_identity: 1.0
+    controller_state_identity: 1.0
+    rng_state_identity: 1.0
+    event_prefix_identity: 1.0
+    action_prefix_identity: 1.0
+    forced_identical_terminal_state_identity: 1.0
+  pilot:
+    shared_prefix_exact: true
+    executor_conditional_success_min: 0.99
+    broker_or_fault_injector_errors: 0
+    m4_clean_success_min: 0.98
+    m4_attempt_leakage: 0
+    m4_support_invariant_violations: 0
+
+pass_gates:
+  attempt_scope:
+    minimum_success_margin: 0.15
+    ci_95_lower_gt: 0.0
+    stale_witness_acceptance: 0.0
+    cross_attempt_verification: 0.0
+    superseded_witness_realization: 0.0
+    late_witness_after_revocation: 0.0
+  support_proof:
+    cascade_precision_min: 0.95
+    cascade_recall_min: 0.95
+    over_invalidation_max: 0.05
+    under_invalidation_max: 0.05
+    minimum_success_margin: 0.15
+    ci_95_lower_gt: 0.0
+  truth_attribution:
+    effect_truth_recognition_min: 0.95
+    task_advance_correctness_min: 0.95
+    false_current_skill_credit_max: 0.05
+  clean:
+    m4_clean_success_degradation_max: 0.02
+    action_step_overhead_fraction_max: 0.15
+    event_processing_latency_overhead_fraction_max: 0.10
+
+execution_policy:
+  scientific_compute: linux_cpu_only
+  gpu_used: false
+  rendering_before_primary_results: false
+  independent_replay_per_arm_forbidden: true
+  shared_prefix_fork_required: true
+  omp_num_threads: 1
+  mkl_num_threads: 1
+  diagnostic_continuation_after_failed_gate: true
+  diagnostic_continuation_authority: explicit_latest_user_instruction
+  failed_gate_still_blocks_pass: true
+  thresholds_may_not_change_after_freeze: true
+
+status_definitions:
+  - PASS_PHASE4_ASC_EFFECT_LEDGER
+  - NARROW_TO_ATTEMPT_SCOPED_LEDGER
+  - NARROW_TO_SUPPORT_PROOF_LEDGER
+  - NARROW_TO_EFFECT_ATTRIBUTION_LEDGER
+  - REJECT_R16P19_V2
+  - BLOCKED_BY_MECHANISM_IMPLEMENTATION
+  - BLOCKED_BY_SHARED_PREFIX
+  - BLOCKED_BY_MICROENV
+  - BLOCKED_BY_IMPLEMENTATION
+
+claim_limits:
+  - no_N3_claim
+  - no_paper_readiness_claim
+  - no_VLA_improvement_claim
+  - no_external_benchmark_generalization_claim
+  - no_learned_verifier_ACT_Mem0_Pi05_DINOWM_RMBench
+

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "repository": "mikasaTu/R16-P19-Grounded-Epistemic-Effect-Writeback",
+  "base_branch": "phase3-effect-boundary-replay",
+  "base_head": "5592c3e0686847aea6c55e887b964078fa5bedb0",
+  "base_tree": "2934c8e0c945d8707a53fa04e52c3ff0690f3931",
+  "current_status": "BLOCKED_BY_IMPLEMENTATION",
+  "protected_inputs": [
+    {
+      "path": "r16p19/memory.py",
+      "sha256": "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5",
+      "policy": "frozen_bytes_and_semantics"
+    },
+    {
+      "path": "experiments/r16p19_libero_phase1/effect_ontology.json",
+      "sha256": "1a8ee265bc23d714b38603617bb3d7cf426a50981d90f343745b281277dd6160"
+    },
+    {
+      "path": "experiments/r16p19_libero_phase3/FINAL_DECISION.md",
+      "sha256": "a2de3adb731ce2d9aa2bff4411976030538d3690c47341ee1d66f161a5977602"
+    },
+    {
+      "path": "experiments/r16p19_libero_phase3/EXPERIMENT_REPORT_ZH.md",
+      "sha256": "53180ab9a9f2598ef4c73e8cc2da39f2a2c3e994dc713ac6e4825d89b37f283d"
+    }
+  ],
+  "phase3_summary": {
+    "formal_matrix_complete": true,
+    "qualification_replay_gate_pass": false,
+    "formal_replay_gate_pass": false,
+    "shared_prefix_differing_units": 27,
+    "shared_prefix_total_units": 150,
+    "b6_full_backend_valid_success": 0.9130434782608695,
+    "typed_matched_backend_valid_success": 0.9130434782608695,
+    "paired_difference": 0.0,
+    "paired_ci_95": [0.0, 0.0]
+  },
+  "forbidden_as_unseen_evidence": [
+    "Phase-3 formal demo indices 40-49",
+    "Phase-3 independent per-arm replay prefixes",
+    "development seeds 0-19 for confirmatory endpoints"
+  ]
+}
+

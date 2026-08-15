@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "r16p19/phase4/attempt_schema.json",
+  "title": "ASCEL Attempt and Effect Fact Records",
+  "type": "object",
+  "required": ["attempt_record", "effect_fact_record", "realization_proof"],
+  "properties": {
+    "attempt_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attempt_id", "effect_id", "generation", "command_event_id",
+        "start_epoch", "end_epoch", "status", "evidence_ids",
+        "evidence_digests", "attribution_witness_ids"
+      ],
+      "properties": {
+        "attempt_id": {"type": "string", "minLength": 1},
+        "effect_id": {"type": "string", "minLength": 1},
+        "generation": {"type": "integer", "minimum": 1},
+        "command_event_id": {"type": ["string", "null"]},
+        "start_epoch": {"type": "integer", "minimum": 0},
+        "end_epoch": {"type": ["integer", "null"], "minimum": 0},
+        "status": {
+          "enum": ["ACTIVE", "SUCCEEDED", "FAILED", "SUPERSEDED", "INVALIDATED"]
+        },
+        "evidence_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "evidence_digests": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "attribution_witness_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "effect_fact_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "effect_id", "fact_state", "fact_epoch", "active_attempt_id",
+        "verified_fact_observations", "realization_proof_ids",
+        "invalidation_event_id", "physical_truth_confidence"
+      ],
+      "properties": {
+        "effect_id": {"type": "string"},
+        "fact_state": {"enum": ["UNKNOWN", "OBSERVED", "VERIFIED", "REALIZED", "REVOKED"]},
+        "fact_epoch": {"type": "integer", "minimum": 0},
+        "active_attempt_id": {"type": ["string", "null"]},
+        "verified_fact_observations": {"type": "array", "items": {"type": "string"}},
+        "realization_proof_ids": {"type": "array", "items": {"type": "string"}},
+        "invalidation_event_id": {"type": ["string", "null"]},
+        "physical_truth_confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "realization_proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proof_id", "effect_id", "fact_epoch", "attributed_attempt_id",
+        "evidence_ids", "witness_id", "support_clause_id", "validity_status"
+      ],
+      "properties": {
+        "proof_id": {"type": "string"},
+        "effect_id": {"type": "string"},
+        "fact_epoch": {"type": "integer", "minimum": 0},
+        "attributed_attempt_id": {"type": ["string", "null"]},
+        "evidence_ids": {"type": "array", "items": {"type": "string"}},
+        "witness_id": {"type": "string"},
+        "support_clause_id": {"type": ["string", "null"]},
+        "validity_status": {"enum": ["VALID", "INVALID", "REVOKED", "SUPERSEDED"]}
+      }
+    }
+  }
+}
+

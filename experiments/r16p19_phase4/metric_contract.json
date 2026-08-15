@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "binary_convention": "rates use eligible opportunities as denominator; undefined denominators are null",
+  "attempt_metrics": [
+    "stale_witness_acceptance_rate",
+    "cross_attempt_verification_rate",
+    "superseded_command_realization_rate",
+    "late_witness_after_revocation_rate",
+    "current_attempt_realization_precision",
+    "attempt_attribution_precision",
+    "attempt_attribution_recall"
+  ],
+  "fact_attribution_metrics": [
+    "effect_truth_recognition",
+    "task_advance_correctness",
+    "false_skill_credit_rate",
+    "missed_incidental_success_rate"
+  ],
+  "support_metrics": [
+    "cascade_invalidation_precision",
+    "cascade_invalidation_recall",
+    "over_invalidation_rate",
+    "under_invalidation_rate",
+    "alternative_support_survival_rate",
+    "discharged_support_false_invalidation_rate",
+    "branch_locality_accuracy"
+  ],
+  "behavior_metrics": [
+    "clean_chain_success",
+    "faulted_chain_success",
+    "grounded_advance_precision",
+    "recovery_success",
+    "premature_advance_rate",
+    "timeout_rate",
+    "action_steps",
+    "retry_count",
+    "reobserve_count",
+    "rollback_count"
+  ],
+  "system_metrics": [
+    "decision_latency_ns",
+    "ledger_size",
+    "proof_graph_size",
+    "event_processing_time_ns",
+    "child_process_failures"
+  ],
+  "primary_endpoints": {
+    "attempt_family": "mean chain_success over A1,A2,A3,A4",
+    "support_family": "mean chain_success over S1,S2,S3,S4",
+    "truth_attribution": "A5 effect_truth_recognition and false_skill_credit_rate"
+  },
+  "cluster_unit": "task plus formal seed",
+  "timing_note": "latency is descriptive system evidence and not used to alter functional outcomes"
+}
+

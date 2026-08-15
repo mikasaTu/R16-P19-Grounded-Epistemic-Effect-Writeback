@@ -1,0 +1,106 @@
+schema_version: 1
+method: ASCEL
+
+state_separation:
+  physical_truth_field: effect_fact_verified
+  active_attempt_credit_field: attempt_attributed_success
+  advance_rule: verified physical truth may advance the task
+  credit_rule: only valid current-attempt attribution may update skill credit
+  incidental_rule: incidental truth advances without crediting the current skill
+
+attempt_lifecycle:
+  statuses: [ACTIVE, SUCCEEDED, FAILED, SUPERSEDED, INVALIDATED]
+  request_after_first:
+    - supersede_previous_active_attempt
+    - allocate_deterministic_attempt_id
+    - allocate_new_evidence_scope
+    - retain_old_evidence_append_only
+    - exclude_old_evidence_from_new_attempt
+  command_binding: exactly_one_command_id_per_attempt
+  attribution_requirements:
+    - matching_effect_id
+    - matching_active_attempt_id
+    - current_command_id
+    - valid_observation_epoch
+    - non_superseded_attempt
+
+pre_realization_revocation:
+  applicable_states: [OBSERVED, VERIFIED, REALIZED]
+  witness_requirements:
+    - witness_attempt_is_active
+    - witness_command_is_current
+    - witness_epoch_after_latest_revocation
+    - positive_evidence_from_same_attempt_scope
+  observed_or_verified_action:
+    - revoke_or_stall_active_fact_proof
+    - clear_active_attempt_verification_set
+    - close_or_invalidate_attempt
+    - reject_pre_contradiction_witnesses
+  realized_action:
+    - invalidate_realization_proof
+    - propagate_through_support_graph
+
+support_graph:
+  clause_semantics: disjunction_of_conjunctions
+  reference_validity_types:
+    - PERSISTENT
+    - UNTIL_CHILD_REALIZED
+    - UNTIL_EFFECT_REALIZED
+  invalidation_algorithm:
+    - invalidate_directly_contradicted_proof
+    - recompute_every_referencing_clause
+    - invalidate_dependent_only_if_all_clauses_invalid
+    - recurse_only_through_newly_invalidated_proofs
+    - preserve_unrelated_branches
+    - preserve_legitimately_discharged_support
+    - preserve_valid_alternative_clauses
+
+arms:
+  M0_TYPED_MATCHED:
+    implementation: frozen Phase-3 TYPED_MATCHED_RECOVERY semantics
+    attempt_scope: false
+    discharge_aware_support: false
+  M1_B6_ORIGINAL:
+    implementation: adapter around frozen r16p19.memory.MemoryArm B6
+    protected_sha256: 4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5
+    attempt_scope: false
+    discharge_aware_support: false
+  M2_ATTEMPT_ONLY:
+    attempt_scope: true
+    fact_attribution_split: true
+    pre_realization_revocation: true
+    discharge_aware_support: false
+  M3_SUPPORT_ONLY:
+    attempt_scope: false
+    fact_attribution_split: false
+    pre_realization_revocation: false
+    discharge_aware_support: true
+  M4_ASCEL_FULL:
+    attempt_scope: true
+    fact_attribution_split: true
+    pre_realization_revocation: true
+    discharge_aware_support: true
+
+fairness:
+  identical_across_arms:
+    - retry_limit
+    - reobserve_limit
+    - rollback_limit
+    - action_budget
+    - event_access
+    - fault_schedule
+    - physical_executor
+    - shared_prefix_state
+  executor_forbidden_inputs:
+    - memory_arm
+    - condition
+    - attempt_state
+    - fault_identity
+  frozen_original_b6_modified: false
+
+mechanism_ablations:
+  NO_ATTEMPT_SCOPE: pool evidence at effect level while preserving other M4 behavior
+  NO_SUPPORT_VALIDITY: replace clauses with static transitive invalidation
+  NO_ATTRIBUTION_SPLIT: merge physical truth and attempt credit
+  NO_PRE_REALIZATION_REVOCATION: apply contradictions only after REALIZED
+

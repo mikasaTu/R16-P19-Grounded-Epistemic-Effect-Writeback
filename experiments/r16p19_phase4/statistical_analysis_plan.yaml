@@ -1,0 +1,62 @@
+schema_version: 1
+primary_arm: M4_ASCEL_FULL
+strong_baselines: [M0_TYPED_MATCHED, M1_B6_ORIGINAL]
+best_baseline_rule:
+  - maximize_family_specific_mean_chain_success
+  - tie_break_M0_before_M1
+
+endpoints:
+  attempt_family:
+    conditions: [A1, A2, A3, A4]
+    statistic: mean paired chain-success difference
+  support_family:
+    conditions: [S1, S2, S3, S4]
+    statistic: mean paired chain-success difference
+  truth_attribution:
+    conditions: [A5]
+    statistics: [effect_truth_recognition, false_skill_credit_rate]
+  clean:
+    conditions: [C0]
+    statistics:
+      - chain_success_degradation
+      - action_step_overhead_fraction
+      - event_processing_latency_overhead_fraction
+
+pairing:
+  unit: [task, seed, condition]
+  cluster: [task, seed]
+  physical_prefix: single_parent_execution_then_os_fork
+  arm_specific_execution_before_fork: forbidden
+
+inference:
+  paired_cluster_bootstrap:
+    repetitions: 10000
+    seed: 1619
+    confidence_interval: percentile_95
+  exact_paired_tests:
+    method: exact_two_sided_McNemar
+    correction: Holm_step_down
+    alpha: 0.05
+  effects:
+    - absolute_success_difference
+    - family_specific_means
+    - discordant_pair_counts
+
+ablation_interpretation:
+  NO_ATTEMPT_SCOPE: remove at least 50 percent of M4 A1-A4 advantage
+  NO_SUPPORT_VALIDITY: increase S2-S4 over-invalidation or remove at least 50 percent of support advantage
+  NO_ATTRIBUTION_SPLIT: materially increase A5 false skill credit
+  NO_PRE_REALIZATION_REVOCATION: materially increase A4 false realization
+  materially_definition: absolute adverse rate change at least 0.10 or at least 50 percent advantage removal
+
+missingness:
+  child_failure: retained and counted; never silently dropped
+  backend_failure: retained and blocks platform-valid PASS
+  undefined_rate: null with numerator and denominator preserved
+
+gate_override_policy:
+  run_full_matrix_after_failed_gate: true
+  downstream_classification: diagnostic_continuation
+  failed_gate_may_be_reinterpreted_as_pass: false
+  threshold_refit_after_pilot_or_formal: forbidden
+
