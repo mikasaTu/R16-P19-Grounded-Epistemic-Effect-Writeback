@@ -1,0 +1,19 @@
+{
+  "backend_error_count": 0,
+  "conditional_effect_count": 240,
+  "conditional_effect_success": 1.0,
+  "full_chain_count": 60,
+  "full_chain_success": 1.0,
+  "gates": {
+    "backend_errors_zero": true,
+    "conditional_effect_success_ge_0_99": true,
+    "full_chain_success_ge_0_98": true
+  },
+  "mujoco_version": "2.3.7",
+  "pass": true,
+  "schema_version": 1,
+  "seed_range": [
+    40,
+    59
+  ]
+}

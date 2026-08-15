@@ -1,0 +1,70 @@
+{
+  "attempt": {
+    "M0_TYPED_MATCHED": {
+      "arm_a": "M4_ASCEL_FULL",
+      "arm_b": "M0_TYPED_MATCHED",
+      "bootstrap_mean": 0.75,
+      "ci_95": [
+        0.75,
+        0.75
+      ],
+      "cluster_count": 150,
+      "draw_sha256": "3901d0f568ad880596972bdb5be9ac3eaae6e8fcba0d32a7835a50000a9389ab",
+      "method": "paired_cluster_bootstrap_task_plus_seed",
+      "observed_difference": 0.75,
+      "paired_unit_count": 600,
+      "repetitions": 10000,
+      "seed": 1619
+    },
+    "M1_B6_ORIGINAL": {
+      "arm_a": "M4_ASCEL_FULL",
+      "arm_b": "M1_B6_ORIGINAL",
+      "bootstrap_mean": 0.5,
+      "ci_95": [
+        0.5,
+        0.5
+      ],
+      "cluster_count": 150,
+      "draw_sha256": "8e73cdcf9759d946327ccb8076c77e51c5640e4781a3b5959ed74df1c4fc141e",
+      "method": "paired_cluster_bootstrap_task_plus_seed",
+      "observed_difference": 0.5,
+      "paired_unit_count": 600,
+      "repetitions": 10000,
+      "seed": 1620
+    }
+  },
+  "support": {
+    "M0_TYPED_MATCHED": {
+      "arm_a": "M4_ASCEL_FULL",
+      "arm_b": "M0_TYPED_MATCHED",
+      "bootstrap_mean": 0.4998308806848615,
+      "ci_95": [
+        0.45,
+        0.5482233502538071
+      ],
+      "cluster_count": 150,
+      "draw_sha256": "4a6fcfbb89c2ac97aaff05996283a1493c78bea1cfad1b25299e1c93a91a164b",
+      "method": "paired_cluster_bootstrap_task_plus_seed",
+      "observed_difference": 0.5,
+      "paired_unit_count": 200,
+      "repetitions": 10000,
+      "seed": 1719
+    },
+    "M1_B6_ORIGINAL": {
+      "arm_a": "M4_ASCEL_FULL",
+      "arm_b": "M1_B6_ORIGINAL",
+      "bootstrap_mean": 0.49957413555660335,
+      "ci_95": [
+        0.45097531240475464,
+        0.5487179487179488
+      ],
+      "cluster_count": 150,
+      "draw_sha256": "cd06407e168feb43ccf94b5ee8bfcbff56ddea75ab06e2e65fdf6cc9a2bc4f61",
+      "method": "paired_cluster_bootstrap_task_plus_seed",
+      "observed_difference": 0.5,
+      "paired_unit_count": 200,
+      "repetitions": 10000,
+      "seed": 1720
+    }
+  }
+}

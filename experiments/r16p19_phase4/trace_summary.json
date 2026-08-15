@@ -1,0 +1,61 @@
+{
+  "confusion_counts": {
+    "actual_invalidation_total": 11000,
+    "expected_invalidation_total": 11000,
+    "false_negative": 0,
+    "false_positive": 0,
+    "true_positive": 11000
+  },
+  "family_counts": {
+    "A1_STALE_WITNESS_AFTER_RETRY": 1000,
+    "A2_CROSS_ATTEMPT_SENSOR_MIX": 1000,
+    "A3_SUPERSEDED_COMMAND_WITNESS": 1000,
+    "A4_VERIFIED_CONTRADICTION_LATE_WITNESS": 1000,
+    "A5_INCIDENTAL_EFFECT": 1000,
+    "S1_LIVE_SUPPORT_REVERSAL": 1000,
+    "S2_DISCHARGED_SUPPORT_REVERSAL": 1000,
+    "S3_ALTERNATIVE_SUPPORT": 1000,
+    "S4_BRANCH_LOCAL_INVALIDATION": 1000,
+    "S5_LATE_DEPENDENT_WITNESS": 1000
+  },
+  "family_pass_counts": {
+    "A1_STALE_WITNESS_AFTER_RETRY": 1000,
+    "A2_CROSS_ATTEMPT_SENSOR_MIX": 1000,
+    "A3_SUPERSEDED_COMMAND_WITNESS": 1000,
+    "A4_VERIFIED_CONTRADICTION_LATE_WITNESS": 1000,
+    "A5_INCIDENTAL_EFFECT": 1000,
+    "S1_LIVE_SUPPORT_REVERSAL": 1000,
+    "S2_DISCHARGED_SUPPORT_REVERSAL": 1000,
+    "S3_ALTERNATIVE_SUPPORT": 1000,
+    "S4_BRANCH_LOCAL_INVALIDATION": 1000,
+    "S5_LATE_DEPENDENT_WITNESS": 1000
+  },
+  "gates": {
+    "cascade_invalidation_precision_eq_1": true,
+    "cascade_invalidation_recall_eq_1": true,
+    "cross_attempt_verification_zero": true,
+    "incidental_current_skill_credit_zero": true,
+    "incidental_effect_truth_recognition_eq_1": true,
+    "over_invalidation_zero": true,
+    "post_revocation_late_witness_realization_zero": true,
+    "stale_evidence_accepted_zero": true,
+    "superseded_witness_realization_zero": true,
+    "under_invalidation_zero": true
+  },
+  "metrics": {
+    "cascade_invalidation_precision": 1.0,
+    "cascade_invalidation_recall": 1.0,
+    "cross_attempt_verification": 0,
+    "incidental_current_skill_credit": 0,
+    "incidental_effect_truth_recognition": 1.0,
+    "over_invalidation": 0,
+    "post_revocation_late_witness_realization": 0,
+    "stale_evidence_accepted": 0,
+    "superseded_witness_realization": 0,
+    "under_invalidation": 0
+  },
+  "pass": true,
+  "schedule_count": 10000,
+  "schema_version": 1,
+  "status": "TRACE_GATE_PASS"
+}

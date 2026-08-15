@@ -1,0 +1,43 @@
+{
+  "cpu_model": "Intel(R) Xeon(R) Processor @ 2.90GHz",
+  "execution": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYGLFW_LIBRARY": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/glfw/x11/libglfw.so",
+    "PYGLFW_LIBRARY_VARIANT": "x11",
+    "cpu_only": true,
+    "gpu_used": false,
+    "os_fork_shared_prefix": true,
+    "renderer_initialized": false
+  },
+  "hostname": "dsw-925252-7796557db6-j84nn",
+  "kernel": "5.10.134-013.9.kangaroo.al8.x86_64",
+  "machine": "x86_64",
+  "mujoco_version": "2.3.7",
+  "numpy_version": "1.22.4",
+  "platform": "Linux-5.10.134-013.9.kangaroo.al8.x86_64-x86_64-with-glibc2.10",
+  "python": "3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:18) \n[GCC 10.3.0]",
+  "python_executable": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python",
+  "recorded_at_utc": "2026-08-15T16:36:41Z",
+  "schema_version": 1,
+  "source": {
+    "branch": "phase4-attempt-scoped-causal-ledger",
+    "head": "3574bb0d397e16578ceeccc9a4ada0b846212f39",
+    "protected_b6_sha256": "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5",
+    "source_hashes": {
+      "r16p19/phase4_analysis.py": "008a35aec68b243e5add4a9082debecd05d7820f0212570dca77106862616013",
+      "r16p19/phase4_arms.py": "71591887c9846564139f37435872ca4e2924a0ae997f49a2bfc9e3293e9f5ea1",
+      "r16p19/phase4_attempt_ledger.py": "b051fd01f2e4a97fb8a79899c9178b285d6af0d2c0fdc48d564adb62d944f201",
+      "r16p19/phase4_event_broker.py": "366c217588c3ae0cc9f9e67cb11aa0bef912c715a8d8a841296d06cbf45a85f3",
+      "r16p19/phase4_executor.py": "b69686d2645fe0286f3efaf4cf028b9ab1bd894ae3206d6e09d4f75373d09595",
+      "r16p19/phase4_fork_runner.py": "19a6162988c1b3bfeacd45898dc4144bfe25227d74399615df4264eed0b7fb27",
+      "r16p19/phase4_microenv.py": "9f8f6311abf002f6eac70fa1a93b8202d9e7cab811061e1163c712138fd9d658",
+      "r16p19/phase4_support_graph.py": "a51230da8e69c81357b6311d08cdcae20b5bb84ac5c58f441d3aad78fa135acc",
+      "r16p19/phase4_trace_generator.py": "ad051be4de6628ca18ded641025978bdcfd2d50c122cedea1dfca65ea684e831",
+      "r16p19/phase4_trace_oracle.py": "5918661b534a3b2488d04f272aadccfb16a2bbaf2f7099139aae19ba04a18577",
+      "r16p19/phase4_types.py": "40430881e6498969c2c51dab41d90b6e02a6345e0761a9edaab1505d959fe24e",
+      "scripts/run_phase4_pipeline.py": "6f32aca0cb34fd12156b94a343388a6264a8e5157fcbe084a9d940221bef6968"
+    },
+    "tree": "940117128ad3a3b4ddc161401dde38f0345591e2"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "claim_boundary": "CPU_microbenchmark_only_not_VLA_or_external_benchmark_evidence",
+  "component_status": {
+    "attempt_scope": "ATTEMPT_SCOPE_PASS",
+    "clean": "CLEAN_FAIL",
+    "support_proof": "SUPPORT_PROOF_PASS",
+    "truth_attribution": "TRUTH_ATTRIBUTION_PASS"
+  },
+  "diagnostic_continuation_after_failed_gate": true,
+  "failed_gate_can_be_overridden_by_downstream_results": false,
+  "overall_status": "BLOCKED_BY_IMPLEMENTATION",
+  "platform_gates": {
+    "executor_gate": true,
+    "shared_prefix_gate": true,
+    "trace_gate": true
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,16 @@
+{
+  "arm_row_count": 5000,
+  "child_process_failure_count": 0,
+  "gates": {
+    "action_prefix_identity": true,
+    "controller_state_identity": true,
+    "event_prefix_identity": true,
+    "forced_identical_terminal_state_identity": true,
+    "pre_decision_state_identity": true,
+    "rng_state_identity": true
+  },
+  "pass": true,
+  "protected_b6_sha256": "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5",
+  "schema_version": 1,
+  "unit_count": 1000
+}

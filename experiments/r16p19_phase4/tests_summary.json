@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-08-15T16:36:04Z",
+  "source_head": "3574bb0d397e16578ceeccc9a4ada0b846212f39",
+  "source_tree": "940117128ad3a3b4ddc161401dde38f0345591e2",
+  "python_executable": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python",
+  "command": "PYGLFW_LIBRARY=/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/site-packages/glfw/x11/libglfw.so PYGLFW_LIBRARY_VARIANT=x11 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m pytest -q",
+  "result": "PASS",
+  "total_passed": 55,
+  "total_failed": 0,
+  "phase4_passed": 20,
+  "warnings": [
+    {
+      "source": "tests/test_core.py::test_tiny_actor_shape_and_parameter_limit",
+      "type": "PyTorch CUDA availability probe warning",
+      "interpretation": "Pre-existing core test queried CUDA availability in the restricted DSW container; the test passed and no GPU was used by the Phase-4 scientific experiment."
+    }
+  ]
+}
