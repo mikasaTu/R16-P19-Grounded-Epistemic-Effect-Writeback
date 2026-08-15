@@ -58,6 +58,25 @@ def test_exact_mcnemar_and_holm_preserve_pairing_and_bounds():
     assert adjusted[1]["holm_adjusted_p_value"] == 0.04
 
 
+def test_holm_keeps_same_comparison_label_separate_across_families():
+    adjusted = holm_adjust(
+        [
+            {
+                "comparison": "M4_vs_M0",
+                "family": "attempt",
+                "exact_two_sided_p_value": 0.001,
+            },
+            {
+                "comparison": "M4_vs_M0",
+                "family": "support",
+                "exact_two_sided_p_value": 0.04,
+            },
+        ]
+    )
+    assert adjusted[0]["holm_adjusted_p_value"] == 0.002
+    assert adjusted[1]["holm_adjusted_p_value"] == 0.04
+
+
 def test_support_confusion_is_computed_from_exact_invalidated_sets():
     row = {
         "unit_id": "T3|S3|0",

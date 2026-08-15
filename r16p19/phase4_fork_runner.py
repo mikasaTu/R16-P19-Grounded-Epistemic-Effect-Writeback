@@ -380,6 +380,8 @@ def _attempt_scenario(prepared: PreparedPrefix, arm, timings: List[int]) -> dict
     else:  # pragma: no cover
         raise ValueError("not an attempt scenario")
     target_truth_at_decision = prepared.env.effect_truth(effect)
+    fact_recognition_at_decision = arm.effect_fact_verified(effect)
+    attributed_at_decision = arm.attempt_attributed_success(effect)
     if natural == Decision.ADVANCE_TO_NEXT_SUBTASK and not target_truth_at_decision:
         premature_advance = True
         chain_success = False
@@ -416,20 +418,26 @@ def _attempt_scenario(prepared: PreparedPrefix, arm, timings: List[int]) -> dict
             chain_success = suffix_success
         else:
             chain_success = False
-    fact_recognition = arm.effect_fact_verified(effect)
-    attributed = arm.attempt_attributed_success(effect)
+    final_target_truth = prepared.env.effect_truth(effect)
+    final_fact_recognition = arm.effect_fact_verified(effect)
+    final_attributed = arm.attempt_attributed_success(effect)
     return {
         "natural_decision": natural.value,
         "chain_success": bool(chain_success),
         "target_truth_at_decision": bool(target_truth_at_decision),
-        "effect_truth_recognition": bool(fact_recognition),
+        "effect_truth_recognition": bool(fact_recognition_at_decision),
         "task_advance_correctness": bool(
             (natural == Decision.ADVANCE_TO_NEXT_SUBTASK) == target_truth_at_decision
         ),
-        "attempt_attributed_success": bool(attributed),
-        "false_skill_credit": bool(condition == "A5" and attributed),
+        "attempt_attributed_success": bool(attributed_at_decision),
+        "final_target_truth": bool(final_target_truth),
+        "final_effect_truth_recognition": bool(final_fact_recognition),
+        "final_attempt_attributed_success": bool(final_attributed),
+        "false_skill_credit": bool(condition == "A5" and attributed_at_decision),
         "missed_incidental_success": bool(
-            condition == "A5" and target_truth_at_decision and not fact_recognition
+            condition == "A5"
+            and target_truth_at_decision
+            and not fact_recognition_at_decision
         ),
         "stale_witness_accepted": bool(stale_witness_accepted),
         "cross_attempt_verification": bool(cross_attempt_verification),
@@ -505,6 +513,9 @@ def _support_scenario(prepared: PreparedPrefix, arm, timings: List[int]) -> dict
         else None
     )
     branch_locality = bool(unrelated_valid) if condition == "S4" else None
+    target_truth_at_decision = prepared.env.effect_truth(contract.final_effect)
+    fact_recognition_at_decision = arm.effect_fact_verified(contract.final_effect)
+    attributed_at_decision = arm.attempt_attributed_success(contract.final_effect)
     added_steps = 0
     if condition in ("S1", "S4") and exact and unrelated_valid:
         recovered, added_steps = _finish_chain(prepared, arm, timings)
@@ -516,13 +527,19 @@ def _support_scenario(prepared: PreparedPrefix, arm, timings: List[int]) -> dict
             and (alternative_survived is not False)
             and (discharged_false is not True)
         )
+    final_target_truth = prepared.env.effect_truth(contract.final_effect)
+    final_fact_recognition = arm.effect_fact_verified(contract.final_effect)
+    final_attributed = arm.attempt_attributed_success(contract.final_effect)
     return {
         "natural_decision": decisions[-1].value if decisions else Decision.REOBSERVE.value,
         "chain_success": chain_success,
-        "target_truth_at_decision": prepared.env.effect_truth(contract.final_effect),
-        "effect_truth_recognition": arm.effect_fact_verified(contract.final_effect),
+        "target_truth_at_decision": target_truth_at_decision,
+        "effect_truth_recognition": fact_recognition_at_decision,
         "task_advance_correctness": exact,
-        "attempt_attributed_success": arm.attempt_attributed_success(contract.final_effect),
+        "attempt_attributed_success": attributed_at_decision,
+        "final_target_truth": final_target_truth,
+        "final_effect_truth_recognition": final_fact_recognition,
+        "final_attempt_attributed_success": final_attributed,
         "false_skill_credit": False,
         "missed_incidental_success": False,
         "stale_witness_accepted": False,
@@ -587,6 +604,9 @@ def _run_child(prepared: PreparedPrefix, arm_name: str, forced_identical: bool) 
             "effect_truth_recognition": None,
             "task_advance_correctness": None,
             "attempt_attributed_success": None,
+            "final_target_truth": prepared.env.effect_truth(prepared.target_effect),
+            "final_effect_truth_recognition": None,
+            "final_attempt_attributed_success": None,
             "false_skill_credit": False,
             "missed_incidental_success": False,
             "stale_witness_accepted": False,

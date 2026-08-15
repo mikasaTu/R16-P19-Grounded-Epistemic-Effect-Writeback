@@ -69,11 +69,21 @@ def summarize_arm(rows: Sequence[Mapping[str, object]], arm: str) -> dict:
     support = [row for row in subset if row["condition"] in SUPPORT_CONDITIONS]
     incidental = [row for row in subset if row["condition"] == "A5"]
     faulted = [row for row in subset if row["condition"] != "C0"]
-    attributed = [row for row in subset if row.get("attempt_attributed_success") is True]
-    attributable_truth = [
+    attempt_population = clean + attempt + incidental
+    current_attributed = [
         row
-        for row in subset
-        if row.get("target_truth_at_decision") is True and row["condition"] != "A5"
+        for row in attempt_population
+        if row.get("attempt_attributed_success") is True
+    ]
+    final_attributed = [
+        row
+        for row in attempt_population
+        if row.get("final_attempt_attributed_success") is True
+    ]
+    final_attributable_truth = [
+        row
+        for row in attempt_population
+        if row.get("final_target_truth") is True and row["condition"] != "A5"
     ]
     support_confusion = _support_confusion(support)
     return {
@@ -108,20 +118,26 @@ def summarize_arm(rows: Sequence[Mapping[str, object]], arm: str) -> dict:
             if row["condition"] == "A4"
         ),
         "current_attempt_realization_precision": _rate(
-            sum(row.get("target_truth_at_decision") is True for row in attributed),
-            len(attributed),
+            sum(
+                row.get("target_truth_at_decision") is True
+                for row in current_attributed
+            ),
+            len(current_attributed),
         ),
         "attempt_attribution_precision": _rate(
             sum(
-                row.get("target_truth_at_decision") is True
+                row.get("final_target_truth") is True
                 and row["condition"] != "A5"
-                for row in attributed
+                for row in final_attributed
             ),
-            len(attributed),
+            len(final_attributed),
         ),
         "attempt_attribution_recall": _rate(
-            sum(row.get("attempt_attributed_success") is True for row in attributable_truth),
-            len(attributable_truth),
+            sum(
+                row.get("final_attempt_attributed_success") is True
+                for row in final_attributable_truth
+            ),
+            len(final_attributable_truth),
         ),
         "effect_truth_recognition": _mean(
             row["effect_truth_recognition"] for row in incidental
@@ -172,8 +188,14 @@ def summarize_arm(rows: Sequence[Mapping[str, object]], arm: str) -> dict:
         "reobserve_count": _mean(row["reobserve_count"] for row in subset),
         "rollback_count": _mean(row["rollback_count"] for row in subset),
         "decision_latency_ns": _mean(row["decision_latency_ns"] for row in subset),
+        "clean_decision_latency_ns": _mean(
+            row["decision_latency_ns"] for row in clean
+        ),
         "event_processing_time_ns": _mean(
             row["event_processing_time_ns"] for row in subset
+        ),
+        "clean_event_processing_time_ns": _mean(
+            row["event_processing_time_ns"] for row in clean
         ),
         "ledger_size": _mean(row["ledger_size"] for row in subset),
         "proof_graph_size": _mean(row["proof_graph_size"] for row in subset),
@@ -300,18 +322,22 @@ def exact_mcnemar(
 
 
 def holm_adjust(tests: Sequence[Mapping[str, object]]) -> List[dict]:
-    ordered = sorted(tests, key=lambda row: float(row["exact_two_sided_p_value"]))
-    adjusted: Dict[str, float] = {}
+    # The same arm comparison is intentionally reported once per endpoint
+    # family.  Index by input row, not by the non-unique comparison label.
+    ordered = sorted(
+        enumerate(tests), key=lambda item: float(item[1]["exact_two_sided_p_value"])
+    )
+    adjusted: Dict[int, float] = {}
     running = 0.0
     count = len(ordered)
-    for index, row in enumerate(ordered):
-        value = min(1.0, float(row["exact_two_sided_p_value"]) * (count - index))
+    for rank, (original_index, row) in enumerate(ordered):
+        value = min(1.0, float(row["exact_two_sided_p_value"]) * (count - rank))
         running = max(running, value)
-        adjusted[str(row["comparison"])] = running
+        adjusted[original_index] = running
     result = []
-    for row in tests:
+    for original_index, row in enumerate(tests):
         value = dict(row)
-        value["holm_adjusted_p_value"] = adjusted[str(row["comparison"])]
+        value["holm_adjusted_p_value"] = adjusted[original_index]
         value["holm_reject_0_05"] = value["holm_adjusted_p_value"] <= 0.05
         result.append(value)
     return result
@@ -377,9 +403,11 @@ def analyze_formal(rows: Sequence[Mapping[str, object]]) -> dict:
     action_overhead = (
         float(m4["clean_action_steps"]) - baseline_actions
     ) / baseline_actions
-    baseline_latency = float(summaries[clean_best]["event_processing_time_ns"])
+    baseline_latency = float(
+        summaries[clean_best]["clean_event_processing_time_ns"]
+    )
     latency_overhead = (
-        float(m4["event_processing_time_ns"]) - baseline_latency
+        float(m4["clean_event_processing_time_ns"]) - baseline_latency
     ) / baseline_latency
     attempt_gates = {
         "success_margin_ge_0_15": attempt_margin >= 0.15,

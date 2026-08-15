@@ -113,7 +113,7 @@ def _assert_contract() -> None:
         raise RuntimeError("frozen seed split drift")
 
 
-def _record_provenance() -> None:
+def _record_provenance(path: Path = None) -> None:
     uname = platform.uname()
     cpu_model = None
     cpuinfo = Path("/proc/cpuinfo")
@@ -123,7 +123,7 @@ def _record_provenance() -> None:
                 cpu_model = line.split(":", 1)[-1].strip()
                 break
     write_json(
-        EXPERIMENT / "runtime_provenance.json",
+        path or (EXPERIMENT / "runtime_provenance.json"),
         {
             "schema_version": 1,
             "recorded_at_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -290,7 +290,8 @@ def _final_report(
     effects = formal["effect_sizes"]
     statuses = formal["component_status"]
     isolated = ablations["isolated_effects"]
-    source = _source_identity()
+    execution_source = _json(EXPERIMENT / "runtime_provenance.json")["source"]
+    analysis_source = _source_identity()
     trace = _json(EXPERIMENT / "trace_summary.json")
     executor = _json(EXPERIMENT / "executor_qualification_summary.json")
     shared = _json(EXPERIMENT / "shared_prefix_qualification_summary.json")
@@ -309,10 +310,14 @@ def _final_report(
         "",
         "## 完整执行与平台有效性",
         "",
-        "- 分支：`%s`" % source["branch"],
-        "- 实验源 HEAD：`%s`" % source["head"],
-        "- 实验源 tree：`%s`" % source["tree"],
-        "- 冻结 B6 SHA256：`%s`" % source["protected_b6_sha256"],
+        "- 分支：`%s`" % execution_source["branch"],
+        "- rollout 生成 HEAD/tree：`%s` / `%s`" % (
+            execution_source["head"], execution_source["tree"]
+        ),
+        "- 最终分析 HEAD/tree：`%s` / `%s`" % (
+            analysis_source["head"], analysis_source["tree"]
+        ),
+        "- 冻结 B6 SHA256：`%s`" % execution_source["protected_b6_sha256"],
         "- Trace gate：%s，10,000 schedules" % trace["status"],
         "- Executor gate：pass=%s，conditional=%s，full-chain=%s，backend errors=%d" % (
             executor["pass"], _format_rate(executor["conditional_effect_success"]),
@@ -442,7 +447,8 @@ def analysis_stage() -> None:
     )
     component = {
         "schema_version": 1,
-        "source": _source_identity(),
+        "execution_source": _json(EXPERIMENT / "runtime_provenance.json")["source"],
+        "analysis_source": _source_identity(),
         "formal_rollout_count": len(formal_rows),
         "ablation_rollout_count": len(ablation_rows),
         "arms": formal["arms"],
@@ -467,7 +473,7 @@ def analysis_stage() -> None:
         EXPERIMENT / "MECHANISM_REVERSE_ENGINEERING.md",
         _mechanism_report(formal, ablations),
     )
-    _record_provenance()
+    _record_provenance(EXPERIMENT / "analysis_runtime_provenance.json")
     names = [
         str(path.relative_to(EXPERIMENT))
         for path in EXPERIMENT.rglob("*")
@@ -500,7 +506,10 @@ def main(argv: Iterable[str] = None) -> None:
     args = parser.parse_args(list(argv) if argv is not None else None)
     EXPERIMENT.mkdir(parents=True, exist_ok=True)
     _assert_contract()
-    _record_provenance()
+    if args.stage == "analysis":
+        _record_provenance(EXPERIMENT / "analysis_runtime_provenance.json")
+    else:
+        _record_provenance()
     if args.stage == "all":
         for stage in ("trace", "executor", "shared-prefix", "pilot", "formal", "ablations", "analysis"):
             STAGES[stage]()
