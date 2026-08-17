@@ -8,7 +8,9 @@ hot_capacities:
   active_proofs_per_effect: 4
   support_clauses_total: 256
 cold_audit: append_only_compacted_summary
-receipt_fields: [receipt_id, attempt_id, command_id, effect_id, source_id, source_version, observed_at, expires_at, payload_hash, confidence, truth_value, active_attempt_credit]
+receipt_fields: [receipt_id, attempt_id, command_id, effect_id, source_id, source_version, observed_at, expires_at, payload_hash, confidence, truth_value, active_attempt_credit, capture_id, sensor_source, source_group, correlation_group, frame_digest, timestamp, verifier_model_version, calibration_version, parent_ids, realization_kind]
+independence_rule: distinct_correlation_group_and_capture_id_and_frame_digest_bound_to_active_attempt_and_command_after_revocation_epoch
+pre_formal_contract_repair: original isolated prereg artifact omitted fields already mandatory in the governing Phase-5 plan; repaired before any formal rollout access and without changing gates
 property_workload: {events: 100000, attempts: 10000}
 gates:
   exact_reference_mismatches: 0

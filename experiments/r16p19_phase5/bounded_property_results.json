@@ -1,0 +1,44 @@
+{
+  "attempts_target": 10000,
+  "audit_chain_breaks": 0,
+  "audit_summary": {
+    "accepted_counts": {
+      "false": 58582,
+      "true": 45790
+    },
+    "chain_head": "f3aa33e4af7a664a01cbd5f12a51590dda192db019ed235441ad1856533d2fa6",
+    "event_count": 104372,
+    "kind_counts": {
+      "RECEIPT": 89073,
+      "REQUEST": 10000,
+      "REVOKE": 5299
+    }
+  },
+  "event_latency_ms": {
+    "mean": 0.0885125113,
+    "p50": 0.0797155,
+    "p95": 0.14236814999999997,
+    "p99": 0.19408263999999967
+  },
+  "events": 100000,
+  "exact_reference_mismatches": 0,
+  "gates": {
+    "audit_chain_breaks_zero": true,
+    "event_p99_le_1ms": true,
+    "hot_memory_le_10mb": true,
+    "p99_scaling_ratio_le_1_2": true,
+    "reference_mismatch_zero": true,
+    "tick_p99_le_2ms": true
+  },
+  "hot_memory_mb": 0.010583877563476562,
+  "latency_scaling": {
+    "p99_at_100k_ms": 0.19408263999999967,
+    "p99_at_1k_ms": 0.18634183999999995,
+    "ratio": 1.041540858456693
+  },
+  "pass_partial": true,
+  "python": "3.10.19",
+  "schema_version": 1,
+  "seed": 1701,
+  "tick_latency_p99_ms": 0.6582435099999991
+}
