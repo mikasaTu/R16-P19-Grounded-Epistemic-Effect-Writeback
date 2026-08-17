@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "source_space_id": "7599097990090853600",
+  "source_parent_node_token": "APSlwVZqIi9Evlk3uIVcFy0wn3c",
+  "source_parent_url": "https://icnbwz7kd1ui.feishu.cn/wiki/APSlwVZqIi9Evlk3uIVcFy0wn3c",
+  "exported_at_utc": "2026-08-17T12:03:57.593Z",
+  "format": "markdown",
+  "normalization": "Leading Feishu <title> wrapper converted to Markdown H1; trailing whitespace and EOF newlines normalized; textual content otherwise preserved.",
+  "documents": [
+    {
+      "step": "step1",
+      "kind": "plan",
+      "source_title": "step1",
+      "node_token": "HL0Lwqewxi1jeQkVit7c4Mmanpd",
+      "obj_token": "YPU1dOgRVofhDHxPAUPcfXTHnVb",
+      "revision_id": 3,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/HL0Lwqewxi1jeQkVit7c4Mmanpd",
+      "repository_path": "docs/feishu/experiment_planning/step1/plan.md"
+    },
+    {
+      "step": "step1",
+      "kind": "report",
+      "source_title": "实验报告",
+      "node_token": "Wr28wjd1aivlpLkU0ovcDTWdnWf",
+      "obj_token": "IeWCd5SVMoYqe2xWZktcYsUUnmd",
+      "revision_id": 2,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/Wr28wjd1aivlpLkU0ovcDTWdnWf",
+      "repository_path": "docs/feishu/experiment_planning/step1/experiment_report.md"
+    },
+    {
+      "step": "step2",
+      "kind": "plan",
+      "source_title": "step2",
+      "node_token": "VtaxwsmBkiBjXok19eMcTLkFneb",
+      "obj_token": "PHZldAejOo8YpHxI5ZrceB3Indh",
+      "revision_id": 4,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/VtaxwsmBkiBjXok19eMcTLkFneb",
+      "repository_path": "docs/feishu/experiment_planning/step2/plan.md"
+    },
+    {
+      "step": "step2",
+      "kind": "report",
+      "source_title": "R16-P19 Phase-1B（Step2）Actor Upgrade 与闭环行为验证实验报告",
+      "node_token": "W6arwneS0iGdjAk0WAacZoSJnWe",
+      "obj_token": "NUSUd0BsJoiC0QxmU3CcOvhZnWb",
+      "revision_id": 9,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/W6arwneS0iGdjAk0WAacZoSJnWe",
+      "repository_path": "docs/feishu/experiment_planning/step2/experiment_report.md"
+    },
+    {
+      "step": "step3",
+      "kind": "plan",
+      "source_title": "step3",
+      "node_token": "CP8qwoVcFiyPrMkLS7KcYNx4ngd",
+      "obj_token": "Blrbd7il3oaF30xfccNc6eD6nGh",
+      "revision_id": 2,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/CP8qwoVcFiyPrMkLS7KcYNx4ngd",
+      "repository_path": "docs/feishu/experiment_planning/step3/plan.md"
+    },
+    {
+      "step": "step3",
+      "kind": "report",
+      "source_title": "实验报告",
+      "node_token": "IBc9wR2Mai8Cv1ks6VecHuqTnCk",
+      "obj_token": "T0kJdD5zTolBJrx4QgncwjTJn8b",
+      "revision_id": 9,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/IBc9wR2Mai8Cv1ks6VecHuqTnCk",
+      "repository_path": "docs/feishu/experiment_planning/step3/experiment_report.md"
+    },
+    {
+      "step": "step4",
+      "kind": "plan",
+      "source_title": "step4",
+      "node_token": "SqxXwnTIFiistlk1bOrcprPWnmb",
+      "obj_token": "M6ljd5SjiozVSIxSkRBceaj5nLb",
+      "revision_id": 7,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/SqxXwnTIFiistlk1bOrcprPWnmb",
+      "repository_path": "docs/feishu/experiment_planning/step4/plan.md"
+    },
+    {
+      "step": "step4",
+      "kind": "report",
+      "source_title": "实验报告",
+      "node_token": "DvI3wxPQ7ixoSdkA9kncspgdnUc",
+      "obj_token": "QiVidpj8EodQWMxG61ecYah6nah",
+      "revision_id": 5,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/DvI3wxPQ7ixoSdkA9kncspgdnUc",
+      "repository_path": "docs/feishu/experiment_planning/step4/experiment_report.md"
+    },
+    {
+      "step": "step5",
+      "kind": "plan",
+      "source_title": "step5",
+      "node_token": "FmOdwwSFaipjcNkndMicAmlOngI",
+      "obj_token": "Vs2pdVS0uoDKzQxvJP6cnOwNnua",
+      "revision_id": 7,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/FmOdwwSFaipjcNkndMicAmlOngI",
+      "repository_path": "docs/feishu/experiment_planning/step5/plan.md"
+    },
+    {
+      "step": "step5",
+      "kind": "report",
+      "source_title": "实验报告",
+      "node_token": "Yv8Uw45hAijFGvkZYW8cBYEvnlf",
+      "obj_token": "Sq46dn4IpoX3TaxATy5cODUpnhO",
+      "revision_id": 5,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/Yv8Uw45hAijFGvkZYW8cBYEvnlf",
+      "repository_path": "docs/feishu/experiment_planning/step5/experiment_report.md"
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+# step1
+
+Task:
+
+R16-P19 Phase-1 Actor-Decoupled Simulation Validation on RMBench
+
+
+
+Scientific goal:
+
+Test whether Grounded Epistemic Effect Writeback correctly distinguishes
+
+REQUESTED, IMAGINED, OBSERVED, VERIFIED, REALIZED, STALLED, and
+
+INVALIDATED_REALIZATION, and whether this distinction improves downstream
+
+task decisions under command failure, delayed effects, and contradictions.
+
+
+
+This phase must not start with Pi0.5.
+
+It contains:
+
+A. actor-free trace validation;
+
+B. a tiny state-BC closed-loop sanity test.
+
+
+
+Primary benchmark:
+
+Official RMBench repository.
+
+
+
+Freeze:
+
+- exact RMBench commit;
+- RoboTwin/SAPIEN dependency commits;
+- selected tasks;
+- source demonstrations;
+- simulator seeds;
+- effect ontology;
+- memory capacity;
+- fault matrix;
+- metrics and pass/fail rules.
+
+Selected tasks:
+
+1. put_back_block
+2. rearrange_blocks
+
+Do not use:
+
+- DINO-WM;
+- a large VLA;
+- privileged simulator state as memory input;
+- external formal-activation or cryptographic infrastructure.
+
+Simulator privileged state may only:
+
+- label physical effects;
+- produce oracle evaluation labels;
+- implement the state-BC sanity actor.
+
+==================================================
+
+A. ACTOR-FREE TRACE GATE
+
+==================================================
+
+
+
+A1. Build task effect ontologies.
+
+
+
+put_back_block:
+
+- BLOCK_GRASPED
+- BLOCK_ON_CENTER
+- BUTTON_PRESSED_AFTER_CENTER
+- BLOCK_GRASPED_FROM_CENTER
+- BLOCK_ON_ORIGINAL_MAT
+- OBJECT_RELEASED_AT_ORIGINAL_MAT
+
+rearrange_blocks:
+
+- FIRST_BLOCK_GRASPED
+- FIRST_BLOCK_ON_EMPTY_MAT
+- BUTTON_PRESSED_ONCE
+- SECOND_BLOCK_GRASPED
+- SECOND_BLOCK_ON_CENTER
+
+For every effect define:
+
+- prerequisites;
+- incompatible effects;
+- requested event;
+- observed evidence;
+- verification evidence;
+- realization witness;
+- invalidation witness;
+- valid recovery actions.
+
+A2. Implement epistemic states:
+
+
+
+- REQUESTED
+- IMAGINED
+- OBSERVED
+- VERIFIED
+- REALIZED
+- STALLED
+- INVALIDATED_REALIZATION
+
+Transitions must be explicit and unit-tested.
+
+
+
+A command being sent must never directly produce REALIZED.
+
+
+
+An IMAGINED prediction must never directly produce VERIFIED or REALIZED.
+
+
+
+A later contradiction to REALIZED must:
+
+- invalidate the effect;
+- block dependent progress;
+- create a non-empty recovery route;
+- be idempotent under repeated contradiction events.
+
+A3. Build evidence receipts.
+
+
+
+Every physical evidence item must include:
+
+- episode_id
+- event_index
+- timestamp
+- sensor/view identity
+- frame digest
+- effect_id
+- evidence type
+
+The same physical frame under two different IDs must not count as
+
+independent verification.
+
+
+
+A4. Use:
+
+- 32 resident memory slots;
+- an append-only provenance ledger;
+- no dangling parent references.
+
+A5. Extract source traces.
+
+
+
+For each task:
+
+- download the official 50 demo_clean demonstrations;
+- freeze 30 train, 10 calibration, and 10 trace-test episodes;
+- additionally freeze 20 simulator evaluation seeds.
+
+All variants of the same source episode must stay in the same split.
+
+
+
+A6. Fault injection conditions:
+
+
+
+C0 clean
+
+C1 command issued but physical effect is a no-op
+
+C2 physical effect occurs after a random delay
+
+C3 effect is initially realized and later reversed
+
+C4 one camera produces a false-positive observation
+
+C5 the same physical frame is duplicated under different evidence IDs
+
+C6 irrelevant events fill the 32-slot resident memory
+
+C7 an IMAGINED success is followed by an OBSERVED failure
+
+
+
+A7. Memory arms:
+
+
+
+B1 sliding recent history
+
+B2 command-as-progress
+
+B3 monolithic writeback
+
+B4 typed states without contradiction recovery
+
+B5 typed states plus verification but no recovery
+
+B6 full R16-P19
+
+B7 oracle effect ledger upper bound
+
+
+
+All non-oracle arms receive byte-identical event streams.
+
+
+
+A8. Candidate decisions:
+
+
+
+- ADVANCE_TO_NEXT_SUBTASK
+- RETRY_CURRENT_EFFECT
+- REOBSERVE
+- ROLLBACK_OR_REPLAN
+- SAFE_STOP
+
+A9. Metrics:
+
+
+
+- false_completion_rate
+- premature_advance_rate
+- realized_precision
+- realized_recall
+- contradiction_detection_recall
+- contradiction_recovery_recall
+- recovery_routing_accuracy
+- evidence_alias_acceptance
+- dangling_parent_count
+- duplicate_event_idempotency
+- clean_decision_accuracy
+- unnecessary_recovery_rate
+- resident_slot_count
+- p50/p95 latency
+
+A10. Immediate rejection:
+
+
+
+Reject the implementation if:
+
+- evidence_alias_acceptance > 0;
+- dangling_parent_count > 0;
+- duplicate contradictions are non-idempotent;
+- a contradicted REALIZED effect has no recovery;
+- any arm exceeds 32 resident slots;
+- B6 does not outperform B4/B5 on contradiction recovery;
+- B6 obtains low error merely by always choosing REOBSERVE or SAFE_STOP.
+
+==================================================
+
+B. TINY STATE-BC CLOSED-LOOP GATE
+
+==================================================
+
+
+
+B1. Implement one small actor:
+
+
+
+Input:
+
+- low-dimensional robot state;
+- object state;
+- current subtask token;
+- fixed-size memory summary.
+
+Output:
+
+- an 8–16 step action chunk.
+
+Recommended model:
+
+- 3–5 layer MLP or Tiny-ACT;
+- no more than 10M parameters.
+
+This actor is only a causal sanity actor and is not publication evidence.
+
+
+
+B2. Train the actor using the same official demonstrations.
+
+
+
+All memory arms must share the exact same frozen actor.
+
+
+
+B3. Actor competence gate:
+
+
+
+Before comparing memory:
+
+- clean per-subtask success must be >= 80%.
+
+If below 80%:
+
+- do not interpret memory results;
+- switch temporarily to scripted primitives or the Mem-0 execution module;
+- keep the memory implementation unchanged.
+
+B4. Closed-loop faults:
+
+
+
+Run:
+
+- C0 clean
+- C1 no-op
+- C2 delayed effect
+- C3 post-realization reversal
+- C7 wrong imagined effect
+
+For the first smoke:
+
+2 tasks × 20 seeds × 5 conditions × 4 key memory arms
+
+(B2, B3, B5, B6).
+
+
+
+B5. Primary behavioral metrics:
+
+
+
+- full task success;
+- premature subtask transition;
+- repeated-action loop rate;
+- recovery success;
+- number of retries;
+- extra action steps;
+- clean-case degradation.
+
+B6. Phase-1 pass criteria:
+
+
+
+All correctness gates from actor-free testing must pass.
+
+
+
+Additionally:
+
+- B6 false completion decreases by >= 50% relative to B3;
+- B6 contradiction recovery recall >= 0.80;
+- B6 task success under C1/C3/C7 exceeds B3 and B5;
+- paired bootstrap 95% CI lower bound > 0 on the primary mechanism metric;
+- clean success degradation relative to B3 <= 3 percentage points;
+- B6 is not statistically indistinguishable from command-as-progress.
+
+==================================================
+
+DELIVERABLES
+
+==================================================
+
+
+
+Produce:
+
+
+
+experiments/r16p19_rmbench_phase1/
+
+  preregistration.yaml
+
+  benchmark_manifest.json
+
+  effect_ontology.json
+
+  fault_matrix.json
+
+  split_manifest.json
+
+  trace_events.jsonl
+
+  memory_outputs.jsonl
+
+  state_bc_config.yaml
+
+  state_bc_results.jsonl
+
+  metrics.json
+
+  paired_bootstrap.json
+
+  failure_cases.md
+
+  README.md
+
+  SHA256SUMS
+
+
+
+Use only one final status:
+
+
+
+PASS_PHASE1
+
+REJECT_CORE_MECHANISM
+
+BLOCKED_BY_ACTOR
+
+BLOCKED_BY_IMPLEMENTATION
+
+
+
+Do not:
+
+- train Pi0.5;
+- claim VLA improvement;
+- claim accepted idea status;
+- begin Mem-0 or ACT full experiments before this gate finishes.
+
+At the end, also provide a readiness report for:
+
+- official ACT;
+- official Mem-0 weights/configs;
+- official Pi0.5 integration.
+
+The readiness report must not start those experiments.

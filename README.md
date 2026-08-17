@@ -214,6 +214,8 @@ other than itself):
 
 ## Related records
 
+- Feishu `step1`–`step5` plans and experiment-report Markdown archive:
+  [docs/feishu/experiment_planning](docs/feishu/experiment_planning/README.md)
 - Original idea and planning document:
   [Feishu wiki](https://icnbwz7kd1ui.feishu.cn/wiki/AfN7wFfFWi7dBOkBBtucoroanff)
 - Phase-2 step3 plan:
