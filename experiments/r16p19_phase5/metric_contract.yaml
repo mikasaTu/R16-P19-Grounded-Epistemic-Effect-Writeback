@@ -1,0 +1,7 @@
+schema_version: 1
+primary: task_success
+secondary: [minimum_effect_success, false_grounded_advance, stale_acceptance, cross_attempt_acceptance, late_witness_acceptance, effect_truth_recognition, false_current_attempt_credit, recovery_success, action_steps, clean_degradation, backend_errors]
+systems: [event_latency_p50_ms, event_latency_p95_ms, event_latency_p99_ms, tick_latency_p99_ms, hot_memory_mb, audit_chain_breaks, policy_cycle_fraction]
+mechanism: [cascade_precision, cascade_recall, over_invalidation, under_invalidation, receipt_rejection_reason, first_divergence, recovery_mode]
+aggregation_unit: paired_rollout
+cluster_unit: [task_id, init_index, policy_seed]

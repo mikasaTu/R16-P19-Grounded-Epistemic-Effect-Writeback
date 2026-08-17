@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "phase_1": {"status": "ACTOR_FREE_PASSED"},
+  "phase_1b": {"status": "POLICY_FAILED"},
+  "phase_2": {"status": "GEOMETRIC_FAILED"},
+  "phase_3": {
+    "status": "CONFIRMATORY_INVALID",
+    "finding": "B6 tied the best baseline only on backend-valid units",
+    "final_decision_sha256": "a2de3adb731ce2d9aa2bff4411976030538d3690c47341ee1d66f161a5977602"
+  },
+  "phase_4": {
+    "status": "BLOCKED_BY_IMPLEMENTATION",
+    "finding": "ASCEL mechanisms passed synthetic microbench; clean latency gate failed",
+    "final_decision_sha256": "3802a16c57a73b64111302c187e6490b1b4b3dbaf28775db09ef8eb8dc1237cf",
+    "mechanism_report_sha256": "77729aa97cf609797e53487b9c11dcfef19cbd1936b00ab613ef06584b2d6bed"
+  },
+  "forbidden_reinterpretation": true
+}

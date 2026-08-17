@@ -1,0 +1,19 @@
+schema_version: 1
+bootstrap: {type: paired_cluster, replicates: 10000, ci: 0.95, cluster: [task_id, init_index, policy_seed]}
+binary_test: exact_mcnemar
+multiple_testing: holm
+primary_comparison: M3_ASCEL_CORE_vs_best_of_M0_M1_M2
+core_pass_gates:
+  success_margin_min: 0.08
+  ci95_lower_gt: 0.0
+  tasks_improved_min: 2
+  remaining_task_degradation_max: 0.02
+  false_grounded_relative_reduction_min: 0.5
+  stale_cross_late_acceptance_max: 0.0
+  external_realization_truth_min: 0.95
+  external_realization_false_credit_max: 0.05
+  clean_degradation_max: 0.02
+  clean_extra_steps_fraction_max: 0.10
+support_primary: M4_ASCEL_FULL_vs_M3_ASCEL_CORE
+support_pass_gates: {success_margin_min: 0.05, ci95_lower_gt: 0.0, cascade_precision_min: 0.95, cascade_recall_min: 0.95, over_invalidation_max: 0.05, under_invalidation_max: 0.05, clean_degradation_max: 0.02}
+ablation_support_rule: corresponding_advantage_removed_fraction_min_0_5_or_target_error_increase_min_0_10

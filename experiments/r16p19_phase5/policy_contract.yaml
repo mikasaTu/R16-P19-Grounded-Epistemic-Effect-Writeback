@@ -1,0 +1,21 @@
+schema_version: 1
+primary:
+  implementation: official_openpi
+  config: pi05_libero
+  checkpoint: frozen_pi05_libero
+  action_horizon: 10
+  executed_replan_steps: 5
+  action_dim: 7
+  policy_training: forbidden
+fallback: null
+inputs: [agentview_rgb, wrist_rgb, proprioception, task_language, execution_mode]
+allowed_execution_modes: [EXECUTE, RETRY, ROLLBACK_REEXECUTE, REOBSERVE]
+forbidden_inputs: [arm_identity, fault_identity, epistemic_state, simulator_truth, reward, success, future_observation]
+broker_key: [observation_hash, history_hash, task_id, effect_id, mode, checkpoint_hash, config_hash, policy_seed]
+same_key_inference_count: 1
+same_key_action_bytes_required: true
+qualification:
+  per_task_success_min: 0.8
+  minimum_effect_success_min: 0.8
+  loop_rate_max: 0.1
+  backend_errors: 0

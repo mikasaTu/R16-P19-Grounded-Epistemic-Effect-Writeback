@@ -1,0 +1,20 @@
+schema_version: 1
+implementations: [live_bounded, unbounded_reference]
+hot_capacities:
+  recent_closed_per_effect: 4
+  recent_effects_per_attempt: 4
+  receipts_per_source: 4
+  active_attempts: 4
+  active_proofs_per_effect: 4
+  support_clauses_total: 256
+cold_audit: append_only_compacted_summary
+receipt_fields: [receipt_id, attempt_id, command_id, effect_id, source_id, source_version, observed_at, expires_at, payload_hash, confidence, truth_value, active_attempt_credit]
+property_workload: {events: 100000, attempts: 10000}
+gates:
+  exact_reference_mismatches: 0
+  audit_chain_breaks: 0
+  event_latency_p99_ms_max: 1.0
+  tick_latency_p99_ms_max: 2.0
+  ledger_fraction_policy_cycle_max: 0.05
+  p99_100k_over_1k_max: 1.2
+  hot_memory_mb_max: 10.0

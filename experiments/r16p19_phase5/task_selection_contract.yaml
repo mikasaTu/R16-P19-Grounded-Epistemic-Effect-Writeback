@@ -1,0 +1,22 @@
+schema_version: 1
+suite: libero_10
+tasks:
+  - id: 0
+    name: LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket
+    families: [multi_object_grasp_place_release, containment, long_dependency]
+  - id: 5
+    name: STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy
+    families: [grasp_place_release, containment]
+  - id: 9
+    name: KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it
+    families: [grasp_place_release, containment, reversible_articulated, closure, long_dependency]
+split:
+  development_init_indices: [0, 9]
+  calibration_init_indices: [10, 19]
+  qualification_init_indices: [20, 29]
+  formal_init_indices: [30, 49]
+  formal_unit_mapping: formal_seed = 2 * (init_index - 30) + policy_seed
+  policy_seeds_per_formal_init: [0, 1]
+  pilot_init_indices: [20, 24]
+  pilot_policy_seed: 0
+cluster_unit: [task_id, init_index, policy_seed]

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "repository_head": "9188ba8ae09f6e828d132bc9d1b94b75f7d450ae",
+  "protected": [{"path": "r16p19/memory.py", "sha256": "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5", "rule": "byte unchanged"}],
+  "official_libero": {"commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01", "tree": "99f4ada3f1d62e026fc9ff2390eb4ff8a1760e60"},
+  "official_openpi": {"commit": "54cbaee6ae0c010a1ed431871cdaa8f4684ac709", "tree": "c9e0e412a77b7164d1259bc0d0f9ea8ed53ea346"},
+  "checkpoint": {
+    "name": "pi05_libero",
+    "params_manifest_sha256": "65246951e69bd2b5118e609646bc9e8c439229bccbc1325643833aeb74f77104",
+    "params_metadata_sha256": "303a4e354814928e1d29b75e310f2c1ac7e7e29b62f48395b631045ca1cffc73",
+    "norm_stats_sha256": "b3a44bb2810436fb62917decaea58bd4d9110255df527dea21e8fd40c960bd84"
+  }
+}

@@ -1,0 +1,10 @@
+schema_version: 1
+arms:
+  M0_TYPED_MATCHED: {attempt_scope: false, persistence_k: 1, support_graph: false}
+  M1_VERSIONED_POSTCHECK: {attempt_scope: false, persistence_k: 2, support_graph: false}
+  M2_B6_FROZEN: {historical_implementation: true, attempt_scope: false, support_graph: false}
+  M3_ASCEL_CORE: {attempt_scope: true, command_binding: true, evidence_isolation: true, stale_rejection: true, realization_revocation: true, truth_credit_split: true, bounded_recovery: true, support_graph: false}
+  M4_ASCEL_FULL: {inherits: M3_ASCEL_CORE, support_graph: true, conjunctive_references: true, disjunctive_clauses: true, support_discharge: true, recursive_local_invalidation: true}
+pairing: same_snapshot_policy_actions_rng_observations_fault_schedule_and_budgets
+budgets: {retry: 2, reobserve: 4, rollback: 1, decision: 32}
+ablations: [NO_ATTEMPT_SCOPE, NO_PRE_REALIZATION_REVOCATION, NO_TRUTH_CREDIT_SPLIT, NO_SUPPORT_GRAPH]

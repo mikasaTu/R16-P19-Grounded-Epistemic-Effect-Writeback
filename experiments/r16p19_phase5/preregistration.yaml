@@ -1,0 +1,53 @@
+schema_version: 1
+phase: R16-P19 Phase-5 Bounded ASCEL Embodied Bridge Validation
+frozen_at_utc: '2026-08-18'
+branch: phase5-bounded-ascel-embodied
+base_head: 9188ba8ae09f6e828d132bc9d1b94b75f7d450ae
+base_tree: d09214d4f3ebccb56f9730cd929dccc2f9a17de3
+evidence_boundary:
+  phase1: actor_free_passed
+  phase1b: policy_failed
+  phase2: geometric_failed
+  phase3: confirmatory_invalid_b6_tied_best_baseline
+  phase4: synthetic_mechanisms_passed_clean_latency_failed
+  entering_status: BLOCKED_BY_IMPLEMENTATION
+  prior_results_are_immutable: true
+protected_source:
+  path: r16p19/memory.py
+  sha256: 4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5
+  policy: byte_unchanged
+hypotheses:
+  q1: oracle ASCEL-Core improves embodied recovery with a qualified frozen policy
+  q2: a qualified learned verifier retains the oracle ASCEL-Core gain
+  q3: ASCEL-Full support proofs add value beyond ASCEL-Core
+  q4: the bounded implementation satisfies correctness and systems gates
+execution_order: [bounded_ledger, policy_qualification, shared_prefix, oracle_core, learned_verifier, support, ablations]
+diagnostic_continuation:
+  enabled: true
+  authority: explicit_user_instruction_2026_08_18
+  rule: failed gates remain failed and block confirmatory claims; remaining experiments still run and are labelled diagnostic
+formal_data_firewall:
+  formal_seeds_for_selection_training_calibration: forbidden
+  simulator_truth_to_policy_verifier_or_memory: forbidden
+  fault_or_arm_identity_to_policy_verifier_or_memory: forbidden
+  independent_prefix_replay_per_arm: forbidden
+fixed_counts:
+  bounded_events: 100000
+  bounded_attempts: 10000
+  shared_prefix_units: 1000
+  natural_audit_rollouts_min: 200
+  oracle_pilot_rollouts: 525
+  oracle_formal_rollouts: 4200
+  learned_formal_rollouts: 1680
+  support_rollouts: 960
+  bootstrap_replicates: 10000
+final_status_vocabulary:
+  - PASS_PHASE5_ASCEL_FULL_EMBODIED
+  - PASS_PHASE5_ASCEL_CORE_EMBODIED
+  - NARROW_TO_ASCEL_CORE
+  - BLOCKED_BY_LEDGER_IMPLEMENTATION
+  - BLOCKED_BY_POLICY
+  - BLOCKED_BY_PAIRING
+  - BLOCKED_BY_VERIFIER
+  - BLOCKED_BY_IMPLEMENTATION
+  - REJECT_ASCEL_EMBODIED_VALUE

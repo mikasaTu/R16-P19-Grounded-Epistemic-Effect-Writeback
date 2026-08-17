@@ -1,0 +1,22 @@
+schema_version: 1
+precedence:
+  - BLOCKED_BY_LEDGER_IMPLEMENTATION
+  - BLOCKED_BY_POLICY
+  - BLOCKED_BY_PAIRING
+  - BLOCKED_BY_VERIFIER
+  - BLOCKED_BY_IMPLEMENTATION
+  - REJECT_ASCEL_EMBODIED_VALUE
+  - NARROW_TO_ASCEL_CORE
+  - PASS_PHASE5_ASCEL_CORE_EMBODIED
+  - PASS_PHASE5_ASCEL_FULL_EMBODIED
+rules:
+  PASS_PHASE5_ASCEL_FULL_EMBODIED: oracle_core_and_learned_verifier_and_support_all_pass
+  PASS_PHASE5_ASCEL_CORE_EMBODIED: oracle_core_and_learned_verifier_pass_support_not_established
+  NARROW_TO_ASCEL_CORE: oracle_core_passes_but_full_support_addition_fails
+  REJECT_ASCEL_EMBODIED_VALUE: oracle_core_confirmatory_gate_fails_without_infrastructure_block
+  BLOCKED_BY_LEDGER_IMPLEMENTATION: bounded_correctness_or_system_gate_fails
+  BLOCKED_BY_POLICY: no frozen policy passes qualification
+  BLOCKED_BY_PAIRING: exact_shared_prefix_gate_fails
+  BLOCKED_BY_VERIFIER: oracle_core_passes_but_no learned verifier qualifies
+  BLOCKED_BY_IMPLEMENTATION: required experiment or artifact is missing_or_invalid
+diagnostic_continuation_does_not_override_precedence: true

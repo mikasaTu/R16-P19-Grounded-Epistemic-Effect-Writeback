@@ -1,0 +1,19 @@
+schema_version: 1
+oracle_core_conditions:
+  - C0_CLEAN
+  - A1_NOOP_RETRY_STALE_WITNESS
+  - A2_CROSS_ATTEMPT_MIX
+  - A3_VERIFIED_CONTRADICTION_LATE_WITNESS
+  - A4_POST_REALIZATION_REVERSAL
+  - A5_EXTERNAL_REALIZATION
+  - V1_SINGLE_VIEW_CORRELATED_FALSE_POSITIVE
+support_conditions: [C0_CLEAN, S1_LIVE_SUPPORT_INVALIDATED, S2_DISCHARGED_SUPPORT_REMOVED, S3_ALTERNATIVE_SUPPORT_REMOVED]
+injection_visibility:
+  fault_name_to_policy: forbidden
+  fault_name_to_verifier: forbidden
+  fault_name_to_memory: forbidden
+fixed_counts:
+  oracle_pilot: '3 tasks x 7 conditions x 5 seeds x 5 arms = 525'
+  oracle_formal: '3 tasks x 7 conditions x 40 seeds x 5 arms = 4200'
+  learned_formal: '3 tasks x 7 conditions x 40 seeds x 2 arms = 1680'
+  support: '2 tasks x 4 conditions x 30 seeds x 4 arms = 960'

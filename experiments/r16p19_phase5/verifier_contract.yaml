@@ -1,0 +1,22 @@
+schema_version: 1
+oracle:
+  exposed_to_arms: signed_receipts_only
+  direct_simulator_truth_exposure: forbidden
+learned:
+  allowed_inputs: [multi_view_rgb, short_temporal_context, proprioception, gripper_state, contact, wrench, task_language, effect_description]
+  forbidden_inputs: [simulator_truth, reward, success, future_observation, fault_identity, arm_identity]
+  models: [linear_probe, small_mlp]
+  split: episode_and_environment_disjoint
+  formal_access_before_freeze: 0
+qualification_gates:
+  macro_auroc_min: 0.9
+  ece_max: 0.05
+  minimum_tpr_min: 0.8
+  maximum_fpr_max: 0.1
+learned_formal_gate:
+  success_margin_min: 0.05
+  ci95_lower_gt: 0.0
+  oracle_gain_retention_min: 0.5
+  false_advance_max: 0.05
+  false_credit_max: 0.05
+  clean_degradation_max: 0.02

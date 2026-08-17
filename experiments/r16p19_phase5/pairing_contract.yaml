@@ -1,0 +1,14 @@
+schema_version: 1
+shared_prefix_units: 1000
+fork_point: immediately_before_first_arm_specific_decision
+snapshot_fields: [physics_state, controller_state, policy_broker_cache, numpy_rng, python_rng, simulator_rng, observations, event_prefix, action_prefix, terminal_state]
+forced_identical_requirements:
+  physical_state_identity: exact
+  controller_state_identity: exact
+  policy_rng_state_identity: exact
+  observation_identity: exact_bytes
+  event_prefix_identity: exact_bytes
+  action_prefix_identity: exact_bytes
+  terminal_state_identity: exact
+independent_prefix_replay: forbidden
+failure_status: BLOCKED_BY_PAIRING
