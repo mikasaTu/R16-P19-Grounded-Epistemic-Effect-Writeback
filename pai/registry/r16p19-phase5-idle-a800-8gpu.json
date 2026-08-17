@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "kind": "pytorchjob",
+  "name_prefix": "r16p19-phase5-bounded-ascel-idle",
+  "description": "Phase-5 bounded ASCEL official frozen pi0.5 LIBERO evaluation, learned verifier diagnostics, and gravity-enabled support matrix; all preregistered matrices continue diagnostically after failed gates",
+  "resource_alias": "idle-a800",
+  "workspace_id": "179169",
+  "provenance": {
+    "contract_source_job_id": "dlct3tq8a7z5lsdd",
+    "resource_source_job_id": "dlct3tq8a7z5lsdd",
+    "submission_method": "cli_create",
+    "pai_clone_performed": false,
+    "source_role": "readback_reference"
+  },
+  "network": {},
+  "storage": {
+    "data_sources": [
+      {"id": "d-mkixtohdn75dp8x9tb", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon", "options": ""},
+      {"id": "d-36p023eg0f2vuqny8y", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon", "options": ""},
+      {"id": "d-ejgj2ej7io1t2t32uc", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon", "options": ""}
+    ],
+    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai"
+  },
+  "worker": {
+    "count": 1,
+    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+    "gpu": 8,
+    "cpu": 92,
+    "memory": "1600Gi",
+    "shared_memory": "1600Gi"
+  },
+  "runtime": {
+    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/R16-P19-Grounded-Epistemic-Effect-Writeback-phase5/launch/pai_phase5.sh",
+    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
+    "uid": 2254,
+    "gid": 2254,
+    "pod_env": {},
+    "secret_env_names": [],
+    "write_paths": ["{{ARTIFACT_DIR}}"],
+    "output_mode": "resume",
+    "create_artifact_dir": true,
+    "recursive_repair": false,
+    "payload_transport": "base64"
+  },
+  "fault_tolerance": {
+    "aimaster_args": "--job-execution-mode=Sync --enable-job-restart=True --max-num-of-job-restart=50 --fault-tolerant-policy=OnFailure",
+    "maximum_platform_restarts": 50,
+    "launcher_attempts": 1,
+    "retry_sleep_seconds": 30,
+    "pai_automatic_fault_tolerance": true
+  },
+  "evidence": {
+    "kind": "r16p19_phase5_bounded_ascel_formal_evaluation",
+    "idle_8gpu_contract": "generic_formal_idle_8gpu_v1",
+    "workload_type": "evaluation",
+    "task_id": "r16p19-phase5-bounded-ascel",
+    "model_id": "official-openpi-pi05-libero-frozen-plus-ascel",
+    "success_gate": "persisted_completed_evaluation_result",
+    "validation_method": "static",
+    "validation_status": "passed",
+    "validated_payload_sha256": "3a82165d603e63c023d2116db57bcc4979a179a73553f1529fda9b0504116c8c",
+    "pai_probe_created": false,
+    "first_work_evidence_path": "{{ARTIFACT_DIR}}/rollouts/FIRST_COMPLETED_ROLLOUT.json",
+    "completed_evidence_path": "{{ARTIFACT_DIR}}/FORMAL_COMPLETE.json",
+    "contract_ready": true,
+    "require_actual_idle": true,
+    "source_commit": "66be42da50c97e3fccf776ae64652b841b62c411",
+    "source_tree": "505f4d20d0ccb17dcb54032a0e701df5b8744f9b",
+    "launcher_sha256": "3a82165d603e63c023d2116db57bcc4979a179a73553f1529fda9b0504116c8c",
+    "resume_contract": "atomic_episode_files_worker_markers_and_terminal_marker",
+    "all_preregistered_experiments_run_despite_gate_failure": true,
+    "expected_first_work_uid": 2254,
+    "expected_first_work_gid": 2254,
+    "wandb_mode": "online_official_entity_injected"
+  },
+  "submission": {
+    "priority": 9,
+    "disable_ecs_stock_check": true,
+    "job_reserved_policy": "",
+    "job_reserved_minutes": 0,
+    "job_max_running_time_minutes": 0,
+    "tags": {
+      "managed_by": "pai-job-registry",
+      "purpose": "formal-evaluation",
+      "task": "r16p19-phase5-bounded-ascel",
+      "model": "official-openpi-pi05-libero-frozen-plus-ascel",
+      "dataset": "libero10-three-frozen-tasks-plus-mujoco-support",
+      "hardware": "8xa800-idle",
+      "resource_pool": "idle-a800",
+      "autoresume": "atomic-episode-markers",
+      "experiment_role": "step6-phase5-embodied-bridge"
+    }
+  }
+}
