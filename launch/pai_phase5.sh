@@ -52,9 +52,10 @@ cd "$source_root"
 "$python_bin" -m pytest -q tests/test_phase5_*.py | tee "$ARTIFACT_DIR/logs/tests.log"
 
 pids=()
-for rank in 0 1 2 3 4 5 6 7; do
-  CUDA_VISIBLE_DEVICES="$rank" EGL_DEVICE_ID=0 RANK="$rank" WORLD_SIZE=8 \
-    "$python_bin" -m r16p19.phase5_rollout --output-root "$rollout_root" --rank "$rank" --world-size 8 \
+world_size="${PAI_CANARY_EXPECTED_GPUS:?PAI_CANARY_EXPECTED_GPUS is injected by pai-job-registry}"
+for ((rank = 0; rank < world_size; rank++)); do
+  CUDA_VISIBLE_DEVICES="$rank" EGL_DEVICE_ID=0 RANK="$rank" WORLD_SIZE="$world_size" \
+    "$python_bin" -m r16p19.phase5_rollout --output-root "$rollout_root" --rank "$rank" --world-size "$world_size" \
     > "$ARTIFACT_DIR/logs/rollout-rank-${rank}.log" 2>&1 &
   pids+=("$!")
 done
