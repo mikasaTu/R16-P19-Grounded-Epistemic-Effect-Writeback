@@ -8,8 +8,10 @@ if [ "$(id -u)" != "$expected_uid" ] || [ "$(id -g)" != "$expected_gid" ]; then
   exit 2
 fi
 
-: "${ARTIFACT_DIR:?ARTIFACT_DIR is injected by pai-job-registry}"
-: "${RUN_ID:?RUN_ID is injected by pai-job-registry}"
+: "${PAI_CANARY_RUN_DIR:?PAI_CANARY_RUN_DIR is injected by pai-job-registry}"
+: "${PAI_CANARY_RUN_ID:?PAI_CANARY_RUN_ID is injected by pai-job-registry}"
+export ARTIFACT_DIR="${ARTIFACT_DIR:-$PAI_CANARY_RUN_DIR}"
+export RUN_ID="${RUN_ID:-$PAI_CANARY_RUN_ID}"
 
 source_root="/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/R16-P19-Grounded-Epistemic-Effect-Writeback-phase5"
 qpilots_root="/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/QPILOTS-r16p15-stage1-task64-20260812"
