@@ -1,0 +1,9 @@
+{
+  "all_failures_referenced": true,
+  "all_false_skill_credits_referenced": true,
+  "all_first_decision_divergences_referenced": true,
+  "all_premature_advances_referenced": true,
+  "manifest_rows": 4200,
+  "schema_version": 1,
+  "unique_videos": 240
+}

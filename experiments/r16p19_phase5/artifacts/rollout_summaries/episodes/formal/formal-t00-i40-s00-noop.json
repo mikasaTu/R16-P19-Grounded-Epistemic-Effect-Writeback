@@ -1,0 +1,17 @@
+{
+  "action_steps": 279,
+  "backend_errors": 0,
+  "chunks": 56,
+  "complete": true,
+  "episode_id": "formal-t00-i40-s00-noop",
+  "init_index": 40,
+  "policy_inference_count": 56,
+  "policy_latency_ms_mean": 96.55335998535156,
+  "policy_seed": 0,
+  "split": "formal",
+  "success": true,
+  "task_id": 0,
+  "trajectory_sha256": "ada2f617124a392b89d8c845349f21b57a6e9502ec0a0fba70129f3c3781de4d",
+  "variant": "noop",
+  "wall_seconds": 12.222680807113647
+}

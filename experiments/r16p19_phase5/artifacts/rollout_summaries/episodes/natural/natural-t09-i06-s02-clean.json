@@ -1,0 +1,17 @@
+{
+  "action_steps": 249,
+  "backend_errors": 0,
+  "chunks": 50,
+  "complete": true,
+  "episode_id": "natural-t09-i06-s02-clean",
+  "init_index": 6,
+  "policy_inference_count": 50,
+  "policy_latency_ms_mean": 94.2063980102539,
+  "policy_seed": 2,
+  "split": "natural",
+  "success": true,
+  "task_id": 9,
+  "trajectory_sha256": "8fd1da822776442b78128409c01c7ad87427d42e11a39989c119eee0f2800e44",
+  "variant": "clean",
+  "wall_seconds": 9.790303707122803
+}

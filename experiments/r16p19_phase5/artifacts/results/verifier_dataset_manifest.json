@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "calibration": 30,
+    "formal": 240,
+    "natural": 210,
+    "pilot": 15,
+    "qualification": 30
+  },
+  "episode_id_set_sha256": {
+    "calibration": "a5ce6594ee51fc0b75bcf587a2b375e1f8760c3d0c1bc7a015db569aeda13289",
+    "formal": "25728ffd60e5e62c9568d4617eeb84c1ecc23a87bfce17dedab6fabade670870",
+    "natural": "c576790efcaeacdfd0067254798a46917599e1b58751eae3c32507133908b156",
+    "pilot": "c66da50855de238c2231375b60dd348bee7b4c5596383ac4d8c7564569451474",
+    "qualification": "b502f9c22058a590218f5b0da5de1127626dcf36d78210b0521a25c2f2739c0e"
+  },
+  "formal_access_before_freeze": 0,
+  "schema_version": 1,
+  "split_by_source_episode": true
+}

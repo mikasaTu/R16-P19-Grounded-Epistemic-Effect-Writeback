@@ -1,0 +1,14 @@
+{
+  "cuda_visible_devices": null,
+  "gid": 2254,
+  "openpi_commit": "54cbaee6ae0c010a1ed431871cdaa8f4684ac709",
+  "platform": "Linux-5.10.134-013.9.kangaroo.al8.x86_64-x86_64-with-glibc2.35",
+  "protected_memory_sha256": "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5",
+  "python": "3.11.11",
+  "qpilots_commit": "eacf47b981e3b22357f8a74902f8dad8cfcfa375",
+  "schema_version": 1,
+  "source_commit": "acd45410ad6c09435ce5d8d748068eb183b1f41e",
+  "source_tree": "87e5be158218123e781c003cac2a44f2329997df",
+  "uid": 2254,
+  "verifier_checkpoint_sha256": "edba3ff23ae71c5768760af161b601b3d1a9f65d37d1ddeb8304b2510e938005"
+}

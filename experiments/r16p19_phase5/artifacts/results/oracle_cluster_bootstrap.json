@@ -1,0 +1,12 @@
+{
+  "ci95": [
+    0.30416666666666664,
+    0.325
+  ],
+  "clusters": 120,
+  "left": "M3_ASCEL_CORE",
+  "replicates": 10000,
+  "right": "M0_TYPED_MATCHED",
+  "risk_difference": 0.3152777777777778,
+  "seed": 5019
+}

@@ -1,0 +1,28 @@
+{
+  "cascade_precision": 1.0,
+  "cascade_recall": 1.0,
+  "gates": {
+    "cascade_precision_ge_0_95": true,
+    "cascade_recall_ge_0_95": true,
+    "ci_lower_gt_zero": true,
+    "clean_degradation_le_0_02": true,
+    "margin_ge_0_05": true,
+    "over_invalidation_le_0_05": true,
+    "systems_pass": true,
+    "under_invalidation_le_0_05": true
+  },
+  "paired_bootstrap": {
+    "ci95": [
+      0.25,
+      0.25
+    ],
+    "clusters": 60,
+    "left": "M4_ASCEL_FULL",
+    "replicates": 10000,
+    "right": "M3_ASCEL_CORE",
+    "risk_difference": 0.25,
+    "seed": 5019
+  },
+  "pass": true,
+  "schema_version": 1
+}

@@ -1,0 +1,11 @@
+{
+  "backend_errors": 0,
+  "rows": 960,
+  "schema_version": 1,
+  "success_rate": {
+    "M0_TYPED_MATCHED": 1.0,
+    "M1_VERSIONED_POSTCHECK": 1.0,
+    "M3_ASCEL_CORE": 0.75,
+    "M4_ASCEL_FULL": 1.0
+  }
+}

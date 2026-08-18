@@ -1,0 +1,8 @@
+{
+  "all_fields_exact": true,
+  "arm_rows": 5000,
+  "forced_identical_replays_per_unit": 5,
+  "mismatched_units": 0,
+  "schema_version": 1,
+  "units": 1000
+}

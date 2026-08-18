@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "successful_core_job": {
+    "job_id": "dlcmc75e2yprmtto",
+    "run_id": "r16p19-phase5-idle-fixed-20260818-0855",
+    "hardware": "1 worker x 8 A800",
+    "resource_pool": "idle-a800",
+    "gmt_running_time": "2026-08-18T00:53:54Z",
+    "gmt_finish_time": "2026-08-18T01:27:05Z",
+    "terminal_status": "StoppedByUser after all PAI matrices persisted and repeated spot preemption during non-model postprocessing",
+    "pai_source_commit": "acd45410ad6c09435ce5d8d748068eb183b1f41e",
+    "pai_source_tree": "87e5be158218123e781c003cac2a44f2329997df",
+    "launcher_sha256": "bdd6b581dbb18c85692945d9df22c063805c5ff4539c55690185c81f0857e4c9",
+    "worker_uid": 2254,
+    "worker_gid": 2254,
+    "spot_worker_restarts": 2,
+    "completed_before_first_preemption": {
+      "trajectories": 525,
+      "oracle_rows": 4200,
+      "learned_rows": 1680,
+      "support_rows": 960,
+      "ablation_rows": 1560,
+      "shared_prefix_rows": 5000
+    }
+  },
+  "postprocessing": {
+    "location": "development CPU",
+    "model_training": false,
+    "model_inference": false,
+    "scope": ["paired statistics", "video export", "report generation", "checksums"],
+    "source_commit_after_repairs": "0894f51"
+  },
+  "raw_rollouts": {
+    "cpfs_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes",
+    "npz_count": 525,
+    "summary_count": 525,
+    "sha256_manifest": "raw_rollout_sha256.txt"
+  },
+  "superseded_attempts": [
+    {
+      "job_id": "dlc121hx56bcgj11",
+      "run_id": "r16p19-phase5-20260818-0132",
+      "result": "idle environment preparation rollback; no scientific payload"
+    },
+    {
+      "job_id": "dlc8nv3m2eheix7t",
+      "run_id": "r16p19-phase5-dedicated-20260818-0335",
+      "result": "stopped while queued; no GmtRunningTime"
+    },
+    {
+      "job_id": "dlc1hmkzka28hh9x",
+      "run_id": "r16p19-phase5-dedicated-20260818-0442",
+      "result": "stopped while queued after launcher environment bug was identified; no GmtRunningTime"
+    },
+    {
+      "job_id": "dlc11bflsaq4jtp7",
+      "run_id": "r16p19-phase5-idle-retry-20260818-0838",
+      "result": "launcher expected ARTIFACT_DIR/RUN_ID absent from sanitized registry environment; no scientific payload"
+    }
+  ],
+  "credentials_archived": false
+}

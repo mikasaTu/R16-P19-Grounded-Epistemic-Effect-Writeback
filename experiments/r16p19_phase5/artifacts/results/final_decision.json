@@ -1,0 +1,9 @@
+{
+  "all_planned_matrices_completed": true,
+  "diagnostic_continuation_used": true,
+  "learned_core_pass": false,
+  "oracle_core_pass": true,
+  "schema_version": 1,
+  "status": "BLOCKED_BY_VERIFIER",
+  "support_full_pass": true
+}

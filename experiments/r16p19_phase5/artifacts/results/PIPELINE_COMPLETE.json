@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "all_planned_matrices_completed": true,
+  "formal": {
+    "learned_formal_rows": 1680,
+    "oracle_formal_rows": 4200,
+    "oracle_pilot_rows": 525,
+    "natural_audit_rollouts": 210,
+    "policy_qualification_pass": true,
+    "shared_prefix_pass": true
+  },
+  "support": {
+    "rows": 960,
+    "backend_errors": 0
+  },
+  "video_evidence": {
+    "manifest_rows": 4200,
+    "unique_videos": 240
+  },
+  "decision": {
+    "status": "BLOCKED_BY_VERIFIER",
+    "oracle_core_pass": true,
+    "learned_core_pass": false,
+    "support_full_pass": true
+  },
+  "postprocessing": "dev_cpu_after_pai_spot_preemption",
+  "pai_core_matrices_complete_before_preemption": true
+}

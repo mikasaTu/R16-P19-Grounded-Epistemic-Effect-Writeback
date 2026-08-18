@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "scope": [
+    "paired_statistics",
+    "video_export",
+    "human_report",
+    "checksums"
+  ],
+  "training_performed": false,
+  "model_inference_performed": false,
+  "input_matrices_from_pai": true,
+  "status": "complete"
+}

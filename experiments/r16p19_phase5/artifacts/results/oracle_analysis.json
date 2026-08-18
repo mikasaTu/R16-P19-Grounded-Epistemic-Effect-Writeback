@@ -1,0 +1,50 @@
+{
+  "clean_degradation": 0.0,
+  "clean_extra_steps_fraction": 0.0,
+  "false_grounded_advance": {
+    "M0_TYPED_MATCHED": 0.3333333333333333,
+    "M3_ASCEL_CORE": 0.0,
+    "relative_reduction": 1.0
+  },
+  "faulted_success": {
+    "M0_TYPED_MATCHED": 0.6333333333333333,
+    "M1_VERSIONED_POSTCHECK": 0.475,
+    "M2_B6_FROZEN": 0.6319444444444444,
+    "M3_ASCEL_CORE": 0.9486111111111111
+  },
+  "gates": {
+    "a5_false_credit_le_0_05": true,
+    "a5_truth_recognition_ge_0_95": true,
+    "ci_lower_gt_zero": true,
+    "clean_degradation_le_0_02": true,
+    "clean_extra_steps_le_0_10": true,
+    "cross_attempt_acceptance_zero": true,
+    "false_advance_relative_reduction_ge_0_5": true,
+    "late_witness_acceptance_zero": true,
+    "remaining_degradation_le_0_02": true,
+    "stale_acceptance_zero": true,
+    "success_margin_ge_0_08": true,
+    "systems_pass": true,
+    "two_tasks_positive": true
+  },
+  "paired_bootstrap": {
+    "ci95": [
+      0.30416666666666664,
+      0.325
+    ],
+    "clusters": 120,
+    "left": "M3_ASCEL_CORE",
+    "replicates": 10000,
+    "right": "M0_TYPED_MATCHED",
+    "risk_difference": 0.3152777777777778,
+    "seed": 5019
+  },
+  "pass": true,
+  "per_task_risk_difference": {
+    "0": 0.30833333333333335,
+    "5": 0.33333333333333337,
+    "9": 0.3041666666666667
+  },
+  "schema_version": 1,
+  "strongest_baseline": "M0_TYPED_MATCHED"
+}

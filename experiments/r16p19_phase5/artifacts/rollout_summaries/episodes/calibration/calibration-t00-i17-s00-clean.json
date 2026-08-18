@@ -1,0 +1,17 @@
+{
+  "action_steps": 271,
+  "backend_errors": 0,
+  "chunks": 55,
+  "complete": true,
+  "episode_id": "calibration-t00-i17-s00-clean",
+  "init_index": 17,
+  "policy_inference_count": 55,
+  "policy_latency_ms_mean": 95.48638916015625,
+  "policy_seed": 0,
+  "split": "calibration",
+  "success": true,
+  "task_id": 0,
+  "trajectory_sha256": "33dd820c07f2a6b3ce9dbcc9f1df11dc5930c6728a918c503ab21f697c27ff40",
+  "variant": "clean",
+  "wall_seconds": 11.576265573501587
+}

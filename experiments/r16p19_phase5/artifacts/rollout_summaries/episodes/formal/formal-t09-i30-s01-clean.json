@@ -1,0 +1,17 @@
+{
+  "action_steps": 288,
+  "backend_errors": 0,
+  "chunks": 58,
+  "complete": true,
+  "episode_id": "formal-t09-i30-s01-clean",
+  "init_index": 30,
+  "policy_inference_count": 58,
+  "policy_latency_ms_mean": 93.2951431274414,
+  "policy_seed": 1,
+  "split": "formal",
+  "success": true,
+  "task_id": 9,
+  "trajectory_sha256": "0eea9d29ffa6951f01b02f524de8a920c3e0a2bf1f3121664023a9979abface1",
+  "variant": "clean",
+  "wall_seconds": 11.294199466705322
+}

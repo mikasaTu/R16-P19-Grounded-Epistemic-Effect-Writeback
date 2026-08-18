@@ -1,0 +1,6 @@
+{
+  "events": 100000,
+  "hot_memory_mb": 0.010122299194335938,
+  "limit_mb": 10.0,
+  "schema_version": 1
+}

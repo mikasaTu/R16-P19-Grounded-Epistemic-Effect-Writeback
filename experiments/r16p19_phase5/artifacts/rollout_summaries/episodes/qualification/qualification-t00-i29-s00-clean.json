@@ -1,0 +1,17 @@
+{
+  "action_steps": 271,
+  "backend_errors": 0,
+  "chunks": 55,
+  "complete": true,
+  "episode_id": "qualification-t00-i29-s00-clean",
+  "init_index": 29,
+  "policy_inference_count": 55,
+  "policy_latency_ms_mean": 103.90271759033203,
+  "policy_seed": 0,
+  "split": "qualification",
+  "success": true,
+  "task_id": 0,
+  "trajectory_sha256": "5cc7143e2973cf4eb30e5380c3517b8714ea2072d0361fbe2c9bcbef7b02ef79",
+  "variant": "clean",
+  "wall_seconds": 32.147761821746826
+}

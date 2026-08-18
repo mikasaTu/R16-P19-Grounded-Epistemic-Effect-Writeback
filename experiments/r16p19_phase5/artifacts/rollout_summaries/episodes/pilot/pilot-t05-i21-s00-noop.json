@@ -1,0 +1,17 @@
+{
+  "action_steps": 172,
+  "backend_errors": 0,
+  "chunks": 35,
+  "complete": true,
+  "episode_id": "pilot-t05-i21-s00-noop",
+  "init_index": 21,
+  "policy_inference_count": 35,
+  "policy_latency_ms_mean": 92.53168487548828,
+  "policy_seed": 0,
+  "split": "pilot",
+  "success": true,
+  "task_id": 5,
+  "trajectory_sha256": "751ee7c7e1ef891dac89c23419a92fc0f5381541b4ebcc84680feee1550ea66c",
+  "variant": "noop",
+  "wall_seconds": 6.514019012451172
+}

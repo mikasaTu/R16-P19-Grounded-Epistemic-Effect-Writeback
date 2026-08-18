@@ -1,0 +1,9 @@
+{
+  "learned_formal_rows": 1680,
+  "natural_audit_rollouts": 210,
+  "oracle_formal_rows": 4200,
+  "oracle_pilot_rows": 525,
+  "policy_qualification_pass": true,
+  "schema_version": 1,
+  "shared_prefix_pass": true
+}

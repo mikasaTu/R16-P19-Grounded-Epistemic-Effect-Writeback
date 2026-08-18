@@ -1,0 +1,31 @@
+{
+  "pass": true,
+  "policy": "official_openpi_pi05_libero_frozen",
+  "schema_version": 1,
+  "tasks": {
+    "0": {
+      "backend_errors": 0,
+      "episodes": 10,
+      "loop_rate": 0.0,
+      "minimum_effect_success": 1.0,
+      "pass": true,
+      "success_rate": 1.0
+    },
+    "5": {
+      "backend_errors": 0,
+      "episodes": 10,
+      "loop_rate": 0.0,
+      "minimum_effect_success": 1.0,
+      "pass": true,
+      "success_rate": 1.0
+    },
+    "9": {
+      "backend_errors": 0,
+      "episodes": 10,
+      "loop_rate": 0.0,
+      "minimum_effect_success": 0.9,
+      "pass": true,
+      "success_rate": 0.9
+    }
+  }
+}

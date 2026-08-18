@@ -1,13 +1,21 @@
 # R16-P19 Grounded Epistemic Effect Writeback
 
-This repository contains the complete Phase-1 through Phase-4 validation bundle for
+This repository contains the complete Phase-1 through Phase-5 validation bundle for
 Grounded Epistemic Effect Writeback: frozen protocols, implementations, tests, raw
 results, paired audits, mechanism diagnoses, and reports. Phase-1 through Phase-3 use
 two frozen official LIBERO-10 tasks; Phase-4 is an isolated Linux CPU MuJoCo
-microbenchmark for the narrower Attempt-Scoped Causal Effect Ledger (ASCEL).
+microbenchmark for the narrower Attempt-Scoped Causal Effect Ledger (ASCEL); Phase-5
+bridges bounded ASCEL to three official LIBERO-10 tasks with frozen π0.5.
 
-The latest machine-readable terminal status remains **`BLOCKED_BY_IMPLEMENTATION`**.
-In Phase-4 all three functional ASCEL components passed, but M4's clean C0 event
+The latest machine-readable terminal status is **`BLOCKED_BY_VERIFIER`**. Phase-5
+completed every preregistered matrix. Oracle ASCEL Core improved faulted success over
+the strongest baseline by +0.3153 (clustered 95% CI `[0.3042, 0.3250]`), while the
+learned verifier failed qualification and retained 0.0 of that gain. The support graph
+branch passed (+0.25, CI `[0.25, 0.25]`). This is bounded embodied evidence for the
+oracle ledger mechanism, not evidence of an end-to-end learned VLA improvement.
+
+Phase-4 remains independently **`BLOCKED_BY_IMPLEMENTATION`**. In that phase all
+three functional ASCEL components passed, but M4's clean C0 event
 processing latency was 816,234 ns versus 395,884 ns for M0 (+106.18%), violating the
 frozen +10% clean-overhead gate. Clean success and physical action steps did not
 degrade. This does not overwrite Phase-3, which independently failed both the qualification replay and formal
@@ -24,6 +32,25 @@ their frozen action hashes matched. The experiment therefore supports no B6
 incremental-value, VLA, benchmark-generalization, or paper-level mechanism
 claim. Phase-2 `BLOCKED_BY_EXECUTOR_V3`, Phase-1B `BLOCKED_BY_ACTOR`, and
 Phase-1 trace-level PASS remain predecessor evidence.
+
+## Phase-5 headline results
+
+| Phase-5 item | Result | Key evidence |
+|---|---:|---|
+| Bounded ledger | PASS | 100,000 events; 0 reference mismatches; 0 audit breaks; event P99 0.0528 ms |
+| Frozen π0.5 qualification | PASS | task 0/5/9 success 1.0 / 1.0 / 0.9; backend errors 0 |
+| Real trajectories | COMPLETE | 525 episodes; 240 formal shared trajectories; 240 GIFs |
+| Shared-prefix audit | PASS | 1,000 units; 5,000 arm rows; 0 mismatches |
+| Oracle Core | PASS | +0.3153 over M0; 95% CI `[0.3042,0.3250]` |
+| Learned verifier | FAIL | selected MLP not qualified; min per-effect TPR 0; learned gain 0 |
+| Support graph | PASS | Full-Core +0.25; precision/recall 1.0/1.0 |
+| All matrices after failed gate | COMPLETE | 4,200 oracle + 1,680 learned + 960 support + 1,560 ablation rows |
+| Overall | `BLOCKED_BY_VERIFIER` | diagnostic continuation used; no VLA improvement claim |
+
+The complete Phase-5 report is
+[EXPERIMENT_REPORT_ZH.md](experiments/r16p19_phase5/artifacts/results/EXPERIMENT_REPORT_ZH.md),
+with compact artifacts and execution provenance under
+[artifacts](experiments/r16p19_phase5/artifacts/README.md).
 
 ## Phase-4 headline results
 
@@ -210,11 +237,13 @@ other than itself):
 (cd experiments/r16p19_libero_phase3 && sha256sum -c SHA256SUMS)
 (cd experiments/r16p19_libero_phase3 && sha256sum -c BUNDLE_SHA256SUMS)
 (cd experiments/r16p19_phase4 && sha256sum -c SHA256SUMS)
+(cd experiments/r16p19_phase5/artifacts/results && sha256sum -c SHA256SUMS)
+(cd docs/feishu/experiment_planning && sha256sum -c SHA256SUMS)
 ```
 
 ## Related records
 
-- Feishu `step1`–`step5` plans and experiment-report Markdown archive:
+- Feishu `step1`–`step6` plans and experiment-report Markdown archive:
   [docs/feishu/experiment_planning](docs/feishu/experiment_planning/README.md)
 - Original idea and planning document:
   [Feishu wiki](https://icnbwz7kd1ui.feishu.cn/wiki/AfN7wFfFWi7dBOkBBtucoroanff)
@@ -230,6 +259,10 @@ other than itself):
   [step5](https://icnbwz7kd1ui.feishu.cn/wiki/FmOdwwSFaipjcNkndMicAmlOngI)
 - Phase-4 step5 experiment report:
   [实验报告](https://icnbwz7kd1ui.feishu.cn/wiki/Yv8Uw45hAijFGvkZYW8cBYEvnlf)
+- Phase-5 step6 plan:
+  [step6](https://icnbwz7kd1ui.feishu.cn/wiki/Y3Nlwy8SNi9nVTkFtIzcVDUNnlb)
+- Phase-5 step6 experiment report:
+  [实验报告](https://icnbwz7kd1ui.feishu.cn/wiki/IXb8wgpmfiRRh8kfwZjcXVT3nKc)
 - Phase-1 Feishu experiment report:
   [实验报告](https://icnbwz7kd1ui.feishu.cn/wiki/Wr28wjd1aivlpLkU0ovcDTWdnWf)
 - Original Step-1 protocol:

@@ -1,0 +1,20 @@
+{
+  "attempts": 10000,
+  "audit_chain_breaks": 0,
+  "audit_summary": {
+    "accepted_counts": {
+      "false": 58582,
+      "true": 45790
+    },
+    "chain_head": "f3aa33e4af7a664a01cbd5f12a51590dda192db019ed235441ad1856533d2fa6",
+    "event_count": 104372,
+    "kind_counts": {
+      "RECEIPT": 89073,
+      "REQUEST": 10000,
+      "REVOKE": 5299
+    }
+  },
+  "events": 100000,
+  "exact_reference_mismatches": 0,
+  "schema_version": 1
+}

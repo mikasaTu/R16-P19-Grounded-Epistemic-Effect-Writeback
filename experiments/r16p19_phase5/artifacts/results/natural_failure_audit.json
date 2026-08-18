@@ -1,0 +1,28 @@
+{
+  "by_task": {
+    "0": {
+      "failures": 3,
+      "rollouts": 70
+    },
+    "5": {
+      "failures": 2,
+      "rollouts": 70
+    },
+    "9": {
+      "failures": 4,
+      "rollouts": 70
+    }
+  },
+  "failure_rate": 0.04285714285714286,
+  "failure_taxonomy": {
+    "timeout_or_incomplete_goal": 9
+  },
+  "failures": 9,
+  "frozen_prior": {
+    "empirical_failure": 0.04285714285714286,
+    "uniform": 1.0
+  },
+  "rollouts": 210,
+  "schema_version": 1,
+  "successes": 201
+}

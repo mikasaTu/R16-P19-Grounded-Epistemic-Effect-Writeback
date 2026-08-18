@@ -1,0 +1,22 @@
+{
+  "conditions_by_ablation": {
+    "NO_ATTEMPT_SCOPE": [
+      "A1_NOOP_RETRY_STALE",
+      "A2_CROSS_ATTEMPT_MIX"
+    ],
+    "NO_PRE_REALIZATION_REVOCATION": [
+      "A3_CONTRADICTION_LATE_WITNESS",
+      "A4_POST_REALIZATION_REVERSAL"
+    ],
+    "NO_SUPPORT_GRAPH": [
+      "S1_LIVE_SUPPORT_INVALIDATED",
+      "S2_DISCHARGED_SUPPORT_REMOVED",
+      "S3_ALTERNATIVE_SUPPORT_REMOVED"
+    ],
+    "NO_TRUTH_CREDIT_SPLIT": [
+      "A5_EXTERNAL_REALIZATION"
+    ]
+  },
+  "rows": 1560,
+  "schema_version": 1
+}

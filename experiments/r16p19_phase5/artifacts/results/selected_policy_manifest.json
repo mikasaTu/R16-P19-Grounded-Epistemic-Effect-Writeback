@@ -1,0 +1,43 @@
+{
+  "checkpoint_contract": {
+    "checkpoint": {
+      "files": {
+        "assets/physical-intelligence/libero/norm_stats.json": {
+          "bytes": 1914,
+          "sha256": "b3a44bb2810436fb62917decaea58bd4d9110255df527dea21e8fd40c960bd84"
+        },
+        "params/_METADATA": {
+          "bytes": 23493,
+          "sha256": "303a4e354814928e1d29b75e310f2c1ac7e7e29b62f48395b631045ca1cffc73"
+        },
+        "params/_sharding": {
+          "bytes": 17952,
+          "sha256": "63f4c57ba6ff10f4132a639b9942eabcc26942eb34081be1d93bf7ddab816501"
+        },
+        "params/manifest.ocdbt": {
+          "bytes": 120,
+          "sha256": "65246951e69bd2b5118e609646bc9e8c439229bccbc1325643833aeb74f77104"
+        }
+      },
+      "root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/cache/openpi/r16p15/openpi-assets/checkpoints/pi05_libero"
+    },
+    "contract": {
+      "action_dim": 32,
+      "action_horizon": 10,
+      "config_name": "pi05_libero",
+      "contract_id": "pi05_libero_openpi_54cbaee6_token200_h10_state8_action32to7_v1",
+      "discrete_state_input": false,
+      "extra_delta_transform": false,
+      "max_token_len": 200,
+      "openpi_module": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/QPILOTS-r16p15-stage1-task64-20260812/third_party/openpi/src/openpi/__init__.py",
+      "physical_action_dim": 7,
+      "prompt_from_task": true,
+      "state_dim": 8
+    },
+    "ready": true
+  },
+  "checkpoint_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/cache/openpi/r16p15/openpi-assets/checkpoints/pi05_libero",
+  "implementation": "official_openpi_pi05_libero",
+  "policy_training": false,
+  "schema_version": 1
+}

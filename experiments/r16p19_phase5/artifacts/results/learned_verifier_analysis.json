@@ -1,0 +1,29 @@
+{
+  "baseline": "M0_TYPED_MATCHED",
+  "gates": {
+    "ci_lower_gt_zero": false,
+    "clean_degradation_le_0_02": true,
+    "false_advance_le_0_05": true,
+    "false_credit_le_0_05": true,
+    "margin_ge_0_05": false,
+    "oracle_direction_consistent": false,
+    "oracle_gain_retained_ge_0_5": false,
+    "systems_pass": true,
+    "verifier_qualified": false
+  },
+  "oracle_absolute_gain_retained": 0.0,
+  "paired_bootstrap": {
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "clusters": 120,
+    "left": "M3_ASCEL_CORE",
+    "replicates": 10000,
+    "right": "M0_TYPED_MATCHED",
+    "risk_difference": 0.0,
+    "seed": 5019
+  },
+  "pass": false,
+  "schema_version": 1
+}

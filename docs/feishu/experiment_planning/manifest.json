@@ -3,7 +3,7 @@
   "source_space_id": "7599097990090853600",
   "source_parent_node_token": "APSlwVZqIi9Evlk3uIVcFy0wn3c",
   "source_parent_url": "https://icnbwz7kd1ui.feishu.cn/wiki/APSlwVZqIi9Evlk3uIVcFy0wn3c",
-  "exported_at_utc": "2026-08-17T12:03:57.593Z",
+  "exported_at_utc": "2026-08-18T01:35:07.314Z",
   "format": "markdown",
   "normalization": "Leading Feishu <title> wrapper converted to Markdown H1; trailing whitespace and EOF newlines normalized; textual content otherwise preserved.",
   "documents": [
@@ -106,6 +106,26 @@
       "revision_id": 5,
       "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/Yv8Uw45hAijFGvkZYW8cBYEvnlf",
       "repository_path": "docs/feishu/experiment_planning/step5/experiment_report.md"
+    },
+    {
+      "step": "step6",
+      "kind": "plan",
+      "source_title": "step6",
+      "node_token": "Y3Nlwy8SNi9nVTkFtIzcVDUNnlb",
+      "obj_token": "DklOdA4f2oyHopxDge7cnXl6npc",
+      "revision_id": 2,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/Y3Nlwy8SNi9nVTkFtIzcVDUNnlb",
+      "repository_path": "docs/feishu/experiment_planning/step6/plan.md"
+    },
+    {
+      "step": "step6",
+      "kind": "report",
+      "source_title": "实验报告",
+      "node_token": "IXb8wgpmfiRRh8kfwZjcXVT3nKc",
+      "obj_token": "Vd0ldK49eoudcAx2avZcb4mZnHc",
+      "revision_id": 4,
+      "source_url": "https://icnbwz7kd1ui.feishu.cn/wiki/IXb8wgpmfiRRh8kfwZjcXVT3nKc",
+      "repository_path": "docs/feishu/experiment_planning/step6/experiment_report.md"
     }
   ]
 }
