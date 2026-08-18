@@ -49,6 +49,10 @@ def run(root: Path) -> None:
         lines.append(f"- `{name}`：target-error 增量={row['target_error_increase']:.4f}，对应优势移除比例={row['advantage_removed_fraction']:.4f}，支持该机制归因={row['supports_mechanism']}。")
     lines += [
         "",
+        f"learned 分支的 0 增益来自 verifier 门控而不是 ASCEL ledger 退化：选中的 small MLP threshold={verifier['models']['small_mlp']['threshold']:.4f}，qualification min TPR={verifier['models']['small_mlp']['min_tpr']:.4f}。`phase5_formal_runner.py` 对一条 receipt 使用 `np.all(scores >= threshold)`；任一 effect 漏检就整体不承认真实完成，因此 Core 与 baseline 同时不能推进，formal 风险差精确为 0。该结论与 oracle Core 的正向结果并存，最终按预注册优先级记为 `BLOCKED_BY_VERIFIER`。",
+        "",
+        "`NO_TRUTH_CREDIT_SPLIT` 的零消融效应有指标边界：本轮 `target_error` 只统计 false advance，A5 的 task success 也没有因 `active_attempt_credit` 单独扣分；因此它只能说明选定 outcome 对 credit 字段不敏感，不能证明 truth 与 credit 在代码语义上等价。",
+        "",
         "代码路径上，attempt scope 在 `phase5_ledger_live.py` 的 active-attempt/command 检查处拒绝 stale 与 cross-attempt receipt；pre-realization revocation 通过 revocation epoch 使旧 witness 不再复活事实；truth-credit split 允许 external realization 更新物理事实但不把成功计给 active skill；support graph 只递归失效新近失去全部有效 clause 的 proof，并保留 alternative branch 或已 discharge 的结果。",
         "",
         "## 证据边界",

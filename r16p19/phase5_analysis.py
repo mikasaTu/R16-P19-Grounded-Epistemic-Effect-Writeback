@@ -179,7 +179,7 @@ def analyze(output: Path, bounded_path: Path, rollout_root: Path, oracle_path: P
         status = "PASS_PHASE5_ASCEL_CORE_EMBODIED"
     else:
         status = "NARROW_TO_ASCEL_CORE"
-    decision = {"schema_version": 1, "status": status, "oracle_core_pass": oracle_analysis["pass"], "learned_core_pass": learned_analysis["pass"], "support_full_pass": support_analysis["pass"], "diagnostic_continuation_used": not (bounded["pass"] and qualification["pass"] and pairing["all_fields_exact"] and oracle_analysis["pass"]), "all_planned_matrices_completed": True}
+    decision = {"schema_version": 1, "status": status, "oracle_core_pass": oracle_analysis["pass"], "learned_core_pass": learned_analysis["pass"], "support_full_pass": support_analysis["pass"], "diagnostic_continuation_used": not (bounded["pass"] and qualification["pass"] and pairing["all_fields_exact"] and oracle_analysis["pass"] and verifier["selected_qualified"] and learned_analysis["pass"]), "all_planned_matrices_completed": True}
     (output / "final_decision.json").write_text(json.dumps(decision, indent=2, sort_keys=True) + "\n")
     return decision
 
