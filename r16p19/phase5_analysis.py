@@ -88,8 +88,8 @@ def analyze(output: Path, bounded_path: Path, rollout_root: Path, oracle_path: P
     clean_m3 = [row for row in m3 if row["condition"] == "C0_CLEAN"]
     clean_base = [row for row in base if row["condition"] == "C0_CLEAN"]
     clean_degradation = rate(clean_base, "task_success") - rate(clean_m3, "task_success")
-    base_steps = np.mean([row["action_steps"] for row in clean_base])
-    clean_extra_steps = (np.mean([row["action_steps"] for row in clean_m3]) - base_steps) / max(base_steps, 1.0)
+    base_steps = float(np.mean([row["action_steps"] for row in clean_base]))
+    clean_extra_steps = float((np.mean([row["action_steps"] for row in clean_m3]) - base_steps) / max(base_steps, 1.0))
     policy_latencies = []
     for path in (rollout_root / "episodes").glob("*/*.npz"):
         with np.load(path, allow_pickle=False) as data:
