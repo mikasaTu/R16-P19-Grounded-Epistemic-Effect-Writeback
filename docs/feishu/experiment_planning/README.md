@@ -1,9 +1,9 @@
 # Feishu experiment-planning archive
 
-This directory mirrors the six plans and their experiment reports under the R16-P19 Feishu wiki's **实验规划** node.
+This directory mirrors the seven plans and their experiment reports under the R16-P19 Feishu wiki's **实验规划** node.
 
 - Source: https://icnbwz7kd1ui.feishu.cn/wiki/APSlwVZqIi9Evlk3uIVcFy0wn3c
-- Exported at: `2026-08-18T01:35:07.314Z`
+- Exported at: `2026-09-02T11:59:24.838Z`
 - Format: GitHub-friendly Markdown. The leading Feishu `<title>` wrapper was converted to an H1; trailing whitespace and EOF newlines were normalized.
 - Provenance: see [manifest.json](manifest.json) for source node/object tokens and revisions.
 - Integrity: verify the exported files with `sha256sum -c SHA256SUMS` from this directory.
@@ -16,3 +16,4 @@ This directory mirrors the six plans and their experiment reports under the R16-
 | Step 4 | [plan](step4/plan.md) | [report](step4/experiment_report.md) | [source](https://icnbwz7kd1ui.feishu.cn/wiki/SqxXwnTIFiistlk1bOrcprPWnmb) | [source](https://icnbwz7kd1ui.feishu.cn/wiki/DvI3wxPQ7ixoSdkA9kncspgdnUc) |
 | Step 5 | [plan](step5/plan.md) | [report](step5/experiment_report.md) | [source](https://icnbwz7kd1ui.feishu.cn/wiki/FmOdwwSFaipjcNkndMicAmlOngI) | [source](https://icnbwz7kd1ui.feishu.cn/wiki/Yv8Uw45hAijFGvkZYW8cBYEvnlf) |
 | Step 6 | [plan](step6/plan.md) | [report](step6/experiment_report.md) | [source](https://icnbwz7kd1ui.feishu.cn/wiki/Y3Nlwy8SNi9nVTkFtIzcVDUNnlb) | [source](https://icnbwz7kd1ui.feishu.cn/wiki/IXb8wgpmfiRRh8kfwZjcXVT3nKc) |
+| Step 7 | [plan](step7/plan.md) | [report](step7/experiment_report.md) | [source](https://icnbwz7kd1ui.feishu.cn/wiki/CvGcwqsrKibDfDkY7ywcA2mMnCg) | [source](https://icnbwz7kd1ui.feishu.cn/wiki/JBk1wL8MUirGFvkMI2Pc2jGjnwd) |
