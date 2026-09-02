@@ -1,0 +1,232 @@
+{
+  "checkpoint_recompute_feasible": true,
+  "checkpoint_recompute_inputs": [
+    "verifier_checkpoint.npz",
+    "frozen episode NPZ base_rgb_32/wrist_rgb_32/proprio/contact_count/predicate_values",
+    "frozen episode JSON task_id/chunks/episode_id",
+    "phase5 feature construction and predictor code"
+  ],
+  "phase5_read_only": true,
+  "raw_effect_scores_saved": true,
+  "required_files": [
+    {
+      "fields": [
+        "b1",
+        "b2",
+        "calibration_bias",
+        "calibration_scale",
+        "mean",
+        "model_type",
+        "std",
+        "threshold",
+        "w1",
+        "w2"
+      ],
+      "lines": null,
+      "path": "experiments/r16p19_phase5/artifacts/results/verifier_checkpoint.npz",
+      "sha256": "edba3ff23ae71c5768760af161b601b3d1a9f65d37d1ddeb8304b2510e938005"
+    },
+    {
+      "fields": [
+        "calibration_samples",
+        "formal_samples_accessed",
+        "models",
+        "qualification_samples",
+        "schema_version",
+        "selected",
+        "selected_qualified",
+        "training_samples"
+      ],
+      "lines": 207,
+      "path": "experiments/r16p19_phase5/artifacts/results/verifier_checkpoint.metrics.json",
+      "sha256": "495589fdf47f3909debfdd7d8a8aa7586759c85e17d12fc88b5c5118fae22463"
+    },
+    {
+      "fields": [
+        "arm",
+        "clean_degradation",
+        "cluster_id",
+        "condition",
+        "effect_truth_recognized",
+        "false_current_attempt_credit",
+        "false_grounded_advance",
+        "formal_init",
+        "policy_seed",
+        "task_id",
+        "task_success",
+        "threshold",
+        "trajectory_sha256",
+        "verifier",
+        "verifier_scores"
+      ],
+      "lines": 1680,
+      "path": "experiments/r16p19_phase5/artifacts/results/learned_verifier_formal_results.jsonl",
+      "sha256": "7cd40fbd6ff84e6db49e5527b90b67e26f55dcbeca8e0b3013ffa28fca30d999"
+    },
+    {
+      "fields": [
+        "action_steps",
+        "active_attempt_credit",
+        "arm",
+        "backend_errors",
+        "clean_degradation",
+        "cluster_id",
+        "condition",
+        "cross_attempt_acceptance",
+        "effect_truth_recognized",
+        "false_current_attempt_credit",
+        "false_grounded_advance",
+        "first_divergence",
+        "formal_init",
+        "late_witness_acceptance",
+        "physical_policy_success",
+        "policy_seed",
+        "recovery_success",
+        "semantic_event_count",
+        "stale_acceptance",
+        "task_id",
+        "task_success",
+        "trajectory_sha256"
+      ],
+      "lines": 4200,
+      "path": "experiments/r16p19_phase5/artifacts/results/oracle_formal_results.jsonl",
+      "sha256": "595337aef08cdc14bb9bcd410ec91196e0dfd94a6182e20a49dfb8a46b37e9be"
+    },
+    {
+      "fields": [
+        "action_steps",
+        "arm",
+        "backend_errors",
+        "cascade_false_negative",
+        "cascade_true_positive",
+        "cluster_id",
+        "condition",
+        "contact_count",
+        "formal_init",
+        "over_invalidation",
+        "policy_seed",
+        "prefix_sha256",
+        "recovery_executed",
+        "seed",
+        "task_id",
+        "task_success",
+        "under_invalidation"
+      ],
+      "lines": 960,
+      "path": "experiments/r16p19_phase5/artifacts/results/support_formal_results.jsonl",
+      "sha256": "747afaaad728a1a30f07bfcafbacdf1c602ed2592161857054320a86227f3208"
+    },
+    {
+      "fields": [
+        "counts",
+        "episode_id_set_sha256",
+        "formal_access_before_freeze",
+        "schema_version",
+        "split_by_source_episode"
+      ],
+      "lines": 19,
+      "path": "experiments/r16p19_phase5/artifacts/results/verifier_dataset_manifest.json",
+      "sha256": "b8be18283d9d149c0a78ac80883aea57d17520cc25ab53f698915ff380f2edf8"
+    },
+    {
+      "fields": [],
+      "lines": 22,
+      "path": "experiments/r16p19_phase5/task_selection_contract.yaml",
+      "sha256": "825979f9da9b3611bd35e6d3f160177f2073cd35e1c6e07cc5df30bc63331f72"
+    },
+    {
+      "fields": [],
+      "lines": 53,
+      "path": "experiments/r16p19_phase5/preregistration.yaml",
+      "sha256": "959477d10371a43855ab96416c2d36121141296ff9f20e75579400e559bbfd41"
+    },
+    {
+      "fields": [],
+      "lines": 525,
+      "path": "experiments/r16p19_phase5/artifacts/raw_rollout_sha256.txt",
+      "sha256": "63aa07a8cf6c7ae0cda5dd07f2dd92cd3baba84ae3ca79333743e38006121ce3"
+    }
+  ],
+  "row_counts": {
+    "learned": 1680,
+    "oracle": 4200,
+    "support": 960
+  },
+  "schema_version": 1,
+  "split_inventory": [
+    {
+      "episode_ids_sha256": "4170ddae092d24888efd5fe821216adee9f9f60d8fb442ee066ffd2bb059a952",
+      "json_count": 30,
+      "npz_count": 30,
+      "npz_fields": [
+        "action_sha256",
+        "base_rgb_32",
+        "contact_count",
+        "controller_state_sha256",
+        "done",
+        "executed_steps",
+        "forced_identical_terminal_state",
+        "initial_predicate_values",
+        "injected_noop",
+        "observation_sha256",
+        "pairing_qualified_unit",
+        "physics_state_sha256",
+        "policy_history_sha256",
+        "policy_latency_ms",
+        "policy_request_key",
+        "predicate_fraction",
+        "predicate_labels",
+        "predicate_values",
+        "prefix_controller_state_sha256",
+        "prefix_physics_state_sha256",
+        "prefix_rng_state_sha256",
+        "proprio",
+        "reward",
+        "rng_state_sha256",
+        "success",
+        "terminal_state_sha256",
+        "wrist_rgb_32"
+      ],
+      "npz_sha256s_sha256": "c3c96447ed59af5bc0db15c5361392d1e0f3d63359fd98cbb544c8af82f4075d",
+      "representative_npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i10-s00-clean.npz",
+      "split": "calibration"
+    },
+    {
+      "episode_ids_sha256": "f99da4d9eab51e5619268f76dcf93475075094bfd9cfe3de5ba027808a8600b9",
+      "json_count": 240,
+      "npz_count": 240,
+      "npz_fields": [
+        "action_sha256",
+        "base_rgb_32",
+        "contact_count",
+        "controller_state_sha256",
+        "done",
+        "executed_steps",
+        "forced_identical_terminal_state",
+        "initial_predicate_values",
+        "injected_noop",
+        "observation_sha256",
+        "pairing_qualified_unit",
+        "physics_state_sha256",
+        "policy_history_sha256",
+        "policy_latency_ms",
+        "policy_request_key",
+        "predicate_fraction",
+        "predicate_labels",
+        "predicate_values",
+        "prefix_controller_state_sha256",
+        "prefix_physics_state_sha256",
+        "prefix_rng_state_sha256",
+        "proprio",
+        "reward",
+        "rng_state_sha256",
+        "success",
+        "terminal_state_sha256",
+        "wrist_rgb_32"
+      ],
+      "npz_sha256s_sha256": "49622d2ba20f080469110995a40683a5c92c4a231b83a8dced725e63aa7776c1",
+      "representative_npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/formal/formal-t00-i30-s00-clean.npz",
+      "split": "formal"
+    }
+  ]
+}

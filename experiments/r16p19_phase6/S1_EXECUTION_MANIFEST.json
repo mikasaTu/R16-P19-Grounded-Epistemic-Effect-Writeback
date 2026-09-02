@@ -1,0 +1,16 @@
+{
+  "cpu_only": true,
+  "cuda_visible_devices": "",
+  "gpu_jobs_submitted": 0,
+  "pai_jobs_submitted": 0,
+  "phase5_modified": false,
+  "platform": "Linux-5.10.134-013.9.kangaroo.al8.x86_64-x86_64-with-glibc2.35",
+  "protected_memory_sha256": "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5",
+  "python": "3.10.19",
+  "raw_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts",
+  "repo_head_at_start": "b66f5139c33e2f75af1a7c9dc6df66adde39298e",
+  "s2_started": false,
+  "schema_version": 1,
+  "simulation_rollouts_executed": 0,
+  "stage": "Phase-6 S1 offline recalibration and replay"
+}

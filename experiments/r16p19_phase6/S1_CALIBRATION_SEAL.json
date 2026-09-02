@@ -1,0 +1,42 @@
+{
+  "calibration_json_sha256": "c50dd15cca4b0573a4c49daf3ea7efe81bb5d623ce2e814fb2fd57a254d873f7",
+  "formal_receipts_accessed_for_selection": 0,
+  "per_effect_thresholds": {
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.8282415866851807,
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.16626326739788055,
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.13262638449668884,
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9528886079788208,
+    "task9:effect1:close microwave_1": 0.10243265330791473
+  },
+  "schema_version": 1,
+  "selection_input_evidence_sha256": "43776fb09e6b05e51664048d6565523657a83cda38656cec13202abc5e24568b",
+  "selection_split": "calibration",
+  "weighted_soft_rule": {
+    "aggregation": "weighted_arithmetic_mean",
+    "calibration_false_upgrades": 0,
+    "calibration_min_effect_group_receipt_tpr": 0.0,
+    "calibration_receipt_tpr": 0.14285714285714285,
+    "receipt_threshold": 0.8764886915683746,
+    "selection_objective": [
+      "require false_upgrades=0",
+      "maximize min effect-group receipt TPR",
+      "maximize overall receipt TPR",
+      "prefer weights closest to one",
+      "prefer higher threshold"
+    ],
+    "weight_grid": [
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "weights": {
+      "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 1.0,
+      "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.25,
+      "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 1.0,
+      "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 1.0,
+      "task9:effect1:close microwave_1": 0.25
+    }
+  }
+}

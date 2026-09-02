@@ -1,11 +1,21 @@
 # R16-P19 Grounded Epistemic Effect Writeback
 
-This repository contains the complete Phase-1 through Phase-5 validation bundle for
+This repository contains the complete Phase-1 through Phase-5 validation bundle and
+the bounded Phase-6 S1 offline recalibration/replay result for
 Grounded Epistemic Effect Writeback: frozen protocols, implementations, tests, raw
 results, paired audits, mechanism diagnoses, and reports. Phase-1 through Phase-3 use
 two frozen official LIBERO-10 tasks; Phase-4 is an isolated Linux CPU MuJoCo
 microbenchmark for the narrower Attempt-Scoped Causal Effect Ledger (ASCEL); Phase-5
-bridges bounded ASCEL to three official LIBERO-10 tasks with frozen π0.5.
+bridges bounded ASCEL to three official LIBERO-10 tasks with frozen π0.5. Phase-6 S1
+uses the frozen Phase-5 checkpoint, features, scores, and outcomes without new rollout.
+
+The latest S1 gate is **`FAIL_G1`**. Phase-5's 1,680 learned rows reproduce exactly
+(0 mismatches). Per-effect calibration improves formal oracle agreement from 0.7333
+to 0.9571, but its minimum formal effect TPR is 0.8421 and it creates 8 false
+upgrades; the calibration-only weighted-soft rule also fails. This confirms that the
+global 0.9395 threshold plus conjunctive `np.all` caused much of the collapse, while
+showing that calibration-to-formal verifier reliability is still insufficient. S2
+was not started. See [the S1 report](experiments/r16p19_phase6/S1_EXPERIMENT_REPORT.md).
 
 The latest machine-readable terminal status is **`BLOCKED_BY_VERIFIER`**. Phase-5
 completed every preregistered matrix. Oracle ASCEL Core improved faulted success over

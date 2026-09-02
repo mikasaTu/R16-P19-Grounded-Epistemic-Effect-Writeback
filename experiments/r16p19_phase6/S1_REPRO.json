@@ -1,0 +1,10 @@
+{
+  "aggregation": "numpy.all(scores >= threshold)",
+  "compared_rows": 1680,
+  "max_score_absolute_error": 0.0,
+  "mismatch_examples": [],
+  "mismatch_rows": 0,
+  "schema_version": 1,
+  "threshold": 0.9395385384559631,
+  "unique_receipts": 840
+}

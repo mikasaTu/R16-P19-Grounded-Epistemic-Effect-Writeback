@@ -1,0 +1,18 @@
+{
+  "calibration_evidence_sha256": "43776fb09e6b05e51664048d6565523657a83cda38656cec13202abc5e24568b",
+  "disagreement_union_count": 93,
+  "gates": {
+    "g1_min_per_effect_tpr_ge_0_90": false,
+    "g2_same_variant_false_upgrade_count_zero": false,
+    "g3_calibration_selection_never_accessed_formal_receipts": true,
+    "g4_reproduction_mismatch_rows_zero": true
+  },
+  "gpu_jobs_submitted": 0,
+  "pai_jobs_submitted": 0,
+  "phase6_final_report_written": false,
+  "qualifying_variants": [],
+  "rollouts_executed": 0,
+  "s2_started": false,
+  "schema_version": 1,
+  "status": "FAIL_G1"
+}

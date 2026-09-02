@@ -1,0 +1,104 @@
+{
+  "calibration_seal_sha256": "ba89303c4b12acd5734413e07d51c07308e19c5a01126fdb195d00fd2d2ecfde",
+  "formal_evaluation_only_after_calibration_seal": true,
+  "oracle_receipt_definition": "AND of frozen per-effect predicate labels at the Phase-5 injection frame",
+  "schema_version": 1,
+  "variants": {
+    "A_ORACLE_AND": {
+      "agreement_with_oracle": 1.0,
+      "effect_tpr_definition": "effect-level threshold output conditioned on that effect's oracle-positive label",
+      "false_upgrade_count": 0,
+      "min_effect_group_receipt_tpr": 0.95,
+      "min_per_effect_tpr": 1.0,
+      "per_effect_group_receipt_tpr": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.95,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 1.0,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 1.0,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.972972972972973,
+        "task9:effect1:close microwave_1": 1.0
+      },
+      "per_effect_tpr": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 1.0,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 1.0,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 1.0,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 1.0,
+        "task9:effect1:close microwave_1": 1.0
+      },
+      "receipt_count": 840,
+      "receipt_fpr": 0.0,
+      "receipt_tpr": 1.0
+    },
+    "B_LEARNED_AND_0_9395": {
+      "agreement_with_oracle": 0.7333333333333333,
+      "effect_tpr_definition": "effect-level threshold output conditioned on that effect's oracle-positive label",
+      "false_upgrade_count": 0,
+      "min_effect_group_receipt_tpr": 0.0,
+      "min_per_effect_tpr": 0.0,
+      "per_effect_group_receipt_tpr": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.0,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.0,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.0,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.05405405405405406,
+        "task9:effect1:close microwave_1": 0.05555555555555555
+      },
+      "per_effect_tpr": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.975,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.0,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.0,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 1.0,
+        "task9:effect1:close microwave_1": 0.05555555555555555
+      },
+      "receipt_count": 840,
+      "receipt_fpr": 0.0,
+      "receipt_tpr": 0.017543859649122806
+    },
+    "C_PER_EFFECT_CALIBRATED_AND": {
+      "agreement_with_oracle": 0.9571428571428572,
+      "effect_tpr_definition": "effect-level threshold output conditioned on that effect's oracle-positive label",
+      "false_upgrade_count": 8,
+      "min_effect_group_receipt_tpr": 0.8421052631578947,
+      "min_per_effect_tpr": 0.8421052631578947,
+      "per_effect_group_receipt_tpr": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.85,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.8421052631578947,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.875,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.918918918918919,
+        "task9:effect1:close microwave_1": 0.9166666666666666
+      },
+      "per_effect_tpr": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 1.0,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.8421052631578947,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.875,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 1.0,
+        "task9:effect1:close microwave_1": 0.9166666666666666
+      },
+      "receipt_count": 840,
+      "receipt_fpr": 0.013071895424836602,
+      "receipt_tpr": 0.8771929824561403
+    },
+    "D_WEIGHTED_SOFT": {
+      "agreement_with_oracle": 0.7833333333333333,
+      "effect_tpr_definition": "receipt acceptance conditioned on each required effect's oracle-positive label; D emits no effect-level decisions",
+      "false_upgrade_count": 4,
+      "min_effect_group_receipt_tpr": 0.0,
+      "min_per_effect_tpr": 0.0,
+      "per_effect_group_receipt_tpr": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.325,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.34210526315789475,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.0,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.35135135135135137,
+        "task9:effect1:close microwave_1": 0.3333333333333333
+      },
+      "per_effect_tpr": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.325,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.34210526315789475,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.0,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.35135135135135137,
+        "task9:effect1:close microwave_1": 0.3333333333333333
+      },
+      "receipt_count": 840,
+      "receipt_fpr": 0.006535947712418301,
+      "receipt_tpr": 0.21929824561403508
+    }
+  }
+}
