@@ -6,10 +6,10 @@
   "B0_unchanged": true,
   "new_training": 0,
   "new_rollouts": 0,
-  "new_inference": 0,
   "GPU_PAI_S2": 0,
   "goal_complete": false,
   "continuation_protocol_status": "PROPOSED_WAITING_FOR_EXPLICIT_USER_CHOICE",
   "feishu_report_revision": 6,
-  "figure_token_readback_verified": true
+  "figure_token_readback_verified": true,
+  "model_inference_count": "not asserted across independent review processes; no new model fitting or rollout"
 }
