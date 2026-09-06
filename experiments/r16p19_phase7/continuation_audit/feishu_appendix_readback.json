@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "identity": "user",
+  "data": {
+    "document": {
+      "content": "<fragment mode=\"keyword\" keyword=\"完整性审计结果|六个Phase|60个|尚未执行\"><h2 id=\"doxcnREOpW942qIPEl0pgZuNauc\">完整性审计结果：仍未完成的原始实验</h2><p id=\"doxcnpA9nLWJsLBfqGtqCSStQ2f\">扩大同一lineage搜索后，六个Phase-5尝试只有一个有产物；该run只有一个checkpoint，仍是small_mlp。已检查三个源码/归档副本、相关Git refs/reflogs及19个dangling blobs，没有找到原始linear参数或逐样本分数，也没有额外同lineage非formal episode。不能用历史Phase3模型或已选small_mlp的formal分数替代linear。</p><p id=\"doxcnkbpDF9b1TZFvmgzUElrtTb\">另核查60个未训练natural seed5/6 episode：其中tomato/book/close正样本20/19/74。仅作为输入可用性审计，未并入B2；即使假设并入，tomato/book总数也仅34/33，全对下界0.898485/0.895730，仍未达到0.90。没有修改B0或原始split定义。</p><p id=\"doxcnRXQ7p77lhwWbtXwJTTCA0V\">已准备两条待确认路线：A保留认证目标，补齐原始linear与合格非formal数据后另行预注册；B保留旧B0，另开CPU-only诊断补充轮，允许重建linear与未过G1的诊断选点/重放。路线B仍禁止GPU、PAI、新rollout和S2执行，但需要用户明确放宽原计划“不重训”和“只能使用合格工作点”的条件。尚未执行任何修订轮。</p></fragment>",
+      "document_id": "IMXzdUm1toItRZxq5nrcGAOSnDc",
+      "revision_id": 6
+    },
+    "log_id": "2026090701320791BA793B4B1C2DDA25EF"
+  },
+  "_notice": {
+    "update": {
+      "command": "lark-cli update",
+      "current": "1.0.32",
+      "latest": "1.0.93",
+      "message": "lark-cli 1.0.93 available, current 1.0.32, run: lark-cli update"
+    }
+  }
+}

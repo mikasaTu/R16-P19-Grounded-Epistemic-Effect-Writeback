@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "identity": "user",
+  "data": {
+    "document": {
+      "content": "<fragment mode=\"range\" requested-end=\"doxcnfHIT5N8IbogDIXPjaIvQDd\" requested-start=\"doxcnfHIT5N8IbogDIXPjaIvQDd\"><img id=\"doxcnfHIT5N8IbogDIXPjaIvQDd\" name=\"B4_COMPLETE_CURVES.png\" caption=\"B4 完整 ROC；仅描述性结果，不是 G1认证&#xA;\" height=\"727\" mime=\"image/png\" scale=\"1.000000\" src=\"BrzxbE3pkoU5uLxUU53cLL7unte\" width=\"1000\"/></fragment>",
+      "document_id": "IMXzdUm1toItRZxq5nrcGAOSnDc",
+      "revision_id": 5
+    },
+    "log_id": "20260907012736E5C89F3DCC46F8D15408"
+  },
+  "_notice": {
+    "update": {
+      "command": "lark-cli update",
+      "current": "1.0.32",
+      "latest": "1.0.93",
+      "message": "lark-cli 1.0.93 available, current 1.0.32, run: lark-cli update"
+    }
+  }
+}

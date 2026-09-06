@@ -1,0 +1,18 @@
+{
+  "input": "B4_SOFT.json",
+  "input_sha256": "8d14481717cccac9d1b0161ff977e15f0499ad84b59e96dc0a0ac16d62d48a5a",
+  "formal_reads": 0,
+  "new_inference": false,
+  "new_selection": false,
+  "selection_eligible": false,
+  "points_plotted": {
+    "estimation": {
+      "min": 2322,
+      "sum_log_p": 2322
+    },
+    "qualification": {
+      "min": 1487,
+      "sum_log_p": 1487
+    }
+  }
+}
