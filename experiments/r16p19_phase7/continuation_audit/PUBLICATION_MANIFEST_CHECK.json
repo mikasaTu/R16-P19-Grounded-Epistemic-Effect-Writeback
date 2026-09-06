@@ -1,0 +1,11 @@
+{
+  "verified_utc": "2026-09-06T17:39:31.592883+00:00",
+  "issue": "SHA256SUMS included one ignored generated Python cache that was absent from GitHub",
+  "fix": "Exclude only the generated cache from the deliverable manifest; preserve cache locally and all scientific artifacts",
+  "excluded_generated_cache": "__pycache__/run_nonformal.cpython-310.pyc",
+  "all_previous_scientific_hashes_unchanged": true,
+  "B0_unchanged": true,
+  "manifest_policy": "All published Phase7 deliverable files except SHA256SUMS itself; generated ignored Python caches are not deliverables",
+  "goal_complete": false,
+  "scientific_blockers_unchanged": true
+}
