@@ -1,0 +1,11 @@
+{
+  "github_main_verified_commit": "8cee0bc10a8c2cb550571abcd348273d9e96e051",
+  "step8_plan_revision": 2,
+  "step8_report_revision": 2,
+  "plan_all_source_lines_verified": true,
+  "report_all_prose_and_table_cells_verified": true,
+  "report_xml_table_count": 5,
+  "step8_child_report_parentage_verified": true,
+  "scientific_status": "UNCERTIFIABLE_NO_OPERATING_POINT",
+  "S2_started": false
+}

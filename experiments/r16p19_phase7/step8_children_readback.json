@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "identity": "user",
+  "data": {
+    "has_more": false,
+    "nodes": [
+      {
+        "has_child": false,
+        "node_token": "BeI2wqXpIi33eVk58K8cKPiOncd",
+        "node_type": "origin",
+        "obj_token": "IMXzdUm1toItRZxq5nrcGAOSnDc",
+        "obj_type": "docx",
+        "parent_node_token": "WWd0wVERpiTYMCkJd25ckkXlnzd",
+        "space_id": "7599097990090853600",
+        "title": "实验报告"
+      }
+    ],
+    "page_token": ""
+  },
+  "meta": {
+    "count": 1
+  },
+  "_notice": {
+    "update": {
+      "command": "lark-cli update",
+      "current": "1.0.32",
+      "latest": "1.0.93",
+      "message": "lark-cli 1.0.93 available, current 1.0.32, run: lark-cli update"
+    }
+  }
+}
