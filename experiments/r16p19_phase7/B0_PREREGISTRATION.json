@@ -1,0 +1,91 @@
+{
+  "B1_diagnostic": {
+    "branch_cap": 0.02,
+    "branch_fail": "STOP_AFTER_B1; no B2-B7; write B1_DECISION and B_DECISION as diagnostic stop, no selected candidate",
+    "branch_threshold": 0.973,
+    "caps": [
+      0.02,
+      0.05
+    ],
+    "claim_eligible": false,
+    "deduplication": "one receipt per cluster_id and condition; never count arm replicas as independent samples",
+    "formal_labels": true,
+    "objective": "maximize minimum per-effect TPR with receipt-level FPR <= cap",
+    "selection_eligible": false,
+    "threshold_candidates": "unique observed per-effect scores plus all-reject endpoint; inclusive score >= threshold",
+    "tie_break": "maximize min TPR, then minimize receipt FPR, then maximize sum per-effect TPR, then lexicographically highest threshold vector by sorted effect key",
+    "variant": "F",
+    "write_to_selection_seal": false
+  },
+  "B3": "qualification only; report each effect confusion counts and Wilson intervals, receipt false upgrades; fail on qualification means estimation insufficient, pass qualification then fail formal means transfer failure",
+  "B4": {
+    "AUC": "trapezoidal ROC with tied-score groups",
+    "aggregators": [
+      "min(scores)",
+      "sum(log(clipped p))"
+    ],
+    "clip_p": [
+      1e-15,
+      1.0
+    ],
+    "curve": "all observed receipt thresholds plus endpoints",
+    "eligibility": "exclude receipt-only aggregators from G1 prime effect-level claims",
+    "zero_false_positive_constraint": false
+  },
+  "B5": {
+    "fixed_receipt_FPR": 0.02,
+    "models": [
+      "linear",
+      "small_mlp"
+    ],
+    "ranking": "max min per-effect TPR, then lower FPR, then original chosen model; report both ranks and frozen B2 Wilson results",
+    "selection_split": "pooled eligible nonformal estimation splits only",
+    "train": false
+  },
+  "B6": {
+    "admissibility": "all qualification effect LCB >= 0.90 and false-upgrade UCB <= 0.05; formal G1 prime remains pending until B7",
+    "formal_frontier": "descriptive only, selection_eligible false",
+    "none_feasible": "UNCERTIFIABLE; no fabricated seal or S2 candidate set",
+    "selection_split": "qualification",
+    "target_grid": "0.80 through 0.99 inclusive by 0.01",
+    "threshold_estimation": "same B0 Wilson rule replacing target 0.90 with grid target; qualification never added to estimation",
+    "tie_break": "highest qualification oracle decision agreement, then lowest false upgrades, then highest min effect LCB, then higher target, then original model"
+  },
+  "B7": "Use only sealed selected candidate; adversarial lower bound and inherited-oracle upper bound, neutral assumption separately; disagreement units only from selected candidate; no cross-variant union",
+  "G1_prime": [
+    "Each selected-variant formal per-effect TPR Wilson 95% LCB >= 0.90",
+    "Formal false-upgrade Wilson 95% UCB <= 0.05 and one-sided exact binomial p < 0.05 against fixed B3 baseline p=0.50",
+    "Threshold/model/operating-point selection process reads zero formal paths, demonstrated by isolated process read audit and seal",
+    "Phase-5 decision replay mismatch = 0 across 1680 rows"
+  ],
+  "artifact_namespace": "r16p19_phase7",
+  "constraints": {
+    "S2": false,
+    "cpu_only": true,
+    "gpu": false,
+    "pai": false,
+    "phase5_phase6_read_only": true,
+    "rollout": false,
+    "stop_on_S1_reproduction_discrepancy": true
+  },
+  "created_utc": "2026-09-06T16:22:29.759244+00:00",
+  "publication": "Publish code/tests/diagnostic evidence to GitHub main and step8/实验报告; no Phase-6/7 final report; stop for human confirmation.",
+  "sample_size_precision": "The requested 0.973 is a planning approximation; exact integer counts and the frozen Wilson formula govern certification, never rounded TPR.",
+  "sample_size_statement_requested": "n=72~80 时认证 LCB>=0.90 需要经验 TPR >= 0.973",
+  "schema_version": 1,
+  "source_commit": "b7f7c8862acef48438318c49658f0af97927e05e",
+  "task": "R16-P19 Phase-6 / step8 S1b",
+  "threshold_rule": {
+    "comparison": ">=",
+    "minimum_positive_count": 35,
+    "no_feasible_threshold": "UNCERTIFIABLE; record maximum attainable LCB; never silently pass",
+    "per_effect": "highest observed-score threshold with Wilson two-sided 95% TPR lower bound >= 0.90",
+    "required_splits": [
+      "calibration",
+      "pilot"
+    ],
+    "splits": "all non-formal splits proven unused for model fitting, excluding qualification held-out",
+    "under_35": "UNCERTIFIABLE even if other criteria appear favorable",
+    "z": 1.959963984540054
+  }
+}
