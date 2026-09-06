@@ -1,0 +1,51 @@
+{
+  "G1_prime_pass": false,
+  "GPU": 0,
+  "PAI": 0,
+  "S2": 0,
+  "S2_candidate_set_valid": false,
+  "awaiting_human_confirmation": true,
+  "gates": {
+    "1_formal_effect_LCB": {
+      "evidence": "B2 positive counts 14/14/15; max LCB 0.784689/0.784689/0.796117; B6 all20 targets lack vector",
+      "status": "UNCERTIFIABLE_NO_SELECTED_VARIANT",
+      "value": null
+    },
+    "2_formal_false_upgrade_UCB_and_significance": {
+      "F_diagnostic_is_not_gate_evidence": true,
+      "UCB": null,
+      "p_vs_B3_0_50": null,
+      "status": "NOT_EVALUATED_NO_SELECTED_VARIANT"
+    },
+    "3_selection_no_formal_paths": {
+      "B2_seal": "B2_SELECTION_SEAL.json",
+      "B6_operating_point_seal": null,
+      "evidence": [
+        "B2_SELECTION_SEAL.json",
+        "B2_B6_READ_AUDIT.json",
+        "B5_READ_AUDIT.json"
+      ],
+      "formal_access_count": 0,
+      "status": "PASS_FOR_EXECUTED_SELECTION"
+    },
+    "4_phase5_reproduction": {
+      "compared_rows": 1680,
+      "mismatch_rows": 0,
+      "status": "PASS"
+    }
+  },
+  "not_a_phase6_or_phase7_final_report": true,
+  "rollouts": 0,
+  "selected_variant": null,
+  "stage_status": {
+    "B0": "SEALED",
+    "B1": "DIAGNOSTIC_CEILING_CONTINUE",
+    "B2": "UNCERTIFIABLE",
+    "B3": "PARTIAL_EFFECT_TESTS_NO_FULL_VECTOR",
+    "B4": "COMPLETED_CURVES_AND_AUC",
+    "B5": "PARTIAL_AVAILABLE_MODEL_BLOCKED_MISSING_LINEAR",
+    "B6": "20_TARGETS_NO_CERTIFIABLE_POINT",
+    "B7": "NOT_EXECUTED_MISSING_SEAL"
+  },
+  "status": "UNCERTIFIABLE_NO_OPERATING_POINT"
+}

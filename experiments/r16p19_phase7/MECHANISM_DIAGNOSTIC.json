@@ -1,0 +1,23 @@
+{
+  "S1_recheck": {
+    "concordant_gain_numerator": 197,
+    "concordant_share_of_oracle_gain": 0.8678414096916299,
+    "concordant_units": 102,
+    "faulted_cells": 720,
+    "oracle_gain_numerator": 227,
+    "status": "MATCH"
+  },
+  "claim_eligible": false,
+  "code_confirmed_mechanisms": [
+    "Global pooled threshold suppresses low-score rare effects; effect-specific thresholds repair scale mismatch without changing weights.",
+    "n=14/15 prevents Wilson LCB certification even at empirical TPR=1. This is an exact sample-size obstruction, not formal transfer failure.",
+    "Arithmetic weighted mean permits compensating a low effect by a high effect; min enforces componentwise conjunction at a common threshold.",
+    "sum(log p) is a receipt-only score; its AUC cannot substitute for effect TPR.",
+    "Only selected small_mlp weights were serialized, preventing no-retrain alternative ranking."
+  ],
+  "hypotheses_not_confirmed": [
+    "Sparse positive coverage can make tail thresholds unstable across splits; no new rollout or causal test performed.",
+    "High AUC can coexist with poor rare-effect operation at the original pooled threshold; model-capacity inadequacy is not established by these diagnostics."
+  ],
+  "new_idea_generated": false
+}

@@ -1,0 +1,432 @@
+{
+  "code_sha256": "54a617d66aaccf06f1f8d641702aca34942d69f97e6187f405871435c5151ba9",
+  "denied_access_attempts": [],
+  "formal_access_count": 0,
+  "no_retraining": true,
+  "read_paths": [
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i10-s00-clean.json",
+      "sha256": "f34da276973e445871d737e7f39774ef643811d0f59f84cbbdb7277783c68dd7"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i10-s00-clean.npz",
+      "sha256": "ebb4edd22ec0c4fe17793134ed8f7bb5bd91785da5d5db2da5fcb4295c505927"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i11-s00-clean.json",
+      "sha256": "d9e4c313e3c5d6a7f5c5a80dfba6644bda76ccdc1a4c82ede791d0255f0650c2"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i11-s00-clean.npz",
+      "sha256": "a66d290493aa3741b727c4df2f29c19c20a3a7e1efe7797127563d361e9015f4"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i12-s00-clean.json",
+      "sha256": "5b66b4543d55e237483574ecb12add646c16aea7c58821ee86cb2c5d666c6926"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i12-s00-clean.npz",
+      "sha256": "f3438c29350f00eb725aad9fea504db6aadc9849bef81b3ecb30eca9631a8efb"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i13-s00-clean.json",
+      "sha256": "b07b5c5e22972c49956b01690cf1fcc1a3d1e57ed1d78f4fa7a6f5bec1d64f30"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i13-s00-clean.npz",
+      "sha256": "54da429b97743d018e4775ca3694d40bc1fc37c080530cafbd76fca2d3826eab"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i14-s00-clean.json",
+      "sha256": "3b77f7d7c893e774e730cd0d81a4d0de45850d9c039e51bbec5007c56af00255"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i14-s00-clean.npz",
+      "sha256": "05e1f280ec879120ea7854975e882c332c232bf3dba24f06e023f52418cfc19a"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i15-s00-clean.json",
+      "sha256": "a9a3fff0243ac531dcfb7fa8cc9b8c89860f098c347878f4263a865967d68548"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i15-s00-clean.npz",
+      "sha256": "1b28d4f3f15accaad563ed026654cbed1326d77688c8244cabf6f8879c88b9ad"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i16-s00-clean.json",
+      "sha256": "d2fb8f7b4a5b2f4c1b2b86bf8967f7daf0529f2f03d156d79e23c8262b36def3"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i16-s00-clean.npz",
+      "sha256": "125112fbd091bfbe638d2ed0f929decc777b3767664ec4a17ef1ee9d319879a0"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i17-s00-clean.json",
+      "sha256": "1ad9420c592446d1c71ba63216998d98e95319b465d73f61dc93771dc34878a4"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i17-s00-clean.npz",
+      "sha256": "33dd820c07f2a6b3ce9dbcc9f1df11dc5930c6728a918c503ab21f697c27ff40"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i18-s00-clean.json",
+      "sha256": "cd72cc43ee602c233db54bc9b8964ee3205de6aca797bc47da58b091d5589bc7"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i18-s00-clean.npz",
+      "sha256": "3412266e513d8f5311a3b8a70021efb23949abf438a4f001d5bdb567e9cacb1b"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i19-s00-clean.json",
+      "sha256": "682dda1eeb92f7a1f4030f92cb7c26990f84d34d576136e3e3a062509f475fcf"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i19-s00-clean.npz",
+      "sha256": "494aec69ac302b718f97a2e7676fcb92784e128c4ed838232131b481429ee9ab"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i10-s00-clean.json",
+      "sha256": "109ab8b7943638641c4ec21fcc916c29908dd7087249f4b615e5b008f6e41c78"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i10-s00-clean.npz",
+      "sha256": "44fbaedc93103a7a44a31af47ee80597fb629067aa2986e429bbd3a959c4873e"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i11-s00-clean.json",
+      "sha256": "df41f95cb4e8acdea2336ababf79b793b9c2553e35e933af2e1d0cd936102a8f"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i11-s00-clean.npz",
+      "sha256": "666997a10e6895b4be8a65516c422df58af0860a56f9e2c62502c30e8661e8f7"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i12-s00-clean.json",
+      "sha256": "0aa22c0d24d721ac1857ef6f54e126bc0c4d369bf3327009ef943b946fa340e5"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i12-s00-clean.npz",
+      "sha256": "c92019709974ccc9072f30ebb8a2aaca3352835a5b46b6353bc4c065960bf0a5"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i13-s00-clean.json",
+      "sha256": "ae51a3970eba818d095b7e27ec4629ca712bc3df22b41ac5d1dd1169104a4edd"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i13-s00-clean.npz",
+      "sha256": "5b1be87a80c4ebe18db03e5e251c3a4c1130d6f180ea35f6ecfdcfed3a7a06e5"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i14-s00-clean.json",
+      "sha256": "5a4aa54bba12c3181832dbf087f32d73f306f83c8d12015d5221f1f0abba378a"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i14-s00-clean.npz",
+      "sha256": "ad2b2d98e3dc3108782f3d026a45ad5aa49029b0c07c6b663aea00ac91f1954d"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i15-s00-clean.json",
+      "sha256": "e8b43d407009fcc5d5faa24de0de80e2c03291dcdac36890d47ae51a9b265356"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i15-s00-clean.npz",
+      "sha256": "0bd51023049935e18ec86d1fe373bb285ae79b4ee29394f2f0899031905e4a70"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i16-s00-clean.json",
+      "sha256": "f020e47bd0ad6d6d3c9c78339c4ad19f84de3eaa5b36ac47c83331bf70ad94c8"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i16-s00-clean.npz",
+      "sha256": "d3a14fafd28c72312890135faa89991a437d1286e7f78ad86392dc9bbe60b5a2"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i17-s00-clean.json",
+      "sha256": "4d0827fc4e7b2fef728b59b6997dd8205171476cd6c698a0b13ebafd1240f7c3"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i17-s00-clean.npz",
+      "sha256": "c0aca7efccaf06c229e4f3215312afebcbfa2d37103c62ab00bd6b478085eba3"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i18-s00-clean.json",
+      "sha256": "ac1b1ec360df729fd43ba795c466df7a0f06a12bacf787a25ed14710fdcb4371"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i18-s00-clean.npz",
+      "sha256": "40a701f5b831445829fe670076b25b03a587ebca4d9a6696fcb59c5237e18e1a"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i19-s00-clean.json",
+      "sha256": "db4966fb350cfc8936247c0c19488a9b2128cc661e9ac4bcd60a2ff9680a62d9"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i19-s00-clean.npz",
+      "sha256": "235ae345f99ad44db6264ec1b808a30320fcb0a16971ae67a35f70ec5b9a3dfa"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i10-s00-clean.json",
+      "sha256": "1bcdda734dc3fb0643b939f6db0299782b49288dc11ffca6d707bcd690f2bec7"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i10-s00-clean.npz",
+      "sha256": "7679d8bf4eac61b6f0f9ed106bb2a9daa4b6be75bc8c4e587792dabc907abcc6"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i11-s00-clean.json",
+      "sha256": "f510a496776294e869ed22cc4abc0c2d8f19b25bc279a0938b423d7670afe49c"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i11-s00-clean.npz",
+      "sha256": "4b379e730e1cd95b74780df57203c960e6a311fdf66a8cbb217029647b4ba74a"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i12-s00-clean.json",
+      "sha256": "9cd36a6e3cd79a2d97e2bc62b035dd2858053804821ae196666ce9a5a10d114c"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i12-s00-clean.npz",
+      "sha256": "17fee76a7027cfbd85d31aaf7c4c863ade39f1276cb8efc1ecf65f9a5b8d7da5"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i13-s00-clean.json",
+      "sha256": "c70b54677412bb621e5fae2a4eb5b70943ec0386e8cd088fe7b182d9116ab7e0"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i13-s00-clean.npz",
+      "sha256": "7c041a1f8c7f098b8cc35d1afa2839d8426ba09724f75c98c98e2756a2938aed"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i14-s00-clean.json",
+      "sha256": "0b2f3bdd27235da0ff4e886f23244056edeed0cde631f396c3429aad03f01ce8"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i14-s00-clean.npz",
+      "sha256": "33e34cd0b9bbb8c32e45f6327472e749233c90469ca323858f00cc06b7f75b3c"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i15-s00-clean.json",
+      "sha256": "23e839e9d115cc562cf58d4b0ec54478e426fa856aa0e61ef13a664733a1ad77"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i15-s00-clean.npz",
+      "sha256": "76397769a3c3b2d0f211f5285b434042ef70d9006ffb37f080839b230087d2aa"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i16-s00-clean.json",
+      "sha256": "ae39a7dafa3987145dc78b0035e166bf5986fc11c776d1195c71e724b831d208"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i16-s00-clean.npz",
+      "sha256": "9392fdb704e8f8db79a38f27310fde42a74849db489e2b0fb1506b3b30bb1b52"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i17-s00-clean.json",
+      "sha256": "8291d5d7e2711855a082254eb0bdb88408ed26bf8a4921a19ae3670ecd1ef7e0"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i17-s00-clean.npz",
+      "sha256": "9a36d3e8a2f651076b6b983701cdccb705ca075a3c17c49759effdc3fa5f9aff"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i18-s00-clean.json",
+      "sha256": "888aa5a4962e0f207b5519eb8d18179b5b390656e86677fbea83f7dec6cf16b0"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i18-s00-clean.npz",
+      "sha256": "e900343bc406b1896d8e6e7ddb81fbdda4be20bc1ebad8b6ca84e3a88ffdf5ca"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i19-s00-clean.json",
+      "sha256": "a09e0bb76c8e4bcdf0ca6af542897d661e63aab849e4ff22829d923f8ebe0d0f"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i19-s00-clean.npz",
+      "sha256": "aa9cd0fe735aa66579e276da187e3a3601248dbd7779a720ec71dacab6ef9c32"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t00-i20-s00-noop.json",
+      "sha256": "4b8bb8a30db486a3ac269e3ef8c3a58e260cb14e9d56bf7edd86153593f95c8d"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t00-i20-s00-noop.npz",
+      "sha256": "0a5aedb9e06e88dad993c9c42d88a9df1e76319e2d4da6cdd1ccf32e0bd97716"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t00-i21-s00-noop.json",
+      "sha256": "c8284bfb01d27635383a450b2d6a8a7b57b178dfe02c469228cc4478ce62462d"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t00-i21-s00-noop.npz",
+      "sha256": "78e87b15d402b53ce628041bfc49c14a2ba4eb6c12c65c5f4ad03cbc346b62ce"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t00-i22-s00-noop.json",
+      "sha256": "f8cf7a5d31d00b5a7f0ac1434fdc899f6cc0e6ded768a69d92eec7aaeeae5035"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t00-i22-s00-noop.npz",
+      "sha256": "1a47cb6b1e9d0af592ecf606c7303e96a6eb80653f5c9c1dacb1966bd3830c9f"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t00-i23-s00-noop.json",
+      "sha256": "2f24dada77b921eb27864f78658ae59e8782bca0cb3620aabbe2235ff842e4bf"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t00-i23-s00-noop.npz",
+      "sha256": "685758e02ef035c36b76d13e995a6835eb3a8b48cd327aa97c7df7426456d2a0"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t00-i24-s00-noop.json",
+      "sha256": "61841e7c66ad1445f419af023ed1163310cb7067dada0892d95262f1923446c7"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t00-i24-s00-noop.npz",
+      "sha256": "2dc21ad02758111d862136c80ab11ae3f17bbb0ddf3b864db2b5944ab2a3d1ef"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t05-i20-s00-noop.json",
+      "sha256": "986ec88726be294c4d24576a391323ef8bda27e2359698eec283e34bcbaa9e15"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t05-i20-s00-noop.npz",
+      "sha256": "bc4ca2051c827507bdb20200894c9da027ece8c662803da7cca4bbd72ec51a0b"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t05-i21-s00-noop.json",
+      "sha256": "19888777a171506ebdb0f326870834101b6a0eb717d043d035427be072bea010"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t05-i21-s00-noop.npz",
+      "sha256": "751ee7c7e1ef891dac89c23419a92fc0f5381541b4ebcc84680feee1550ea66c"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t05-i22-s00-noop.json",
+      "sha256": "9ff11f12435b7d4664e78e44c3ef14302a837165e8478771cde10a384908c68c"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t05-i22-s00-noop.npz",
+      "sha256": "ebc94125c50916b227cab980d0e1b318b3fd8ae2e080e6aeadd0b590b9849fc2"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t05-i23-s00-noop.json",
+      "sha256": "50c853f1c6fd1a0e478a5ccf22de109376caf24d171536f03ebaf551143c15ef"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t05-i23-s00-noop.npz",
+      "sha256": "8c56e8dc974ecdfabc761de2d3a2f04e2f522481b51e7f8953f516b10246cb00"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t05-i24-s00-noop.json",
+      "sha256": "8c3055c2f73f9145a60604992de83f3895175fea56813beb601efbcc04d5a9ce"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t05-i24-s00-noop.npz",
+      "sha256": "75205b3ad54d71daa0d9a26e60ff5be8f17c9b519849558a62024d0bc2e68302"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t09-i20-s00-noop.json",
+      "sha256": "2eef61d5675af4f7fab179c6da9a8a9190c6c65200280b9734b3bf38cc08e278"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t09-i20-s00-noop.npz",
+      "sha256": "eac637d793338f0f541b555992d76bfd91dc139deee17272148a2e0e48fc9d58"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t09-i21-s00-noop.json",
+      "sha256": "d582049b2933be2bf34964774d199101da7971f95e95671528cf0d6a64680ae2"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t09-i21-s00-noop.npz",
+      "sha256": "113fa025a198782f5625190e87782d974f998c81a5434a00f26e733d0abc6316"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t09-i22-s00-noop.json",
+      "sha256": "5ad0522d086add043c1cff5a23d9b7b2ba19e279d6fce6fe03488a2fe46357b0"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t09-i22-s00-noop.npz",
+      "sha256": "4387390795eb2fe4c1c85e817dd3d284a23b802984231e2089c14b9796dcce45"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t09-i23-s00-noop.json",
+      "sha256": "9cc25c9697cc2ed6c1dc980ca2575df9aaefdcd0698fae0f01ba7577dbf3a98e"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t09-i23-s00-noop.npz",
+      "sha256": "394f17d82f14fd5755542399881bf420bff259f64470ceb330b43876209d680b"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t09-i24-s00-noop.json",
+      "sha256": "7065f635e3f9279d6c6e96c9b6173478e04c4718ee517cae4094009850d8d7ac"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/pilot/pilot-t09-i24-s00-noop.npz",
+      "sha256": "576e131ad212e9fc33ed8b6ca2788dd465af91ef6d651ccb68b73174815d39f9"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/experiments/r16p19_phase5/artifacts/results/verifier_checkpoint.npz",
+      "sha256": "edba3ff23ae71c5768760af161b601b3d1a9f65d37d1ddeb8304b2510e938005"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/experiments/r16p19_phase6/run_s1.py",
+      "sha256": "988f381bb2f084dc4c1038cc43b291afcbacc47417a698fadf677d769299084e"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/experiments/r16p19_phase7/B5_MODEL_SELECTION.json",
+      "sha256": "4f730e8b42f3bb1d8e38dbf15316d2a89f45361ee621cc80d5a971b006c478cc"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/__init__.py",
+      "sha256": "c997992d31aea9c26e12c2ff8d9f87d0c91a3e07c92f7607de59c541c73f0f75"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/config.py",
+      "sha256": "a026b4d5443f447a0a96ba268bf3cced84ee7f1bb788607329abbd431827f5f2"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/memory.py",
+      "sha256": "4992462e105306eca9a777619fa5c7418f90c1289e4e9f6fdde1bdc2fbfce4c5"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/ontology.py",
+      "sha256": "3d0ff3355536d61e85bd462b3b100a3222e90a5050fad9b3ba6d64711684da5d"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/phase4_arms.py",
+      "sha256": "71591887c9846564139f37435872ca4e2924a0ae997f49a2bfc9e3293e9f5ea1"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/phase4_attempt_ledger.py",
+      "sha256": "b051fd01f2e4a97fb8a79899c9178b285d6af0d2c0fdc48d564adb62d944f201"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/phase4_event_broker.py",
+      "sha256": "366c217588c3ae0cc9f9e67cb11aa0bef912c715a8d8a841296d06cbf45a85f3"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/phase4_support_graph.py",
+      "sha256": "a51230da8e69c81357b6311d08cdcae20b5bb84ac5c58f441d3aad78fa135acc"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/phase4_types.py",
+      "sha256": "40430881e6498969c2c51dab41d90b6e02a6345e0761a9edaab1505d959fe24e"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/phase5_arm_kernel.py",
+      "sha256": "3e48b04420508104c988a4ba5ce1569ea7f04221bc85098d684969169f06e206"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/phase5_verifier_data.py",
+      "sha256": "2755a0f6530c334550f2a1248c2d25c4c602700335474f1bd4df7215c1cff695"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/phase5_verifier_model.py",
+      "sha256": "8de041e216f376abfff2c483ec7e91538275a09ddff7a41e024b89d2223aa907"
+    },
+    {
+      "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/r16p19/types.py",
+      "sha256": "7effbe9cd068feff927302ec12f71e5e6a77e4b397d4b3b543da85b91f06e5e8"
+    }
+  ]
+}

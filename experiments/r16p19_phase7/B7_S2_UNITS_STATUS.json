@@ -1,0 +1,8 @@
+{
+  "candidate_count": null,
+  "execution_allowed": false,
+  "file": "B7_S2_UNITS.txt",
+  "file_is_empty_placeholder": true,
+  "reason": "No sealed working point. Empty file does not mean zero disagreements.",
+  "status": "NO_VALID_CANDIDATE_SET"
+}

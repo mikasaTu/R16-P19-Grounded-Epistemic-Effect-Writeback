@@ -1,0 +1,15 @@
+{
+  "B3": "NOT_EVALUABLE_FULL_VECTOR",
+  "B4": {
+    "estimation": {
+      "min": 0.983107107475156,
+      "sum_log_p": 0.9831479609032693
+    },
+    "qualification": {
+      "min": 0.9837059492231905,
+      "sum_log_p": 0.9842743463433118
+    }
+  },
+  "B5": "BLOCKED_MISSING_LINEAR_CHECKPOINT",
+  "B6": "NO_CERTIFIABLE_OPERATING_POINT"
+}

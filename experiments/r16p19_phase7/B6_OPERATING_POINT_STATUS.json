@@ -1,0 +1,5 @@
+{
+  "S2_allowed": false,
+  "reason": "Every preregistered target 0.80..0.99 lacks a complete certified threshold vector. Never fabricate a selected point.",
+  "status": "NO_SEAL_CREATED"
+}

@@ -1,0 +1,18 @@
+{
+  "S2_candidate_count": null,
+  "S2_candidate_set_valid": false,
+  "S2_started": false,
+  "concordant_units": null,
+  "divergent_unit_ids": null,
+  "divergent_units": null,
+  "gain_interval": {
+    "adversarial_lower": null,
+    "inherited_oracle_upper": null,
+    "neutral_assumption_value": null,
+    "neutral_is_assumption_not_point_estimate": true
+  },
+  "operating_point_seal": null,
+  "reason": "B2 and all B6 targets are uncertifiable. F formal ceiling thresholds and prior S1 disagreement sets cannot substitute for a sealed current working point.",
+  "selected_variant": null,
+  "status": "NOT_EXECUTED_NO_SEALED_OPERATING_POINT"
+}

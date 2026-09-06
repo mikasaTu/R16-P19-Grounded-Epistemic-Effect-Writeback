@@ -1,0 +1,177 @@
+{
+  "B2_result_after_model_switch": null,
+  "available_checkpoint": {
+    "keys": [
+      "b1",
+      "b2",
+      "calibration_bias",
+      "calibration_scale",
+      "mean",
+      "model_type",
+      "std",
+      "threshold",
+      "w1",
+      "w2"
+    ],
+    "model_type": "small_mlp",
+    "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/experiments/r16p19_phase5/artifacts/results/verifier_checkpoint.npz",
+    "sha256": "edba3ff23ae71c5768760af161b601b3d1a9f65d37d1ddeb8304b2510e938005"
+  },
+  "available_model_fixed_FPR_result": {
+    "B2_Wilson_result_unchanged": true,
+    "allowed_false_upgrades": 45,
+    "estimation_splits": [
+      "calibration",
+      "pilot"
+    ],
+    "evaluation": {
+      "complete_vector": true,
+      "effects": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+          "fp": 0,
+          "fpr": 0.0,
+          "fpr_wilson95": [
+            0.0,
+            0.007319274718361214
+          ],
+          "negative_count": 521,
+          "positive_count": 371,
+          "status": "EVALUATED",
+          "threshold": 0.9574936032295227,
+          "tp": 248,
+          "tpr": 0.6684636118598383,
+          "tpr_wilson95": [
+            0.6190486709337741,
+            0.7144256474974586
+          ]
+        },
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+          "fp": 19,
+          "fpr": 0.02164009111617312,
+          "fpr_wilson95": [
+            0.013896886254027957,
+            0.03355093829784742
+          ],
+          "negative_count": 878,
+          "positive_count": 14,
+          "status": "EVALUATED",
+          "threshold": 0.24089986085891724,
+          "tp": 10,
+          "tpr": 0.7142857142857143,
+          "tpr_wilson95": [
+            0.4535091567010681,
+            0.8827862135542308
+          ]
+        },
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+          "fp": 5,
+          "fpr": 0.008389261744966443,
+          "fpr_wilson95": [
+            0.0035885620267443064,
+            0.01948663328887599
+          ],
+          "negative_count": 596,
+          "positive_count": 14,
+          "status": "EVALUATED",
+          "threshold": 0.21904174983501434,
+          "tp": 10,
+          "tpr": 0.7142857142857143,
+          "tpr_wilson95": [
+            0.4535091567010681,
+            0.8827862135542308
+          ]
+        },
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+          "fp": 0,
+          "fpr": 0.0,
+          "fpr_wilson95": [
+            -8.673617379884035e-19,
+            0.008713923665370556
+          ],
+          "negative_count": 437,
+          "positive_count": 381,
+          "status": "EVALUATED",
+          "threshold": 0.9908484220504761,
+          "tp": 254,
+          "tpr": 0.6666666666666666,
+          "tpr_wilson95": [
+            0.6178758075052272,
+            0.7121302172852878
+          ]
+        },
+        "task9:effect1:close microwave_1": {
+          "fp": 16,
+          "fpr": 0.019925280199252802,
+          "fpr_wilson95": [
+            0.012301349668838191,
+            0.032120585308426326
+          ],
+          "negative_count": 803,
+          "positive_count": 15,
+          "status": "EVALUATED",
+          "threshold": 0.1447414606809616,
+          "tp": 10,
+          "tpr": 0.6666666666666666,
+          "tpr_wilson95": [
+            0.41713547738519774,
+            0.8482367556028526
+          ]
+        }
+      },
+      "false_upgrade_count": 38,
+      "negative_receipts": 2277,
+      "oracle_agreement": 0.9780172413793103,
+      "positive_receipts": 43,
+      "receipt_count": 2320,
+      "receipt_fpr": 0.01668862538427756
+    },
+    "method": "Exact monotone TPR feasibility: for each possible TPR target use the highest threshold covering required positives; this minimizes receipt false upgrades at that target.",
+    "minimum_per_effect_TPR": 0.6666666666666666,
+    "model": "small_mlp",
+    "not_B2_certified_thresholds": true,
+    "receipt_FPR_cap": 0.02,
+    "thresholds_for_model_ranking_only": {
+      "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9574936032295227,
+      "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.24089986085891724,
+      "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.21904174983501434,
+      "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9908484220504761,
+      "task9:effect1:close microwave_1": 0.1447414606809616
+    }
+  },
+  "formal_access_count": 0,
+  "model_switch_performed": false,
+  "original_metrics": {
+    "linear": {
+      "accuracy": 0.9468451242829828,
+      "ece": 0.032575744402621135,
+      "macro_auroc": 0.9821771185299317,
+      "max_fpr": 0.08648648648648649,
+      "min_tpr": 0.0,
+      "qualified": false
+    },
+    "small_mlp": {
+      "accuracy": 0.9552581261950287,
+      "ece": 0.025675630108270484,
+      "macro_auroc": 0.9916669890228063,
+      "max_fpr": 0.0,
+      "min_tpr": 0.0,
+      "qualified": false
+    }
+  },
+  "original_ranking": [
+    "small_mlp",
+    "linear"
+  ],
+  "original_selected": "small_mlp",
+  "original_selection_rule": "max(qualified, macro_auroc, -ece, name == linear); not loss/accuracy",
+  "ranking_under_requested_rule": null,
+  "reason": "Only selected small_mlp weights saved. linear aggregate metrics at historical threshold cannot determine its fixed-FPR frontier. Reconstructing training would violate no-retraining instruction.",
+  "requested_selection_rule": "min per-effect TPR @ receipt FPR <=0.02 on eligible estimation splits",
+  "retraining_performed": false,
+  "same_criterion_ranking": {
+    "linear": null,
+    "ranking_determinable": false,
+    "small_mlp": 0.6666666666666666
+  },
+  "status": "BLOCKED_MISSING_LINEAR_CHECKPOINT"
+}

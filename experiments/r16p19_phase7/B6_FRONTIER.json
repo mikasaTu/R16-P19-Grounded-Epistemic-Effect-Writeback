@@ -1,0 +1,513 @@
+{
+  "eligible_operating_points": 0,
+  "estimation_splits": [
+    "calibration",
+    "pilot"
+  ],
+  "formal_access_count": 0,
+  "points": [
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.8,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9057705998420715,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9733912348747253,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.81,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.8945144414901733,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9710121750831604,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.82,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.8855969309806824,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9646007418632507,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.83,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.8771688938140869,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9618270993232727,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.84,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.86762535572052,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9543032646179199,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.85,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.8566009402275085,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9504169225692749,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.86,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.8404631614685059,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9373447299003601,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.87,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.8282415866851807,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9270554780960083,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.88,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.816938579082489,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9257450103759766,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.89,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.8112561702728271,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.901732861995697,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.9,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.7940068244934082,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.8930768370628357,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.91,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.7653850317001343,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.8790690898895264,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.92,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.7305599451065063,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.8687980771064758,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.93,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.6977491974830627,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.8331990242004395,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.94,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.6714785695075989,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.8240988850593567,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.95,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.6517949104309082,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.8085374236106873,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.96,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.625225305557251,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.739818274974823,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.97,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.6131489276885986,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.6881352066993713,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.98,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.5627523064613342,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.6040728688240051,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    },
+    {
+      "maximum_lcbs": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.989751777103899,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.7846891972623643,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.7846891972623643,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9900180743715453,
+        "task9:effect1:close microwave_1": 0.7961166989641515
+      },
+      "qualification_false_upgrade_rate": null,
+      "qualification_oracle_agreement": null,
+      "status": "UNREACHABLE_CERTIFICATION",
+      "target": 0.99,
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": null,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.30185624957084656,
+        "task9:effect1:close microwave_1": null
+      },
+      "uncertifiable_effects": [
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region",
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+        "task9:effect1:close microwave_1"
+      ]
+    }
+  ],
+  "selection_split": "qualification",
+  "status": "NO_CERTIFIABLE_OPERATING_POINT"
+}

@@ -1,0 +1,7 @@
+{
+  "claim_eligible": false,
+  "formal_access_count": 0,
+  "reason": "No complete threshold vector exists at any preregistered target. Formal cannot fill missing thresholds.",
+  "selection_eligible": false,
+  "status": "NOT_EVALUABLE"
+}

@@ -1,0 +1,80 @@
+{
+  "audit_provenance": {
+    "independent_read_only_audit": true,
+    "primary_crosscheck": "B2 live counts matched independently audited 371/14/14/381/15; checkpoint hash and original source criterion verified."
+  },
+  "base_fit": {
+    "episodes": 150,
+    "frame_effect_rows": 13138,
+    "natural_total_episodes": 210,
+    "positive_rows": 2632,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "r16p19/phase5_verifier_model.py:145-153; r16p19/phase5_verifier_data.py:49-67",
+    "split": "natural",
+    "unused_natural_seed_5_6_episodes": 60
+  },
+  "calibration": {
+    "episodes": 30,
+    "historical_use": "fit calibrator scale/bias and choose threshold",
+    "positive_rows": 505,
+    "rows": 2711,
+    "source": "r16p19/phase5_verifier_model.py:156-160"
+  },
+  "candidate_preservation": {
+    "keys": [
+      "b1",
+      "b2",
+      "calibration_bias",
+      "calibration_scale",
+      "mean",
+      "model_type",
+      "std",
+      "threshold",
+      "w1",
+      "w2"
+    ],
+    "model_type": "small_mlp",
+    "path": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/experiments/r16p19_phase5/artifacts/results/verifier_checkpoint.npz",
+    "sha256": "edba3ff23ae71c5768760af161b601b3d1a9f65d37d1ddeb8304b2510e938005"
+  },
+  "pilot": {
+    "episodes": 15,
+    "historical_use": "oracle pilot matrix",
+    "source": "r16p19/phase5_runner.py:207-208",
+    "verifier_fit_use": false
+  },
+  "pilot_qualification_environment_overlap": {
+    "count": 15,
+    "environment_seed_formula": "500000 + task_id*10000 + init_id*100 + policy_seed; variant excluded",
+    "implication": "Threshold-heldout only, not independent environment-heldout.",
+    "initializations": [
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "policy_seed": 0,
+    "source": "r16p19/phase5_rollout.py:37-45,89-90",
+    "tasks": [
+      0,
+      5,
+      9
+    ]
+  },
+  "qualification": {
+    "episodes": 30,
+    "historical_use": "per-group qualification, robustness metrics and model selection",
+    "positive_rows": 501,
+    "rows": 2615,
+    "source": "r16p19/phase5_verifier_model.py:160-182",
+    "untouched_holdout": false
+  },
+  "sample_dependence": "Rows are per-frame/per-effect expansions within episodes, not independent trials. Wilson intervals use the user-requested counting convention, not a guarantee of independence."
+}
