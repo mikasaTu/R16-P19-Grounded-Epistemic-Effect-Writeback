@@ -1,0 +1,65 @@
+{
+  "stage": "B2",
+  "status": "UNCERTIFIABLE",
+  "effects": {
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+      "status": "CERTIFIABLE_ON_ESTIMATION",
+      "positive_count": 371,
+      "negative_count": 521,
+      "target_lcb": 0.9,
+      "maximum_attainable_lcb": 0.989751777103899,
+      "threshold": 0.7940068244934082,
+      "reasons": [],
+      "selected_tp": 346
+    },
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+      "status": "UNCERTIFIABLE",
+      "positive_count": 14,
+      "negative_count": 878,
+      "target_lcb": 0.9,
+      "maximum_attainable_lcb": 0.7846891972623643,
+      "threshold": null,
+      "reasons": [
+        "positive_count_below_35",
+        "no_threshold_meets_Wilson_LCB"
+      ],
+      "selected_tp": null
+    },
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+      "status": "UNCERTIFIABLE",
+      "positive_count": 14,
+      "negative_count": 596,
+      "target_lcb": 0.9,
+      "maximum_attainable_lcb": 0.7846891972623643,
+      "threshold": null,
+      "reasons": [
+        "positive_count_below_35",
+        "no_threshold_meets_Wilson_LCB"
+      ],
+      "selected_tp": null
+    },
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+      "status": "CERTIFIABLE_ON_ESTIMATION",
+      "positive_count": 381,
+      "negative_count": 437,
+      "target_lcb": 0.9,
+      "maximum_attainable_lcb": 0.9900180743715453,
+      "threshold": 0.8930768370628357,
+      "reasons": [],
+      "selected_tp": 355
+    },
+    "task9:effect1:close microwave_1": {
+      "status": "UNCERTIFIABLE",
+      "positive_count": 15,
+      "negative_count": 803,
+      "target_lcb": 0.9,
+      "maximum_attainable_lcb": 0.7961166989641515,
+      "threshold": null,
+      "reasons": [
+        "positive_count_below_35",
+        "no_threshold_meets_Wilson_LCB"
+      ],
+      "selected_tp": null
+    }
+  }
+}

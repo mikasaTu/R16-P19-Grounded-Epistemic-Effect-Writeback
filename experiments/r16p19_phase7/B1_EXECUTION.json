@@ -1,0 +1,15 @@
+{
+  "code_sha256": "670bcc6a4a30d94ba27fbf248ad0bdfb6543966e74bf74902abfb00cf7cf0de0",
+  "cpu_only": true,
+  "cuda_visible_devices": "",
+  "gpu_jobs_submitted": 0,
+  "pai_jobs_submitted": 0,
+  "phase5_phase6_unchanged": true,
+  "platform": "Linux-5.10.134-013.9.kangaroo.al8.x86_64-x86_64-with-glibc2.10",
+  "preregistration_sha256": "7fd8f1cc3392aea5a375abe293843305178c789d5e38f243e34f9738f04f17ec",
+  "python": "3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:18) \n[GCC 10.3.0]",
+  "python_executable": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python",
+  "rollouts_executed": 0,
+  "s2_started": false,
+  "time_utc": "2026-09-06T16:27:20.681597+00:00"
+}

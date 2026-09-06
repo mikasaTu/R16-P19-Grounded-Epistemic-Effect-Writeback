@@ -1,0 +1,263 @@
+{
+  "branch": "CONTINUE_B2",
+  "claim_eligible": false,
+  "formal_labels_used": true,
+  "interpretation": "Formal-label upper-bound diagnostic only; no prospective or deployment claim; cannot infer global model-class capacity.",
+  "method": "Exact Cartesian threshold enumeration per disjoint task, monotone feasible min-TPR search and exact global false-upgrade-budget combination. Ties follow B0.",
+  "negative_receipts": 612,
+  "not_written_to_selection_seal": true,
+  "operating_points": [
+    {
+      "allowed_false_upgrades": 12,
+      "claim_eligible": false,
+      "effects": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+          "fp": 0,
+          "fpr": 0.0,
+          "fpr_wilson95": [
+            1.734723475976807e-18,
+            0.018845326377266575
+          ],
+          "negative_count": 200,
+          "positive_count": 80,
+          "threshold": 0.9318578839302063,
+          "tp": 80,
+          "tpr": 1.0,
+          "tpr_wilson95": [
+            0.9541818704644728,
+            0.9999999999999999
+          ]
+        },
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+          "fp": 4,
+          "fpr": 0.0196078431372549,
+          "fpr_wilson95": [
+            0.007650879122415393,
+            0.04932263755651539
+          ],
+          "negative_count": 204,
+          "positive_count": 76,
+          "threshold": 0.02039381116628647,
+          "tp": 76,
+          "tpr": 1.0,
+          "tpr_wilson95": [
+            0.9518864149348628,
+            1.0000000000000002
+          ]
+        },
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+          "fp": 0,
+          "fpr": 0.0,
+          "fpr_wilson95": [
+            1.734723475976807e-18,
+            0.018845326377266575
+          ],
+          "negative_count": 200,
+          "positive_count": 80,
+          "threshold": 0.04870769381523132,
+          "tp": 80,
+          "tpr": 1.0,
+          "tpr_wilson95": [
+            0.9541818704644728,
+            0.9999999999999999
+          ]
+        },
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+          "fp": 4,
+          "fpr": 0.019417475728155338,
+          "fpr_wilson95": [
+            0.0075763491456009545,
+            0.04885415265915653
+          ],
+          "negative_count": 206,
+          "positive_count": 74,
+          "threshold": 0.990629255771637,
+          "tp": 74,
+          "tpr": 1.0,
+          "tpr_wilson95": [
+            0.950650220603614,
+            1.0000000000000002
+          ]
+        },
+        "task9:effect1:close microwave_1": {
+          "fp": 6,
+          "fpr": 0.028846153846153848,
+          "fpr_wilson95": [
+            0.013286106595828018,
+            0.061493678762913215
+          ],
+          "negative_count": 208,
+          "positive_count": 72,
+          "threshold": 0.05850173160433769,
+          "tp": 72,
+          "tpr": 1.0,
+          "tpr_wilson95": [
+            0.9493488274035422,
+            1.0
+          ]
+        }
+      },
+      "false_upgrade_count": 10,
+      "false_upgrade_receipt_ids": [
+        "t0-i49-s0:A5_EXTERNAL_REALIZATION",
+        "t0-i49-s0:C0_CLEAN",
+        "t0-i49-s1:A5_EXTERNAL_REALIZATION",
+        "t0-i49-s1:C0_CLEAN",
+        "t9-i37-s0:A5_EXTERNAL_REALIZATION",
+        "t9-i37-s0:C0_CLEAN",
+        "t9-i44-s0:A5_EXTERNAL_REALIZATION",
+        "t9-i44-s0:C0_CLEAN",
+        "t9-i49-s0:A5_EXTERNAL_REALIZATION",
+        "t9-i49-s0:C0_CLEAN"
+      ],
+      "min_per_effect_tpr": 1.0,
+      "negative_receipts": 612,
+      "optimality": {
+        "minimum_false_upgrades_at_branch_target_0_973": 10,
+        "minimum_false_upgrades_at_next_tpr": null,
+        "next_attainable_min_tpr": null
+      },
+      "positive_receipts": 228,
+      "receipt_fpr": 0.016339869281045753,
+      "receipt_fpr_cap": 0.02,
+      "receipt_fpr_wilson95": [
+        0.008899263292798791,
+        0.029814367430194978
+      ],
+      "receipt_tp": 228,
+      "receipt_tpr": 1.0,
+      "selection_eligible": false
+    },
+    {
+      "allowed_false_upgrades": 30,
+      "claim_eligible": false,
+      "effects": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+          "fp": 0,
+          "fpr": 0.0,
+          "fpr_wilson95": [
+            1.734723475976807e-18,
+            0.018845326377266575
+          ],
+          "negative_count": 200,
+          "positive_count": 80,
+          "threshold": 0.9318578839302063,
+          "tp": 80,
+          "tpr": 1.0,
+          "tpr_wilson95": [
+            0.9541818704644728,
+            0.9999999999999999
+          ]
+        },
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+          "fp": 4,
+          "fpr": 0.0196078431372549,
+          "fpr_wilson95": [
+            0.007650879122415393,
+            0.04932263755651539
+          ],
+          "negative_count": 204,
+          "positive_count": 76,
+          "threshold": 0.02039381116628647,
+          "tp": 76,
+          "tpr": 1.0,
+          "tpr_wilson95": [
+            0.9518864149348628,
+            1.0000000000000002
+          ]
+        },
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+          "fp": 0,
+          "fpr": 0.0,
+          "fpr_wilson95": [
+            1.734723475976807e-18,
+            0.018845326377266575
+          ],
+          "negative_count": 200,
+          "positive_count": 80,
+          "threshold": 0.04870769381523132,
+          "tp": 80,
+          "tpr": 1.0,
+          "tpr_wilson95": [
+            0.9541818704644728,
+            0.9999999999999999
+          ]
+        },
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+          "fp": 4,
+          "fpr": 0.019417475728155338,
+          "fpr_wilson95": [
+            0.0075763491456009545,
+            0.04885415265915653
+          ],
+          "negative_count": 206,
+          "positive_count": 74,
+          "threshold": 0.990629255771637,
+          "tp": 74,
+          "tpr": 1.0,
+          "tpr_wilson95": [
+            0.950650220603614,
+            1.0000000000000002
+          ]
+        },
+        "task9:effect1:close microwave_1": {
+          "fp": 6,
+          "fpr": 0.028846153846153848,
+          "fpr_wilson95": [
+            0.013286106595828018,
+            0.061493678762913215
+          ],
+          "negative_count": 208,
+          "positive_count": 72,
+          "threshold": 0.05850173160433769,
+          "tp": 72,
+          "tpr": 1.0,
+          "tpr_wilson95": [
+            0.9493488274035422,
+            1.0
+          ]
+        }
+      },
+      "false_upgrade_count": 10,
+      "false_upgrade_receipt_ids": [
+        "t0-i49-s0:A5_EXTERNAL_REALIZATION",
+        "t0-i49-s0:C0_CLEAN",
+        "t0-i49-s1:A5_EXTERNAL_REALIZATION",
+        "t0-i49-s1:C0_CLEAN",
+        "t9-i37-s0:A5_EXTERNAL_REALIZATION",
+        "t9-i37-s0:C0_CLEAN",
+        "t9-i44-s0:A5_EXTERNAL_REALIZATION",
+        "t9-i44-s0:C0_CLEAN",
+        "t9-i49-s0:A5_EXTERNAL_REALIZATION",
+        "t9-i49-s0:C0_CLEAN"
+      ],
+      "min_per_effect_tpr": 1.0,
+      "negative_receipts": 612,
+      "optimality": {
+        "minimum_false_upgrades_at_branch_target_0_973": 10,
+        "minimum_false_upgrades_at_next_tpr": null,
+        "next_attainable_min_tpr": null
+      },
+      "positive_receipts": 228,
+      "receipt_fpr": 0.016339869281045753,
+      "receipt_fpr_cap": 0.05,
+      "receipt_fpr_wilson95": [
+        0.008899263292798791,
+        0.029814367430194978
+      ],
+      "receipt_tp": 228,
+      "receipt_tpr": 1.0,
+      "selection_eligible": false
+    }
+  ],
+  "options_per_task": {
+    "0": 14520,
+    "5": 121,
+    "9": 14641
+  },
+  "positive_receipts": 228,
+  "receipt_count": 840,
+  "selection_eligible": false,
+  "unit_count": 120,
+  "variant": "F"
+}

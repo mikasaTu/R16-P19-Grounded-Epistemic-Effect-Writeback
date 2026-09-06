@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "B_LEARNED_AND_0_9395": {
+      "agreement_with_oracle": 0.7333333333333333,
+      "concordant_units": 8,
+      "divergent_units": 112,
+      "false_upgrade_count": 0,
+      "per_effect_tpr": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.975,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.0,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.0,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 1.0,
+        "task9:effect1:close microwave_1": 0.05555555555555555
+      }
+    },
+    "C_PER_EFFECT_CALIBRATED_AND": {
+      "agreement_with_oracle": 0.9571428571428572,
+      "concordant_units": 102,
+      "divergent_units": 18,
+      "false_upgrade_count": 8,
+      "per_effect_tpr": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 1.0,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.8421052631578947,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.875,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 1.0,
+        "task9:effect1:close microwave_1": 0.9166666666666666
+      }
+    }
+  },
+  "old_FAIL_G1_not_reused": true,
+  "status": "MATCH"
+}

@@ -1,0 +1,138 @@
+{
+  "calibration_reuse_caveat": "Calibration previously fitted score scale/bias and threshold, though absent from base-model training_samples. Included because USER_PLAN explicitly requires calibration+pilot.",
+  "complete_vector": false,
+  "effects": {
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+      "maximum_attainable_lcb": 0.989751777103899,
+      "negative_count": 521,
+      "positive_count": 371,
+      "reasons": [],
+      "selected_tp": 346,
+      "status": "CERTIFIABLE_ON_ESTIMATION",
+      "target_lcb": 0.9,
+      "threshold": 0.7940068244934082
+    },
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+      "maximum_attainable_lcb": 0.7846891972623643,
+      "negative_count": 878,
+      "positive_count": 14,
+      "reasons": [
+        "positive_count_below_35",
+        "no_threshold_meets_Wilson_LCB"
+      ],
+      "selected_tp": null,
+      "status": "UNCERTIFIABLE",
+      "target_lcb": 0.9,
+      "threshold": null
+    },
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+      "maximum_attainable_lcb": 0.7846891972623643,
+      "negative_count": 596,
+      "positive_count": 14,
+      "reasons": [
+        "positive_count_below_35",
+        "no_threshold_meets_Wilson_LCB"
+      ],
+      "selected_tp": null,
+      "status": "UNCERTIFIABLE",
+      "target_lcb": 0.9,
+      "threshold": null
+    },
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+      "maximum_attainable_lcb": 0.9900180743715453,
+      "negative_count": 437,
+      "positive_count": 381,
+      "reasons": [],
+      "selected_tp": 355,
+      "status": "CERTIFIABLE_ON_ESTIMATION",
+      "target_lcb": 0.9,
+      "threshold": 0.8930768370628357
+    },
+    "task9:effect1:close microwave_1": {
+      "maximum_attainable_lcb": 0.7961166989641515,
+      "negative_count": 803,
+      "positive_count": 15,
+      "reasons": [
+        "positive_count_below_35",
+        "no_threshold_meets_Wilson_LCB"
+      ],
+      "selected_tp": null,
+      "status": "UNCERTIFIABLE",
+      "target_lcb": 0.9,
+      "threshold": null
+    }
+  },
+  "estimation_splits": [
+    "calibration",
+    "pilot"
+  ],
+  "excluded_splits": {
+    "formal": "Prohibited",
+    "natural": "Split participates in base model fitting (seeds0-4); seeds5-6 are not promoted to a new eligible split after B0.",
+    "qualification": "Reserved for B3"
+  },
+  "formal_access_count": 0,
+  "sample_unit": "frame-effect; within-episode dependence remains, Wilson is the requested descriptive counting convention",
+  "splits": {
+    "calibration": {
+      "effects": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+          "positive_count": 237,
+          "samples": 609
+        },
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+          "positive_count": 9,
+          "samples": 609
+        },
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+          "positive_count": 9,
+          "samples": 433
+        },
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+          "positive_count": 240,
+          "samples": 530
+        },
+        "task9:effect1:close microwave_1": {
+          "positive_count": 10,
+          "samples": 530
+        }
+      },
+      "episodes": 30,
+      "receipts": 1572
+    },
+    "pilot": {
+      "effects": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+          "positive_count": 134,
+          "samples": 283
+        },
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+          "positive_count": 5,
+          "samples": 283
+        },
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+          "positive_count": 5,
+          "samples": 177
+        },
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+          "positive_count": 141,
+          "samples": 288
+        },
+        "task9:effect1:close microwave_1": {
+          "positive_count": 5,
+          "samples": 288
+        }
+      },
+      "episodes": 15,
+      "receipts": 748
+    }
+  },
+  "status": "UNCERTIFIABLE",
+  "threshold_vector": {
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.7940068244934082,
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.8930768370628357,
+    "task9:effect1:close microwave_1": null
+  }
+}
