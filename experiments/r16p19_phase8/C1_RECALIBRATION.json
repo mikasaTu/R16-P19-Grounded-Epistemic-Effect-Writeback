@@ -1,0 +1,62 @@
+{
+  "status": "COMPLETED",
+  "mapping": "Platt per effect on calibration+pilot frame-effect rows",
+  "retraining": false,
+  "effects": {
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+      "a": 1.6947934621244543,
+      "b": -1.5731023652446074,
+      "monotone": true,
+      "auc_before": 0.9941383716779364,
+      "auc_after": 0.9941383716779364
+    },
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+      "a": 2.9801937660683024,
+      "b": 1.8796757736654242,
+      "monotone": true,
+      "auc_before": 0.9877155873739017,
+      "auc_after": 0.9877155873739017
+    },
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+      "a": 3.9222267214660373,
+      "b": 4.8056220553709945,
+      "monotone": true,
+      "auc_before": 0.9937679769894535,
+      "auc_after": 0.9937679769894535
+    },
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+      "a": 2.3269717128471488,
+      "b": -1.7488385582958972,
+      "monotone": true,
+      "auc_before": 0.9994894802909362,
+      "auc_after": 0.9994894802909362
+    },
+    "task9:effect1:close microwave_1": {
+      "a": 0.9046587892921005,
+      "b": -0.43846295399387,
+      "monotone": true,
+      "auc_before": 0.9794935657949356,
+      "auc_after": 0.9794935657949356
+    }
+  },
+  "formal_diagnostic": {
+    "claim_eligible": false,
+    "selection_eligible": false,
+    "formal_access_count": 1,
+    "fpr_caps": {
+      "0.02": {
+        "threshold_vector": {},
+        "min_per_effect_tpr": 1.0
+      },
+      "0.05": {
+        "threshold_vector": {},
+        "min_per_effect_tpr": 1.0
+      }
+    }
+  },
+  "thresholds_before": null,
+  "thresholds_after": {},
+  "threshold_spread_before": null,
+  "threshold_spread_after": null,
+  "conclusion": "尺度失配假设仅由数值极差变化描述；formal 诊断不参与选择。"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE",
+  "formal_access_count": 0,
+  "pooled_positive_count": 795,
+  "global_threshold": 0.6477173811021721,
+  "per_effect_lcb": {
+    "individual_95": {
+      "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9024186077099525,
+      "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.11721378644576919,
+      "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.26799202452413634,
+      "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9660733348878446,
+      "task9:effect1:close microwave_1": 0.011866895493268553
+    },
+    "joint_95_bonferroni": {
+      "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.8909266093312087,
+      "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.08934691522070981,
+      "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.216478540794531,
+      "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9576875250662444,
+      "task9:effect1:close microwave_1": 0.007876031762663438
+    }
+  },
+  "per_effect_thresholds_comparison": {
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region": null,
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region": null,
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": null,
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": null,
+    "task9:effect1:close microwave_1": null
+  },
+  "formal_read_paths": []
+}

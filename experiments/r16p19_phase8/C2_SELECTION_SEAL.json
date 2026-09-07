@@ -1,0 +1,7 @@
+{
+  "status": "SEALED",
+  "formal_access_count": 0,
+  "formal_read_paths": [],
+  "c2_sha256": "ed46b20203134b1938c708d7212492762982e678f76d50abc29a317a466493d3",
+  "selection_rule": "pooled positive rows, highest global threshold with Wilson LCB >= .90"
+}

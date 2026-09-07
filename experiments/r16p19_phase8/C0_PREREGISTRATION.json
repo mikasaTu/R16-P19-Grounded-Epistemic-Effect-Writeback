@@ -1,0 +1,26 @@
+{
+  "step": "R16-P19 Phase-8 / step9 S1c",
+  "mode": "CPU-only zero-rollout",
+  "frozen": true,
+  "authentication": {
+    "method": "one-sided Wilson lower bound for per-effect TPR",
+    "target": 0.9,
+    "threshold_rule": "highest threshold with lower bound >= 0.90; otherwise UNCERTIFIABLE"
+  },
+  "multiplicity": {
+    "individual_95": {
+      "alpha": 0.05,
+      "z": 1.959963984540054
+    },
+    "joint_95_bonferroni": {
+      "alpha_per_effect": 0.01,
+      "z": 2.5758293035489004
+    },
+    "primary": "individual_95"
+  },
+  "independence_units": {
+    "frame_effect": "intervals use frame-effect rows; temporal correlation caveat retained",
+    "episode": "episodes are clusters; effective interval uses episode-level clustered counts; report width difference"
+  },
+  "formal_policy": "formal labels diagnostic only; claim_eligible=false; selection_eligible=false; formal data excluded from all seals"
+}

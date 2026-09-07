@@ -1,0 +1,21 @@
+{
+  "status": "NEEDS_DATA",
+  "gates": {
+    "C1_scale_mismatch_supported": false,
+    "C2_individual_95_complete": true,
+    "C2_joint_95_complete": false,
+    "C4_more_consistent_without_higher_false_upgrade": false,
+    "phase5_reproduction_mismatch": 0
+  },
+  "basis": {
+    "rare_effect_positive_counts": {
+      "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 371,
+      "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 14,
+      "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 14,
+      "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 381,
+      "task9:effect1:close microwave_1": 15
+    },
+    "sample_budget_file": "C0_SAMPLE_BUDGET.json"
+  },
+  "reason": "No new data; rare-effect certification remains underpowered and qualification is not clean held-out. No formal evaluation performed."
+}

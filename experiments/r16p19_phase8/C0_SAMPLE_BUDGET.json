@@ -1,0 +1,79 @@
+{
+  "status": "SEALED",
+  "budgets": {
+    "individual_95": {
+      "frame_effect": {
+        "minimum_positive_samples": 35,
+        "basis": "all-positive conservative Wilson calculation"
+      },
+      "episode_cluster": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+          "estimated_sets": 85,
+          "observed_positive_rate_per_frame": 0.41591928251121074,
+          "extrapolation": true
+        },
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+          "estimated_sets": 2230,
+          "observed_positive_rate_per_frame": 0.01569506726457399,
+          "extrapolation": true
+        },
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+          "estimated_sets": 1525,
+          "observed_positive_rate_per_frame": 0.022950819672131147,
+          "extrapolation": true
+        },
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+          "estimated_sets": 76,
+          "observed_positive_rate_per_frame": 0.46577017114914426,
+          "extrapolation": true
+        },
+        "task9:effect1:close microwave_1": {
+          "estimated_sets": 1909,
+          "observed_positive_rate_per_frame": 0.018337408312958436,
+          "extrapolation": true
+        }
+      }
+    },
+    "joint_95_bonferroni": {
+      "frame_effect": {
+        "minimum_positive_samples": 60,
+        "basis": "all-positive conservative Wilson calculation"
+      },
+      "episode_cluster": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+          "estimated_sets": 145,
+          "observed_positive_rate_per_frame": 0.41591928251121074,
+          "extrapolation": true
+        },
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+          "estimated_sets": 3823,
+          "observed_positive_rate_per_frame": 0.01569506726457399,
+          "extrapolation": true
+        },
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+          "estimated_sets": 2615,
+          "observed_positive_rate_per_frame": 0.022950819672131147,
+          "extrapolation": true
+        },
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+          "estimated_sets": 129,
+          "observed_positive_rate_per_frame": 0.46577017114914426,
+          "extrapolation": true
+        },
+        "task9:effect1:close microwave_1": {
+          "estimated_sets": 3272,
+          "observed_positive_rate_per_frame": 0.018337408312958436,
+          "extrapolation": true
+        }
+      }
+    }
+  },
+  "observed_nonformal_positive_rates": {
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.41591928251121074,
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.01569506726457399,
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.022950819672131147,
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.46577017114914426,
+    "task9:effect1:close microwave_1": 0.018337408312958436
+  },
+  "notes": "Episode estimates extrapolate calibration+pilot frame-positive rates; cluster widths are reported descriptively, not treated as independent frame evidence."
+}

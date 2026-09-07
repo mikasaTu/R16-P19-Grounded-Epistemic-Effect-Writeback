@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETED_DIAGNOSTIC",
+  "ledger_semantics_changed": true,
+  "event_stream_source": "phase7/B7_REPLAY.json and phase5 frozen event stream",
+  "consistent_units": null,
+  "divergent_units": null,
+  "gain_intervals": null,
+  "false_upgrade_count": null,
+  "false_upgrade_wilson_upper": 0.7934506856227626,
+  "claim_eligible": false,
+  "selection_eligible": false,
+  "note": "Per-effect independent upgrade is a ledger semantic change; formal-derived values are diagnostic only."
+}
