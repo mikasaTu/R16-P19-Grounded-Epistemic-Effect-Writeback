@@ -9,3 +9,5 @@
 - Phase-5 判决复现 mismatch = 0。
 
 需要按 `C0_SAMPLE_BUDGET.json` 采集全新、seed 不重叠、未参与任何选型且含独立 held-out 的 split；本步不做 formal、不启动 Track 2、不提交 PAI。
+
+C4 frozen replay: concordant units = 102, divergent units = 18; false-upgrade denominator absent in source artifact, so its count and Wilson bound remain null.

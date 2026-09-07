@@ -1,13 +1,40 @@
 {
   "status": "COMPLETED_DIAGNOSTIC",
   "ledger_semantics_changed": true,
-  "event_stream_source": "phase7/B7_REPLAY.json and phase5 frozen event stream",
-  "consistent_units": null,
-  "divergent_units": null,
-  "gain_intervals": null,
+  "event_stream_source": "phase6/S1_REPLAY.json frozen receipt event stream",
+  "consistent_units": 102,
+  "divergent_units": 18,
+  "divergent_unit_ids": [
+    "t0-i31-s0",
+    "t0-i32-s1",
+    "t0-i42-s0",
+    "t0-i44-s1",
+    "t0-i46-s0",
+    "t0-i46-s1",
+    "t0-i49-s0",
+    "t0-i49-s1",
+    "t5-i39-s1",
+    "t5-i40-s0",
+    "t5-i42-s0",
+    "t5-i43-s1",
+    "t5-i47-s1",
+    "t9-i31-s1",
+    "t9-i33-s0",
+    "t9-i35-s0",
+    "t9-i37-s0",
+    "t9-i49-s0"
+  ],
+  "gain_intervals": {
+    "lower": 0.12361111111111112,
+    "lower_rule": "mathematical worst case for gain: Core fails and baseline succeeds in every faulted cell of each divergent unit",
+    "point_estimate_forbidden": true,
+    "upper": 0.31527777777777777,
+    "upper_rule": "all divergent units inherit frozen oracle outcomes"
+  },
   "false_upgrade_count": null,
-  "false_upgrade_wilson_upper": 0.7934506856227626,
+  "false_upgrade_wilson_upper": null,
+  "false_upgrade_denominator": null,
   "claim_eligible": false,
   "selection_eligible": false,
-  "note": "Per-effect independent upgrade is a ledger semantic change; formal-derived values are diagnostic only."
+  "note": "Independent per-effect upgrade requires effect-level ledger replay; the frozen C replay supplies the effect-calibrated event decisions. False-upgrade count is null because phase6 event artifact does not expose negative effect-cell denominator; null is preserved rather than inferred."
 }

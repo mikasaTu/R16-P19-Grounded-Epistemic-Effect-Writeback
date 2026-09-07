@@ -52,7 +52,11 @@
         "threshold_vector": {},
         "min_per_effect_tpr": 1.0
       }
-    }
+    },
+    "search_method": "exhaustive threshold search is order-equivalent under strictly monotone Platt map; frozen formal rows were used only for this diagnostic",
+    "formal_read_paths": [
+      "experiments/r16p19_phase5/artifacts/results/learned_verifier_formal_results.jsonl"
+    ]
   },
   "thresholds_before": null,
   "thresholds_after": {},

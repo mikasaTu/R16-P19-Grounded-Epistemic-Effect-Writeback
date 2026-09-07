@@ -15,7 +15,9 @@
       "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 381,
       "task9:effect1:close microwave_1": 15
     },
-    "sample_budget_file": "C0_SAMPLE_BUDGET.json"
+    "sample_budget_file": "C0_SAMPLE_BUDGET.json",
+    "C4_consistent_units": 102,
+    "C4_divergent_units": 18
   },
   "reason": "No new data; rare-effect certification remains underpowered and qualification is not clean held-out. No formal evaluation performed."
 }
