@@ -1,0 +1,1003 @@
+{
+  "fit_artifact": "C1_MODELS_NONFORMAL.json",
+  "fit_artifact_sha256": "48fd2529a58a52e0ff24bbb65e06d95334c727d51044622c66f3454e0ea3d074",
+  "formal_diagnostic": {
+    "claim_eligible": false,
+    "diagnostic_only": true,
+    "formal_access_count": 1,
+    "formal_labels_used": true,
+    "formal_read_paths": [
+      "experiments/r16p19_phase5/artifacts/results/learned_verifier_formal_results.jsonl",
+      "raw/episodes/formal/*.npz and *.json"
+    ],
+    "formal_receipt_count": 840,
+    "selection_eligible": false,
+    "selection_seal_written": false
+  },
+  "interpretation": "Both scalar maps are strictly monotone on the logit decision scale, so per-effect ranking/AUC is invariant. Numeric threshold scale may move or compress, but this formal-label ceiling cannot establish a prospective claim and is excluded from all selection seals.",
+  "maps_artifact": "C2_EXTRA_MAPS_NONFORMAL.json",
+  "maps_artifact_sha256": "2097cad0d7c68e84e78fcfac1d8c844e06b01ea7a03cd7bb451c57521744ea26",
+  "operating_points": {
+    "0.02": {
+      "platt": {
+        "allowed_false_upgrades": 12,
+        "claim_eligible": false,
+        "effects": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.9458217078905796,
+            "threshold_decision_score": 2.859773768197129,
+            "threshold_probability": 0.9458217078905796,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+            "fp": 4,
+            "fpr": 0.0196078431372549,
+            "fpr_wilson95": [
+              0.007650879122415393,
+              0.04932263755651539
+            ],
+            "negative_count": 204,
+            "positive_count": 76,
+            "threshold": 6.381913259160358e-05,
+            "threshold_decision_score": -9.65939370751966,
+            "threshold_probability": 6.381913259160358e-05,
+            "tp": 76,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9518864149348628,
+              1.0000000000000002
+            ]
+          },
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.0010570933106020983,
+            "threshold_decision_score": -6.8511746448472515,
+            "threshold_probability": 0.0010570933106020983,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+            "fp": 4,
+            "fpr": 0.019417475728155338,
+            "fpr_wilson95": [
+              0.0075763491456009545,
+              0.04885415265915653
+            ],
+            "negative_count": 206,
+            "positive_count": 74,
+            "threshold": 0.9998879652966586,
+            "threshold_decision_score": 9.096589842421318,
+            "threshold_probability": 0.9998879652966586,
+            "tp": 74,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.950650220603614,
+              1.0000000000000002
+            ]
+          },
+          "task9:effect1:close microwave_1": {
+            "fp": 6,
+            "fpr": 0.028846153846153848,
+            "fpr_wilson95": [
+              0.013286106595828018,
+              0.061493678762913215
+            ],
+            "negative_count": 208,
+            "positive_count": 72,
+            "threshold": 0.04964294103964569,
+            "threshold_decision_score": -2.9519815595619487,
+            "threshold_probability": 0.04964294103964569,
+            "tp": 72,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9493488274035422,
+              1.0
+            ]
+          }
+        },
+        "false_upgrade_count": 10,
+        "false_upgrade_receipt_ids": [
+          "t0-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s0:C0_CLEAN",
+          "t0-i49-s1:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s1:C0_CLEAN",
+          "t9-i37-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i37-s0:C0_CLEAN",
+          "t9-i44-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i44-s0:C0_CLEAN",
+          "t9-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i49-s0:C0_CLEAN"
+        ],
+        "min_per_effect_tpr": 1.0,
+        "model": "platt",
+        "negative_receipts": 612,
+        "optimality": {
+          "minimum_false_upgrades_at_branch_target_0_973": 10,
+          "minimum_false_upgrades_at_next_tpr": null,
+          "next_attainable_min_tpr": null
+        },
+        "positive_receipts": 228,
+        "receipt_fpr": 0.016339869281045753,
+        "receipt_fpr_cap": 0.02,
+        "receipt_fpr_wilson95": [
+          0.008899263292798791,
+          0.029814367430194978
+        ],
+        "receipt_tp": 228,
+        "receipt_tpr": 1.0,
+        "selection_eligible": false,
+        "threshold_spread": {
+          "cv": 1.1744823373153248,
+          "max": 0.9998879652966586,
+          "mean": 0.39929470533401556,
+          "min": 6.381913259160358e-05,
+          "range": 0.999824146164067,
+          "std": 0.4689645787983285
+        },
+        "threshold_vector": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9458217078905796,
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 6.381913259160358e-05,
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.0010570933106020983,
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9998879652966586,
+          "task9:effect1:close microwave_1": 0.04964294103964569
+        }
+      },
+      "raw_phase7_reference": {
+        "false_upgrade_count": 10,
+        "min_per_effect_tpr": 1.0,
+        "threshold_spread": {
+          "cv": 1.0990518918762464,
+          "max": 0.990629255771637,
+          "mean": 0.41001807525753975,
+          "min": 0.02039381116628647,
+          "range": 0.9702354446053505,
+          "std": 0.4506311413152562
+        },
+        "threshold_vector": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9318578839302063,
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.02039381116628647,
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.04870769381523132,
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.990629255771637,
+          "task9:effect1:close microwave_1": 0.05850173160433769
+        }
+      },
+      "raw_recomputed": {
+        "allowed_false_upgrades": 12,
+        "claim_eligible": false,
+        "effects": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.9318578839302063,
+            "threshold_decision_score": 0.9318578839302063,
+            "threshold_probability": 0.9318578839302063,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+            "fp": 4,
+            "fpr": 0.0196078431372549,
+            "fpr_wilson95": [
+              0.007650879122415393,
+              0.04932263755651539
+            ],
+            "negative_count": 204,
+            "positive_count": 76,
+            "threshold": 0.02039381116628647,
+            "threshold_decision_score": 0.02039381116628647,
+            "threshold_probability": 0.02039381116628647,
+            "tp": 76,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9518864149348628,
+              1.0000000000000002
+            ]
+          },
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.04870769381523132,
+            "threshold_decision_score": 0.04870769381523132,
+            "threshold_probability": 0.04870769381523132,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+            "fp": 4,
+            "fpr": 0.019417475728155338,
+            "fpr_wilson95": [
+              0.0075763491456009545,
+              0.04885415265915653
+            ],
+            "negative_count": 206,
+            "positive_count": 74,
+            "threshold": 0.990629255771637,
+            "threshold_decision_score": 0.990629255771637,
+            "threshold_probability": 0.990629255771637,
+            "tp": 74,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.950650220603614,
+              1.0000000000000002
+            ]
+          },
+          "task9:effect1:close microwave_1": {
+            "fp": 6,
+            "fpr": 0.028846153846153848,
+            "fpr_wilson95": [
+              0.013286106595828018,
+              0.061493678762913215
+            ],
+            "negative_count": 208,
+            "positive_count": 72,
+            "threshold": 0.05850173160433769,
+            "threshold_decision_score": 0.05850173160433769,
+            "threshold_probability": 0.05850173160433769,
+            "tp": 72,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9493488274035422,
+              1.0
+            ]
+          }
+        },
+        "false_upgrade_count": 10,
+        "false_upgrade_receipt_ids": [
+          "t0-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s0:C0_CLEAN",
+          "t0-i49-s1:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s1:C0_CLEAN",
+          "t9-i37-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i37-s0:C0_CLEAN",
+          "t9-i44-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i44-s0:C0_CLEAN",
+          "t9-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i49-s0:C0_CLEAN"
+        ],
+        "min_per_effect_tpr": 1.0,
+        "model": "raw",
+        "negative_receipts": 612,
+        "optimality": {
+          "minimum_false_upgrades_at_branch_target_0_973": 10,
+          "minimum_false_upgrades_at_next_tpr": null,
+          "next_attainable_min_tpr": null
+        },
+        "positive_receipts": 228,
+        "receipt_fpr": 0.016339869281045753,
+        "receipt_fpr_cap": 0.02,
+        "receipt_fpr_wilson95": [
+          0.008899263292798791,
+          0.029814367430194978
+        ],
+        "receipt_tp": 228,
+        "receipt_tpr": 1.0,
+        "selection_eligible": false,
+        "threshold_spread": {
+          "cv": 1.0990518918762464,
+          "max": 0.990629255771637,
+          "mean": 0.41001807525753975,
+          "min": 0.02039381116628647,
+          "range": 0.9702354446053505,
+          "std": 0.4506311413152562
+        },
+        "threshold_vector": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9318578839302063,
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.02039381116628647,
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.04870769381523132,
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.990629255771637,
+          "task9:effect1:close microwave_1": 0.05850173160433769
+        }
+      },
+      "temperature": {
+        "allowed_false_upgrades": 12,
+        "claim_eligible": false,
+        "effects": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.9634027972126995,
+            "threshold_decision_score": 3.2704997867618,
+            "threshold_probability": 0.9634027972126995,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+            "fp": 4,
+            "fpr": 0.0196078431372549,
+            "fpr_wilson95": [
+              0.007650879122415393,
+              0.04932263755651539
+            ],
+            "negative_count": 204,
+            "positive_count": 76,
+            "threshold": 0.0019002752374204764,
+            "threshold_decision_score": -6.263854458449948,
+            "threshold_probability": 0.0019002752374204764,
+            "tp": 76,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9518864149348628,
+              1.0000000000000002
+            ]
+          },
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.025281977100402444,
+            "threshold_decision_score": -3.6520564475807884,
+            "threshold_probability": 0.025281977100402444,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+            "fp": 4,
+            "fpr": 0.019417475728155338,
+            "fpr_wilson95": [
+              0.0075763491456009545,
+              0.04885415265915653
+            ],
+            "negative_count": 206,
+            "positive_count": 74,
+            "threshold": 0.9995351204610546,
+            "threshold_decision_score": 7.673267254340177,
+            "threshold_probability": 0.9995351204610546,
+            "tp": 74,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.950650220603614,
+              1.0000000000000002
+            ]
+          },
+          "task9:effect1:close microwave_1": {
+            "fp": 6,
+            "fpr": 0.028846153846153848,
+            "fpr_wilson95": [
+              0.013286106595828018,
+              0.061493678762913215
+            ],
+            "negative_count": 208,
+            "positive_count": 72,
+            "threshold": 0.05402760813115977,
+            "threshold_decision_score": -2.8627182069523314,
+            "threshold_probability": 0.05402760813115977,
+            "tp": 72,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9493488274035422,
+              1.0
+            ]
+          }
+        },
+        "false_upgrade_count": 10,
+        "false_upgrade_receipt_ids": [
+          "t0-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s0:C0_CLEAN",
+          "t0-i49-s1:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s1:C0_CLEAN",
+          "t9-i37-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i37-s0:C0_CLEAN",
+          "t9-i44-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i44-s0:C0_CLEAN",
+          "t9-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i49-s0:C0_CLEAN"
+        ],
+        "min_per_effect_tpr": 1.0,
+        "model": "temperature",
+        "negative_receipts": 612,
+        "optimality": {
+          "minimum_false_upgrades_at_branch_target_0_973": 10,
+          "minimum_false_upgrades_at_next_tpr": null,
+          "next_attainable_min_tpr": null
+        },
+        "positive_receipts": 228,
+        "receipt_fpr": 0.016339869281045753,
+        "receipt_fpr_cap": 0.02,
+        "receipt_fpr_wilson95": [
+          0.008899263292798791,
+          0.029814367430194978
+        ],
+        "receipt_tp": 228,
+        "receipt_tpr": 1.0,
+        "selection_eligible": false,
+        "threshold_spread": {
+          "cv": 1.144704750951903,
+          "max": 0.9995351204610546,
+          "mean": 0.40882955562854734,
+          "min": 0.0019002752374204764,
+          "range": 0.9976348452236342,
+          "std": 0.4679891346575535
+        },
+        "threshold_vector": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9634027972126995,
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.0019002752374204764,
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.025281977100402444,
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9995351204610546,
+          "task9:effect1:close microwave_1": 0.05402760813115977
+        }
+      }
+    },
+    "0.05": {
+      "platt": {
+        "allowed_false_upgrades": 30,
+        "claim_eligible": false,
+        "effects": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.9458217078905796,
+            "threshold_decision_score": 2.859773768197129,
+            "threshold_probability": 0.9458217078905796,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+            "fp": 4,
+            "fpr": 0.0196078431372549,
+            "fpr_wilson95": [
+              0.007650879122415393,
+              0.04932263755651539
+            ],
+            "negative_count": 204,
+            "positive_count": 76,
+            "threshold": 6.381913259160358e-05,
+            "threshold_decision_score": -9.65939370751966,
+            "threshold_probability": 6.381913259160358e-05,
+            "tp": 76,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9518864149348628,
+              1.0000000000000002
+            ]
+          },
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.0010570933106020983,
+            "threshold_decision_score": -6.8511746448472515,
+            "threshold_probability": 0.0010570933106020983,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+            "fp": 4,
+            "fpr": 0.019417475728155338,
+            "fpr_wilson95": [
+              0.0075763491456009545,
+              0.04885415265915653
+            ],
+            "negative_count": 206,
+            "positive_count": 74,
+            "threshold": 0.9998879652966586,
+            "threshold_decision_score": 9.096589842421318,
+            "threshold_probability": 0.9998879652966586,
+            "tp": 74,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.950650220603614,
+              1.0000000000000002
+            ]
+          },
+          "task9:effect1:close microwave_1": {
+            "fp": 6,
+            "fpr": 0.028846153846153848,
+            "fpr_wilson95": [
+              0.013286106595828018,
+              0.061493678762913215
+            ],
+            "negative_count": 208,
+            "positive_count": 72,
+            "threshold": 0.04964294103964569,
+            "threshold_decision_score": -2.9519815595619487,
+            "threshold_probability": 0.04964294103964569,
+            "tp": 72,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9493488274035422,
+              1.0
+            ]
+          }
+        },
+        "false_upgrade_count": 10,
+        "false_upgrade_receipt_ids": [
+          "t0-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s0:C0_CLEAN",
+          "t0-i49-s1:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s1:C0_CLEAN",
+          "t9-i37-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i37-s0:C0_CLEAN",
+          "t9-i44-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i44-s0:C0_CLEAN",
+          "t9-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i49-s0:C0_CLEAN"
+        ],
+        "min_per_effect_tpr": 1.0,
+        "model": "platt",
+        "negative_receipts": 612,
+        "optimality": {
+          "minimum_false_upgrades_at_branch_target_0_973": 10,
+          "minimum_false_upgrades_at_next_tpr": null,
+          "next_attainable_min_tpr": null
+        },
+        "positive_receipts": 228,
+        "receipt_fpr": 0.016339869281045753,
+        "receipt_fpr_cap": 0.05,
+        "receipt_fpr_wilson95": [
+          0.008899263292798791,
+          0.029814367430194978
+        ],
+        "receipt_tp": 228,
+        "receipt_tpr": 1.0,
+        "selection_eligible": false,
+        "threshold_spread": {
+          "cv": 1.1744823373153248,
+          "max": 0.9998879652966586,
+          "mean": 0.39929470533401556,
+          "min": 6.381913259160358e-05,
+          "range": 0.999824146164067,
+          "std": 0.4689645787983285
+        },
+        "threshold_vector": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9458217078905796,
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 6.381913259160358e-05,
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.0010570933106020983,
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9998879652966586,
+          "task9:effect1:close microwave_1": 0.04964294103964569
+        }
+      },
+      "raw_phase7_reference": {
+        "false_upgrade_count": 10,
+        "min_per_effect_tpr": 1.0,
+        "threshold_spread": {
+          "cv": 1.0990518918762464,
+          "max": 0.990629255771637,
+          "mean": 0.41001807525753975,
+          "min": 0.02039381116628647,
+          "range": 0.9702354446053505,
+          "std": 0.4506311413152562
+        },
+        "threshold_vector": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9318578839302063,
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.02039381116628647,
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.04870769381523132,
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.990629255771637,
+          "task9:effect1:close microwave_1": 0.05850173160433769
+        }
+      },
+      "raw_recomputed": {
+        "allowed_false_upgrades": 30,
+        "claim_eligible": false,
+        "effects": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.9318578839302063,
+            "threshold_decision_score": 0.9318578839302063,
+            "threshold_probability": 0.9318578839302063,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+            "fp": 4,
+            "fpr": 0.0196078431372549,
+            "fpr_wilson95": [
+              0.007650879122415393,
+              0.04932263755651539
+            ],
+            "negative_count": 204,
+            "positive_count": 76,
+            "threshold": 0.02039381116628647,
+            "threshold_decision_score": 0.02039381116628647,
+            "threshold_probability": 0.02039381116628647,
+            "tp": 76,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9518864149348628,
+              1.0000000000000002
+            ]
+          },
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.04870769381523132,
+            "threshold_decision_score": 0.04870769381523132,
+            "threshold_probability": 0.04870769381523132,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+            "fp": 4,
+            "fpr": 0.019417475728155338,
+            "fpr_wilson95": [
+              0.0075763491456009545,
+              0.04885415265915653
+            ],
+            "negative_count": 206,
+            "positive_count": 74,
+            "threshold": 0.990629255771637,
+            "threshold_decision_score": 0.990629255771637,
+            "threshold_probability": 0.990629255771637,
+            "tp": 74,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.950650220603614,
+              1.0000000000000002
+            ]
+          },
+          "task9:effect1:close microwave_1": {
+            "fp": 6,
+            "fpr": 0.028846153846153848,
+            "fpr_wilson95": [
+              0.013286106595828018,
+              0.061493678762913215
+            ],
+            "negative_count": 208,
+            "positive_count": 72,
+            "threshold": 0.05850173160433769,
+            "threshold_decision_score": 0.05850173160433769,
+            "threshold_probability": 0.05850173160433769,
+            "tp": 72,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9493488274035422,
+              1.0
+            ]
+          }
+        },
+        "false_upgrade_count": 10,
+        "false_upgrade_receipt_ids": [
+          "t0-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s0:C0_CLEAN",
+          "t0-i49-s1:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s1:C0_CLEAN",
+          "t9-i37-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i37-s0:C0_CLEAN",
+          "t9-i44-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i44-s0:C0_CLEAN",
+          "t9-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i49-s0:C0_CLEAN"
+        ],
+        "min_per_effect_tpr": 1.0,
+        "model": "raw",
+        "negative_receipts": 612,
+        "optimality": {
+          "minimum_false_upgrades_at_branch_target_0_973": 10,
+          "minimum_false_upgrades_at_next_tpr": null,
+          "next_attainable_min_tpr": null
+        },
+        "positive_receipts": 228,
+        "receipt_fpr": 0.016339869281045753,
+        "receipt_fpr_cap": 0.05,
+        "receipt_fpr_wilson95": [
+          0.008899263292798791,
+          0.029814367430194978
+        ],
+        "receipt_tp": 228,
+        "receipt_tpr": 1.0,
+        "selection_eligible": false,
+        "threshold_spread": {
+          "cv": 1.0990518918762464,
+          "max": 0.990629255771637,
+          "mean": 0.41001807525753975,
+          "min": 0.02039381116628647,
+          "range": 0.9702354446053505,
+          "std": 0.4506311413152562
+        },
+        "threshold_vector": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9318578839302063,
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.02039381116628647,
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.04870769381523132,
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.990629255771637,
+          "task9:effect1:close microwave_1": 0.05850173160433769
+        }
+      },
+      "temperature": {
+        "allowed_false_upgrades": 30,
+        "claim_eligible": false,
+        "effects": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.9634027972126995,
+            "threshold_decision_score": 3.2704997867618,
+            "threshold_probability": 0.9634027972126995,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+            "fp": 4,
+            "fpr": 0.0196078431372549,
+            "fpr_wilson95": [
+              0.007650879122415393,
+              0.04932263755651539
+            ],
+            "negative_count": 204,
+            "positive_count": 76,
+            "threshold": 0.0019002752374204764,
+            "threshold_decision_score": -6.263854458449948,
+            "threshold_probability": 0.0019002752374204764,
+            "tp": 76,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9518864149348628,
+              1.0000000000000002
+            ]
+          },
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_wilson95": [
+              1.734723475976807e-18,
+              0.018845326377266575
+            ],
+            "negative_count": 200,
+            "positive_count": 80,
+            "threshold": 0.025281977100402444,
+            "threshold_decision_score": -3.6520564475807884,
+            "threshold_probability": 0.025281977100402444,
+            "tp": 80,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9541818704644728,
+              0.9999999999999999
+            ]
+          },
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+            "fp": 4,
+            "fpr": 0.019417475728155338,
+            "fpr_wilson95": [
+              0.0075763491456009545,
+              0.04885415265915653
+            ],
+            "negative_count": 206,
+            "positive_count": 74,
+            "threshold": 0.9995351204610546,
+            "threshold_decision_score": 7.673267254340177,
+            "threshold_probability": 0.9995351204610546,
+            "tp": 74,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.950650220603614,
+              1.0000000000000002
+            ]
+          },
+          "task9:effect1:close microwave_1": {
+            "fp": 6,
+            "fpr": 0.028846153846153848,
+            "fpr_wilson95": [
+              0.013286106595828018,
+              0.061493678762913215
+            ],
+            "negative_count": 208,
+            "positive_count": 72,
+            "threshold": 0.05402760813115977,
+            "threshold_decision_score": -2.8627182069523314,
+            "threshold_probability": 0.05402760813115977,
+            "tp": 72,
+            "tpr": 1.0,
+            "tpr_wilson95": [
+              0.9493488274035422,
+              1.0
+            ]
+          }
+        },
+        "false_upgrade_count": 10,
+        "false_upgrade_receipt_ids": [
+          "t0-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s0:C0_CLEAN",
+          "t0-i49-s1:A5_EXTERNAL_REALIZATION",
+          "t0-i49-s1:C0_CLEAN",
+          "t9-i37-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i37-s0:C0_CLEAN",
+          "t9-i44-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i44-s0:C0_CLEAN",
+          "t9-i49-s0:A5_EXTERNAL_REALIZATION",
+          "t9-i49-s0:C0_CLEAN"
+        ],
+        "min_per_effect_tpr": 1.0,
+        "model": "temperature",
+        "negative_receipts": 612,
+        "optimality": {
+          "minimum_false_upgrades_at_branch_target_0_973": 10,
+          "minimum_false_upgrades_at_next_tpr": null,
+          "next_attainable_min_tpr": null
+        },
+        "positive_receipts": 228,
+        "receipt_fpr": 0.016339869281045753,
+        "receipt_fpr_cap": 0.05,
+        "receipt_fpr_wilson95": [
+          0.008899263292798791,
+          0.029814367430194978
+        ],
+        "receipt_tp": 228,
+        "receipt_tpr": 1.0,
+        "selection_eligible": false,
+        "threshold_spread": {
+          "cv": 1.144704750951903,
+          "max": 0.9995351204610546,
+          "mean": 0.40882955562854734,
+          "min": 0.0019002752374204764,
+          "range": 0.9976348452236342,
+          "std": 0.4679891346575535
+        },
+        "threshold_vector": {
+          "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9634027972126995,
+          "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.0019002752374204764,
+          "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.025281977100402444,
+          "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9995351204610546,
+          "task9:effect1:close microwave_1": 0.05402760813115977
+        }
+      }
+    }
+  },
+  "retraining_performed": false,
+  "schema_version": 2,
+  "status": "COMPLETED_RETROSPECTIVE_FORMAL_DIAGNOSTIC",
+  "threshold_convergence": {
+    "platt": {
+      "spread": {
+        "cv": 1.1744823373153248,
+        "max": 0.9998879652966586,
+        "mean": 0.39929470533401556,
+        "min": 6.381913259160358e-05,
+        "range": 0.999824146164067,
+        "std": 0.4689645787983285
+      },
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9458217078905796,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 6.381913259160358e-05,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.0010570933106020983,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9998879652966586,
+        "task9:effect1:close microwave_1": 0.04964294103964569
+      }
+    },
+    "raw": {
+      "spread": {
+        "cv": 1.0990518918762464,
+        "max": 0.990629255771637,
+        "mean": 0.41001807525753975,
+        "min": 0.02039381116628647,
+        "range": 0.9702354446053505,
+        "std": 0.4506311413152562
+      },
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9318578839302063,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.02039381116628647,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.04870769381523132,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.990629255771637,
+        "task9:effect1:close microwave_1": 0.05850173160433769
+      }
+    },
+    "temperature": {
+      "spread": {
+        "cv": 1.144704750951903,
+        "max": 0.9995351204610546,
+        "mean": 0.40882955562854734,
+        "min": 0.0019002752374204764,
+        "range": 0.9976348452236342,
+        "std": 0.4679891346575535
+      },
+      "threshold_vector": {
+        "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9634027972126995,
+        "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.0019002752374204764,
+        "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.025281977100402444,
+        "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9995351204610546,
+        "task9:effect1:close microwave_1": 0.05402760813115977
+      }
+    }
+  },
+  "verifier_weights_unchanged": true
+}

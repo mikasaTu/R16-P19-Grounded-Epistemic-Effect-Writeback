@@ -1,0 +1,46 @@
+{
+  "platt": {
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+      "a": 1.694793481009101,
+      "b": -1.5731023871805339
+    },
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+      "a": 2.980193811740104,
+      "b": 1.8796758190833391
+    },
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+      "a": 3.922226814343336,
+      "b": 4.8056221861132045
+    },
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+      "a": 2.3269717212651244,
+      "b": -1.7488385655867642
+    },
+    "task9:effect1:close microwave_1": {
+      "a": 0.9046588054448221,
+      "b": -0.4384629197291192
+    }
+  },
+  "temperature": {
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+      "a": 1.2503894816735137,
+      "b": 0.0
+    },
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+      "a": 1.6177647817855503,
+      "b": 0.0
+    },
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+      "a": 1.2288276045226914,
+      "b": 0.0
+    },
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+      "a": 1.64635966776334,
+      "b": 0.0
+    },
+    "task9:effect1:close microwave_1": {
+      "a": 1.0303417656766938,
+      "b": 0.0
+    }
+  }
+}
