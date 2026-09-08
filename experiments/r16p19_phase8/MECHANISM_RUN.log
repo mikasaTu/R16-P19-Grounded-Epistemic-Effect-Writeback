@@ -1,0 +1,58 @@
+{
+  "estimation": {
+    "temperature": {
+      "positive_negative_pairs": 97911,
+      "improved_pair_count": 480,
+      "worsened_pair_count": 171,
+      "unchanged_pair_count": 97260,
+      "improvement_credit": 480.0,
+      "worsening_credit": 171.0,
+      "delta_auc_exact": 0.0031559273217513866,
+      "C3_auc_delta": 0.003155927321751295,
+      "bottleneck_effect_changed_receipts": 89,
+      "total_receipts": 2320,
+      "interpretation": "exact pair-order accounting, including half-credit ties; per-effect monotone maps change cross-effect bottlenecks and receipt ordering, not effect AUC"
+    },
+    "platt": {
+      "positive_negative_pairs": 97911,
+      "improved_pair_count": 565,
+      "worsened_pair_count": 199,
+      "unchanged_pair_count": 97147,
+      "improvement_credit": 565.0,
+      "worsening_credit": 199.0,
+      "delta_auc_exact": 0.00373808867236572,
+      "C3_auc_delta": 0.0037380886723656914,
+      "bottleneck_effect_changed_receipts": 381,
+      "total_receipts": 2320,
+      "interpretation": "exact pair-order accounting, including half-credit ties; per-effect monotone maps change cross-effect bottlenecks and receipt ordering, not effect AUC"
+    }
+  },
+  "qualification": {
+    "temperature": {
+      "positive_negative_pairs": 42224,
+      "improved_pair_count": 126,
+      "worsened_pair_count": 80,
+      "unchanged_pair_count": 42018,
+      "improvement_credit": 126.0,
+      "worsening_credit": 80.0,
+      "delta_auc_exact": 0.0010894278135657445,
+      "C3_auc_delta": 0.001089427813565691,
+      "bottleneck_effect_changed_receipts": 64,
+      "total_receipts": 1485,
+      "interpretation": "exact pair-order accounting, including half-credit ties; per-effect monotone maps change cross-effect bottlenecks and receipt ordering, not effect AUC"
+    },
+    "platt": {
+      "positive_negative_pairs": 42224,
+      "improved_pair_count": 190,
+      "worsened_pair_count": 254,
+      "unchanged_pair_count": 41780,
+      "improvement_credit": 190.0,
+      "worsening_credit": 254.0,
+      "delta_auc_exact": -0.0015157256536566881,
+      "C3_auc_delta": -0.0015157256536567631,
+      "bottleneck_effect_changed_receipts": 306,
+      "total_receipts": 1485,
+      "interpretation": "exact pair-order accounting, including half-credit ties; per-effect monotone maps change cross-effect bottlenecks and receipt ordering, not effect AUC"
+    }
+  }
+}

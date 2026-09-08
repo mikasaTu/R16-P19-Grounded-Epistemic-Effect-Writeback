@@ -1,23 +1,599 @@
 {
   "status": "NEEDS_DATA",
+  "execution_status": "RETROSPECTIVE_DIAGNOSTICS_COMPLETED_WITH_PROTOCOL_BREACH",
+  "fully_preregistered_plan_completed": false,
+  "protocol_blocker": "Original C0 was not fully sealed before fitting; cannot repair retrospectively. Original C0 bytes retained.",
   "gates": {
-    "C1_scale_mismatch_supported": false,
-    "C2_individual_95_complete": true,
-    "C2_joint_95_complete": false,
-    "C4_more_consistent_without_higher_false_upgrade": false,
-    "phase5_reproduction_mismatch": 0
-  },
-  "basis": {
-    "rare_effect_positive_counts": {
-      "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 371,
-      "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 14,
-      "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 14,
-      "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 381,
-      "task9:effect1:close microwave_1": 15
+    "C1": {
+      "passed": false,
+      "reason": "尺度失配假设未被支持；两种映射阈值极差均变宽。原始预注册没有显著性检验定义，不能事后报告确认性显著性。",
+      "threshold_convergence": {
+        "platt": {
+          "spread": {
+            "cv": 1.1744823373153248,
+            "max": 0.9998879652966586,
+            "mean": 0.39929470533401556,
+            "min": 6.381913259160358e-05,
+            "range": 0.999824146164067,
+            "std": 0.4689645787983285
+          },
+          "threshold_vector": {
+            "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9458217078905796,
+            "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 6.381913259160358e-05,
+            "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.0010570933106020983,
+            "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9998879652966586,
+            "task9:effect1:close microwave_1": 0.04964294103964569
+          }
+        },
+        "raw": {
+          "spread": {
+            "cv": 1.0990518918762464,
+            "max": 0.990629255771637,
+            "mean": 0.41001807525753975,
+            "min": 0.02039381116628647,
+            "range": 0.9702354446053505,
+            "std": 0.4506311413152562
+          },
+          "threshold_vector": {
+            "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9318578839302063,
+            "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.02039381116628647,
+            "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.04870769381523132,
+            "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.990629255771637,
+            "task9:effect1:close microwave_1": 0.05850173160433769
+          }
+        },
+        "temperature": {
+          "spread": {
+            "cv": 1.144704750951903,
+            "max": 0.9995351204610546,
+            "mean": 0.40882955562854734,
+            "min": 0.0019002752374204764,
+            "range": 0.9976348452236342,
+            "std": 0.4679891346575535
+          },
+          "threshold_vector": {
+            "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9634027972126995,
+            "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.0019002752374204764,
+            "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.025281977100402444,
+            "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9995351204610546,
+            "task9:effect1:close microwave_1": 0.05402760813115977
+          }
+        }
+      },
+      "claim_eligible": false,
+      "selection_eligible": false
     },
-    "sample_budget_file": "C0_SAMPLE_BUDGET.json",
-    "C4_consistent_units": 102,
-    "C4_divergent_units": 18
+    "C2": {
+      "individual95": false,
+      "joint95_bonferroni": false,
+      "reason": "Both mappings fail at least three per-effect bounds; pooled positive count is not per-effect certification; independent calibration validity also absent.",
+      "methods": {
+        "platt": {
+          "individual95": {
+            "global_threshold": 0.6477173870222876,
+            "pooled_positive_count": 795,
+            "pooled_tpr_ci": [
+              0.9012777013372835,
+              0.938688718270654
+            ],
+            "per_effect_lcb": {
+              "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9024186077099525,
+              "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.11721378644576919,
+              "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.26799202452413634,
+              "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9660733348878446,
+              "task9:effect1:close microwave_1": 0.011866895493268553
+            },
+            "complete_frame_count_vector": false,
+            "complete_certified_vector": false
+          },
+          "joint95_bonferroni": {
+            "global_threshold": 0.5932677564995656,
+            "pooled_positive_count": 795,
+            "pooled_tpr_ci": [
+              0.9010199961980764,
+              0.948493919535233
+            ],
+            "per_effect_lcb": {
+              "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9040005185689627,
+              "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0.08934691522070981,
+              "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0.216478540794531,
+              "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.961480719606474,
+              "task9:effect1:close microwave_1": 0.007876031762663438
+            },
+            "complete_frame_count_vector": false,
+            "complete_certified_vector": false
+          }
+        },
+        "temperature": {
+          "individual95": {
+            "global_threshold": 0.740021261219368,
+            "pooled_positive_count": 795,
+            "pooled_tpr_ci": [
+              0.9012777013372835,
+              0.938688718270654
+            ],
+            "per_effect_lcb": {
+              "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9311000988612546,
+              "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 1.3877787807814457e-17,
+              "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 1.3877787807814457e-17,
+              "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9733203911134996,
+              "task9:effect1:close microwave_1": 0.011866895493268553
+            },
+            "complete_frame_count_vector": false,
+            "complete_certified_vector": false
+          },
+          "joint95_bonferroni": {
+            "global_threshold": 0.6971601415973621,
+            "pooled_positive_count": 795,
+            "pooled_tpr_ci": [
+              0.9010199961980764,
+              0.948493919535233
+            ],
+            "per_effect_lcb": {
+              "task0:effect0:in alphabet_soup_1 basket_1_contain_region": 0.9345905559522649,
+              "task0:effect1:in tomato_sauce_1 basket_1_contain_region": 0,
+              "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": 0,
+              "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": 0.9693963951448307,
+              "task9:effect1:close microwave_1": 0.007876031762663438
+            },
+            "complete_frame_count_vector": false,
+            "complete_certified_vector": false
+          }
+        }
+      }
+    },
+    "C4": {
+      "passed": false,
+      "before": {
+        "concordant_units": 19,
+        "divergent_units": 41,
+        "unit_count": 60,
+        "false_upgrade_count": 0,
+        "false_upgrade_denominator": 510,
+        "false_upgrade_wilson_95_upper": 0.007475961222573534
+      },
+      "after": {
+        "concordant_units": 18,
+        "divergent_units": 42,
+        "unit_count": 60,
+        "false_upgrade_count": 2,
+        "false_upgrade_denominator": 510,
+        "false_upgrade_wilson_95_upper": 0.014184368340742382
+      },
+      "source": "C4_AUDITED.json",
+      "scope": {
+        "effect_cells": 700,
+        "faulted_effect_cells": 600,
+        "formal_evaluation_performed": false,
+        "formal_paths_read": [],
+        "inventory": {
+          "calibration_episodes": 30,
+          "formal_paths_read": [],
+          "pilot_episodes": 15,
+          "qualification_episodes": 30,
+          "qualification_units_with_pilot_noop": 15
+        },
+        "new_data_collected": false,
+        "splits": [
+          "calibration",
+          "qualification",
+          "pilot"
+        ],
+        "units": 60
+      },
+      "claim_eligible": false,
+      "selection_eligible": false
+    },
+    "Phase5_reproduction": {
+      "passed": true,
+      "rows": 1680,
+      "mismatch": 0,
+      "purpose": "frozen Phase-5 exact reproduction only; no step9 formal workpoint evaluation",
+      "claim_eligible": false,
+      "selection_eligible": false
+    }
   },
-  "reason": "No new data; rare-effect certification remains underpowered and qualification is not clean held-out. No formal evaluation performed."
+  "claim_eligible": false,
+  "selection_eligible": false,
+  "formal_selected_point_evaluated": false,
+  "formal_usage": "C1 ceiling and frozen Phase5 reproduction only; no C4 formal or new workpoint evaluation",
+  "gpu_jobs_submitted": 0,
+  "pai_jobs_submitted": 0,
+  "rollouts_started": 0,
+  "S2_started": false,
+  "sample_budget": "C0_SAMPLE_BUDGET.json",
+  "future_data_collection_started": false,
+  "selected_workpoint": null,
+  "C4_pilot_task_success_gain": {
+    "arms": [
+      "M0_TYPED_MATCHED",
+      "M3_ASCEL_CORE"
+    ],
+    "formal_paths_read": [],
+    "nonpilot_reason": "No frozen task-level M0/M3 outcomes are available for calibration or qualification outside the paired pilot; per-effect predictions cannot be substituted for task_success.",
+    "nonpilot_task_success_gain": null,
+    "rows_available": 525,
+    "scope": "pilot_only_nonformal",
+    "source": "experiments/r16p19_phase5/artifacts/results/oracle_pilot_results.jsonl",
+    "source_sha256": "63dc2cce008c0d72a50101277f991336ac8bbf6c655762bbffa7a96a83d765e6",
+    "task_rows_used": 210,
+    "variants": {
+      "legacy_receipt_and": {
+        "all_pilot_inherited_oracle_core_minus_baseline_sum": 30,
+        "concordant_unit_ids": [
+          "qualification-t0-i23-s0",
+          "qualification-t0-i24-s0",
+          "qualification-t5-i21-s0",
+          "qualification-t5-i22-s0",
+          "qualification-t5-i23-s0",
+          "qualification-t5-i24-s0"
+        ],
+        "concordant_units": 6,
+        "condition_vector_mismatch_examples": [
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i20-s0",
+            "variant_effect_vector": [
+              false,
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i20-s0",
+            "variant_effect_vector": [
+              false,
+              false
+            ]
+          },
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i21-s0",
+            "variant_effect_vector": [
+              false,
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i21-s0",
+            "variant_effect_vector": [
+              false,
+              false
+            ]
+          },
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i22-s0",
+            "variant_effect_vector": [
+              false,
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i22-s0",
+            "variant_effect_vector": [
+              false,
+              false
+            ]
+          },
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true
+            ],
+            "unit_id": "qualification-t5-i20-s0",
+            "variant_effect_vector": [
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true
+            ],
+            "unit_id": "qualification-t5-i20-s0",
+            "variant_effect_vector": [
+              false
+            ]
+          },
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t9-i20-s0",
+            "variant_effect_vector": [
+              false,
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t9-i20-s0",
+            "variant_effect_vector": [
+              false,
+              false
+            ]
+          },
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t9-i21-s0",
+            "variant_effect_vector": [
+              false,
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t9-i21-s0",
+            "variant_effect_vector": [
+              false,
+              false
+            ]
+          }
+        ],
+        "divergent_faulted_cells": 54,
+        "divergent_unit_ids": [
+          "qualification-t0-i20-s0",
+          "qualification-t0-i21-s0",
+          "qualification-t0-i22-s0",
+          "qualification-t5-i20-s0",
+          "qualification-t9-i20-s0",
+          "qualification-t9-i21-s0",
+          "qualification-t9-i22-s0",
+          "qualification-t9-i23-s0",
+          "qualification-t9-i24-s0"
+        ],
+        "divergent_units": 9,
+        "faulted_conditions": [
+          "A1_NOOP_RETRY_STALE",
+          "A2_CROSS_ATTEMPT_MIX",
+          "A3_CONTRADICTION_LATE_WITNESS",
+          "A4_POST_REALIZATION_REVERSAL",
+          "A5_EXTERNAL_REALIZATION",
+          "V1_SINGLE_VIEW_FALSE_POSITIVE"
+        ],
+        "faulted_task_cell_denominator": 90,
+        "known_concordant_core_minus_baseline_sum": 12,
+        "oracle_vector_definition": "at each condition, the one or two required-effect predicate labels at the injection frame are reduced by legacy receipt AND; the expected vector repeats that receipt value for every required effect",
+        "task_success_gain_interval": {
+          "lower_adversarial": -0.4666666666666667,
+          "lower_rule": "concordant cells inherit stored M3 minus M0 task_success; every divergent faulted cell is assigned worst-case gain -1",
+          "neutral_divergence_zero": 0.13333333333333333,
+          "neutral_rule": "conditional descriptive assumption: every divergent faulted cell has zero gain",
+          "point_estimate_forbidden": true,
+          "upper_inherited_oracle": 0.3333333333333333,
+          "upper_rule": "conditional descriptive assumption: every divergent unit inherits the stored pilot M3 minus M0 task_success"
+        },
+        "unit_count": 15
+      },
+      "per_effect_independent": {
+        "all_pilot_inherited_oracle_core_minus_baseline_sum": 30,
+        "concordant_unit_ids": [
+          "qualification-t0-i23-s0",
+          "qualification-t0-i24-s0",
+          "qualification-t5-i21-s0",
+          "qualification-t5-i22-s0",
+          "qualification-t5-i23-s0",
+          "qualification-t5-i24-s0"
+        ],
+        "concordant_units": 6,
+        "condition_vector_mismatch_examples": [
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i20-s0",
+            "variant_effect_vector": [
+              true,
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i20-s0",
+            "variant_effect_vector": [
+              true,
+              false
+            ]
+          },
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i21-s0",
+            "variant_effect_vector": [
+              true,
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i21-s0",
+            "variant_effect_vector": [
+              true,
+              false
+            ]
+          },
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i22-s0",
+            "variant_effect_vector": [
+              true,
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t0-i22-s0",
+            "variant_effect_vector": [
+              true,
+              false
+            ]
+          },
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true
+            ],
+            "unit_id": "qualification-t5-i20-s0",
+            "variant_effect_vector": [
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true
+            ],
+            "unit_id": "qualification-t5-i20-s0",
+            "variant_effect_vector": [
+              false
+            ]
+          },
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t9-i20-s0",
+            "variant_effect_vector": [
+              true,
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t9-i20-s0",
+            "variant_effect_vector": [
+              true,
+              false
+            ]
+          },
+          {
+            "condition": "C0_CLEAN",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t9-i21-s0",
+            "variant_effect_vector": [
+              true,
+              false
+            ]
+          },
+          {
+            "condition": "A5_EXTERNAL_REALIZATION",
+            "oracle_receipt_and_vector": [
+              true,
+              true
+            ],
+            "unit_id": "qualification-t9-i21-s0",
+            "variant_effect_vector": [
+              true,
+              false
+            ]
+          }
+        ],
+        "divergent_faulted_cells": 54,
+        "divergent_unit_ids": [
+          "qualification-t0-i20-s0",
+          "qualification-t0-i21-s0",
+          "qualification-t0-i22-s0",
+          "qualification-t5-i20-s0",
+          "qualification-t9-i20-s0",
+          "qualification-t9-i21-s0",
+          "qualification-t9-i22-s0",
+          "qualification-t9-i23-s0",
+          "qualification-t9-i24-s0"
+        ],
+        "divergent_units": 9,
+        "faulted_conditions": [
+          "A1_NOOP_RETRY_STALE",
+          "A2_CROSS_ATTEMPT_MIX",
+          "A3_CONTRADICTION_LATE_WITNESS",
+          "A4_POST_REALIZATION_REVERSAL",
+          "A5_EXTERNAL_REALIZATION",
+          "V1_SINGLE_VIEW_FALSE_POSITIVE"
+        ],
+        "faulted_task_cell_denominator": 90,
+        "known_concordant_core_minus_baseline_sum": 12,
+        "oracle_vector_definition": "at each condition, the one or two required-effect predicate labels at the injection frame are reduced by legacy receipt AND; the expected vector repeats that receipt value for every required effect",
+        "task_success_gain_interval": {
+          "lower_adversarial": -0.4666666666666667,
+          "lower_rule": "concordant cells inherit stored M3 minus M0 task_success; every divergent faulted cell is assigned worst-case gain -1",
+          "neutral_divergence_zero": 0.13333333333333333,
+          "neutral_rule": "conditional descriptive assumption: every divergent faulted cell has zero gain",
+          "point_estimate_forbidden": true,
+          "upper_inherited_oracle": 0.3333333333333333,
+          "upper_rule": "conditional descriptive assumption: every divergent unit inherits the stored pilot M3 minus M0 task_success"
+        },
+        "unit_count": 15
+      }
+    }
+  }
 }

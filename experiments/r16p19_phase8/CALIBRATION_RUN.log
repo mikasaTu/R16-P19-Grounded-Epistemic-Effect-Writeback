@@ -1,0 +1,18 @@
+/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/experiments/r16p19_phase8/audit_calibration.py:444: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  trap_auc = float(np.trapz(tpr, fpr))
+{
+  "status": "complete",
+  "effects": [
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region",
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region",
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region",
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region",
+    "task9:effect1:close microwave_1"
+  ],
+  "nonformal_model": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/experiments/r16p19_phase8/C1_MODELS_NONFORMAL.json",
+  "map_artifact": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/experiments/r16p19_phase8/C2_EXTRA_MAPS_NONFORMAL.json",
+  "c3": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/experiments/r16p19_phase8/C3_AUDITED.json",
+  "c1": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-step8-s1b-20260907/experiments/r16p19_phase8/C1_AUDITED.json",
+  "formal_claim_eligible": false,
+  "formal_selection_eligible": false
+}

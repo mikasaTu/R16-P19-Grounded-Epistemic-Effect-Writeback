@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "original_C0_unchanged": true,
+    "C2_formal_access_zero": true,
+    "C2_input_hashes_match": true,
+    "C2_output_hash_match": true,
+    "C2_code_hash_match": true,
+    "C1_ineligible": true,
+    "C1_actual_ceiling_reproduced": true,
+    "C2_no_false_complete": true,
+    "C3_map_binding": true,
+    "C4_ineligible": true,
+    "C4_same_denominator": true,
+    "C4_count_integrity": true,
+    "C4_persistent_records": true,
+    "C4_properties_pass": true,
+    "Phase5_exact_repro": true,
+    "Phase5_6_7_unchanged": true,
+    "decision_honest": true,
+    "canonical_C0_SAMPLE_BUDGET.json": true,
+    "canonical_C1_RECALIBRATION.json": true,
+    "canonical_C2_GLOBAL_THRESHOLD.json": true,
+    "canonical_C3_MIN_AGG.json": true,
+    "canonical_C4_PER_EFFECT_UPGRADE.json": true
+  },
+  "all_pass": true,
+  "scope": "release integrity and executed diagnostics; not restoration of valid preregistration"
+}

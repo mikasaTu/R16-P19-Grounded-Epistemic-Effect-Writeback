@@ -1,0 +1,9 @@
+{
+  "baseline_commit": "585814e",
+  "protected_tracked_files": 935,
+  "changed_protected_files": [],
+  "verifier_checkpoint_sha256": "edba3ff23ae71c5768760af161b601b3d1a9f65d37d1ddeb8304b2510e938005",
+  "baseline_verifier_checkpoint_sha256": "edba3ff23ae71c5768760af161b601b3d1a9f65d37d1ddeb8304b2510e938005",
+  "verifier_byte_identical": true,
+  "scope": "tracked source integrity plus checkpoint; repair subprocesses additionally block protected writes; no GPU/PAI tasks submitted"
+}

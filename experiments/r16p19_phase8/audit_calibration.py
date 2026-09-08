@@ -35,6 +35,25 @@ CHECKPOINT = REPO / "experiments/r16p19_phase5/artifacts/results/verifier_checkp
 EPSILON = 1e-6
 Z95 = 1.959963984540054
 
+# Reject formal reads until explicit diagnostic stage; preserve source bytes.
+STAGE = "NONFORMAL"
+FORMAL_READS = set()
+def access_audit(event, args):
+    if event != "open" or not isinstance(args[0], (str, bytes)):
+        return
+    p = Path(os.fsdecode(args[0])).absolute()
+    mode, flags = args[1:3]
+    writing = (isinstance(mode, str) and any(c in mode for c in "wax+")) or (isinstance(flags, int) and flags & (os.O_WRONLY | os.O_RDWR | os.O_CREAT))
+    if writing:
+        if (str(p).startswith(str(REPO)) and not str(p).startswith(str(OUT))) or str(p).startswith(str(RAW)):
+            raise RuntimeError("protected source write: " + str(p))
+    elif "formal" in p.parts or "formal_results" in p.name or p.name == "B1_CEILING.json":
+        if STAGE != "FORMAL_DIAGNOSTIC":
+            raise RuntimeError("formal access before model freeze: " + str(p))
+        FORMAL_READS.add(str(p))
+sys.dont_write_bytecode = True
+sys.addaudithook(access_audit)
+
 _spec_s1 = importlib.util.spec_from_file_location(
     "phase6_s1", REPO / "experiments/r16p19_phase6/run_s1.py"
 )
@@ -645,6 +664,7 @@ def c1_formal_diagnostic(
 
 
 def main() -> None:
+    global STAGE
     OUT.mkdir(parents=True, exist_ok=True)
     effect_rows, estimation_receipts, paths = collect_estimation()
     effects = sorted(effect_rows)
@@ -663,14 +683,13 @@ def main() -> None:
 
     _, qualification_receipts, _, _ = collect_split("qualification")
     c3_path = OUT / "C3_AUDITED.json"
-    if c3_path.is_file():
-        c3 = json.loads(c3_path.read_text())
-    else:
-        c3 = c3_audit(estimation_receipts, qualification_receipts, effects, maps)
-        write_json(c3_path, c3)
+    c3 = c3_audit(estimation_receipts, qualification_receipts, effects, maps)
+    c3['maps_sha256'] = sha256(map_path)
+    write_json(c3_path, c3)
 
     # Formal is opened only after both non-formal artifacts and C3 are durable.
     calibration = json.loads((REPO / "experiments/r16p19_phase6/S1_CALIBRATION.json").read_text())
+    STAGE = "FORMAL_DIAGNOSTIC"
     formal_receipts = s1._formal_receipts(REPO, RAW, calibration)
     c1 = c1_formal_diagnostic(
         formal_receipts,
@@ -679,6 +698,10 @@ def main() -> None:
         sha256(model_path),
         sha256(map_path),
     )
+    c1.update(claim_eligible=False, selection_eligible=False)
+    c1['formal_diagnostic']['formal_read_paths'] = sorted(FORMAL_READS)
+    c1['formal_diagnostic']['formal_access_count'] = len(FORMAL_READS)
+    c1['formal_diagnostic']['access_count_unit'] = 'unique paths; Python open audit'
     write_json(OUT / "C1_AUDITED.json", c1)
     print(
         json.dumps(

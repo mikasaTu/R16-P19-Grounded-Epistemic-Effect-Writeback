@@ -82,6 +82,21 @@ CONDITIONS = (
 TRUE_CONDITIONS = {"C0_CLEAN", "A5_EXTERNAL_REALIZATION"}
 FAULT_CONDITIONS = set(CONDITIONS) - {"C0_CLEAN"}
 
+# Executable read/write boundary for the nonformal replay.
+sys.dont_write_bytecode = True
+def access_audit(event, args):
+    if event != "open" or not isinstance(args[0], (str, bytes)):
+        return
+    path = Path(os.fsdecode(args[0])).absolute()
+    mode, flags = args[1:3]
+    writing = (isinstance(mode, str) and any(c in mode for c in "wax+")) or (isinstance(flags, int) and flags & (os.O_WRONLY | os.O_RDWR | os.O_CREAT))
+    if writing:
+        if (str(path).startswith(str(ROOT)) and not str(path).startswith(str(PHASE8))) or str(path).startswith(str(RAW_ROOT)):
+            raise RuntimeError("protected source write: " + str(path))
+    elif "formal" in path.parts or "formal_results" in path.name:
+        raise RuntimeError("formal read forbidden in C4: " + str(path))
+sys.addaudithook(access_audit)
+
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
