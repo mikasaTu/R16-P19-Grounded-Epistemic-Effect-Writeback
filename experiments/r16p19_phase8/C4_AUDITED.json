@@ -1,0 +1,668 @@
+{
+  "c0_retrospective": {
+    "audit_retrospective": true,
+    "note": "C0 was not independently sealed before this audit; this output records the breach and does not repair it.",
+    "pre_registration_sha256": "de415c807142cecfba8469b3f3a589bc704784a378d1b54251e03f50bdeb6c6a"
+  },
+  "claim_eligible": false,
+  "data_scope": {
+    "effect_cells": 700,
+    "faulted_effect_cells": 600,
+    "formal_evaluation_performed": false,
+    "formal_paths_read": [],
+    "inventory": {
+      "calibration_episodes": 30,
+      "formal_paths_read": [],
+      "pilot_episodes": 15,
+      "qualification_episodes": 30,
+      "qualification_units_with_pilot_noop": 15
+    },
+    "new_data_collected": false,
+    "splits": [
+      "calibration",
+      "qualification",
+      "pilot"
+    ],
+    "units": 60
+  },
+  "event_stream_materialization": {
+    "event_log_search_scope": [
+      "experiments/r16p19_phase5",
+      "experiments/r16p19_phase6",
+      "experiments/r16p19_phase7"
+    ],
+    "formal_paths_read": [],
+    "materialized_from_frozen_source": "r16p19/phase5_arm_kernel.py:event_sequence plus the actual M3_ASCEL_CORE ledger; deterministic replay is cross-checked against oracle_pilot_results.jsonl",
+    "serialized_event_log_available": false,
+    "serialized_phase5_6_7_event_log_paths": []
+  },
+  "formal_claim_boundary": "No formal labels or formal workpoint evaluation were read in C4; all metrics are diagnostic on nonformal frozen data.",
+  "input_evidence": [
+    {
+      "path": "r16p19/phase4_event_broker.py",
+      "sha256": "366c217588c3ae0cc9f9e67cb11aa0bef912c715a8d8a841296d06cbf45a85f3"
+    },
+    {
+      "path": "r16p19/phase4_types.py",
+      "sha256": "40430881e6498969c2c51dab41d90b6e02a6345e0761a9edaab1505d959fe24e"
+    },
+    {
+      "path": "r16p19/phase4_attempt_ledger.py",
+      "sha256": "b051fd01f2e4a97fb8a79899c9178b285d6af0d2c0fdc48d564adb62d944f201"
+    },
+    {
+      "path": "r16p19/phase5_arm_kernel.py",
+      "sha256": "3e48b04420508104c988a4ba5ce1569ea7f04221bc85098d684969169f06e206"
+    },
+    {
+      "path": "experiments/r16p19_phase5/artifacts/results/verifier_checkpoint.npz",
+      "sha256": "edba3ff23ae71c5768760af161b601b3d1a9f65d37d1ddeb8304b2510e938005"
+    },
+    {
+      "path": "experiments/r16p19_phase8/C0_PREREGISTRATION.json",
+      "sha256": "de415c807142cecfba8469b3f3a589bc704784a378d1b54251e03f50bdeb6c6a"
+    },
+    {
+      "path": "experiments/r16p19_phase8/C1_RECALIBRATION.json",
+      "sha256": "683bc2ad1acb35dd8322d1841703d87318cf7af84016524a11cdc8a1d3ebb251"
+    },
+    {
+      "path": "experiments/r16p19_phase8/C2_GLOBAL_THRESHOLD.json",
+      "sha256": "ed46b20203134b1938c708d7212492762982e678f76d50abc29a317a466493d3"
+    }
+  ],
+  "ledger_semantics_by_condition": {
+    "A1_NOOP_RETRY_STALE": {
+      "attempt_attributed_success": false,
+      "decision_sequence": [
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE"
+      ],
+      "effect_fact_verified": false,
+      "event_count": 7,
+      "final_decision": "REOBSERVE",
+      "final_fact_state": "UNKNOWN",
+      "ledger_counters": {
+        "commands": 2,
+        "stale_witness_rejected": 1,
+        "superseded_attempts": 1,
+        "superseded_witness_rejected": 1,
+        "verifications": 1,
+        "witnesses_rejected": 1
+      },
+      "stream_sha256": "317e04685fe11a99b28191ebbb1a98714c792612bf25ab0d55d1ac9668b78243"
+    },
+    "A2_CROSS_ATTEMPT_MIX": {
+      "attempt_attributed_success": false,
+      "decision_sequence": [
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE"
+      ],
+      "effect_fact_verified": false,
+      "event_count": 7,
+      "final_decision": "REOBSERVE",
+      "final_fact_state": "OBSERVED",
+      "ledger_counters": {
+        "commands": 2,
+        "superseded_attempts": 1,
+        "witnesses_rejected": 1
+      },
+      "stream_sha256": "78d3133a6ec771e5e52c64abf351697f70bf5d52c4bcd4ff0b821a6e16f5a456"
+    },
+    "A3_CONTRADICTION_LATE_WITNESS": {
+      "attempt_attributed_success": false,
+      "decision_sequence": [
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "ROLLBACK_OR_REPLAN",
+        "ROLLBACK_OR_REPLAN"
+      ],
+      "effect_fact_verified": false,
+      "event_count": 6,
+      "final_decision": "ROLLBACK_OR_REPLAN",
+      "final_fact_state": "REVOKED",
+      "ledger_counters": {
+        "commands": 1,
+        "revocations": 1,
+        "verifications": 1,
+        "witnesses_rejected": 1
+      },
+      "stream_sha256": "a7380aa64bb04bed94193ff001e52fc1d5234fb7690e6214316f6ac7507fd798"
+    },
+    "A4_POST_REALIZATION_REVERSAL": {
+      "attempt_attributed_success": false,
+      "decision_sequence": [
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "ADVANCE_TO_NEXT_SUBTASK",
+        "ROLLBACK_OR_REPLAN",
+        "ROLLBACK_OR_REPLAN"
+      ],
+      "effect_fact_verified": false,
+      "event_count": 7,
+      "final_decision": "ROLLBACK_OR_REPLAN",
+      "final_fact_state": "REVOKED",
+      "ledger_counters": {
+        "attributed_realizations": 1,
+        "commands": 1,
+        "revocations": 1,
+        "verifications": 1,
+        "witnesses_rejected": 1
+      },
+      "stream_sha256": "b214bab4b81e9233c547f6a6fcbf6c13123692bacb237165e1ffa6e52a0a5298"
+    },
+    "A5_EXTERNAL_REALIZATION": {
+      "attempt_attributed_success": false,
+      "decision_sequence": [
+        "REOBSERVE",
+        "REOBSERVE",
+        "ADVANCE_TO_NEXT_SUBTASK"
+      ],
+      "effect_fact_verified": true,
+      "event_count": 3,
+      "final_decision": "ADVANCE_TO_NEXT_SUBTASK",
+      "final_fact_state": "REALIZED",
+      "ledger_counters": {
+        "commands": 1,
+        "external_truth_without_credit": 1
+      },
+      "stream_sha256": "3e6af4bf39e2c6a4084e3a695f5ae285445de7ea75805abc6c89ad24da49b14e"
+    },
+    "C0_CLEAN": {
+      "attempt_attributed_success": true,
+      "decision_sequence": [
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "ADVANCE_TO_NEXT_SUBTASK"
+      ],
+      "effect_fact_verified": true,
+      "event_count": 5,
+      "final_decision": "ADVANCE_TO_NEXT_SUBTASK",
+      "final_fact_state": "REALIZED",
+      "ledger_counters": {
+        "attributed_realizations": 1,
+        "commands": 1,
+        "verifications": 1
+      },
+      "stream_sha256": "b4541c9eace6b2595b9d097bbc2fbdd7d8c52801566ed5731cd6c8fcdc94a14e"
+    },
+    "V1_SINGLE_VIEW_FALSE_POSITIVE": {
+      "attempt_attributed_success": false,
+      "decision_sequence": [
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE",
+        "REOBSERVE"
+      ],
+      "effect_fact_verified": false,
+      "event_count": 5,
+      "final_decision": "REOBSERVE",
+      "final_fact_state": "OBSERVED",
+      "ledger_counters": {
+        "commands": 1,
+        "witnesses_rejected": 1
+      },
+      "stream_sha256": "52533fc10618a3e07879a17ae4f15fe79fc0b58262a4354c1477ba2a248ee3dc"
+    }
+  },
+  "ledger_semantics_changed": true,
+  "pooled_metrics": {
+    "legacy_receipt_and": {
+      "concordant_units": 19,
+      "divergent_unit_ids": [
+        "calibration-t0-i10-s0",
+        "calibration-t0-i11-s0",
+        "calibration-t0-i13-s0",
+        "calibration-t0-i14-s0",
+        "calibration-t0-i15-s0",
+        "calibration-t0-i16-s0",
+        "calibration-t0-i19-s0",
+        "calibration-t5-i12-s0",
+        "calibration-t5-i15-s0",
+        "calibration-t5-i18-s0",
+        "calibration-t5-i19-s0",
+        "calibration-t9-i10-s0",
+        "calibration-t9-i11-s0",
+        "calibration-t9-i12-s0",
+        "calibration-t9-i13-s0",
+        "calibration-t9-i14-s0",
+        "calibration-t9-i15-s0",
+        "calibration-t9-i16-s0",
+        "calibration-t9-i17-s0",
+        "calibration-t9-i18-s0",
+        "calibration-t9-i19-s0",
+        "qualification-t0-i20-s0",
+        "qualification-t0-i21-s0",
+        "qualification-t0-i22-s0",
+        "qualification-t0-i25-s0",
+        "qualification-t0-i26-s0",
+        "qualification-t0-i27-s0",
+        "qualification-t0-i28-s0",
+        "qualification-t5-i20-s0",
+        "qualification-t5-i25-s0",
+        "qualification-t5-i26-s0",
+        "qualification-t5-i28-s0",
+        "qualification-t9-i20-s0",
+        "qualification-t9-i21-s0",
+        "qualification-t9-i22-s0",
+        "qualification-t9-i23-s0",
+        "qualification-t9-i24-s0",
+        "qualification-t9-i26-s0",
+        "qualification-t9-i27-s0",
+        "qualification-t9-i28-s0",
+        "qualification-t9-i29-s0"
+      ],
+      "divergent_units": 41,
+      "effect_cells": 700,
+      "effect_fpr": 0.0,
+      "effect_tpr": 0.22105263157894736,
+      "false_upgrade_count": 0,
+      "false_upgrade_denominator": 510,
+      "false_upgrade_wilson_95_upper": 0.007475961222573534,
+      "faulted_effect_cells": 600,
+      "faulted_true_positive_effect_cells": 21,
+      "gain_intervals": {
+        "lower_adversarial": -0.74,
+        "lower_rule": "on divergent units, every faulted effect cell is assigned the worst possible delta (-1); concordant units inherit observed labels",
+        "neutral_assumption": 0.0,
+        "neutral_rule": "conditional descriptive assumption: divergent-unit gain rate equals the concordant-unit observed gain rate; never a point estimate",
+        "point_estimate_forbidden": true,
+        "same_faulted_effect_denominator_before_after": 600,
+        "upper_inherited_oracle": 0.12333333333333334,
+        "upper_rule": "conditional descriptive assumption: divergent units inherit their stored predicate labels as the oracle outcome"
+      },
+      "negative_effect_cells": 510,
+      "positive_effect_cells": 190,
+      "true_positive_effect_cells": 42,
+      "unit_count": 60
+    },
+    "per_effect_independent": {
+      "concordant_units": 18,
+      "divergent_unit_ids": [
+        "calibration-t0-i10-s0",
+        "calibration-t0-i11-s0",
+        "calibration-t0-i13-s0",
+        "calibration-t0-i14-s0",
+        "calibration-t0-i15-s0",
+        "calibration-t0-i16-s0",
+        "calibration-t0-i18-s0",
+        "calibration-t0-i19-s0",
+        "calibration-t5-i12-s0",
+        "calibration-t5-i15-s0",
+        "calibration-t5-i18-s0",
+        "calibration-t5-i19-s0",
+        "calibration-t9-i10-s0",
+        "calibration-t9-i11-s0",
+        "calibration-t9-i12-s0",
+        "calibration-t9-i13-s0",
+        "calibration-t9-i14-s0",
+        "calibration-t9-i15-s0",
+        "calibration-t9-i16-s0",
+        "calibration-t9-i17-s0",
+        "calibration-t9-i18-s0",
+        "calibration-t9-i19-s0",
+        "qualification-t0-i20-s0",
+        "qualification-t0-i21-s0",
+        "qualification-t0-i22-s0",
+        "qualification-t0-i25-s0",
+        "qualification-t0-i26-s0",
+        "qualification-t0-i27-s0",
+        "qualification-t0-i28-s0",
+        "qualification-t5-i20-s0",
+        "qualification-t5-i25-s0",
+        "qualification-t5-i26-s0",
+        "qualification-t5-i28-s0",
+        "qualification-t9-i20-s0",
+        "qualification-t9-i21-s0",
+        "qualification-t9-i22-s0",
+        "qualification-t9-i23-s0",
+        "qualification-t9-i24-s0",
+        "qualification-t9-i26-s0",
+        "qualification-t9-i27-s0",
+        "qualification-t9-i28-s0",
+        "qualification-t9-i29-s0"
+      ],
+      "divergent_units": 42,
+      "effect_cells": 700,
+      "effect_fpr": 0.00392156862745098,
+      "effect_tpr": 0.5684210526315789,
+      "false_upgrade_count": 2,
+      "false_upgrade_denominator": 510,
+      "false_upgrade_wilson_95_upper": 0.014184368340742382,
+      "faulted_effect_cells": 600,
+      "faulted_true_positive_effect_cells": 54,
+      "gain_intervals": {
+        "lower_adversarial": -0.76,
+        "lower_rule": "on divergent units, every faulted effect cell is assigned the worst possible delta (-1); concordant units inherit observed labels",
+        "neutral_assumption": 0.0,
+        "neutral_rule": "conditional descriptive assumption: divergent-unit gain rate equals the concordant-unit observed gain rate; never a point estimate",
+        "point_estimate_forbidden": true,
+        "same_faulted_effect_denominator_before_after": 600,
+        "upper_inherited_oracle": 0.12333333333333334,
+        "upper_rule": "conditional descriptive assumption: divergent units inherit their stored predicate labels as the oracle outcome"
+      },
+      "negative_effect_cells": 510,
+      "positive_effect_cells": 190,
+      "true_positive_effect_cells": 108,
+      "unit_count": 60
+    }
+  },
+  "property_tests": {
+    "event_replay_checks": [
+      {
+        "condition": "C0_CLEAN",
+        "event_count": 5,
+        "fact_state": "REALIZED",
+        "final_decision": "ADVANCE_TO_NEXT_SUBTASK",
+        "reference_credited": true,
+        "reference_verified": true
+      },
+      {
+        "condition": "A1_NOOP_RETRY_STALE",
+        "event_count": 7,
+        "fact_state": "UNKNOWN",
+        "final_decision": "REOBSERVE",
+        "reference_credited": false,
+        "reference_verified": false
+      },
+      {
+        "condition": "A2_CROSS_ATTEMPT_MIX",
+        "event_count": 7,
+        "fact_state": "OBSERVED",
+        "final_decision": "REOBSERVE",
+        "reference_credited": false,
+        "reference_verified": false
+      },
+      {
+        "condition": "A3_CONTRADICTION_LATE_WITNESS",
+        "event_count": 6,
+        "fact_state": "REVOKED",
+        "final_decision": "ROLLBACK_OR_REPLAN",
+        "reference_credited": false,
+        "reference_verified": false
+      },
+      {
+        "condition": "A4_POST_REALIZATION_REVERSAL",
+        "event_count": 7,
+        "fact_state": "REVOKED",
+        "final_decision": "ROLLBACK_OR_REPLAN",
+        "reference_credited": false,
+        "reference_verified": false
+      },
+      {
+        "condition": "A5_EXTERNAL_REALIZATION",
+        "event_count": 3,
+        "fact_state": "REALIZED",
+        "final_decision": "ADVANCE_TO_NEXT_SUBTASK",
+        "reference_credited": false,
+        "reference_verified": true
+      },
+      {
+        "condition": "V1_SINGLE_VIEW_FALSE_POSITIVE",
+        "event_count": 5,
+        "fact_state": "OBSERVED",
+        "final_decision": "REOBSERVE",
+        "reference_credited": false,
+        "reference_verified": false
+      }
+    ],
+    "passed": true,
+    "semantic_distinction": {
+      "detector_pass": [
+        true,
+        false
+      ],
+      "independent_effect_upgrade_effects": [
+        true,
+        false
+      ],
+      "ledger_verified": true,
+      "legacy_receipt_and_effects": [
+        false,
+        false
+      ]
+    }
+  },
+  "schema_version": 2,
+  "selection_eligible": false,
+  "semantic_change": {
+    "audited": "per-effect independent upgrade: each effect upgrades when its own detector passes and its own ledger witness is verified",
+    "ledger_arm_held_fixed": "M3_ASCEL_CORE",
+    "legacy": "receipt-level AND: upgrade every effect only when the same receipt's detector vector is all true and the ledger witness is verified",
+    "receipt_and_is_outside_frozen_ledger": true
+  },
+  "split_metrics": {
+    "calibration": {
+      "legacy_receipt_and": {
+        "concordant_units": 9,
+        "divergent_unit_ids": [
+          "calibration-t0-i10-s0",
+          "calibration-t0-i11-s0",
+          "calibration-t0-i13-s0",
+          "calibration-t0-i14-s0",
+          "calibration-t0-i15-s0",
+          "calibration-t0-i16-s0",
+          "calibration-t0-i19-s0",
+          "calibration-t5-i12-s0",
+          "calibration-t5-i15-s0",
+          "calibration-t5-i18-s0",
+          "calibration-t5-i19-s0",
+          "calibration-t9-i10-s0",
+          "calibration-t9-i11-s0",
+          "calibration-t9-i12-s0",
+          "calibration-t9-i13-s0",
+          "calibration-t9-i14-s0",
+          "calibration-t9-i15-s0",
+          "calibration-t9-i16-s0",
+          "calibration-t9-i17-s0",
+          "calibration-t9-i18-s0",
+          "calibration-t9-i19-s0"
+        ],
+        "divergent_units": 21,
+        "effect_cells": 350,
+        "effect_fpr": 0.0,
+        "effect_tpr": 0.19148936170212766,
+        "false_upgrade_count": 0,
+        "false_upgrade_denominator": 256,
+        "false_upgrade_wilson_95_upper": 0.01478385642587143,
+        "faulted_effect_cells": 300,
+        "faulted_true_positive_effect_cells": 9,
+        "gain_intervals": {
+          "lower_adversarial": -0.76,
+          "lower_rule": "on divergent units, every faulted effect cell is assigned the worst possible delta (-1); concordant units inherit observed labels",
+          "neutral_assumption": 0.0,
+          "neutral_rule": "conditional descriptive assumption: divergent-unit gain rate equals the concordant-unit observed gain rate; never a point estimate",
+          "point_estimate_forbidden": true,
+          "same_faulted_effect_denominator_before_after": 300,
+          "upper_inherited_oracle": 0.12666666666666668,
+          "upper_rule": "conditional descriptive assumption: divergent units inherit their stored predicate labels as the oracle outcome"
+        },
+        "negative_effect_cells": 256,
+        "positive_effect_cells": 94,
+        "true_positive_effect_cells": 18,
+        "unit_count": 30
+      },
+      "per_effect_independent": {
+        "concordant_units": 8,
+        "divergent_unit_ids": [
+          "calibration-t0-i10-s0",
+          "calibration-t0-i11-s0",
+          "calibration-t0-i13-s0",
+          "calibration-t0-i14-s0",
+          "calibration-t0-i15-s0",
+          "calibration-t0-i16-s0",
+          "calibration-t0-i18-s0",
+          "calibration-t0-i19-s0",
+          "calibration-t5-i12-s0",
+          "calibration-t5-i15-s0",
+          "calibration-t5-i18-s0",
+          "calibration-t5-i19-s0",
+          "calibration-t9-i10-s0",
+          "calibration-t9-i11-s0",
+          "calibration-t9-i12-s0",
+          "calibration-t9-i13-s0",
+          "calibration-t9-i14-s0",
+          "calibration-t9-i15-s0",
+          "calibration-t9-i16-s0",
+          "calibration-t9-i17-s0",
+          "calibration-t9-i18-s0",
+          "calibration-t9-i19-s0"
+        ],
+        "divergent_units": 22,
+        "effect_cells": 350,
+        "effect_fpr": 0.0078125,
+        "effect_tpr": 0.5531914893617021,
+        "false_upgrade_count": 2,
+        "false_upgrade_denominator": 256,
+        "false_upgrade_wilson_95_upper": 0.028032768301535768,
+        "faulted_effect_cells": 300,
+        "faulted_true_positive_effect_cells": 26,
+        "gain_intervals": {
+          "lower_adversarial": -0.8,
+          "lower_rule": "on divergent units, every faulted effect cell is assigned the worst possible delta (-1); concordant units inherit observed labels",
+          "neutral_assumption": 0.0,
+          "neutral_rule": "conditional descriptive assumption: divergent-unit gain rate equals the concordant-unit observed gain rate; never a point estimate",
+          "point_estimate_forbidden": true,
+          "same_faulted_effect_denominator_before_after": 300,
+          "upper_inherited_oracle": 0.12666666666666668,
+          "upper_rule": "conditional descriptive assumption: divergent units inherit their stored predicate labels as the oracle outcome"
+        },
+        "negative_effect_cells": 256,
+        "positive_effect_cells": 94,
+        "true_positive_effect_cells": 52,
+        "unit_count": 30
+      }
+    },
+    "qualification": {
+      "legacy_receipt_and": {
+        "concordant_units": 10,
+        "divergent_unit_ids": [
+          "qualification-t0-i20-s0",
+          "qualification-t0-i21-s0",
+          "qualification-t0-i22-s0",
+          "qualification-t0-i25-s0",
+          "qualification-t0-i26-s0",
+          "qualification-t0-i27-s0",
+          "qualification-t0-i28-s0",
+          "qualification-t5-i20-s0",
+          "qualification-t5-i25-s0",
+          "qualification-t5-i26-s0",
+          "qualification-t5-i28-s0",
+          "qualification-t9-i20-s0",
+          "qualification-t9-i21-s0",
+          "qualification-t9-i22-s0",
+          "qualification-t9-i23-s0",
+          "qualification-t9-i24-s0",
+          "qualification-t9-i26-s0",
+          "qualification-t9-i27-s0",
+          "qualification-t9-i28-s0",
+          "qualification-t9-i29-s0"
+        ],
+        "divergent_units": 20,
+        "effect_cells": 350,
+        "effect_fpr": 0.0,
+        "effect_tpr": 0.25,
+        "false_upgrade_count": 0,
+        "false_upgrade_denominator": 254,
+        "false_upgrade_wilson_95_upper": 0.01489853043131252,
+        "faulted_effect_cells": 300,
+        "faulted_true_positive_effect_cells": 12,
+        "gain_intervals": {
+          "lower_adversarial": -0.72,
+          "lower_rule": "on divergent units, every faulted effect cell is assigned the worst possible delta (-1); concordant units inherit observed labels",
+          "neutral_assumption": 0.0,
+          "neutral_rule": "conditional descriptive assumption: divergent-unit gain rate equals the concordant-unit observed gain rate; never a point estimate",
+          "point_estimate_forbidden": true,
+          "same_faulted_effect_denominator_before_after": 300,
+          "upper_inherited_oracle": 0.12,
+          "upper_rule": "conditional descriptive assumption: divergent units inherit their stored predicate labels as the oracle outcome"
+        },
+        "negative_effect_cells": 254,
+        "positive_effect_cells": 96,
+        "true_positive_effect_cells": 24,
+        "unit_count": 30
+      },
+      "per_effect_independent": {
+        "concordant_units": 10,
+        "divergent_unit_ids": [
+          "qualification-t0-i20-s0",
+          "qualification-t0-i21-s0",
+          "qualification-t0-i22-s0",
+          "qualification-t0-i25-s0",
+          "qualification-t0-i26-s0",
+          "qualification-t0-i27-s0",
+          "qualification-t0-i28-s0",
+          "qualification-t5-i20-s0",
+          "qualification-t5-i25-s0",
+          "qualification-t5-i26-s0",
+          "qualification-t5-i28-s0",
+          "qualification-t9-i20-s0",
+          "qualification-t9-i21-s0",
+          "qualification-t9-i22-s0",
+          "qualification-t9-i23-s0",
+          "qualification-t9-i24-s0",
+          "qualification-t9-i26-s0",
+          "qualification-t9-i27-s0",
+          "qualification-t9-i28-s0",
+          "qualification-t9-i29-s0"
+        ],
+        "divergent_units": 20,
+        "effect_cells": 350,
+        "effect_fpr": 0.0,
+        "effect_tpr": 0.5833333333333334,
+        "false_upgrade_count": 0,
+        "false_upgrade_denominator": 254,
+        "false_upgrade_wilson_95_upper": 0.01489853043131252,
+        "faulted_effect_cells": 300,
+        "faulted_true_positive_effect_cells": 28,
+        "gain_intervals": {
+          "lower_adversarial": -0.72,
+          "lower_rule": "on divergent units, every faulted effect cell is assigned the worst possible delta (-1); concordant units inherit observed labels",
+          "neutral_assumption": 0.0,
+          "neutral_rule": "conditional descriptive assumption: divergent-unit gain rate equals the concordant-unit observed gain rate; never a point estimate",
+          "point_estimate_forbidden": true,
+          "same_faulted_effect_denominator_before_after": 300,
+          "upper_inherited_oracle": 0.12,
+          "upper_rule": "conditional descriptive assumption: divergent units inherit their stored predicate labels as the oracle outcome"
+        },
+        "negative_effect_cells": 254,
+        "positive_effect_cells": 96,
+        "true_positive_effect_cells": 56,
+        "unit_count": 30
+      }
+    }
+  },
+  "status": "COMPLETED_CPU_NONFORMAL_DIAGNOSTIC",
+  "stored_nonformal_oracle_replay": {
+    "formal_paths_read": [],
+    "mismatch_count": 0,
+    "mismatch_examples": [],
+    "pilot_overlap_rows_compared": 105,
+    "rows_available": 525,
+    "source": "experiments/r16p19_phase5/artifacts/results/oracle_pilot_results.jsonl",
+    "source_sha256": "63dc2cce008c0d72a50101277f991336ac8bbf6c655762bbffa7a96a83d765e6"
+  },
+  "threshold": {
+    "formal_access_count": 0,
+    "platt_mapping_source": "experiments/r16p19_phase8/C1_RECALIBRATION.json",
+    "source": "experiments/r16p19_phase8/C2_GLOBAL_THRESHOLD.json",
+    "value": 0.6477173811021721
+  }
+}
