@@ -30,11 +30,7 @@ sys.dont_write_bytecode = True
 
 REPO = Path(__file__).resolve().parents[2]
 OUT = REPO / "experiments/r16p19_phase9"
-RECOVERED = Path(
-    "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/"
-    "Explore-claude-local-worktrees/r16p19-phase9-worker-20260909/"
-    "experiments/r16p19_phase9/RECOVERED_LOADED_EVIDENCE.json"
-)
+RECOVERED = OUT / "RECOVERED_LOADED_EVIDENCE.json"
 SEAL = OUT / "D3_OPERATING_POINT_SEAL.json"
 SEAL_COMMIT = "21acdc25331cb221fbeab2c34a1b9044580cadc2"
 L2 = 1e-6
