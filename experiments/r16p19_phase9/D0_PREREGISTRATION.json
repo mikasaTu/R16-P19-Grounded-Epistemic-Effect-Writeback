@@ -1,0 +1,38 @@
+{
+  "task": "Phase9 step9a (source title step10)",
+  "protocol_version": 1,
+  "authorization": "User approved D0 -> D3 seal -> one formal load -> D1/D2/D4/D5/D6; no early stopping on D1 failure",
+  "primary_confidence": "individual one-sided 95%; joint five effects Bonferroni one-sided 99% also reported",
+  "primary_unit": "episode cluster; binary any false acceptance among negative observations within an episode; exact Clopper-Pearson UCB. Receipt bounds secondary. Cluster estimand is probability of any failure, not receipt mean.",
+  "certification_object": "per-effect FPR <= alpha",
+  "alpha_grid": [
+    0.005,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "threshold_rule": "For each effect, sort estimation negative scores; rank ceil((n+1)*(1-alpha)); accept strictly score > order statistic to handle ties. Report receipt-score and episode-max-score versions, primary episode-max. Rank > n yields reject-all (threshold null, explicit reject_all true).",
+  "interval_rule": "One-sided Clopper-Pearson upper bounds at confidence .95/.99; two-sided Wilson95 TPR/FPR for description. Zero denominators null. Calibration-adaptive binomial bounds descriptive, not independent validation; conformal guarantee marginal and requires exchangeability.",
+  "selection_rule": "Among alpha whose every effect primary episode Clopper-Pearson UCB <= alpha, minimize estimation receipt false-upgrade episode UCB; tie lower alpha. If none, certified_point=null; freeze diagnostic fallback minimizing same UCB then alpha over grid. Clearly label fallback uncertified; evaluate once for complete diagnostics, cannot produce READY_FOR_S2.",
+  "estimation": "calibration+pilot; qualification excluded from threshold selection",
+  "negative_export": "Separate preprocessing exports effect negatives and receipts containing >=1 negative effect. Negative receipt export includes all scores but only negative-effect indices; no positive labels or positive-only receipts. Selector read-hook allowlists this export and blocks raw/mixed/positive/formal paths; failed positive path test mandatory.",
+  "D1": "quantiles .90,.95,.98,.99,.995; two-sample KS; for alpha grid formal negative FPR / nominal alpha >2 for any rare effect => fail (one-sided excess); zero actual FPR does not fail. rare effects tomato/book/close inferred by keys. Descriptive formal only, no selection feedback.",
+  "D2": "Platt positive slope sigmoid(a*logit(score)+b), a>0. Negative resampling with replacement to achieve positive fractions .02,.05,.10,.25,.50 for each effect; 10 fixed seeds 19001..19010. Keep positives fixed. Fit logistic NLL with L2 1e-6, no verifier changes. Formal ceiling raw threshold mapped monotonically to each fitted scale, same receipt FPR caps .02/.05; report range/CV distribution. Support only if balanced median range below unbalanced range at >=4/5 levels; otherwise not supported. Diagnostic not causal proof.",
+  "D4": "One physical formal source-loading session after seal commit; reuse in-memory structures for all formal diagnostics and replay. No subsequent raw formal reads. All formal-derived quantities claim_eligible=false.",
+  "D5": "Receipt AND semantics, existing deterministic event replay and frozen oracle outcomes; concordance at unit level; lower adversarial every faulted divergent cell worst, upper inherited oracle, neutral zero incremental gain on divergence explicitly assumption. Compare phase6 C102/120 and197/227 without changing denominators.",
+  "D6": "List all false upgrade units/task/condition and concentration; boundary evidence only from available frozen event timing/type, unavailable null. No causal claims from condition names alone.",
+  "gate_functions": [
+    "gate_exchangeability(max_rare_fpr_ratio: float | None) -> bool",
+    "gate_effect_fpr(ucbs: list[float | None], alpha: float | None, certified: bool) -> bool",
+    "gate_receipt_fpr(cluster_ucb: float | None, pvalue_vs_half: float | None) -> bool",
+    "gate_ledger(concordant: int | None, total: int | None) -> bool"
+  ],
+  "gate_thresholds": {
+    "exchangeability_max_ratio": 2,
+    "receipt_cluster_ucb": 0.05,
+    "one_sided_binomial_pvalue_vs_half": 0.05,
+    "ledger_concordance": 0.85
+  },
+  "safety": "CPU only, no PAI/GPU/rollout/new data/S2; phase5/6/7/8 read only",
+  "hash_policy": "SHA256SUMS every artifact except itself; D0 hash immutable; D0 and seal independent commits; analysis scripts created only after D0 commit; tests and corresponding results committed together"
+}
