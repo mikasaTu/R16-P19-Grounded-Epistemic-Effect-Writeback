@@ -1,0 +1,458 @@
+{
+  "effects": {
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+      "negative_counts": {
+        "estimation": 521,
+        "qualification": 288,
+        "formal": 200
+      },
+      "quantiles": {
+        "0.9": {
+          "estimation": 0.4149360656738281,
+          "qualification": 0.31989577710628514,
+          "formal": 0.001514982432126999,
+          "formal_minus_estimation": -0.4134210832417011,
+          "qualification_minus_estimation": -0.09504028856754299
+        },
+        "0.95": {
+          "estimation": 0.5921295285224915,
+          "qualification": 0.40202680975198735,
+          "formal": 0.001578008639626205,
+          "formal_minus_estimation": -0.5905515198828653,
+          "qualification_minus_estimation": -0.1901027187705041
+        },
+        "0.98": {
+          "estimation": 0.8863273501396173,
+          "qualification": 0.5281626832485198,
+          "formal": 0.0016685017617419362,
+          "formal_minus_estimation": -0.8846588483778753,
+          "qualification_minus_estimation": -0.3581646668910975
+        },
+        "0.99": {
+          "estimation": 0.9227949261665344,
+          "qualification": 0.5728597265481947,
+          "formal": 0.0016685017617419362,
+          "formal_minus_estimation": -0.9211264244047924,
+          "qualification_minus_estimation": -0.34993519961833963
+        },
+        "0.995": {
+          "estimation": 0.9297868967056273,
+          "qualification": 0.6054421344399452,
+          "formal": 0.001668621724238619,
+          "formal_minus_estimation": -0.9281182749813887,
+          "qualification_minus_estimation": -0.3243447622656821
+        }
+      },
+      "ks_statistic": {
+        "estimation_vs_qualification": 0.06573229899765409,
+        "estimation_vs_formal": 0.6967370441458733,
+        "qualification_vs_formal": 0.6805555555555556
+      },
+      "nominal_actual": {
+        "0.005": {
+          "threshold": 0.9297868967056273,
+          "formal_negative_count": 200,
+          "formal_false_positive_count": 0,
+          "formal_fpr": 0.0,
+          "nominal_alpha": 0.005,
+          "actual_minus_nominal": -0.005,
+          "actual_over_nominal": 0.0
+        },
+        "0.01": {
+          "threshold": 0.9227949261665344,
+          "formal_negative_count": 200,
+          "formal_false_positive_count": 0,
+          "formal_fpr": 0.0,
+          "nominal_alpha": 0.01,
+          "actual_minus_nominal": -0.01,
+          "actual_over_nominal": 0.0
+        },
+        "0.02": {
+          "threshold": 0.8863273501396173,
+          "formal_negative_count": 200,
+          "formal_false_positive_count": 0,
+          "formal_fpr": 0.0,
+          "nominal_alpha": 0.02,
+          "actual_minus_nominal": -0.02,
+          "actual_over_nominal": 0.0
+        },
+        "0.05": {
+          "threshold": 0.5921295285224915,
+          "formal_negative_count": 200,
+          "formal_false_positive_count": 0,
+          "formal_fpr": 0.0,
+          "nominal_alpha": 0.05,
+          "actual_minus_nominal": -0.05,
+          "actual_over_nominal": 0.0
+        }
+      }
+    },
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+      "negative_counts": {
+        "estimation": 878,
+        "qualification": 532,
+        "formal": 204
+      },
+      "quantiles": {
+        "0.9": {
+          "estimation": 0.04725480489432818,
+          "qualification": 0.04625304564833646,
+          "formal": 2.0903826225548983e-05,
+          "formal_minus_estimation": -0.04723390106810263,
+          "qualification_minus_estimation": -0.001001759245991718
+        },
+        "0.95": {
+          "estimation": 0.14063215926289557,
+          "qualification": 0.1776029415428638,
+          "formal": 2.3077793230186217e-05,
+          "formal_minus_estimation": -0.1406090814696654,
+          "qualification_minus_estimation": 0.03697078227996822
+        },
+        "0.98": {
+          "estimation": 0.24650470525026322,
+          "qualification": 0.26932969570159904,
+          "formal": 2.6429173885844648e-05,
+          "formal_minus_estimation": -0.24647827607637737,
+          "qualification_minus_estimation": 0.02282499045133582
+        },
+        "0.99": {
+          "estimation": 0.2914891496300698,
+          "qualification": 0.30531246840953774,
+          "formal": 0.22339662909507751,
+          "formal_minus_estimation": -0.06809252053499226,
+          "qualification_minus_estimation": 0.013823318779467964
+        },
+        "0.995": {
+          "estimation": 0.3150351645052433,
+          "qualification": 0.34026651948690523,
+          "formal": 0.2276160113513469,
+          "formal_minus_estimation": -0.08741915315389642,
+          "qualification_minus_estimation": 0.025231354981661902
+        }
+      },
+      "ks_statistic": {
+        "estimation_vs_qualification": 0.04639303269563433,
+        "estimation_vs_formal": 0.764884541515923,
+        "qualification_vs_formal": 0.7529485478401887
+      },
+      "nominal_actual": {
+        "0.005": {
+          "threshold": 0.3150351645052433,
+          "formal_negative_count": 204,
+          "formal_false_positive_count": 0,
+          "formal_fpr": 0.0,
+          "nominal_alpha": 0.005,
+          "actual_minus_nominal": -0.005,
+          "actual_over_nominal": 0.0
+        },
+        "0.01": {
+          "threshold": 0.2914891496300698,
+          "formal_negative_count": 204,
+          "formal_false_positive_count": 0,
+          "formal_fpr": 0.0,
+          "nominal_alpha": 0.01,
+          "actual_minus_nominal": -0.01,
+          "actual_over_nominal": 0.0
+        },
+        "0.02": {
+          "threshold": 0.24650470525026322,
+          "formal_negative_count": 204,
+          "formal_false_positive_count": 0,
+          "formal_fpr": 0.0,
+          "nominal_alpha": 0.02,
+          "actual_minus_nominal": -0.02,
+          "actual_over_nominal": 0.0
+        },
+        "0.05": {
+          "threshold": 0.14063215926289557,
+          "formal_negative_count": 204,
+          "formal_false_positive_count": 4,
+          "formal_fpr": 0.0196078431372549,
+          "nominal_alpha": 0.05,
+          "actual_minus_nominal": -0.0303921568627451,
+          "actual_over_nominal": 0.39215686274509803
+        }
+      }
+    },
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+      "negative_counts": {
+        "estimation": 596,
+        "qualification": 345,
+        "formal": 200
+      },
+      "quantiles": {
+        "0.9": {
+          "estimation": 0.05636918172240257,
+          "qualification": 0.036254019290208876,
+          "formal": 6.542782211909071e-05,
+          "formal_minus_estimation": -0.056303753900283485,
+          "qualification_minus_estimation": -0.020115162432193696
+        },
+        "0.95": {
+          "estimation": 0.09383998438715935,
+          "qualification": 0.07178272753953936,
+          "formal": 7.09619271219708e-05,
+          "formal_minus_estimation": -0.09376902246003738,
+          "qualification_minus_estimation": -0.022057256847619985
+        },
+        "0.98": {
+          "estimation": 0.16080842912197119,
+          "qualification": 0.1535447281599045,
+          "formal": 7.11999558552635e-05,
+          "formal_minus_estimation": -0.16073722916611594,
+          "qualification_minus_estimation": -0.007263700962066688
+        },
+        "0.99": {
+          "estimation": 0.17532193735241847,
+          "qualification": 0.19125791311264043,
+          "formal": 8.14572413219139e-05,
+          "formal_minus_estimation": -0.17524048011109655,
+          "qualification_minus_estimation": 0.01593597576022196
+        },
+        "0.995": {
+          "estimation": 0.22640957124531244,
+          "qualification": 0.2233357274532307,
+          "formal": 8.14572413219139e-05,
+          "formal_minus_estimation": -0.22632811400399053,
+          "qualification_minus_estimation": -0.003073843792081754
+        }
+      },
+      "ks_statistic": {
+        "estimation_vs_qualification": 0.05685244626009145,
+        "estimation_vs_formal": 0.7768456375838926,
+        "qualification_vs_formal": 0.788695652173913
+      },
+      "nominal_actual": {
+        "0.005": {
+          "threshold": 0.22640957124531244,
+          "formal_negative_count": 200,
+          "formal_false_positive_count": 0,
+          "formal_fpr": 0.0,
+          "nominal_alpha": 0.005,
+          "actual_minus_nominal": -0.005,
+          "actual_over_nominal": 0.0
+        },
+        "0.01": {
+          "threshold": 0.17532193735241847,
+          "formal_negative_count": 200,
+          "formal_false_positive_count": 0,
+          "formal_fpr": 0.0,
+          "nominal_alpha": 0.01,
+          "actual_minus_nominal": -0.01,
+          "actual_over_nominal": 0.0
+        },
+        "0.02": {
+          "threshold": 0.16080842912197119,
+          "formal_negative_count": 200,
+          "formal_false_positive_count": 0,
+          "formal_fpr": 0.0,
+          "nominal_alpha": 0.02,
+          "actual_minus_nominal": -0.02,
+          "actual_over_nominal": 0.0
+        },
+        "0.05": {
+          "threshold": 0.09383998438715935,
+          "formal_negative_count": 200,
+          "formal_false_positive_count": 0,
+          "formal_fpr": 0.0,
+          "nominal_alpha": 0.05,
+          "actual_minus_nominal": -0.05,
+          "actual_over_nominal": 0.0
+        }
+      }
+    },
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+      "negative_counts": {
+        "estimation": 437,
+        "qualification": 370,
+        "formal": 206
+      },
+      "quantiles": {
+        "0.9": {
+          "estimation": 0.10259955376386652,
+          "qualification": 0.3205953657627106,
+          "formal": 0.00419279676862061,
+          "formal_minus_estimation": -0.09840675699524591,
+          "qualification_minus_estimation": 0.21799581199884405
+        },
+        "0.95": {
+          "estimation": 0.32370533943176216,
+          "qualification": 0.4440483927726747,
+          "formal": 0.005509767099283636,
+          "formal_minus_estimation": -0.3181955723324785,
+          "qualification_minus_estimation": 0.12034305334091255
+        },
+        "0.98": {
+          "estimation": 0.5594551992416373,
+          "qualification": 0.5799375677108765,
+          "formal": 0.9664004445075989,
+          "formal_minus_estimation": 0.40694524526596154,
+          "qualification_minus_estimation": 0.02048236846923912
+        },
+        "0.99": {
+          "estimation": 0.6672148013114927,
+          "qualification": 0.6749551266431809,
+          "formal": 0.9952433705329895,
+          "formal_minus_estimation": 0.3280285692214968,
+          "qualification_minus_estimation": 0.007740325331688225
+        },
+        "0.995": {
+          "estimation": 0.7786473178863526,
+          "qualification": 0.7184555235505101,
+          "formal": 0.9978450417518615,
+          "formal_minus_estimation": 0.21919772386550895,
+          "qualification_minus_estimation": -0.06019179433584243
+        }
+      },
+      "ks_statistic": {
+        "estimation_vs_qualification": 0.16055414682416969,
+        "estimation_vs_formal": 0.22272333429606106,
+        "qualification_vs_formal": 0.3634741537654159
+      },
+      "nominal_actual": {
+        "0.005": {
+          "threshold": 0.7786473178863526,
+          "formal_negative_count": 206,
+          "formal_false_positive_count": 6,
+          "formal_fpr": 0.02912621359223301,
+          "nominal_alpha": 0.005,
+          "actual_minus_nominal": 0.02412621359223301,
+          "actual_over_nominal": 5.825242718446602
+        },
+        "0.01": {
+          "threshold": 0.6672148013114927,
+          "formal_negative_count": 206,
+          "formal_false_positive_count": 6,
+          "formal_fpr": 0.02912621359223301,
+          "nominal_alpha": 0.01,
+          "actual_minus_nominal": 0.01912621359223301,
+          "actual_over_nominal": 2.912621359223301
+        },
+        "0.02": {
+          "threshold": 0.5594551992416373,
+          "formal_negative_count": 206,
+          "formal_false_positive_count": 6,
+          "formal_fpr": 0.02912621359223301,
+          "nominal_alpha": 0.02,
+          "actual_minus_nominal": 0.00912621359223301,
+          "actual_over_nominal": 1.4563106796116505
+        },
+        "0.05": {
+          "threshold": 0.32370533943176216,
+          "formal_negative_count": 206,
+          "formal_false_positive_count": 6,
+          "formal_fpr": 0.02912621359223301,
+          "nominal_alpha": 0.05,
+          "actual_minus_nominal": -0.020873786407766992,
+          "actual_over_nominal": 0.5825242718446602
+        }
+      }
+    },
+    "task9:effect1:close microwave_1": {
+      "negative_counts": {
+        "estimation": 803,
+        "qualification": 579,
+        "formal": 208
+      },
+      "quantiles": {
+        "0.9": {
+          "estimation": 0.036592335999012016,
+          "qualification": 0.05102485641837121,
+          "formal": 0.00012222472578287126,
+          "formal_minus_estimation": -0.03647011127322915,
+          "qualification_minus_estimation": 0.014432520419359197
+        },
+        "0.95": {
+          "estimation": 0.07545866742730137,
+          "qualification": 0.09222961440682421,
+          "formal": 0.00015333297778852284,
+          "formal_minus_estimation": -0.07530533444951285,
+          "qualification_minus_estimation": 0.016770946979522847
+        },
+        "0.98": {
+          "estimation": 0.14300881266593937,
+          "qualification": 0.23476202368736035,
+          "formal": 0.06233017146587372,
+          "formal_minus_estimation": -0.08067864120006565,
+          "qualification_minus_estimation": 0.09175321102142098
+        },
+        "0.99": {
+          "estimation": 0.28401275157928507,
+          "qualification": 0.3680546826124193,
+          "formal": 0.8583949208259583,
+          "formal_minus_estimation": 0.5743821692466732,
+          "qualification_minus_estimation": 0.08404193103313423
+        },
+        "0.995": {
+          "estimation": 0.49827621102333114,
+          "qualification": 0.44968843162059874,
+          "formal": 0.8599063915014267,
+          "formal_minus_estimation": 0.36163018047809553,
+          "qualification_minus_estimation": -0.0485877794027324
+        }
+      },
+      "ks_statistic": {
+        "estimation_vs_qualification": 0.044907159464615654,
+        "estimation_vs_formal": 0.4833317367563943,
+        "qualification_vs_formal": 0.4865816394313804
+      },
+      "nominal_actual": {
+        "0.005": {
+          "threshold": 0.49827621102333114,
+          "formal_negative_count": 208,
+          "formal_false_positive_count": 4,
+          "formal_fpr": 0.019230769230769232,
+          "nominal_alpha": 0.005,
+          "actual_minus_nominal": 0.01423076923076923,
+          "actual_over_nominal": 3.8461538461538463
+        },
+        "0.01": {
+          "threshold": 0.28401275157928507,
+          "formal_negative_count": 208,
+          "formal_false_positive_count": 4,
+          "formal_fpr": 0.019230769230769232,
+          "nominal_alpha": 0.01,
+          "actual_minus_nominal": 0.009230769230769232,
+          "actual_over_nominal": 1.9230769230769231
+        },
+        "0.02": {
+          "threshold": 0.14300881266593937,
+          "formal_negative_count": 208,
+          "formal_false_positive_count": 4,
+          "formal_fpr": 0.019230769230769232,
+          "nominal_alpha": 0.02,
+          "actual_minus_nominal": -0.0007692307692307686,
+          "actual_over_nominal": 0.9615384615384616
+        },
+        "0.05": {
+          "threshold": 0.07545866742730137,
+          "formal_negative_count": 208,
+          "formal_false_positive_count": 4,
+          "formal_fpr": 0.019230769230769232,
+          "nominal_alpha": 0.05,
+          "actual_minus_nominal": -0.03076923076923077,
+          "actual_over_nominal": 0.38461538461538464
+        }
+      }
+    }
+  },
+  "sampling_population_mismatch": true,
+  "sampling_population": {
+    "estimation": "all frame-effect rows calibration+pilot",
+    "qualification": "all frame-effect rows qualification",
+    "formal": "seven selected condition injection receipts per unit"
+  },
+  "exchangeability_status": "NOT_CERTIFIABLE_SAMPLING_POPULATION_MISMATCH",
+  "d1_pass": false,
+  "limitation": "KS and ratios below describe the available sampled score distributions, not an isolated split-transfer effect. Full formal frame population was not retained; original sources are not reopened.",
+  "descriptive_max_rare_ratio": 3.8461538461538463,
+  "numeric_ratio_gate": false,
+  "claim_eligible": false,
+  "selection_eligible": false,
+  "protocol_valid": false,
+  "original_formal_load_attempts": 2,
+  "formal_read_once": false,
+  "recovery_source": "RECOVERED_LOADED_EVIDENCE.json; extracted from live process memory before termination",
+  "new_original_formal_reads": 0,
+  "d3_seal_commit": "21acdc25331cb221fbeab2c34a1b9044580cadc2"
+}

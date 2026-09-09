@@ -1,0 +1,15 @@
+{
+  "protected_phase5_through_phase8_git_status": "",
+  "protected_tracked_trees_unchanged": true,
+  "method": "git status metadata and committed tree identity; no fresh raw evidence hash scan",
+  "baseline_commit": "a2c204f34ccb6472e8abb4714dcbe7ed68fd26f6",
+  "d0_sha256": "23dcfb04c6c1478fce14d1b1537cedf6e46283c622deeaf0aa158b7a03cbff10",
+  "seal_sha256": "a918be61f16ae7d568300b95057aa4208618c5c7ebe2281902336c2d2b0a2c56",
+  "cache_sha256": "f0b60f6ac793bcd56571de400625a70ee77725e28aa4d065b0d658d98c9ab998",
+  "verifier_retrained": false,
+  "gpu_jobs_submitted": 0,
+  "pai_jobs_submitted": 0,
+  "rollouts_executed": 0,
+  "new_data_collected": 0,
+  "s2_started": false
+}

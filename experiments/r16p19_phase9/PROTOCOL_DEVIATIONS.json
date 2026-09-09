@@ -1,0 +1,29 @@
+{
+  "D0_valid_separate_commit": true,
+  "D0_commit": "d4c81be6149068ab56cda8350c99b86ddf1c7fa8",
+  "D3_valid_separate_commit": true,
+  "violations": [
+    {
+      "requirement": "formal loaded once",
+      "observed_dataset_load_attempts": 2,
+      "detail": "First invocation loaded formal then failed due missing numpy import; second invocation loaded formal and ran D1/D2. Parent recovered live memory and terminated the second process. Source-hash inventory also read artifact bytes; per-file total source opens was not globally captured.",
+      "consequence": "Cannot claim valid single-read formal protocol; all downstream results diagnostic only."
+    }
+  ],
+  "repairs": [
+    "D4 cluster FPR restricted to negative observations",
+    "D1 sampling-population mismatch disclosed",
+    "D5 actual ledger replay implemented separately",
+    "D2 regularized Platt implementation repaired from cache"
+  ],
+  "original_raw_read_counter_exhaustive": false,
+  "additional_original_formal_reads_after_recovery": 0,
+  "claim_eligible": false,
+  "selection_eligible": false,
+  "protocol_valid": false,
+  "original_formal_load_attempts": 2,
+  "formal_read_once": false,
+  "recovery_source": "RECOVERED_LOADED_EVIDENCE.json; extracted from live process memory before termination",
+  "new_original_formal_reads": 0,
+  "d3_seal_commit": "21acdc25331cb221fbeab2c34a1b9044580cadc2"
+}

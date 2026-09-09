@@ -1,0 +1,257 @@
+{
+  "status": "COMPLETED_CACHED_DIAGNOSTIC_WITH_PROTOCOL_BREACH",
+  "selected_alpha": 0.005,
+  "certified_point": null,
+  "d3_seal_sha256": "a918be61f16ae7d568300b95057aa4208618c5c7ebe2281902336c2d2b0a2c56",
+  "per_effect": {
+    "task0:effect0:in alphabet_soup_1 basket_1_contain_region": {
+      "threshold": null,
+      "reject_all": true,
+      "receipt": {
+        "positive_count": 80,
+        "negative_count": 200,
+        "tp": 0,
+        "fp": 0,
+        "tpr": 0.0,
+        "fpr": 0.0,
+        "tpr_wilson95": [
+          0.0,
+          0.0458181295355271
+        ],
+        "fpr_wilson95": [
+          1.734723475976807e-18,
+          0.018845326377266575
+        ],
+        "fpr_exact_upper95": 0.014867039231272083,
+        "fpr_exact_upper99": 0.02276277904418933
+      },
+      "episode_cluster": {
+        "negative_episode_count": 40,
+        "false_positive_episode_count": 0,
+        "positive_episode_count": 40,
+        "true_positive_episode_count": 0,
+        "fpr": 0.0,
+        "tpr": 0.0,
+        "fpr_exact_upper95": 0.0721575245055146,
+        "fpr_exact_upper99": 0.10874906186625444,
+        "fpr_wilson95": [
+          0.0,
+          0.08762160119728664
+        ],
+        "tpr_wilson95": [
+          0.0,
+          0.08762160119728664
+        ],
+        "fpr_estimand": "any accepted NEGATIVE observation in an episode with >=1 negative observation",
+        "tpr_estimand": "any accepted POSITIVE observation in an episode with >=1 positive observation; not average per-frame TPR"
+      }
+    },
+    "task0:effect1:in tomato_sauce_1 basket_1_contain_region": {
+      "threshold": null,
+      "reject_all": true,
+      "receipt": {
+        "positive_count": 76,
+        "negative_count": 204,
+        "tp": 0,
+        "fp": 0,
+        "tpr": 0.0,
+        "fpr": 0.0,
+        "tpr_wilson95": [
+          0.0,
+          0.048113585065137326
+        ],
+        "fpr_wilson95": [
+          0.0,
+          0.018482639808683074
+        ],
+        "fpr_exact_upper95": 0.014577663934354668,
+        "fpr_exact_upper99": 0.022321469260713878
+      },
+      "episode_cluster": {
+        "negative_episode_count": 40,
+        "false_positive_episode_count": 0,
+        "positive_episode_count": 38,
+        "true_positive_episode_count": 0,
+        "fpr": 0.0,
+        "tpr": 0.0,
+        "fpr_exact_upper95": 0.0721575245055146,
+        "fpr_exact_upper99": 0.10874906186625444,
+        "fpr_wilson95": [
+          0.0,
+          0.08762160119728664
+        ],
+        "tpr_wilson95": [
+          0.0,
+          0.09180986822558396
+        ],
+        "fpr_estimand": "any accepted NEGATIVE observation in an episode with >=1 negative observation",
+        "tpr_estimand": "any accepted POSITIVE observation in an episode with >=1 positive observation; not average per-frame TPR"
+      }
+    },
+    "task5:effect0:in black_book_1 desk_caddy_1_back_contain_region": {
+      "threshold": null,
+      "reject_all": true,
+      "receipt": {
+        "positive_count": 80,
+        "negative_count": 200,
+        "tp": 0,
+        "fp": 0,
+        "tpr": 0.0,
+        "fpr": 0.0,
+        "tpr_wilson95": [
+          0.0,
+          0.0458181295355271
+        ],
+        "fpr_wilson95": [
+          1.734723475976807e-18,
+          0.018845326377266575
+        ],
+        "fpr_exact_upper95": 0.014867039231272083,
+        "fpr_exact_upper99": 0.02276277904418933
+      },
+      "episode_cluster": {
+        "negative_episode_count": 40,
+        "false_positive_episode_count": 0,
+        "positive_episode_count": 40,
+        "true_positive_episode_count": 0,
+        "fpr": 0.0,
+        "tpr": 0.0,
+        "fpr_exact_upper95": 0.0721575245055146,
+        "fpr_exact_upper99": 0.10874906186625444,
+        "fpr_wilson95": [
+          0.0,
+          0.08762160119728664
+        ],
+        "tpr_wilson95": [
+          0.0,
+          0.08762160119728664
+        ],
+        "fpr_estimand": "any accepted NEGATIVE observation in an episode with >=1 negative observation",
+        "tpr_estimand": "any accepted POSITIVE observation in an episode with >=1 positive observation; not average per-frame TPR"
+      }
+    },
+    "task9:effect0:in white_yellow_mug_1 microwave_1_heating_region": {
+      "threshold": null,
+      "reject_all": true,
+      "receipt": {
+        "positive_count": 74,
+        "negative_count": 206,
+        "tp": 0,
+        "fp": 0,
+        "tpr": 0.0,
+        "fpr": 0.0,
+        "tpr_wilson95": [
+          -3.469446951953614e-18,
+          0.04934977939638607
+        ],
+        "fpr_wilson95": [
+          0.0,
+          0.018306481675656787
+        ],
+        "fpr_exact_upper95": 0.01443715984399907,
+        "fpr_exact_upper99": 0.0221071693631808
+      },
+      "episode_cluster": {
+        "negative_episode_count": 40,
+        "false_positive_episode_count": 0,
+        "positive_episode_count": 37,
+        "true_positive_episode_count": 0,
+        "fpr": 0.0,
+        "tpr": 0.0,
+        "fpr_exact_upper95": 0.0721575245055146,
+        "fpr_exact_upper99": 0.10874906186625444,
+        "fpr_wilson95": [
+          0.0,
+          0.08762160119728664
+        ],
+        "tpr_wilson95": [
+          -6.938893903907228e-18,
+          0.09405782583720251
+        ],
+        "fpr_estimand": "any accepted NEGATIVE observation in an episode with >=1 negative observation",
+        "tpr_estimand": "any accepted POSITIVE observation in an episode with >=1 positive observation; not average per-frame TPR"
+      }
+    },
+    "task9:effect1:close microwave_1": {
+      "threshold": null,
+      "reject_all": true,
+      "receipt": {
+        "positive_count": 72,
+        "negative_count": 208,
+        "tp": 0,
+        "fp": 0,
+        "tpr": 0.0,
+        "fpr": 0.0,
+        "tpr_wilson95": [
+          0.0,
+          0.05065117259645781
+        ],
+        "fpr_wilson95": [
+          0.0,
+          0.018133649768460082
+        ],
+        "fpr_exact_upper95": 0.01429933829614205,
+        "fpr_exact_upper99": 0.021896944990939193
+      },
+      "episode_cluster": {
+        "negative_episode_count": 40,
+        "false_positive_episode_count": 0,
+        "positive_episode_count": 36,
+        "true_positive_episode_count": 0,
+        "fpr": 0.0,
+        "tpr": 0.0,
+        "fpr_exact_upper95": 0.0721575245055146,
+        "fpr_exact_upper99": 0.10874906186625444,
+        "fpr_wilson95": [
+          0.0,
+          0.08762160119728664
+        ],
+        "tpr_wilson95": [
+          0.0,
+          0.09641862859446367
+        ],
+        "fpr_estimand": "any accepted NEGATIVE observation in an episode with >=1 negative observation",
+        "tpr_estimand": "any accepted POSITIVE observation in an episode with >=1 positive observation; not average per-frame TPR"
+      }
+    }
+  },
+  "receipt_false_upgrades": {
+    "count": 0,
+    "negative_receipt_count": 612,
+    "rate": 0.0,
+    "wilson95": [
+      4.336808689942018e-19,
+      0.006237739869040854
+    ],
+    "episode_count": 0,
+    "negative_episode_count": 120,
+    "episode_exact_upper95": 0.024655401055656334,
+    "episode_exact_upper99": 0.03764937360191145,
+    "episode_wilson95": [
+      0.0,
+      0.031019166418703486
+    ],
+    "pvalue_vs_half": 7.523163845262668e-37
+  },
+  "oracle_receipt_agreement_count": 612,
+  "oracle_receipt_agreement_denominator": 840,
+  "oracle_receipt_agreement": 0.7285714285714285,
+  "formal_unit_count": 120,
+  "b1_gap": {
+    "reference_source": "user-provided frozen background, diagnostic-only",
+    "min_tpr_reference": 1.0,
+    "false_upgrade_reference": 10,
+    "false_upgrade_denominator_reference": 612,
+    "min_tpr_current": 0.0,
+    "min_tpr_current_minus_reference": -1.0,
+    "false_upgrades_current_minus_reference": -10
+  },
+  "claim_eligible": false,
+  "selection_eligible": false,
+  "protocol_valid": false,
+  "original_formal_load_attempts": 2,
+  "formal_read_once": false,
+  "recovery_source": "RECOVERED_LOADED_EVIDENCE.json; extracted from live process memory before termination",
+  "new_original_formal_reads": 0,
+  "d3_seal_commit": "21acdc25331cb221fbeab2c34a1b9044580cadc2"
+}

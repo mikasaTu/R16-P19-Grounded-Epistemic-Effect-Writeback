@@ -1,0 +1,489 @@
+[
+  {
+    "pid": 3753433,
+    "thread_id": 139920486131520,
+    "thread_name": "MainThread",
+    "os_thread_id": 3753433,
+    "active": true,
+    "owns_gil": false,
+    "frames": [
+      {
+        "name": "sigmoid",
+        "filename": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-phase9-worker-20260909/experiments/r16p19_phase9/phase9_formal.py",
+        "module": null,
+        "short_filename": "phase9_formal.py",
+        "line": 151,
+        "locals": [
+          {
+            "name": "x",
+            "addr": 139920377213552,
+            "arg": true,
+            "repr": "<numpy.ndarray at 0x7f41c0617270>"
+          },
+          {
+            "name": "a",
+            "addr": 139920377213552,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c0617270>"
+          },
+          {
+            "name": "out",
+            "addr": 139920377213648,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c06172d0>"
+          },
+          {
+            "name": "positive",
+            "addr": 139920377212688,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c0616f10>"
+          },
+          {
+            "name": "exp_a",
+            "addr": 139920377213168,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c06170f0>"
+          }
+        ],
+        "is_entry": true,
+        "is_shim_entry": false
+      },
+      {
+        "name": "intercept",
+        "filename": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-phase9-worker-20260909/experiments/r16p19_phase9/phase9_formal.py",
+        "module": null,
+        "short_filename": "phase9_formal.py",
+        "line": 191,
+        "locals": [
+          {
+            "name": "a",
+            "addr": 139920359874064,
+            "arg": true,
+            "repr": "3.3201169227365512"
+          },
+          {
+            "name": "lo",
+            "addr": 139920359867248,
+            "arg": false,
+            "repr": "3.646908609893644"
+          },
+          {
+            "name": "hi",
+            "addr": 139920359873392,
+            "arg": false,
+            "repr": "3.6469086098936443"
+          },
+          {
+            "name": "_",
+            "addr": 139920484733616,
+            "arg": false,
+            "repr": "143"
+          },
+          {
+            "name": "b",
+            "addr": 139920359873936,
+            "arg": false,
+            "repr": "3.646908609893644"
+          }
+        ],
+        "is_entry": true,
+        "is_shim_entry": false
+      },
+      {
+        "name": "objective",
+        "filename": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-phase9-worker-20260909/experiments/r16p19_phase9/phase9_formal.py",
+        "module": null,
+        "short_filename": "phase9_formal.py",
+        "line": 199,
+        "locals": [
+          {
+            "name": "log_a",
+            "addr": 139920359873168,
+            "arg": true,
+            "repr": "1.200000000000001"
+          },
+          {
+            "name": "a",
+            "addr": 139920359874064,
+            "arg": false,
+            "repr": "3.3201169227365512"
+          }
+        ],
+        "is_entry": true,
+        "is_shim_entry": false
+      },
+      {
+        "name": "<listcomp>",
+        "filename": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-phase9-worker-20260909/experiments/r16p19_phase9/phase9_formal.py",
+        "module": null,
+        "short_filename": "phase9_formal.py",
+        "line": 203,
+        "locals": [
+          {
+            "name": ".0",
+            "addr": 139920383644512,
+            "arg": true,
+            "repr": "<iterator at 0x7f41c0c39360>"
+          },
+          {
+            "name": "q",
+            "addr": 139920359867056,
+            "arg": false,
+            "repr": "1.200000000000001"
+          }
+        ],
+        "is_entry": true,
+        "is_shim_entry": false
+      },
+      {
+        "name": "fit_platt_positive",
+        "filename": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-phase9-worker-20260909/experiments/r16p19_phase9/phase9_formal.py",
+        "module": null,
+        "short_filename": "phase9_formal.py",
+        "line": 203,
+        "locals": [
+          {
+            "name": "labels",
+            "addr": 139920377211152,
+            "arg": true,
+            "repr": "<numpy.ndarray at 0x7f41c0616910>"
+          },
+          {
+            "name": "grid",
+            "addr": 139920377213456,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c0617210>"
+          }
+        ],
+        "is_entry": true,
+        "is_shim_entry": false
+      },
+      {
+        "name": "fit_balanced_maps",
+        "filename": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-phase9-worker-20260909/experiments/r16p19_phase9/phase9_formal.py",
+        "module": null,
+        "short_filename": "phase9_formal.py",
+        "line": 414,
+        "locals": [
+          {
+            "name": "effect_rows",
+            "addr": 139920433284160,
+            "arg": true,
+            "repr": "{...}"
+          },
+          {
+            "name": "target",
+            "addr": 139920480932016,
+            "arg": true,
+            "repr": "0.02"
+          },
+          {
+            "name": "seed",
+            "addr": 139920359866864,
+            "arg": true,
+            "repr": "19009"
+          },
+          {
+            "name": "maps",
+            "addr": 139920355705216,
+            "arg": false,
+            "repr": "{\"task0:effect0:in alphabet_soup_1 basket_1_contain_region\": {\"a\": 2.0243482957845726, \"b\": -6.0348856879945885, \"loss\": 446.55322002067203}, ...}"
+          },
+          {
+            "name": "samples",
+            "addr": 139920355705408,
+            "arg": false,
+            "repr": "{\"task0:effect0:in alphabet_soup_1 basket_1_contain_region\": {\"positive_count\": 371, \"negative_count_sampled\": 18179, \"realized_positive_fraction\": 0.02, \"negative_source_count\": 521}, ...}"
+          },
+          {
+            "name": "offset",
+            "addr": 139920484729104,
+            "arg": false,
+            "repr": "2"
+          },
+          {
+            "name": "key",
+            "addr": 139920384172624,
+            "arg": false,
+            "repr": "\"task5:effect0:in black_book_1 desk_caddy_1_back_contain_region\""
+          },
+          {
+            "name": "x",
+            "addr": 139920377213360,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c06171b0>"
+          },
+          {
+            "name": "y",
+            "addr": 139920377212784,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c0616f70>"
+          },
+          {
+            "name": "positive",
+            "addr": 139920384050448,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c0c9c510>"
+          },
+          {
+            "name": "negative",
+            "addr": 139920377212400,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c0616df0>"
+          },
+          {
+            "name": "n_negative",
+            "addr": 139920359870416,
+            "arg": false,
+            "repr": "686"
+          },
+          {
+            "name": "rng",
+            "addr": 139920378114816,
+            "arg": false,
+            "repr": "<numpy.random._generator.Generator at 0x7f41c06f3300>"
+          },
+          {
+            "name": "sampled",
+            "addr": 139920384159696,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c0cb6fd0>"
+          },
+          {
+            "name": "train_x",
+            "addr": 139920384160368,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c0cb7270>"
+          },
+          {
+            "name": "train_y",
+            "addr": 139920377211152,
+            "arg": false,
+            "repr": "<numpy.ndarray at 0x7f41c0616910>"
+          },
+          {
+            "name": "a",
+            "addr": 139920359874352,
+            "arg": false,
+            "repr": "3.057927578242689"
+          },
+          {
+            "name": "b",
+            "addr": 139920359874640,
+            "arg": false,
+            "repr": "2.2342869394956892"
+          },
+          {
+            "name": "loss",
+            "addr": 139920359874544,
+            "arg": false,
+            "repr": "23.94180966889947"
+          }
+        ],
+        "is_entry": true,
+        "is_shim_entry": false
+      },
+      {
+        "name": "d2_baserate",
+        "filename": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-phase9-worker-20260909/experiments/r16p19_phase9/phase9_formal.py",
+        "module": null,
+        "short_filename": "phase9_formal.py",
+        "line": 470,
+        "locals": [
+          {
+            "name": "effect_rows",
+            "addr": 139920433284160,
+            "arg": true,
+            "repr": "{...}"
+          },
+          {
+            "name": "formal",
+            "addr": 139920383859136,
+            "arg": true,
+            "repr": "[{\"receipt_id\": \"t0-i30-s0:A1_NOOP_RETRY_STALE\", \"cluster_id\": \"t0-i30-s0\", \"condition\": \"A1_NOOP_RETRY_STALE\", \"task_id\": 0, ...}, ...]"
+          },
+          {
+            "name": "unbalanced_maps",
+            "addr": 139920371800768,
+            "arg": false,
+            "repr": "{\"task0:effect0:in alphabet_soup_1 basket_1_contain_region\": {\"a\": 1.694793481009101, \"b\": -1.5731023871805339, \"loss\": 87.60223600637318}, ...}"
+          },
+          {
+            "name": "reference",
+            "addr": 139920381489792,
+            "arg": false,
+            "repr": "{...}"
+          },
+          {
+            "name": "levels",
+            "addr": 139920357980928,
+            "arg": false,
+            "repr": "{}"
+          },
+          {
+            "name": "level_index",
+            "addr": 139920484729040,
+            "arg": false,
+            "repr": "0"
+          },
+          {
+            "name": "target",
+            "addr": 139920480932016,
+            "arg": false,
+            "repr": "0.02"
+          },
+          {
+            "name": "replicates",
+            "addr": 139920383268864,
+            "arg": false,
+            "repr": "[{\"replicate\": 0, \"seed\": 19001, \"maps\": {\"task0:effect0:in alphabet_soup_1 basket_1_contain_region\": {\"a\": 2.048403446207421, \"b\": -6.0697033059825785, \"loss\": 441.5659403157704}, ...}, \"sample_info\": {...}, \"operating_points\": {...}}, {...}, ...]"
+          },
+          {
+            "name": "rep",
+            "addr": 139920484729296,
+            "arg": false,
+            "repr": "8"
+          },
+          {
+            "name": "seed",
+            "addr": 139920359866864,
+            "arg": false,
+            "repr": "19009"
+          },
+          {
+            "name": "maps",
+            "addr": 139920360796480,
+            "arg": false,
+            "repr": "{\"task0:effect0:in alphabet_soup_1 basket_1_contain_region\": {\"a\": 2.0272460154822833, \"b\": -6.062067020705035, \"loss\": 449.6421911366562}, ...}"
+          },
+          {
+            "name": "sample_info",
+            "addr": 139920360796672,
+            "arg": false,
+            "repr": "{\"task0:effect0:in alphabet_soup_1 basket_1_contain_region\": {\"positive_count\": 371, \"negative_count_sampled\": 18179, \"realized_positive_fraction\": 0.02, \"negative_source_count\": 521}, ...}"
+          },
+          {
+            "name": "by_cap",
+            "addr": 139920358755520,
+            "arg": false,
+            "repr": "{...}"
+          }
+        ],
+        "is_entry": true,
+        "is_shim_entry": false
+      },
+      {
+        "name": "main",
+        "filename": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-phase9-worker-20260909/experiments/r16p19_phase9/phase9_formal.py",
+        "module": null,
+        "short_filename": "phase9_formal.py",
+        "line": 774,
+        "locals": [
+          {
+            "name": "seal_sha",
+            "addr": 139920471483312,
+            "arg": false,
+            "repr": "\"a918be61f16ae7d568300b95057aa4208618c5c7ebe2281902336c2d2b0a2c56\""
+          },
+          {
+            "name": "seal",
+            "addr": 139920481964672,
+            "arg": false,
+            "repr": "{\"all_alpha_primary_certification\": {\"0.005\": {\"certified_individual_95\": False, \"certified_joint_99_bonferroni\": False}, \"0.010\": {\"certified_individual_95\": False, \"certified_joint_99_bonferroni\": False}, ...}, \"certified\": False, ...}"
+          },
+          {
+            "name": "d3",
+            "addr": 139920471311680,
+            "arg": false,
+            "repr": "{...}"
+          },
+          {
+            "name": "head",
+            "addr": 139920423110000,
+            "arg": false,
+            "repr": "\"21acdc25331cb221fbeab2c34a1b9044580cadc2\""
+          },
+          {
+            "name": "s1",
+            "addr": 139920423164864,
+            "arg": false,
+            "repr": "<module at 0x7f41c31e9bc0>"
+          },
+          {
+            "name": "effect_rows",
+            "addr": 139920433284160,
+            "arg": false,
+            "repr": "{...}"
+          },
+          {
+            "name": "estimation",
+            "addr": 139920383733312,
+            "arg": false,
+            "repr": "[{\"episode_id\": \"calibration-t00-i10-s00-clean\", \"task_id\": 0, \"chunk\": 0, \"effect_keys\": [\"task0:effect0:in alphabet_soup_1 basket_1_contain_region\", \"task0:effect1:in tomato_sauce_1 basket_1_contain_region\"], ...}, {...}, {...}, {...}, {...}, ...]"
+          },
+          {
+            "name": "qualification",
+            "addr": 139920383856320,
+            "arg": false,
+            "repr": "[{\"episode_id\": \"qualification-t00-i20-s00-clean\", \"task_id\": 0, \"chunk\": 0, \"effect_keys\": [\"task0:effect0:in alphabet_soup_1 basket_1_contain_region\", \"task0:effect1:in tomato_sauce_1 basket_1_contain_region\"], ...}, {...}, {...}, {...}, {...}, ...]"
+          },
+          {
+            "name": "task_effects",
+            "addr": 139920385331712,
+            "arg": false,
+            "repr": "{0: [\"task0:effect0:in alphabet_soup_1 basket_1_contain_region\", \"task0:effect1:in tomato_sauce_1 basket_1_contain_region\"], 5: [\"task5:effect0:in black_book_1 desk_caddy_1_back_contain_region\"], 9: [...]}"
+          },
+          {
+            "name": "formal",
+            "addr": 139920383859136,
+            "arg": false,
+            "repr": "[{\"receipt_id\": \"t0-i30-s0:A1_NOOP_RETRY_STALE\", \"cluster_id\": \"t0-i30-s0\", \"condition\": \"A1_NOOP_RETRY_STALE\", \"task_id\": 0, ...}, ...]"
+          },
+          {
+            "name": "oracle_rows",
+            "addr": 139920379156800,
+            "arg": false,
+            "repr": "[{\"action_steps\": 321, \"active_attempt_credit\": True, \"arm\": \"M0_TYPED_MATCHED\", \"backend_errors\": 0, \"clean_degradation\": False, \"cluster_id\": \"t0-i30-s0\", \"condition\": \"C0_CLEAN\", \"cross_attempt_acceptance\": False, ...}, ...]"
+          },
+          {
+            "name": "d1",
+            "addr": 139920381479488,
+            "arg": false,
+            "repr": "{\"schema_version\": 1, \"method\": \"negative-score quantile curves and two-sample KS; formal evaluation diagnostic only\", \"quantiles\": [0.9, 0.95, 0.98, 0.99, 0.995], \"formal_access_count\": 1, \"formal_read_paths\": [...], ...}"
+          },
+          {
+            "name": "d1_decision",
+            "addr": 139920380438912,
+            "arg": false,
+            "repr": "[\"# D1 decision\", \"\", \"最大稀有 effect formal/nominal FPR 比为 `3.84615`，阈值为 `2.0`，D1 判定为 **NOT_EXCHANGEABLE（未通过）**。\", \"\", ...]"
+          },
+          {
+            "name": "spec_b1",
+            "addr": 139920383922896,
+            "arg": false,
+            "repr": "<ModuleSpec at 0x7f41c0c7d2d0>"
+          },
+          {
+            "name": "b1",
+            "addr": 139920379179984,
+            "arg": false,
+            "repr": "<module at 0x7f41c07f73d0>"
+          }
+        ],
+        "is_entry": true,
+        "is_shim_entry": false
+      },
+      {
+        "name": "<module>",
+        "filename": "/mnt/cpfs/zbl-cpfs-new/share/leon/codex-archives/Explore-claude-local-worktrees/r16p19-phase9-worker-20260909/experiments/r16p19_phase9/phase9_formal.py",
+        "module": null,
+        "short_filename": "phase9_formal.py",
+        "line": 856,
+        "locals": [],
+        "is_entry": true,
+        "is_shim_entry": true
+      }
+    ],
+    "process_info": null
+  }
+]

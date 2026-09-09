@@ -1,0 +1,24 @@
+{
+  "false_upgrade_receipts": 0,
+  "false_upgrade_unit_count": 0,
+  "total_unit_count": 120,
+  "concentration": 0.0,
+  "unit_ids": [],
+  "unit_details": [],
+  "task_distribution": {},
+  "condition_distribution": {},
+  "special_conditions": {
+    "A5_EXTERNAL_REALIZATION": 0,
+    "C0_CLEAN": 0
+  },
+  "temporal_or_attribution_confusion": null,
+  "reason": "No false upgrades under reject-all; boundary attribution cannot be tested on an empty set. Zero error is caused by no upgrades, not resolved attribution.",
+  "claim_eligible": false,
+  "selection_eligible": false,
+  "protocol_valid": false,
+  "original_formal_load_attempts": 2,
+  "formal_read_once": false,
+  "recovery_source": "RECOVERED_LOADED_EVIDENCE.json; extracted from live process memory before termination",
+  "new_original_formal_reads": 0,
+  "d3_seal_commit": "21acdc25331cb221fbeab2c34a1b9044580cadc2"
+}
