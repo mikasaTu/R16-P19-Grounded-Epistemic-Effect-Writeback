@@ -1,0 +1,17 @@
+{
+  "report_url": "https://icnbwz7kd1ui.feishu.cn/wiki/EThQwF49Ei0l02kgov7c5MNznpb",
+  "plan_url": "https://icnbwz7kd1ui.feishu.cn/wiki/G0a8wcxMMi2z7Ek6ZG0cBKHdnFh",
+  "readback_checks": {
+    "NOT_READY_FOR_S2": true,
+    "20": true,
+    "1400": true,
+    "8000": true,
+    "197/227": true,
+    "114": true,
+    "两次": true,
+    "PROTOCOL_DEVIATIONS.json": true
+  },
+  "scientific_evidence_commit": "674db9a892dbe723940b112ef91ac38e3e759264",
+  "report_sha256": "aa348a2fae17bf07e521c1741d0ab8099d5e2d47c52b3e4cde20ab6ca070c976",
+  "protocol_failure_visible": true
+}
