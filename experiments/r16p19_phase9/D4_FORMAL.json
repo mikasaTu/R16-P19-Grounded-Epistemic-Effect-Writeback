@@ -253,5 +253,6 @@
   "formal_read_once": false,
   "recovery_source": "RECOVERED_LOADED_EVIDENCE.json; extracted from live process memory before termination",
   "new_original_formal_reads": 0,
-  "d3_seal_commit": "21acdc25331cb221fbeab2c34a1b9044580cadc2"
+  "d3_seal_commit": "21acdc25331cb221fbeab2c34a1b9044580cadc2",
+  "new_original_formal_reads_scope": "Corrected cache-computation processes only; not a complete global tool-access counter."
 }

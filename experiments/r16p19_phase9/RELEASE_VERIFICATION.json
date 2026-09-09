@@ -1,0 +1,28 @@
+{
+  "required_artifacts_present": [
+    "D0_PREREGISTRATION.json",
+    "D1_EXCHANGEABILITY.json",
+    "D2_BASERATE.json",
+    "D3_SELECTION.json",
+    "D3_OPERATING_POINT_SEAL.json",
+    "D4_FORMAL.json",
+    "D5_REPLAY.json",
+    "D5_S2_UNITS.txt",
+    "D6_FAILURE_MODES.json",
+    "D_DECISION.md",
+    "D_DECISION.json"
+  ],
+  "syntax_valid": true,
+  "json_no_nan_infinity": true,
+  "D0_hash_unchanged": true,
+  "D3_hash_unchanged": true,
+  "D0_commit_contains_no_analysis_scripts": true,
+  "D0_precedes_seal": true,
+  "protected_phase5_8_git_status_clean": true,
+  "tests_passed": 20,
+  "computations_completed": true,
+  "protocol_fully_satisfied": false,
+  "single_formal_read_requirement_satisfied": false,
+  "S2_started": false,
+  "SHA256SUMS_excludes_itself": true
+}

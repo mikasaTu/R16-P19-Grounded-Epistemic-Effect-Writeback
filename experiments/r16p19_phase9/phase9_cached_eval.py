@@ -8,7 +8,7 @@ sys.path.insert(0,str(ROOT))
 from phase9_stats import cp_upper,wilson,binom_lower_tail
 SEAL_COMMIT='21acdc25331cb221fbeab2c34a1b9044580cadc2'
 D0_COMMIT='d4c81be6149068ab56cda8350c99b86ddf1c7fa8'
-META={'claim_eligible':False,'selection_eligible':False,'protocol_valid':False,'original_formal_load_attempts':2,'formal_read_once':False,'recovery_source':'RECOVERED_LOADED_EVIDENCE.json; extracted from live process memory before termination','new_original_formal_reads':0,'d3_seal_commit':SEAL_COMMIT}
+META={'claim_eligible':False,'selection_eligible':False,'protocol_valid':False,'original_formal_load_attempts':2,'formal_read_once':False,'recovery_source':'RECOVERED_LOADED_EVIDENCE.json; extracted from live process memory before termination','new_original_formal_reads':0,'new_original_formal_reads_scope':'Corrected cache-computation processes only; not a complete global tool-access counter.','d3_seal_commit':SEAL_COMMIT}
 def write(name,d):
  if isinstance(d,dict):d.update(META)
  (ROOT/name).write_text(json.dumps(d,ensure_ascii=False,indent=2,allow_nan=False)+'\n')

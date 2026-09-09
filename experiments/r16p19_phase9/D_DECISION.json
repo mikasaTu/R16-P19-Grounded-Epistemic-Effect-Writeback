@@ -1,0 +1,102 @@
+{
+  "status": "NOT_READY_FOR_S2",
+  "gates": {
+    "D1_exchangeability": {
+      "function": "gate_exchangeability",
+      "pass": false,
+      "max_rare_ratio": 3.8461538461538463,
+      "limit": 2.0,
+      "excess": 1.8461538461538463,
+      "sampling_population_matched": false,
+      "interpretation": "Descriptive numeric gate fails; isolated split exchangeability is not identifiable from unmatched sampling populations."
+    },
+    "D4_effect_FPR_individual95": {
+      "function": "gate_effect_fpr",
+      "pass": false,
+      "ucbs": [
+        0.0721575245055146,
+        0.0721575245055146,
+        0.0721575245055146,
+        0.0721575245055146,
+        0.0721575245055146
+      ],
+      "alpha": 0.005,
+      "max_excess": 0.0671575245055146,
+      "certified_point": null
+    },
+    "D4_effect_FPR_joint95": {
+      "function": "gate_effect_fpr",
+      "pass": false,
+      "ucbs": [
+        0.10874906186625444,
+        0.10874906186625444,
+        0.10874906186625444,
+        0.10874906186625444,
+        0.10874906186625444
+      ],
+      "alpha": 0.005,
+      "max_excess": 0.10374906186625443,
+      "certified_point": null
+    },
+    "D4_receipt_FPR_cluster": {
+      "function": "gate_receipt_fpr",
+      "pass": true,
+      "ucb": 0.024655401055656334,
+      "limit": 0.05,
+      "margin": 0.02534459894434367,
+      "pvalue_vs_fixed_half": 7.523163845262668e-37,
+      "significance_limit": 0.05
+    },
+    "D5_ledger_concordance": {
+      "function": "gate_ledger",
+      "pass": false,
+      "concordant": 6,
+      "total": 120,
+      "rate": 0.05,
+      "limit": 0.85,
+      "shortfall": 0.7999999999999999,
+      "additional_concordant_units_required": 96
+    }
+  },
+  "all_four_gates_pass": false,
+  "computational_step_status": {
+    "D0": "computed",
+    "D1": "computed",
+    "D2": "computed",
+    "D3": "computed",
+    "D4": "computed",
+    "D5": "computed",
+    "D6": "computed"
+  },
+  "all_planned_diagnostic_computations_completed": true,
+  "all_original_protocol_requirements_satisfied": false,
+  "valid_single_read_formal_experiment": false,
+  "valid_isolated_exchangeability_test": false,
+  "D2_resample_count": 50,
+  "D2_ceiling_evaluation_count": 100,
+  "certified_point": null,
+  "diagnostic_alpha": 0.005,
+  "s2_candidates": 114,
+  "s2_started": false,
+  "route_termination_assessment": {
+    "human_decision_required": true,
+    "current_evidence_supports_S2": false,
+    "basis": [
+      "15 negative episodes per effect imply conformal rank16 for every frozen alpha: reject-all",
+      "No certified point under primary episode CP criterion",
+      "Ledger concordance .05 falls short of .85 by .80",
+      "D1 sample populations differ, so isolated transfer is not established",
+      "Formal single-read protocol was violated and cannot be repaired retroactively"
+    ],
+    "boundary": "The current frozen data and criteria cannot certify a useful point. These diagnostics do not prove the detector lacks capacity or decide whether every possible certification route must terminate."
+  },
+  "claim_eligible": false,
+  "selection_eligible": false,
+  "protocol_valid": false,
+  "original_formal_load_attempts": 2,
+  "formal_read_once": false,
+  "recovery_source": "RECOVERED_LOADED_EVIDENCE.json; extracted from live process memory before termination",
+  "new_original_formal_reads": 0,
+  "d3_seal_commit": "21acdc25331cb221fbeab2c34a1b9044580cadc2",
+  "new_original_formal_reads_scope": "Corrected cache-computation processes only; not a complete global tool-access counter."
+}
