@@ -1,0 +1,12 @@
+D2 base-rate diagnostic validation
+
+Command:
+  PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES="" OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python -B experiments/r16p19_phase9/test_phase9_baserate.py
+
+Result:
+  D2 base-rate tests: 3 passed
+
+Assertions covered:
+  - every unbalanced and 50-replicate map has positive slope, monotonicity, and unchanged rank AUC;
+  - every target level uses all ten fixed seeds and exact negative resampling counts;
+  - L2=1e-6, unchanged verifier weights, formal_source_reopened=false, and claim_eligible=false/selection_eligible=false.
