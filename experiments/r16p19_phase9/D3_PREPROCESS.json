@@ -1,0 +1,24 @@
+{
+  "cpu_only": true,
+  "formal_access_count": 0,
+  "formal_read_paths": [],
+  "gpu_jobs_submitted": 0,
+  "output": "D3_NEGATIVE_EXPORT.json",
+  "output_sha256": "d5320b1465969cbe86a157c4e061b4ba9169df93ac5dbb2fd5059c45bf97f2a5",
+  "pai_jobs_submitted": 0,
+  "positive_label_values_written": false,
+  "process_id": 3591621,
+  "qualification_excluded": true,
+  "rollouts_executed": 0,
+  "schema_version": 1,
+  "selection_split": [
+    "calibration",
+    "pilot"
+  ],
+  "split_episode_counts": {
+    "calibration": 30,
+    "pilot": 15
+  },
+  "split_episode_id_overlap_count": 0,
+  "stage": "separate nonformal negative export preprocessing"
+}
