@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "protocol": "R16-P19 Phase-11 / step12",
+  "objective": "Diagnose verifier shortcut and specify real-robot transferable detector; zero rollout",
+  "analysis_scope": {"training": ["natural policy_seeds 0-4"], "calibration": ["calibration", "pilot"], "descriptive_nonformal": ["qualification"], "formal": "single read only after all nonformal analyses; immediate cache; no model selection"},
+  "feature_sets": {
+    "A_full": "base_stats+wrist_stats+temporal+proprio+contact+time+task_onehot+effect_onehot",
+    "B_no_visual": "proprio+contact+time+task_onehot+effect_onehot",
+    "C_no_time": "base_stats+wrist_stats+temporal+proprio+contact+task_onehot+effect_onehot",
+    "D_no_contact": "base_stats+wrist_stats+temporal+proprio+time+task_onehot+effect_onehot",
+    "E_shortcut_only": "time+task_onehot+effect_onehot",
+    "F_visual_only": "base_stats+wrist_stats+temporal+effect_onehot",
+    "T_transferable": "visual spatial 4x4 pooled statistics where raw 32x32 available + proprio + task/effect onehot; excludes contact/time"
+  },
+  "model": {"structure": "phase5 LinearVerifier and MLPVerifier", "steps": {"linear": 1200, "small_mlp": 1600}, "hidden": 32, "learning_rates": {"linear": 0.03, "small_mlp": 0.01}, "seeds": {"linear": 17, "small_mlp": 29}, "standardization": "fit natural only"},
+  "metrics": {"per_effect": ["AUROC", "TPR@FPR=0.05"], "interval": "episode bootstrap 95% CI (seed 20260915, 2000 resamples)", "no_pooled_claims": true},
+  "formal_policy": "formal labels not read before F1 final comparison; one load then F1_FORMAL_CACHE.json; cached values only thereafter",
+  "gate_functions": ["gate_f1_baseline", "gate_f1_shortcut", "gate_f2_complete", "gate_f4_upper_bound"],
+  "cpu_only": true,
+  "no_gpu_pai_rollout_s2_new_data": true
+}
