@@ -1,0 +1,24 @@
+{
+  "status": "DIAGNOSTICS_COMPLETE_WITH_FORMAL_PROTOCOL_DEVIATION",
+  "shortcut_verdict": "SHORTCUT_CONFIRMED",
+  "gates": {
+    "gate_f1_baseline": true,
+    "gate_f1_conclusion": true,
+    "gate_f2_complete": true,
+    "gate_f4_evidence": true
+  },
+  "formal_protocol_valid": false,
+  "claim_eligible": false,
+  "formal_deviation": "schema probe of one formal NPZ and preview of phase9 formal cache before freeze; cannot claim read-once protocol",
+  "baseline_macro_auc": 0.9916669890228063,
+  "B_minus_A": 0.0030428211976982755,
+  "E_macro_auc": 0.9865061044933604,
+  "F_macro_auc": 0.7842077434329044,
+  "F4_macro_auc": 0.9820064826727546,
+  "true_capacity_ceiling_identified": false,
+  "target_real_robot_data_available": false,
+  "S2_started": false,
+  "PAI_submitted": false,
+  "real_robot_results": null,
+  "idea_continue_decision": "reserved for human"
+}

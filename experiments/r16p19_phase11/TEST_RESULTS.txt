@@ -1,0 +1,16 @@
+test_exact_splits_and_five_groups (__main__.Artifacts) ... ok
+test_formal_is_explicitly_invalid_and_not_selection (__main__.Artifacts) ... ok
+test_full_checkpoint_weights_and_freeze (__main__.Artifacts) ... ok
+test_baseline_rejects_wrong_finite_value (__main__.Gates) ... ok
+test_coverage_rejects_missing_or_duplicate_dimension (__main__.Gates) ... ok
+test_f4_rejects_empty_or_out_of_range_metrics (__main__.Gates) ... ok
+test_shortcut_rejects_inconsistent_verdict (__main__.Gates) ... ok
+test_cluster_bootstrap_perfect_and_all_tied (__main__.Metrics) ... ok
+test_fpr_threshold_direction (__main__.Metrics) ... ok
+test_rank_ties_auc (__main__.Metrics) ... ok
+test_ties_do_not_silently_exceed_fpr (__main__.Metrics) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.148s
+
+OK

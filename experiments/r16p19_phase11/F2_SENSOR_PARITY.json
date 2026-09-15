@@ -1,0 +1,327 @@
+{
+  "dimensions": [
+    {
+      "index": 0,
+      "name": "base_mean_R",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 1,
+      "name": "base_mean_G",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 2,
+      "name": "base_mean_B",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 3,
+      "name": "base_std_R",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 4,
+      "name": "base_std_G",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 5,
+      "name": "base_std_B",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 6,
+      "name": "wrist_mean_R",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 7,
+      "name": "wrist_mean_G",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 8,
+      "name": "wrist_mean_B",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 9,
+      "name": "wrist_std_R",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 10,
+      "name": "wrist_std_G",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 11,
+      "name": "wrist_std_B",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 12,
+      "name": "base_temporal_delta_mean_R",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 13,
+      "name": "base_temporal_delta_mean_G",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 14,
+      "name": "base_temporal_delta_mean_B",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 15,
+      "name": "base_temporal_delta_std_R",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 16,
+      "name": "base_temporal_delta_std_G",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 17,
+      "name": "base_temporal_delta_std_B",
+      "classification": "onboard_observable",
+      "sensor_or_source": "RGB camera (matching base/wrist view), hardware and synchronization unverified",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 18,
+      "name": "proprio_0",
+      "classification": "onboard_observable",
+      "sensor_or_source": "observation/state channel; encoder/FK semantic mapping requires verification",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 19,
+      "name": "proprio_1",
+      "classification": "onboard_observable",
+      "sensor_or_source": "observation/state channel; encoder/FK semantic mapping requires verification",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 20,
+      "name": "proprio_2",
+      "classification": "onboard_observable",
+      "sensor_or_source": "observation/state channel; encoder/FK semantic mapping requires verification",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 21,
+      "name": "proprio_3",
+      "classification": "onboard_observable",
+      "sensor_or_source": "observation/state channel; encoder/FK semantic mapping requires verification",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 22,
+      "name": "proprio_4",
+      "classification": "onboard_observable",
+      "sensor_or_source": "observation/state channel; encoder/FK semantic mapping requires verification",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 23,
+      "name": "proprio_5",
+      "classification": "onboard_observable",
+      "sensor_or_source": "observation/state channel; encoder/FK semantic mapping requires verification",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 24,
+      "name": "proprio_6",
+      "classification": "onboard_observable",
+      "sensor_or_source": "observation/state channel; encoder/FK semantic mapping requires verification",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 25,
+      "name": "proprio_7",
+      "classification": "onboard_observable",
+      "sensor_or_source": "observation/state channel; encoder/FK semantic mapping requires verification",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 26,
+      "name": "log1p(contact_count)",
+      "classification": "privileged",
+      "sensor_or_source": "simulator trace contact_count",
+      "real_platform_available": null,
+      "replacement": "force/torque or tactile contact estimator; not semantically equivalent without validation",
+      "replacement_available": null
+    },
+    {
+      "index": 27,
+      "name": "linspace_episode_time",
+      "classification": "shortcut",
+      "sensor_or_source": "future-dependent complete episode length normalization; no deployable equivalent",
+      "real_platform_available": null,
+      "replacement": "exclude from effect detector",
+      "replacement_available": null
+    },
+    {
+      "index": 28,
+      "name": "task_onehot_0",
+      "classification": "onboard_observable",
+      "sensor_or_source": "query/task metadata, not physical evidence",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 29,
+      "name": "task_onehot_5",
+      "classification": "onboard_observable",
+      "sensor_or_source": "query/task metadata, not physical evidence",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 30,
+      "name": "task_onehot_9",
+      "classification": "onboard_observable",
+      "sensor_or_source": "query/task metadata, not physical evidence",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 31,
+      "name": "effect_onehot_0",
+      "classification": "onboard_observable",
+      "sensor_or_source": "query predicate metadata, not ground-truth label",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 32,
+      "name": "effect_onehot_1",
+      "classification": "onboard_observable",
+      "sensor_or_source": "query predicate metadata, not ground-truth label",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 33,
+      "name": "effect_onehot_2",
+      "classification": "onboard_observable",
+      "sensor_or_source": "query predicate metadata, not ground-truth label",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    },
+    {
+      "index": 34,
+      "name": "effect_onehot_3",
+      "classification": "onboard_observable",
+      "sensor_or_source": "query predicate metadata, not ground-truth label",
+      "real_platform_available": null,
+      "replacement": null,
+      "replacement_available": null
+    }
+  ],
+  "dimension_count": 35,
+  "coverage_complete": true,
+  "real_platform_hardware_verified": false,
+  "unknowns": [
+    "camera model/FOV/extrinsics/synchronization",
+    "proprio channel meaning/units/FK mapping",
+    "force torque/tactile availability"
+  ]
+}

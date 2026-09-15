@@ -1,0 +1,18 @@
+{
+  "formal_early_schema_probe": true,
+  "phase9_mixed_cache_preview": true,
+  "formal_protocol_valid": false,
+  "excluded_failed_development_runs": [
+    "natural seed0-6 contamination",
+    "grouped effect index across tasks",
+    "max threshold yielded zero TPR",
+    "missing calibrator import"
+  ],
+  "final_corrections": {
+    "training_rows": 13138,
+    "group_count": 5,
+    "baseline_match": true,
+    "threshold_rule": "tie-safe ROC threshold at FPR<=.05"
+  },
+  "F0_nonbinding_extra_protocol_deviation": "F0 mentioned calibration+pilot; exact Phase5 calibration uses calibration only. User plan exact Phase5 split takes precedence; no retroactive preregistration claim."
+}

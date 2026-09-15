@@ -1,0 +1,20 @@
+{
+  "models": {
+    "A_full.npz": "77cbaf07850053eeebd3a381dad3f99282ba09929a7d576cd7b5423d70a77986",
+    "B_no_visual.npz": "2be611e46b967216211d9a7ed92315a9a89b36d5eb588a0ad9f32f34e7f30666",
+    "C_no_time.npz": "3c6f57c96ee15096294b7fbaa450d414099193235963ac5b08d0af816b4a39f6",
+    "D_no_contact.npz": "8c6d9aeed359f79efaee4518e9715ca29eab898b5b886d69981fd22556ab4bce",
+    "E_shortcut_only.npz": "5bcc0152eba05742bd8020d2f6ff3f967b21f12bb59bddf1ea08d80c8c6ca5b3",
+    "F_visual_only.npz": "ee09374ec7c5d43e520a954dcb8af5e3770baee31fd8c1b477b01f219a156558",
+    "T_spatial.npz": "bfe0fcf8d607bc16fa5f439c1658cf25132f719d9bc0d054f584649d2512e589"
+  },
+  "selection_inputs": [
+    "natural policy_seed 0-4",
+    "calibration"
+  ],
+  "qualification_role": "fixed ablation comparison; no architecture/hyperparameter selection",
+  "formal_selection_inputs": 0,
+  "source_formal_probe_before_freeze": true,
+  "protocol_valid": false,
+  "deviation": "one formal NPZ was inspected for shape before cache; phase9 mixed cache formal preview was also read. No selection used those values. This cannot be described as compliant single-access formal protocol."
+}

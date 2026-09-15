@@ -1,0 +1,1058 @@
+{
+  "natural": [
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i00-s00-clean.npz",
+      "sha256": "a874d48a38ac1bdeb744a9ad99e653e82c9c2953088388348e8b5e5ee3fe5c66",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i00-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i00-s01-clean.npz",
+      "sha256": "0fdfa9ff467575c68f664ee0f165e228e93e6e3901a92d726174182c1a0244d6",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i00-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i00-s02-clean.npz",
+      "sha256": "c173e4f3bea8ab244efece07c01b6a4d89e028620faa0194526ca8a567acfe5d",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i00-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i00-s03-clean.npz",
+      "sha256": "7e56862a6dae1216178354ef00eecd15f035117390715feb84798a859a37f684",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i00-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i00-s04-clean.npz",
+      "sha256": "9af24bbe70c84d4baa012a3caacda4ff7f26d4e83a53151cf2b89f01ad8fe2ef",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i00-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i01-s00-clean.npz",
+      "sha256": "c68af212891a3cdb405283c4f24e9406df20f9f046cb2afc42c7c0ba7921e7f4",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i01-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i01-s01-clean.npz",
+      "sha256": "ad42e42c483811a6660420c9284929ed62909dd665b1c41691c797351803eeb5",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i01-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i01-s02-clean.npz",
+      "sha256": "e4df440171d38872b3521e85171e1e23f3b593c381a11003160be0af8f98310e",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i01-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i01-s03-clean.npz",
+      "sha256": "b5d7e7273aed9bb6771845a26a66f1e32b03af0fdc076dfcfd4d723c4b8c5d85",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i01-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i01-s04-clean.npz",
+      "sha256": "e2fea7c179a7d49a96efe15866eb949646221ad224c40ce693cdc4a146dc179e",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i01-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i02-s00-clean.npz",
+      "sha256": "6dffcd9bbca59756fba7dd1fdbfd57a549326238b9db0d47c6b895e8dee0a502",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i02-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i02-s01-clean.npz",
+      "sha256": "3ae1985ee3bbfe684ee8aa709681a471eb3ba89c6a12e8db40668d98dfacf31d",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i02-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i02-s02-clean.npz",
+      "sha256": "f50ce99867e85784aecdbf4c6d5f1ec99d22f58bdde7f0d11dd84e6a2c8bad8f",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i02-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i02-s03-clean.npz",
+      "sha256": "794c421dcc65ab33118682a7d23c32c45c4faca7d362c2f196d68257d616995f",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i02-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i02-s04-clean.npz",
+      "sha256": "614c92ff793391f67f646abca19f8a4ab9739060fc8e7bc4ba853a9d0401d04d",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i02-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i03-s00-clean.npz",
+      "sha256": "5c928476463117b6394f0f6cedc3bb71aa6bcf7881b7a3c809b5af190726c52f",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i03-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i03-s01-clean.npz",
+      "sha256": "4abe5ca12cd52bc8d13a6f35cc92d263586056f5af43179c70c1fd5ababec5d2",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i03-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i03-s02-clean.npz",
+      "sha256": "6925e522a80a415b94922c582bebacea5f1f1b82e0e3ccfbd3e15c067ab913aa",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i03-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i03-s03-clean.npz",
+      "sha256": "4af82515f49397ab730c57b6f187d9c3aaea6f9a1be44887549ca745da51c1ca",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i03-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i03-s04-clean.npz",
+      "sha256": "1258a37a8ddbe319694f810e28c76045f89c72c0bf89aa865e4bbf15221b2a4d",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i03-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i04-s00-clean.npz",
+      "sha256": "de56d242dd089b9cbeca9ebcc15442001a583636abe36e2548eebb6e3df22162",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i04-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i04-s01-clean.npz",
+      "sha256": "cc1afd77106dfed54a5111bae09d1f0bd41a935c1136689495e7ed75618ac95a",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i04-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i04-s02-clean.npz",
+      "sha256": "c4ac02b45acad68d7c1fe9e365dd008fe2169b7fbd7ae8d484fa844e8a123601",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i04-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i04-s03-clean.npz",
+      "sha256": "9bcce353c555f73bd7c5a228a2f47d7bcf4aa77c228efe38a3257a4b16701340",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i04-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i04-s04-clean.npz",
+      "sha256": "89aa3c52e0df9351c261faa96e823394a68236ddc2e30f3a5d6cca7546481036",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i04-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i05-s00-clean.npz",
+      "sha256": "f9c3e90fe37c463219e6d9b19e0929122318f62fdffa6981a1aafa9171b1b58e",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i05-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i05-s01-clean.npz",
+      "sha256": "f90355ab72f38c32e9e3b80ae898377037e1d91f5b8f8615a6421f78a9e93ed5",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i05-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i05-s02-clean.npz",
+      "sha256": "296477d9971b0299fb11de78a23d9d86a26615011dc5d9ff2fed53876816a5fd",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i05-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i05-s03-clean.npz",
+      "sha256": "04a107630066b14e8a88b03cef0e5f786f2a6c172e16043b3864c1874737461f",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i05-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i05-s04-clean.npz",
+      "sha256": "0af90f8aff49b3ab27ecfc3ddcbee1072253d8c91072d905487fca020e48ec45",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i05-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i06-s00-clean.npz",
+      "sha256": "22c817be5b22d87149ab68c3ae6ffb19233558272043f30060a9a11f4d9fdd17",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i06-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i06-s01-clean.npz",
+      "sha256": "6c2479d4c0a0c41bd8ebea8642626984ae747e4c2702cb592f80e5b2de7af5bd",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i06-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i06-s02-clean.npz",
+      "sha256": "c1bcddd38eb035d73b984bf7a4cb49ae28e22be317e41c92c9941f3fb46076cc",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i06-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i06-s03-clean.npz",
+      "sha256": "74803adc5a3abfe58d537babfeefb4a2d9351fcf809a8e5e6c02e4b23167fa9f",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i06-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i06-s04-clean.npz",
+      "sha256": "3150206d03ad0598d99333c3099f19270edff405e203abede73d6da35d8fb15c",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i06-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i07-s00-clean.npz",
+      "sha256": "5ce623c49853c70db39af762473548509aae6c7929c81fd21db1ed1ccbc53adc",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i07-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i07-s01-clean.npz",
+      "sha256": "d55d3ef4fa4ac6103ecccc4181887ac8ded10d3e714f4a4a62f2e86cc24d99f5",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i07-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i07-s02-clean.npz",
+      "sha256": "cf40d33b4046a82fbba26065aad2b4a764fe6afbf4c2faf4884f253d6bd5fd00",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i07-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i07-s03-clean.npz",
+      "sha256": "485a5d4f2354a4b583a09c758b76b5928298f52cfc6ca3acfd8b073357ceb6a0",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i07-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i07-s04-clean.npz",
+      "sha256": "0ac90cef41ff4cb371462b36687faa679a123520bb5dcfa422c6b1b49ef8460c",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i07-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i08-s00-clean.npz",
+      "sha256": "dca74bc4289a59c723c772b4d9021cfe0f4f81b51b7d7384828f6c0c0d91f2b8",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i08-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i08-s01-clean.npz",
+      "sha256": "1041c80ba76c6fbf559d8fb93ae4e9411aa28efbdd597dd183ceff8e0abff55d",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i08-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i08-s02-clean.npz",
+      "sha256": "4f6dc9293555ff9ee473229947b6a7f8aaec419669f22b6bc212961677c64bf8",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i08-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i08-s03-clean.npz",
+      "sha256": "36b9e0368b557659d22aa5e2543cd52e0ec1da0c4f81df74cd89b978e8235963",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i08-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i08-s04-clean.npz",
+      "sha256": "ed129c0cb75eae0165bb0ee2f4e731a32dfa2be8949d641bab16dbeaf3f72b55",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i08-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i09-s00-clean.npz",
+      "sha256": "c16576305edba090eb43f41f08428afb780b51451263e10dd186833c6816c93b",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i09-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i09-s01-clean.npz",
+      "sha256": "f41f3d6d34efae5416517997c6b8b60352bfc4c7253053ca9c982707b5949626",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i09-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i09-s02-clean.npz",
+      "sha256": "0cb2723ec30482d61648949f69f70fd04e34e474f5b8cd14d08a4475df2613a9",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i09-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i09-s03-clean.npz",
+      "sha256": "47b7e36921ae4cb4eb7bbbda3de926711ca1377049c36f27f6b1508fc9f7b8c6",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i09-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i09-s04-clean.npz",
+      "sha256": "3ab816a6de18a726cf9bc063cab31549a8508c9cb75a5e6a7da99dc966d69d3f",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t00-i09-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i00-s00-clean.npz",
+      "sha256": "79b60fb85e03a807b3a8b7feedfc711062132a73ea1ed8a4777fa1990af3828c",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i00-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i00-s01-clean.npz",
+      "sha256": "2fcf8bf6835658fe19f0b7838ccdc185757a363eca17e519d6ee134e236b90ff",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i00-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i00-s02-clean.npz",
+      "sha256": "bf0d425018eb74086448722f406db6793bcd297d6848df2af5858133646ab2ff",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i00-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i00-s03-clean.npz",
+      "sha256": "6e65d81b06f5e144fac0fcc945addabf037500527aaffca06924250a2fbcd4d0",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i00-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i00-s04-clean.npz",
+      "sha256": "e5e5650d9ea86902cd85fc6c3d1765e30433a888812cc7355de230ca4fc1f011",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i00-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i01-s00-clean.npz",
+      "sha256": "9646b1d955862f28448a510a6aff95ba64c6c5c8e27157c9c77fab59f206c77a",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i01-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i01-s01-clean.npz",
+      "sha256": "2c81e98da5ebe04f7f24f7b5e7f4bbfb75405f268c2d3ab168fd3f6c463bd435",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i01-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i01-s02-clean.npz",
+      "sha256": "f2894a5aa207b36f9994ee18936a2c9e9629420759c060516a824dfc139f750b",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i01-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i01-s03-clean.npz",
+      "sha256": "9ef27a92ad6f16df37f48eb75e5113805647d79f94937a06957e37a31ce0c20a",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i01-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i01-s04-clean.npz",
+      "sha256": "278d505b52efedc17ecfdc53e5512f867f424d3666c28199bf1b5283723c6b14",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i01-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i02-s00-clean.npz",
+      "sha256": "a13a96154e08263c8ce52c5b339ce0e4b38723c85ac7977ef36950a82ff199e4",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i02-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i02-s01-clean.npz",
+      "sha256": "ebebbdedbe516ab58e4baf20b1abc5123af0f808e194f2142bc94f936c5a8561",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i02-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i02-s02-clean.npz",
+      "sha256": "467cc540e5b48b26a5d572acd44d424686b200dffa69726a59ad16684886f54b",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i02-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i02-s03-clean.npz",
+      "sha256": "f3cab1ac104d37ca55a6518dc6064b6feff1247e88cf7fe3da186ad397296f09",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i02-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i02-s04-clean.npz",
+      "sha256": "29fe290a452db652d4dd5f5ca8af026c32262445dd9612091a3a2384428fe5bb",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i02-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i03-s00-clean.npz",
+      "sha256": "4bc20f781612d0f78291673f28c1b0dc28cccae340ffe82abd9622a5f0cf0e83",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i03-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i03-s01-clean.npz",
+      "sha256": "699d97bbb5a378dc17d012d3d5ff6a5a003ceb675717a1c99b7f25197dda8da2",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i03-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i03-s02-clean.npz",
+      "sha256": "229bcadb50694fde2aeb2f01c7475b3c181bd5f59c5f813418fb683d0b0f6d29",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i03-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i03-s03-clean.npz",
+      "sha256": "9c0baf416fa3abff28e646a3bf4c08261931cc369884c4f2802337ac4ec732ec",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i03-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i03-s04-clean.npz",
+      "sha256": "26a4fb2d041d3beebdf91764b0cf5b181f7986535ca10bd1d23cc401f8671a36",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i03-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i04-s00-clean.npz",
+      "sha256": "763e67c6d1b0e4150e11ed87e2e4c13d924de2dba1ecbd5bd6eec68749296594",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i04-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i04-s01-clean.npz",
+      "sha256": "f3f36d35c79bb299ac12f499e2d765b6b37f13741261e7767332df17a34794c1",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i04-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i04-s02-clean.npz",
+      "sha256": "5ff32cf45b5d0b76739fd08f03c2d89acaa56da21fc0b9bb0bc63d498fd73bc7",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i04-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i04-s03-clean.npz",
+      "sha256": "d6148da00d3ef7aea6e8f6c0a07fec462fc48eef9dfe3b8c565ed8e71f02f00b",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i04-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i04-s04-clean.npz",
+      "sha256": "e4fc2c5168a8e52c6bd3328cf7474a0042b16253923167928ec084ec4c477027",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i04-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i05-s00-clean.npz",
+      "sha256": "e8943d397105a13df3938846127d0792c37a6c4da6a6ddcdef03d37e94fb1225",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i05-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i05-s01-clean.npz",
+      "sha256": "089f74f85b9a0c66a684d4b4b6e123f0b17497f358c0f12131638a2413630fbe",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i05-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i05-s02-clean.npz",
+      "sha256": "d2886cdb1bb0b24b571e37a707017096734fb8e15644895de4a23e56371af114",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i05-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i05-s03-clean.npz",
+      "sha256": "5b06c2eb9598d62224b7a83e1d9c7e84bfeb44912dd5ca11efc3c4b349c1a489",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i05-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i05-s04-clean.npz",
+      "sha256": "e0d7bfba76de06b5b0a16d3bee8653fda391fc074efeb5553f54c57b82137778",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i05-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i06-s00-clean.npz",
+      "sha256": "502599b482fe7e695818733041cd8871a300e7cfd7f2a69032716b4f9506a8ca",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i06-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i06-s01-clean.npz",
+      "sha256": "233983f17ddc5135fd42884e56b5d39c9dc0d1412249a16ca6f9ddc2a94420af",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i06-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i06-s02-clean.npz",
+      "sha256": "b0263f2c52df1f435499086b18b494f8e7c2efc73fe6ac1966cd8dfb42734813",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i06-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i06-s03-clean.npz",
+      "sha256": "f8686e4aed863f2b5bcd5940d37b31fc49d3c004ed2b16c43cc39d36e627ed64",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i06-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i06-s04-clean.npz",
+      "sha256": "c262ce53f201cc6f0953c3d2cce33703e5f85470017adefdf785b972819444d2",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i06-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i07-s00-clean.npz",
+      "sha256": "e584c55236de4c707c0c11c3c7fd252cb500040491822b0a8b3fc0cd0fbf9f03",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i07-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i07-s01-clean.npz",
+      "sha256": "a9611d02eb8a464e64394e066852628894cad6716cd6098d52ea8c66563fd7e9",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i07-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i07-s02-clean.npz",
+      "sha256": "110e21cef7bee982f6a90654799b1046b10d62bca31d018964982b93f5b50509",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i07-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i07-s03-clean.npz",
+      "sha256": "38708431aa9efcaba730e584188ad7f1da85c57f1944681e9248866176876cd4",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i07-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i07-s04-clean.npz",
+      "sha256": "7fae5a0f8444939b55fd84c5d245f529c7a48035d67c3ae851669fed7bf52f35",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i07-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i08-s00-clean.npz",
+      "sha256": "da5ea7b012f0a56189b16894a614f79b1385bda9e5d89f68f6ce0a7a556f4ae4",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i08-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i08-s01-clean.npz",
+      "sha256": "ee8ad17ff5dfb3be46f9b1a9adfee2a37d063fa253db288569d6c849a9532384",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i08-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i08-s02-clean.npz",
+      "sha256": "fc822ae88af855c486374a6041d5831614656c6539ac7804c94cf5b620e58d92",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i08-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i08-s03-clean.npz",
+      "sha256": "50419f9c888ec7a0a49463c07e522fc5c0d0ab2f3c464ac548039233692033d1",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i08-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i08-s04-clean.npz",
+      "sha256": "c40e7cb6b7e3ca5d86fc81c0e95cfaea5a2cdff2ae4fa9bbe7c1851b82d6d380",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i08-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i09-s00-clean.npz",
+      "sha256": "d7185d33702e84bce1ded433c3bd935a0487a983e442ad93c005a6dea945cebb",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i09-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i09-s01-clean.npz",
+      "sha256": "adeb5e3efe28829503af155777ae6843a2fedbb66ea918642708fc27ccc12472",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i09-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i09-s02-clean.npz",
+      "sha256": "7973a1c58a7e95a19e64ab3c9c288eb3be5c513c43b4e87f595c047c74bbcb50",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i09-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i09-s03-clean.npz",
+      "sha256": "89cc03ac494d710a0c869bc7b349cd4cd39a988a180c61c9962ff1c40d6aa032",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i09-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i09-s04-clean.npz",
+      "sha256": "d171a63f149d660ca4e0cb423f2081330da04fc9e9fb0ba7aa78b07c9d29c5cf",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t05-i09-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i00-s00-clean.npz",
+      "sha256": "e0703b6a7f032248d84c5b11a3dacfa81aa4f3a5580266f5eafbce96747b02ec",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i00-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i00-s01-clean.npz",
+      "sha256": "8cc41124f9e88ebac990d6e9623473edcbd1b9768e4c7ddd18e2cc77067828e2",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i00-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i00-s02-clean.npz",
+      "sha256": "890c0e84332b74243fa90487cf604386cd96b727dbf0f134e778b803c9592632",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i00-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i00-s03-clean.npz",
+      "sha256": "58851bc71e507ef66c379dd7bc45e6d2dab555120b98b49c6a3dfefc54151d60",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i00-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i00-s04-clean.npz",
+      "sha256": "3439b405a23fb4506ffdd484d3847af325907a3f9c99d865c13e621adbe68e9f",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i00-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i01-s00-clean.npz",
+      "sha256": "e1c10a841034b4e942fe7553fdd447c649948e19ee44aa90373cb96b025df919",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i01-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i01-s01-clean.npz",
+      "sha256": "a81f4c32bfb71c16383ded29a61d6003814a738350e984c54a81f078e04514a1",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i01-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i01-s02-clean.npz",
+      "sha256": "248bce0fc790fc830d7d00f06215b61956be02a67e33140b3ab4d87e6b506dc1",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i01-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i01-s03-clean.npz",
+      "sha256": "6fd863a19b37825fa9bee9269fd4f9e825fbaa989eeb7a2e9558d064b6c9e4c8",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i01-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i01-s04-clean.npz",
+      "sha256": "911e3fbcbe56f4d6b637df86c430a55f8e7fac826e1bdcbce972a463780c6c26",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i01-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i02-s00-clean.npz",
+      "sha256": "608e05edaf042b39884c0a31ade70fe1be944d2370bdaa465a2cb49b44d8619c",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i02-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i02-s01-clean.npz",
+      "sha256": "762056444e40db4f17a838f0a423bba2e35908769a5290f821c14244de545211",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i02-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i02-s02-clean.npz",
+      "sha256": "0ad89098ee162ebeadb89cb5fbc939ff9451f7dcab3db900bb1973ae5affc525",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i02-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i02-s03-clean.npz",
+      "sha256": "e30c33fc802f0169fce2be9d5883b65b33344ab47058bc88576572639c102da5",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i02-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i02-s04-clean.npz",
+      "sha256": "383560da6e2fec0eec395b7b27d5e160ca3e3abfe67332470cba30a8e9cb815b",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i02-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i03-s00-clean.npz",
+      "sha256": "8e1046446d4bb527e41ce99eea5627887557b12d42e8368b253b302c8b3ffaea",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i03-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i03-s01-clean.npz",
+      "sha256": "844a7cf4700846a2a0aa1365407648fa02e82d31d1f63666ee9b1b6e0fbfb6b9",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i03-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i03-s02-clean.npz",
+      "sha256": "b142db76772deae06715634c0d5db267d88087ad295bb3815fc1e313efb9df8b",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i03-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i03-s03-clean.npz",
+      "sha256": "af846a878ee167a4f6eb16725daa8298be7d4a5ffdaa8f1be6947f2ae6334830",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i03-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i03-s04-clean.npz",
+      "sha256": "b665dc5a7229fbabb1326b8e087962f47f6717c6931e6182fdf3aaeaad567e7c",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i03-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i04-s00-clean.npz",
+      "sha256": "c6fcd099017bc0d872d4313c9ebf304cae90129f3f91af7017dde685c58c1468",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i04-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i04-s01-clean.npz",
+      "sha256": "fa746c1d421a90d3ebc99c232bb247fe1434f3199595dcfbc2dc4dfd5f5fb42d",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i04-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i04-s02-clean.npz",
+      "sha256": "f80fd5f2fb6f09a1f6dce9383650f493484a532a4f7189b27fee6f7fdf7b5383",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i04-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i04-s03-clean.npz",
+      "sha256": "f2994c5163e919d2829fe664c863d8ebb75f95e65717b2faccf2e8a07253ac7c",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i04-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i04-s04-clean.npz",
+      "sha256": "ca585d1d3e475c885d0d4732f485d4148501ef9e68da2c777692f513b1c4bf7c",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i04-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i05-s00-clean.npz",
+      "sha256": "664ae4f0a679cd9e8584772b147939b615953aa97dc05d9a0412bb575694c501",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i05-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i05-s01-clean.npz",
+      "sha256": "222fb351f5e1feb7e0d6841dec6e1aafda88d3c9e05b858bc1044a74983daf40",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i05-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i05-s02-clean.npz",
+      "sha256": "fc3c83429dbfbb05cbb4bf9cda4d3e33d4efcca9e6635bbb9d089207fb2c8b37",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i05-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i05-s03-clean.npz",
+      "sha256": "cb2f0812fb2e439cb25eaa30c412d5b17c4cccbe9d552a2714618b38d882f79c",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i05-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i05-s04-clean.npz",
+      "sha256": "154ee19d4728bb23fec57f89bea4bea7a3b389113812664d94105d2fc035e8bb",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i05-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i06-s00-clean.npz",
+      "sha256": "41cd35d67ade10940a419e311d9e3e60b277b3b6ea838c796a5b6112031aa02b",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i06-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i06-s01-clean.npz",
+      "sha256": "2f6be6a22b1f44c9fbda015da09c92765461f06c4eebfa77893bbe5a6d8b4518",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i06-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i06-s02-clean.npz",
+      "sha256": "8fd1da822776442b78128409c01c7ad87427d42e11a39989c119eee0f2800e44",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i06-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i06-s03-clean.npz",
+      "sha256": "c7e6c56df286d3d9cfd2cf0604ab433cd5536a9b8c28e347355eb4870871a499",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i06-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i06-s04-clean.npz",
+      "sha256": "1d20eb401d83b68cf14da10889b27844e57dedb18c900cd0b42c92c7e1eac337",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i06-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i07-s00-clean.npz",
+      "sha256": "262d547c4968876a800aa3fc7a93d5476ef584bde8dbb16ac0b6f01f9ca2fa3c",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i07-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i07-s01-clean.npz",
+      "sha256": "9568830f3701d7843c2c20481a060d82b0524ce473aedd7a136e8a7b0291156f",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i07-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i07-s02-clean.npz",
+      "sha256": "5e7e26adfdca21228b1fb799d9fb674d39bc3dfe32973f3af563772c8f99dbcf",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i07-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i07-s03-clean.npz",
+      "sha256": "354c14ee98c9c166e957b202ad0f6895e1189109b004163b4b83c6c4678c7657",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i07-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i07-s04-clean.npz",
+      "sha256": "a4a3e15952e7d4fc45fe55f9fe76929448024c0f5d08ebc4bd7af43f2c5fcc32",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i07-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i08-s00-clean.npz",
+      "sha256": "0d61b9bc7008160c536ad76bc9c0a98c58512af409c52779799bbf39d3919164",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i08-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i08-s01-clean.npz",
+      "sha256": "edee1ffbcfc66ba0810644056c996a57c49cc9fd801bd4ebe04d52b055cd1ff9",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i08-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i08-s02-clean.npz",
+      "sha256": "405e4b6950ea0d8ebd41a6630a8eaa329e95d9af8f3a7ecc17cfbaed1bcdc3f9",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i08-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i08-s03-clean.npz",
+      "sha256": "468076c59c1f2879118e1f5e929a8fcd62951cc648b99ada987a2cb64fa6e85d",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i08-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i08-s04-clean.npz",
+      "sha256": "b391cce42270ab3b7886ec6f591ec7dcc609c5ecdf227ec09e96a270538f27bf",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i08-s04-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i09-s00-clean.npz",
+      "sha256": "f74fc42cf9a63ff99c070c75de6383d9722b57eea2678bfcdc88c5174638daeb",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i09-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i09-s01-clean.npz",
+      "sha256": "2b99bff1130e14fe3cc49bd37dc722a58c6c99be700a38fd192a8199229f8b38",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i09-s01-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i09-s02-clean.npz",
+      "sha256": "72594ab264e3bf51705f7a1f1adc07e6619b92d387130b5c88d525105897f624",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i09-s02-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i09-s03-clean.npz",
+      "sha256": "ac3bb78c6a4ef0634f55b7b8d87d170592736f9aa534a9692a499f561407e93a",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i09-s03-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i09-s04-clean.npz",
+      "sha256": "02bd9b0ba0889b6604ea18221172afad81815d1c2a6f71a145b4ff48bf404ccb",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/natural/natural-t09-i09-s04-clean.json"
+    }
+  ],
+  "calibration": [
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i10-s00-clean.npz",
+      "sha256": "ebb4edd22ec0c4fe17793134ed8f7bb5bd91785da5d5db2da5fcb4295c505927",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i10-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i11-s00-clean.npz",
+      "sha256": "a66d290493aa3741b727c4df2f29c19c20a3a7e1efe7797127563d361e9015f4",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i11-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i12-s00-clean.npz",
+      "sha256": "f3438c29350f00eb725aad9fea504db6aadc9849bef81b3ecb30eca9631a8efb",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i12-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i13-s00-clean.npz",
+      "sha256": "54da429b97743d018e4775ca3694d40bc1fc37c080530cafbd76fca2d3826eab",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i13-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i14-s00-clean.npz",
+      "sha256": "05e1f280ec879120ea7854975e882c332c232bf3dba24f06e023f52418cfc19a",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i14-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i15-s00-clean.npz",
+      "sha256": "1b28d4f3f15accaad563ed026654cbed1326d77688c8244cabf6f8879c88b9ad",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i15-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i16-s00-clean.npz",
+      "sha256": "125112fbd091bfbe638d2ed0f929decc777b3767664ec4a17ef1ee9d319879a0",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i16-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i17-s00-clean.npz",
+      "sha256": "33dd820c07f2a6b3ce9dbcc9f1df11dc5930c6728a918c503ab21f697c27ff40",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i17-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i18-s00-clean.npz",
+      "sha256": "3412266e513d8f5311a3b8a70021efb23949abf438a4f001d5bdb567e9cacb1b",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i18-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i19-s00-clean.npz",
+      "sha256": "494aec69ac302b718f97a2e7676fcb92784e128c4ed838232131b481429ee9ab",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t00-i19-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i10-s00-clean.npz",
+      "sha256": "44fbaedc93103a7a44a31af47ee80597fb629067aa2986e429bbd3a959c4873e",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i10-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i11-s00-clean.npz",
+      "sha256": "666997a10e6895b4be8a65516c422df58af0860a56f9e2c62502c30e8661e8f7",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i11-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i12-s00-clean.npz",
+      "sha256": "c92019709974ccc9072f30ebb8a2aaca3352835a5b46b6353bc4c065960bf0a5",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i12-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i13-s00-clean.npz",
+      "sha256": "5b1be87a80c4ebe18db03e5e251c3a4c1130d6f180ea35f6ecfdcfed3a7a06e5",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i13-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i14-s00-clean.npz",
+      "sha256": "ad2b2d98e3dc3108782f3d026a45ad5aa49029b0c07c6b663aea00ac91f1954d",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i14-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i15-s00-clean.npz",
+      "sha256": "0bd51023049935e18ec86d1fe373bb285ae79b4ee29394f2f0899031905e4a70",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i15-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i16-s00-clean.npz",
+      "sha256": "d3a14fafd28c72312890135faa89991a437d1286e7f78ad86392dc9bbe60b5a2",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i16-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i17-s00-clean.npz",
+      "sha256": "c0aca7efccaf06c229e4f3215312afebcbfa2d37103c62ab00bd6b478085eba3",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i17-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i18-s00-clean.npz",
+      "sha256": "40a701f5b831445829fe670076b25b03a587ebca4d9a6696fcb59c5237e18e1a",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i18-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i19-s00-clean.npz",
+      "sha256": "235ae345f99ad44db6264ec1b808a30320fcb0a16971ae67a35f70ec5b9a3dfa",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t05-i19-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i10-s00-clean.npz",
+      "sha256": "7679d8bf4eac61b6f0f9ed106bb2a9daa4b6be75bc8c4e587792dabc907abcc6",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i10-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i11-s00-clean.npz",
+      "sha256": "4b379e730e1cd95b74780df57203c960e6a311fdf66a8cbb217029647b4ba74a",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i11-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i12-s00-clean.npz",
+      "sha256": "17fee76a7027cfbd85d31aaf7c4c863ade39f1276cb8efc1ecf65f9a5b8d7da5",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i12-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i13-s00-clean.npz",
+      "sha256": "7c041a1f8c7f098b8cc35d1afa2839d8426ba09724f75c98c98e2756a2938aed",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i13-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i14-s00-clean.npz",
+      "sha256": "33e34cd0b9bbb8c32e45f6327472e749233c90469ca323858f00cc06b7f75b3c",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i14-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i15-s00-clean.npz",
+      "sha256": "76397769a3c3b2d0f211f5285b434042ef70d9006ffb37f080839b230087d2aa",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i15-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i16-s00-clean.npz",
+      "sha256": "9392fdb704e8f8db79a38f27310fde42a74849db489e2b0fb1506b3b30bb1b52",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i16-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i17-s00-clean.npz",
+      "sha256": "9a36d3e8a2f651076b6b983701cdccb705ca075a3c17c49759effdc3fa5f9aff",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i17-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i18-s00-clean.npz",
+      "sha256": "e900343bc406b1896d8e6e7ddb81fbdda4be20bc1ebad8b6ca84e3a88ffdf5ca",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i18-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i19-s00-clean.npz",
+      "sha256": "aa9cd0fe735aa66579e276da187e3a3601248dbd7779a720ec71dacab6ef9c32",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/calibration/calibration-t09-i19-s00-clean.json"
+    }
+  ],
+  "qualification": [
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i20-s00-clean.npz",
+      "sha256": "69ccb56d6c920766fbf8c79f846dc24fae95d51c24050820da8baed2f274df97",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i20-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i21-s00-clean.npz",
+      "sha256": "2e3b986705dcf65a74e8d58421c47373d13ae9a64e8baf2014af441d6f0866b4",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i21-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i22-s00-clean.npz",
+      "sha256": "ce1346f453ba4c3db9de4d8efa1692d60a1afcbb58507174338bc01a8f528713",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i22-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i23-s00-clean.npz",
+      "sha256": "d1e6276a500336c9660c2c603a18acdb56a47281d7d27d8c85d5227862d14d07",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i23-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i24-s00-clean.npz",
+      "sha256": "24121dab1a28105c7bebfa85c1eb6b8874945a125277ba71975a999af206797c",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i24-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i25-s00-clean.npz",
+      "sha256": "7bde24ea6075f8e7720e7103efb910efa4e120c3d147b5a2ef4946746363282a",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i25-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i26-s00-clean.npz",
+      "sha256": "0bb12bad215ac221f25c959975a46adeca14f990ae9e69be3e365bd8460dbfb3",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i26-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i27-s00-clean.npz",
+      "sha256": "92cef16cfe8b386f78ecc9d1115dab39e5ba5c8aa302c2841fdb9d4147e07a57",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i27-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i28-s00-clean.npz",
+      "sha256": "8b2d00afb678159a1ad7de49129bbd7cc3647ddd7d3caee153718285f0ed4c9a",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i28-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i29-s00-clean.npz",
+      "sha256": "5cc7143e2973cf4eb30e5380c3517b8714ea2072d0361fbe2c9bcbef7b02ef79",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t00-i29-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i20-s00-clean.npz",
+      "sha256": "69b936fc32b3ce6d9db6d246b701c292a1056ccf341400af04303e1d7d5cdf0a",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i20-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i21-s00-clean.npz",
+      "sha256": "263b2cd93655ca6e8eb12791642885f1e6afa0c61cf680e2263c8614078038c2",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i21-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i22-s00-clean.npz",
+      "sha256": "5db7cea7945df0991199dc9b8220ac22267d0116b8faae1cc1530ee6638249b0",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i22-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i23-s00-clean.npz",
+      "sha256": "a2444e5c2fb88b008f3745fd252c450538cc95e276d622cb4a7bde405ba8a233",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i23-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i24-s00-clean.npz",
+      "sha256": "67e6d440429eb5b22fc83e0bfe1e744f6e45441f8147bf6c2842dc5e8d24963e",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i24-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i25-s00-clean.npz",
+      "sha256": "cd7862ec6e9d7d5eb4b3af205b50b8d76e2e39ee06f40159f03be7ffa85fdefb",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i25-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i26-s00-clean.npz",
+      "sha256": "1bbd2acfeb39e361069f0ddf5c6004f9b1f86874fc570ad0b73394d7508942b2",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i26-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i27-s00-clean.npz",
+      "sha256": "1a79486d1fac5afdb560b3a36d09c58ed8804d95b9ec7be24489c30fdb857199",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i27-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i28-s00-clean.npz",
+      "sha256": "f58553084e608175ade6c8a8ae8f5b1e61da00620127e2e081e50efb20c23341",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i28-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i29-s00-clean.npz",
+      "sha256": "5b52058fd63229f10e1d2082b9dd71b62253ef2672e9fc666adc484f65184c70",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t05-i29-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i20-s00-clean.npz",
+      "sha256": "aa185250d069502ffdd17639fa3e299ee152aa2624dc3d72544f1802c2953515",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i20-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i21-s00-clean.npz",
+      "sha256": "25cf6ff9fa5da3c25e352f18527ba869e696305b1c4c0187e3171db761a14ac4",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i21-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i22-s00-clean.npz",
+      "sha256": "7cace6e8d65179934fe57ca5336c32f2b7417a6993b83c8d016d6d1460bce780",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i22-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i23-s00-clean.npz",
+      "sha256": "cecdaf9736e62fe82ab83759767e3018ef2ceec0ff31f26b4050e5c330a93edc",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i23-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i24-s00-clean.npz",
+      "sha256": "176d944e507501d7503c787b504f006fb94de7ed70f1620fc61c5eb1d16a6989",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i24-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i25-s00-clean.npz",
+      "sha256": "e2f7b7a3eab7d0d4d25b4f388aeb5171ff1c24c055d1fbe2f3053b47fd04db16",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i25-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i26-s00-clean.npz",
+      "sha256": "3916ef32513be016d0e3dc4ff17e68328871ba7d4b1c0744f9a414575b747881",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i26-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i27-s00-clean.npz",
+      "sha256": "ce90129bacd7f77f16ba25ebfd8f4cbcee9313c4d2f1e7295c85c7d100990bce",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i27-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i28-s00-clean.npz",
+      "sha256": "0ba6301b634606c6e101db37773328013caf6cad7ff1ab7a918b24e207a3237f",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i28-s00-clean.json"
+    },
+    {
+      "npz": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i29-s00-clean.npz",
+      "sha256": "99607021589545c6a06c9ac834ce38432b42de46ef96d2de220325e2c310056f",
+      "metadata": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r16p19-phase5-bounded-ascel/pai/r16p19-phase5-idle-fixed-20260818-0855/rollouts/episodes/qualification/qualification-t09-i29-s00-clean.json"
+    }
+  ]
+}

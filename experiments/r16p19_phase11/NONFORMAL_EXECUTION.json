@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "formal_read_count": 0,
+  "cpu_only": true,
+  "training_rows": 13138,
+  "phase5_baseline": 0.9916669890228063,
+  "observed_baseline": 0.9916669890228063
+}

@@ -1,0 +1,4 @@
+phase5-9 source protection check: git diff against 14eb5b9 is empty
+verifier checkpoint sha256: edba3ff23ae71c5768760af161b601b3d1a9f65d37d1ddeb8304b2510e938005
+tests: 11 passed
+formal protocol_valid: false and claim/selection eligible: false

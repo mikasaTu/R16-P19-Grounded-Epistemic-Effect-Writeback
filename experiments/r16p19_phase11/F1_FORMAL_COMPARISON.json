@@ -1,0 +1,1304 @@
+{
+  "claim_eligible": false,
+  "selection_eligible": false,
+  "protocol_valid": false,
+  "reason": "early formal schema and mixed-cache preview access disclosed; final metrics descriptive only",
+  "models": {
+    "A_full": {
+      "macro_auc": 0.9563392969154393,
+      "per_effect": [
+        {
+          "task_id": 0,
+          "effect_index": 0,
+          "positive_rows": 2090,
+          "negative_rows": 2808,
+          "episode_count": 80,
+          "auroc": 0.9800748715222399,
+          "tpr_at_fpr_0.05": 0.9392344497607655,
+          "achieved_roc_fpr": 0.04985754985754986,
+          "calibration_threshold": 0.7576897144317627,
+          "calibration_point": {
+            "tpr": 0.9215311004784689,
+            "fpr": 0.03774928774928775
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9600890136547999,
+              0.9941723546793205
+            ],
+            "tpr_at_fpr_0.05": [
+              0.7904777719504511,
+              0.9799300425756292
+            ],
+            "calibration_point_tpr": [
+              0.8701740179672814,
+              0.9637650993860889
+            ],
+            "calibration_point_fpr": [
+              0.011665802158603219,
+              0.07259068704371172
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 0,
+          "effect_index": 1,
+          "positive_rows": 127,
+          "negative_rows": 4771,
+          "episode_count": 80,
+          "auroc": 0.8855156729387028,
+          "tpr_at_fpr_0.05": 0.5196850393700787,
+          "achieved_roc_fpr": 0.04988472018444771,
+          "calibration_threshold": 0.1255241334438324,
+          "calibration_point": {
+            "tpr": 0.5905511811023622,
+            "fpr": 0.0664430936910501
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.8187187934690224,
+              0.9857799832218238
+            ],
+            "tpr_at_fpr_0.05": [
+              0.27815311472358384,
+              0.9275872627066746
+            ],
+            "calibration_point_tpr": [
+              0.3263585372960373,
+              0.9746914556962024
+            ],
+            "calibration_point_fpr": [
+              0.05997785566734702,
+              0.07303049417512306
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 5,
+          "effect_index": 0,
+          "positive_rows": 80,
+          "negative_rows": 3130,
+          "episode_count": 80,
+          "auroc": 0.9822204472843451,
+          "tpr_at_fpr_0.05": 0.9,
+          "achieved_roc_fpr": 0.04984025559105431,
+          "calibration_threshold": 0.09350928664207458,
+          "calibration_point": {
+            "tpr": 0.9125,
+            "fpr": 0.05750798722044728
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9759840983800887,
+              0.9877870228008875
+            ],
+            "tpr_at_fpr_0.05": [
+              0.8375,
+              0.9625
+            ],
+            "calibration_point_tpr": [
+              0.85,
+              0.9625
+            ],
+            "calibration_point_fpr": [
+              0.04748380203605437,
+              0.0681149097891441
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 0,
+          "positive_rows": 1865,
+          "negative_rows": 2894,
+          "episode_count": 80,
+          "auroc": 0.9708829027793475,
+          "tpr_at_fpr_0.05": 0.7892761394101877,
+          "achieved_roc_fpr": 0.0497581202487906,
+          "calibration_threshold": 0.38858774304389954,
+          "calibration_point": {
+            "tpr": 0.9812332439678284,
+            "fpr": 0.14478230822391155
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9527147439987269,
+              0.9867479594598635
+            ],
+            "tpr_at_fpr_0.05": [
+              0.6759403910852815,
+              0.964274918263165
+            ],
+            "calibration_point_tpr": [
+              0.9564994816035518,
+              0.9977579103038581
+            ],
+            "calibration_point_fpr": [
+              0.08601501603620942,
+              0.20219187999122204
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 1,
+          "positive_rows": 73,
+          "negative_rows": 4686,
+          "episode_count": 80,
+          "auroc": 0.9630025900525611,
+          "tpr_at_fpr_0.05": 0.7808219178082192,
+          "achieved_roc_fpr": 0.0499359795134443,
+          "calibration_threshold": 0.07396349310874939,
+          "calibration_point": {
+            "tpr": 0.9178082191780822,
+            "fpr": 0.0761843790012804
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.944946632405456,
+              0.9787862221019686
+            ],
+            "tpr_at_fpr_0.05": [
+              0.35608380338436746,
+              0.935064935064935
+            ],
+            "calibration_point_tpr": [
+              0.8493150684931506,
+              0.9729819819819819
+            ],
+            "calibration_point_fpr": [
+              0.056347902565590836,
+              0.10016796602837734
+            ],
+            "valid_replicates": 2000
+          }
+        }
+      ],
+      "interval_method": "episode bootstrap 2000 resamples seed 20260915; rows within episode jointly weighted",
+      "roc_metrics_descriptive": true,
+      "claim_eligible": false,
+      "selection_eligible": false,
+      "protocol_valid": false
+    },
+    "B_no_visual": {
+      "macro_auc": 0.9591245190056721,
+      "per_effect": [
+        {
+          "task_id": 0,
+          "effect_index": 0,
+          "positive_rows": 2090,
+          "negative_rows": 2808,
+          "episode_count": 80,
+          "auroc": 0.9822574598890388,
+          "tpr_at_fpr_0.05": 0.9325358851674641,
+          "achieved_roc_fpr": 0.04985754985754986,
+          "calibration_threshold": 0.7046123743057251,
+          "calibration_point": {
+            "tpr": 0.9287081339712918,
+            "fpr": 0.04772079772079772
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.968790216507218,
+              0.9934527084725795
+            ],
+            "tpr_at_fpr_0.05": [
+              0.8606640274712366,
+              0.9831926048565122
+            ],
+            "calibration_point_tpr": [
+              0.8698287224460425,
+              0.979125561529574
+            ],
+            "calibration_point_fpr": [
+              0.020406964665270963,
+              0.08197984044852787
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 0,
+          "effect_index": 1,
+          "positive_rows": 127,
+          "negative_rows": 4771,
+          "episode_count": 80,
+          "auroc": 0.8722729350719653,
+          "tpr_at_fpr_0.05": 0.5748031496062992,
+          "achieved_roc_fpr": 0.04988472018444771,
+          "calibration_threshold": 0.11815039813518524,
+          "calibration_point": {
+            "tpr": 0.5748031496062992,
+            "fpr": 0.04988472018444771
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.7882926844670552,
+              0.9969063046553804
+            ],
+            "tpr_at_fpr_0.05": [
+              0.2603747814685315,
+              1.0
+            ],
+            "calibration_point_tpr": [
+              0.2603747814685315,
+              1.0
+            ],
+            "calibration_point_fpr": [
+              0.044174926523546626,
+              0.055873518318507155
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 5,
+          "effect_index": 0,
+          "positive_rows": 80,
+          "negative_rows": 3130,
+          "episode_count": 80,
+          "auroc": 0.986797124600639,
+          "tpr_at_fpr_0.05": 0.925,
+          "achieved_roc_fpr": 0.04984025559105431,
+          "calibration_threshold": 0.07390345633029938,
+          "calibration_point": {
+            "tpr": 0.9125,
+            "fpr": 0.04952076677316294
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9827824505217896,
+              0.9904728289527055
+            ],
+            "tpr_at_fpr_0.05": [
+              0.8625,
+              0.9625
+            ],
+            "calibration_point_tpr": [
+              0.85,
+              0.9625
+            ],
+            "calibration_point_fpr": [
+              0.04267507726895905,
+              0.05598507157668698
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 0,
+          "positive_rows": 1865,
+          "negative_rows": 2894,
+          "episode_count": 80,
+          "auroc": 0.9694436673083443,
+          "tpr_at_fpr_0.05": 0.7758713136729223,
+          "achieved_roc_fpr": 0.0497581202487906,
+          "calibration_threshold": 0.49753519892692566,
+          "calibration_point": {
+            "tpr": 0.9619302949061662,
+            "fpr": 0.13061506565307532
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9509664851016286,
+              0.9846904165246787
+            ],
+            "tpr_at_fpr_0.05": [
+              0.6526780079709167,
+              0.9500820334317401
+            ],
+            "calibration_point_tpr": [
+              0.9366001589334663,
+              0.9835449662890694
+            ],
+            "calibration_point_fpr": [
+              0.08093936722608235,
+              0.1786420846274809
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 1,
+          "positive_rows": 73,
+          "negative_rows": 4686,
+          "episode_count": 80,
+          "auroc": 0.9848514081583732,
+          "tpr_at_fpr_0.05": 0.9863013698630136,
+          "achieved_roc_fpr": 0.0499359795134443,
+          "calibration_threshold": 0.10950411856174469,
+          "calibration_point": {
+            "tpr": 1.0,
+            "fpr": 0.061886470337174565
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9764290722656414,
+              0.9915046899559742
+            ],
+            "tpr_at_fpr_0.05": [
+              0.9142857142857143,
+              1.0
+            ],
+            "calibration_point_tpr": [
+              1.0,
+              1.0
+            ],
+            "calibration_point_fpr": [
+              0.04836237230537667,
+              0.07799288617886178
+            ],
+            "valid_replicates": 2000
+          }
+        }
+      ],
+      "interval_method": "episode bootstrap 2000 resamples seed 20260915; rows within episode jointly weighted",
+      "roc_metrics_descriptive": true,
+      "claim_eligible": false,
+      "selection_eligible": false,
+      "protocol_valid": false
+    },
+    "C_no_time": {
+      "macro_auc": 0.9230540705940502,
+      "per_effect": [
+        {
+          "task_id": 0,
+          "effect_index": 0,
+          "positive_rows": 2090,
+          "negative_rows": 2808,
+          "episode_count": 80,
+          "auroc": 0.9251630679262258,
+          "tpr_at_fpr_0.05": 0.5755980861244019,
+          "achieved_roc_fpr": 0.04985754985754986,
+          "calibration_threshold": 0.8557729721069336,
+          "calibration_point": {
+            "tpr": 0.6502392344497607,
+            "fpr": 0.06588319088319089
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.8856914805021705,
+              0.9519884106699299
+            ],
+            "tpr_at_fpr_0.05": [
+              0.18697570710638112,
+              0.706718955938971
+            ],
+            "calibration_point_tpr": [
+              0.6013056998231154,
+              0.6996962056602303
+            ],
+            "calibration_point_fpr": [
+              0.03671926633853338,
+              0.1091754610839384
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 0,
+          "effect_index": 1,
+          "positive_rows": 127,
+          "negative_rows": 4771,
+          "episode_count": 80,
+          "auroc": 0.8706093408833223,
+          "tpr_at_fpr_0.05": 0.4330708661417323,
+          "achieved_roc_fpr": 0.04988472018444771,
+          "calibration_threshold": 0.05403495579957962,
+          "calibration_point": {
+            "tpr": 0.36220472440944884,
+            "fpr": 0.03605114231817229
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.8103840412734309,
+              0.9620857769837515
+            ],
+            "tpr_at_fpr_0.05": [
+              0.23931159420289855,
+              0.7567664092664093
+            ],
+            "calibration_point_tpr": [
+              0.19742348091258188,
+              0.6666666666666666
+            ],
+            "calibration_point_fpr": [
+              0.028096794891871467,
+              0.04510765763801955
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 5,
+          "effect_index": 0,
+          "positive_rows": 80,
+          "negative_rows": 3130,
+          "episode_count": 80,
+          "auroc": 0.9144968051118211,
+          "tpr_at_fpr_0.05": 0.2875,
+          "achieved_roc_fpr": 0.04984025559105431,
+          "calibration_threshold": 0.20952296257019043,
+          "calibration_point": {
+            "tpr": 0.0125,
+            "fpr": 0.002875399361022364
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.8816989142056791,
+              0.943936890010734
+            ],
+            "tpr_at_fpr_0.05": [
+              0.1625,
+              0.5253124999999983
+            ],
+            "calibration_point_tpr": [
+              0.0,
+              0.0375
+            ],
+            "calibration_point_fpr": [
+              0.000323091351058578,
+              0.0069466872782670995
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 0,
+          "positive_rows": 1865,
+          "negative_rows": 2894,
+          "episode_count": 80,
+          "auroc": 0.9774378347732482,
+          "tpr_at_fpr_0.05": 0.960857908847185,
+          "achieved_roc_fpr": 0.0497581202487906,
+          "calibration_threshold": 0.31486257910728455,
+          "calibration_point": {
+            "tpr": 0.9801608579088472,
+            "fpr": 0.08120248790601244
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9571252518107998,
+              0.9942174760900043
+            ],
+            "tpr_at_fpr_0.05": [
+              0.6233065805726528,
+              0.9950286460304246
+            ],
+            "calibration_point_tpr": [
+              0.9552361362677716,
+              0.9978106484425808
+            ],
+            "calibration_point_fpr": [
+              0.03835656319856204,
+              0.13256607006040969
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 1,
+          "positive_rows": 73,
+          "negative_rows": 4686,
+          "episode_count": 80,
+          "auroc": 0.927563304275633,
+          "tpr_at_fpr_0.05": 0.4246575342465753,
+          "achieved_roc_fpr": 0.0499359795134443,
+          "calibration_threshold": 0.08598684519529343,
+          "calibration_point": {
+            "tpr": 0.5616438356164384,
+            "fpr": 0.06274007682458387
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9069582141989212,
+              0.9458916633667719
+            ],
+            "tpr_at_fpr_0.05": [
+              0.23603025114155252,
+              0.6164879235760632
+            ],
+            "calibration_point_tpr": [
+              0.4473684210526316,
+              0.68
+            ],
+            "calibration_point_fpr": [
+              0.04508454977406401,
+              0.08315710424517606
+            ],
+            "valid_replicates": 2000
+          }
+        }
+      ],
+      "interval_method": "episode bootstrap 2000 resamples seed 20260915; rows within episode jointly weighted",
+      "roc_metrics_descriptive": true,
+      "claim_eligible": false,
+      "selection_eligible": false,
+      "protocol_valid": false
+    },
+    "D_no_contact": {
+      "macro_auc": 0.9632501544212418,
+      "per_effect": [
+        {
+          "task_id": 0,
+          "effect_index": 0,
+          "positive_rows": 2090,
+          "negative_rows": 2808,
+          "episode_count": 80,
+          "auroc": 0.9796265625212993,
+          "tpr_at_fpr_0.05": 0.9473684210526315,
+          "achieved_roc_fpr": 0.04985754985754986,
+          "calibration_threshold": 0.7670854330062866,
+          "calibration_point": {
+            "tpr": 0.9315789473684211,
+            "fpr": 0.03418803418803419
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.955748689704793,
+              0.9947940844387262
+            ],
+            "tpr_at_fpr_0.05": [
+              0.7864801979202477,
+              0.9843770868746965
+            ],
+            "calibration_point_tpr": [
+              0.8876623233020187,
+              0.9680387467433748
+            ],
+            "calibration_point_fpr": [
+              0.007816866443569248,
+              0.06964163709490537
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 0,
+          "effect_index": 1,
+          "positive_rows": 127,
+          "negative_rows": 4771,
+          "episode_count": 80,
+          "auroc": 0.9148744795079194,
+          "tpr_at_fpr_0.05": 0.6850393700787402,
+          "achieved_roc_fpr": 0.04988472018444771,
+          "calibration_threshold": 0.1040029525756836,
+          "calibration_point": {
+            "tpr": 0.6929133858267716,
+            "fpr": 0.05805910710542863
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.8637836242183116,
+              0.995342972959297
+            ],
+            "tpr_at_fpr_0.05": [
+              0.458022533022533,
+              1.0
+            ],
+            "calibration_point_tpr": [
+              0.4687445367132867,
+              1.0
+            ],
+            "calibration_point_fpr": [
+              0.05132062323326467,
+              0.06494367177237653
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 5,
+          "effect_index": 0,
+          "positive_rows": 80,
+          "negative_rows": 3130,
+          "episode_count": 80,
+          "auroc": 0.9758985623003195,
+          "tpr_at_fpr_0.05": 0.9125,
+          "achieved_roc_fpr": 0.04984025559105431,
+          "calibration_threshold": 0.1278630644083023,
+          "calibration_point": {
+            "tpr": 0.75,
+            "fpr": 0.03610223642172524
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9696846534241489,
+              0.9824123152360738
+            ],
+            "tpr_at_fpr_0.05": [
+              0.7875,
+              0.975
+            ],
+            "calibration_point_tpr": [
+              0.65,
+              0.8375
+            ],
+            "calibration_point_fpr": [
+              0.026867849065689405,
+              0.04629156930440899
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 0,
+          "positive_rows": 1865,
+          "negative_rows": 2894,
+          "episode_count": 80,
+          "auroc": 0.9728859376244833,
+          "tpr_at_fpr_0.05": 0.8750670241286863,
+          "achieved_roc_fpr": 0.0497581202487906,
+          "calibration_threshold": 0.25594857335090637,
+          "calibration_point": {
+            "tpr": 0.9849865951742627,
+            "fpr": 0.14443676572218384
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.951154559043884,
+              0.9906253206495218
+            ],
+            "tpr_at_fpr_0.05": [
+              0.6626063249350359,
+              0.9817023942050853
+            ],
+            "calibration_point_tpr": [
+              0.9630611087395086,
+              0.9983731460177719
+            ],
+            "calibration_point_fpr": [
+              0.08794297112702401,
+              0.20067579596028753
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 1,
+          "positive_rows": 73,
+          "negative_rows": 4686,
+          "episode_count": 80,
+          "auroc": 0.9729652301521875,
+          "tpr_at_fpr_0.05": 0.9315068493150684,
+          "achieved_roc_fpr": 0.0499359795134443,
+          "calibration_threshold": 0.0845794826745987,
+          "calibration_point": {
+            "tpr": 0.9726027397260274,
+            "fpr": 0.06743491250533504
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9583136429055747,
+              0.9851252437687855
+            ],
+            "tpr_at_fpr_0.05": [
+              0.7777777777777778,
+              1.0
+            ],
+            "calibration_point_tpr": [
+              0.9285714285714286,
+              1.0
+            ],
+            "calibration_point_fpr": [
+              0.05057563426346037,
+              0.08686750050735964
+            ],
+            "valid_replicates": 2000
+          }
+        }
+      ],
+      "interval_method": "episode bootstrap 2000 resamples seed 20260915; rows within episode jointly weighted",
+      "roc_metrics_descriptive": true,
+      "claim_eligible": false,
+      "selection_eligible": false,
+      "protocol_valid": false
+    },
+    "E_shortcut_only": {
+      "macro_auc": 0.9602170981204129,
+      "per_effect": [
+        {
+          "task_id": 0,
+          "effect_index": 0,
+          "positive_rows": 2090,
+          "negative_rows": 2808,
+          "episode_count": 80,
+          "auroc": 0.9676783012309328,
+          "tpr_at_fpr_0.05": 0.8492822966507177,
+          "achieved_roc_fpr": 0.04985754985754986,
+          "calibration_threshold": 0.9636049866676331,
+          "calibration_point": {
+            "tpr": 0.40382775119617226,
+            "fpr": 0.011752136752136752
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9458247378866862,
+              0.9881220767762371
+            ],
+            "tpr_at_fpr_0.05": [
+              0.5860051403656814,
+              0.9602248985449842
+            ],
+            "calibration_point_tpr": [
+              0.3811182788895421,
+              0.4295708739658918
+            ],
+            "calibration_point_fpr": [
+              0.0,
+              0.02779704795493137
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 0,
+          "effect_index": 1,
+          "positive_rows": 127,
+          "negative_rows": 4771,
+          "episode_count": 80,
+          "auroc": 0.8984638160012015,
+          "tpr_at_fpr_0.05": 0.6299212598425197,
+          "achieved_roc_fpr": 0.049255921190526096,
+          "calibration_threshold": 0.1568862944841385,
+          "calibration_point": {
+            "tpr": 0.6299212598425197,
+            "fpr": 0.049255921190526096
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.8279919377654894,
+              0.9997836914139249
+            ],
+            "tpr_at_fpr_0.05": [
+              0.35882897590214663,
+              1.0
+            ],
+            "calibration_point_tpr": [
+              0.3471653600464576,
+              1.0
+            ],
+            "calibration_point_fpr": [
+              0.04703064605133753,
+              0.05099433335765032
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 5,
+          "effect_index": 0,
+          "positive_rows": 80,
+          "negative_rows": 3130,
+          "episode_count": 80,
+          "auroc": 1.0,
+          "tpr_at_fpr_0.05": 1.0,
+          "achieved_roc_fpr": 0.04984025559105431,
+          "calibration_threshold": 0.11581249535083771,
+          "calibration_point": {
+            "tpr": 1.0,
+            "fpr": 0.047603833865814696
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              1.0,
+              1.0
+            ],
+            "tpr_at_fpr_0.05": [
+              1.0,
+              1.0
+            ],
+            "calibration_point_tpr": [
+              1.0,
+              1.0
+            ],
+            "calibration_point_fpr": [
+              0.04540997219039246,
+              0.049636868227917345
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 0,
+          "positive_rows": 1865,
+          "negative_rows": 2894,
+          "episode_count": 80,
+          "auroc": 0.9356902790464139,
+          "tpr_at_fpr_0.05": 0.43485254691689007,
+          "achieved_roc_fpr": 0.0497581202487906,
+          "calibration_threshold": 0.38016998767852783,
+          "calibration_point": {
+            "tpr": 0.953887399463807,
+            "fpr": 0.15411195577055978
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9054525265698672,
+              0.9675432847316636
+            ],
+            "tpr_at_fpr_0.05": [
+              0.29241002568054625,
+              0.8351348703912053
+            ],
+            "calibration_point_tpr": [
+              0.9276929813401417,
+              0.9769485995272735
+            ],
+            "calibration_point_fpr": [
+              0.09675718245967742,
+              0.20875774321064122
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 1,
+          "positive_rows": 73,
+          "negative_rows": 4686,
+          "episode_count": 80,
+          "auroc": 0.9992530943235168,
+          "tpr_at_fpr_0.05": 1.0,
+          "achieved_roc_fpr": 0.049082373026035,
+          "calibration_threshold": 0.21235588192939758,
+          "calibration_point": {
+            "tpr": 1.0,
+            "fpr": 0.057831839521980365
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9987684665856942,
+              0.9996737037867942
+            ],
+            "tpr_at_fpr_0.05": [
+              1.0,
+              1.0
+            ],
+            "calibration_point_tpr": [
+              1.0,
+              1.0
+            ],
+            "calibration_point_fpr": [
+              0.056350089365762704,
+              0.05930844527106822
+            ],
+            "valid_replicates": 2000
+          }
+        }
+      ],
+      "interval_method": "episode bootstrap 2000 resamples seed 20260915; rows within episode jointly weighted",
+      "roc_metrics_descriptive": true,
+      "claim_eligible": false,
+      "selection_eligible": false,
+      "protocol_valid": false
+    },
+    "F_visual_only": {
+      "macro_auc": 0.7273912542785677,
+      "per_effect": [
+        {
+          "task_id": 0,
+          "effect_index": 0,
+          "positive_rows": 2090,
+          "negative_rows": 2808,
+          "episode_count": 80,
+          "auroc": 0.6092751059856323,
+          "tpr_at_fpr_0.05": 0.06698564593301436,
+          "achieved_roc_fpr": 0.04985754985754986,
+          "calibration_threshold": 0.6877574920654297,
+          "calibration_point": {
+            "tpr": 0.12248803827751197,
+            "fpr": 0.07799145299145299
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.588650690959593,
+              0.6298506304688553
+            ],
+            "tpr_at_fpr_0.05": [
+              0.03441857085937531,
+              0.11397098052060582
+            ],
+            "calibration_point_tpr": [
+              0.09620613684353306,
+              0.15238210818307907
+            ],
+            "calibration_point_fpr": [
+              0.058435957728070004,
+              0.10095347933679591
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 0,
+          "effect_index": 1,
+          "positive_rows": 127,
+          "negative_rows": 4771,
+          "episode_count": 80,
+          "auroc": 0.7062270905090962,
+          "tpr_at_fpr_0.05": 0.15748031496062992,
+          "achieved_roc_fpr": 0.04988472018444771,
+          "calibration_threshold": 0.03203357756137848,
+          "calibration_point": {
+            "tpr": 0.18110236220472442,
+            "fpr": 0.05931670509327185
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.5990132548731678,
+              0.8751695114523093
+            ],
+            "tpr_at_fpr_0.05": [
+              0.09089625064201336,
+              0.3150684931506849
+            ],
+            "calibration_point_tpr": [
+              0.10496000659685,
+              0.33783783783783783
+            ],
+            "calibration_point_fpr": [
+              0.046993281750552146,
+              0.07260516439491618
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 5,
+          "effect_index": 0,
+          "positive_rows": 80,
+          "negative_rows": 3130,
+          "episode_count": 80,
+          "auroc": 0.8740415335463259,
+          "tpr_at_fpr_0.05": 0.375,
+          "achieved_roc_fpr": 0.04984025559105431,
+          "calibration_threshold": 0.1502590924501419,
+          "calibration_point": {
+            "tpr": 0.15,
+            "fpr": 0.016613418530351438
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.8416943115419522,
+              0.9024733048703899
+            ],
+            "tpr_at_fpr_0.05": [
+              0.2625,
+              0.48781249999999826
+            ],
+            "calibration_point_tpr": [
+              0.075,
+              0.225
+            ],
+            "calibration_point_fpr": [
+              0.001649444461545198,
+              0.036700743947237414
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 0,
+          "positive_rows": 1865,
+          "negative_rows": 2894,
+          "episode_count": 80,
+          "auroc": 0.8757709859170587,
+          "tpr_at_fpr_0.05": 0.39249329758713136,
+          "achieved_roc_fpr": 0.0497581202487906,
+          "calibration_threshold": 0.6625534296035767,
+          "calibration_point": {
+            "tpr": 0.627882037533512,
+            "fpr": 0.12024879060124395
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.8318756436812056,
+              0.9124111992342049
+            ],
+            "tpr_at_fpr_0.05": [
+              0.2656527148694234,
+              0.5665013279175128
+            ],
+            "calibration_point_tpr": [
+              0.5745908207841746,
+              0.6768908653530146
+            ],
+            "calibration_point_fpr": [
+              0.06247468706857638,
+              0.18515187442780978
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 1,
+          "positive_rows": 73,
+          "negative_rows": 4686,
+          "episode_count": 80,
+          "auroc": 0.5716415554347254,
+          "tpr_at_fpr_0.05": 0.0684931506849315,
+          "achieved_roc_fpr": 0.0499359795134443,
+          "calibration_threshold": 0.07632394880056381,
+          "calibration_point": {
+            "tpr": 0.0684931506849315,
+            "fpr": 0.04780196329492104
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.5163452243938788,
+              0.6281487828429074
+            ],
+            "tpr_at_fpr_0.05": [
+              0.014084507042253521,
+              0.13159829721362218
+            ],
+            "calibration_point_tpr": [
+              0.014084507042253521,
+              0.1323529411764706
+            ],
+            "calibration_point_fpr": [
+              0.03210362748013435,
+              0.06550531897257914
+            ],
+            "valid_replicates": 2000
+          }
+        }
+      ],
+      "interval_method": "episode bootstrap 2000 resamples seed 20260915; rows within episode jointly weighted",
+      "roc_metrics_descriptive": true,
+      "claim_eligible": false,
+      "selection_eligible": false,
+      "protocol_valid": false
+    },
+    "T_spatial": {
+      "macro_auc": 0.9526634910751532,
+      "per_effect": [
+        {
+          "task_id": 0,
+          "effect_index": 0,
+          "positive_rows": 2090,
+          "negative_rows": 2808,
+          "episode_count": 80,
+          "auroc": 0.9786755885440096,
+          "tpr_at_fpr_0.05": 0.8918660287081339,
+          "achieved_roc_fpr": 0.04985754985754986,
+          "calibration_threshold": 0.5125423669815063,
+          "calibration_point": {
+            "tpr": 0.9741626794258373,
+            "fpr": 0.11182336182336182
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9549777192489098,
+              0.9918400314617539
+            ],
+            "tpr_at_fpr_0.05": [
+              0.6413754233435901,
+              0.9554159386661489
+            ],
+            "calibration_point_tpr": [
+              0.9590645633679388,
+              0.9871679358696027
+            ],
+            "calibration_point_fpr": [
+              0.07806118798649346,
+              0.16414892407157222
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 0,
+          "effect_index": 1,
+          "positive_rows": 127,
+          "negative_rows": 4771,
+          "episode_count": 80,
+          "auroc": 0.8694573679233294,
+          "tpr_at_fpr_0.05": 0.25984251968503935,
+          "achieved_roc_fpr": 0.04988472018444771,
+          "calibration_threshold": 0.0777851790189743,
+          "calibration_point": {
+            "tpr": 0.25984251968503935,
+            "fpr": 0.04988472018444771
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.8326309253526525,
+              0.9348511623095044
+            ],
+            "tpr_at_fpr_0.05": [
+              0.1267605633802817,
+              0.5394736842105263
+            ],
+            "calibration_point_tpr": [
+              0.1206896551724138,
+              0.538486842105263
+            ],
+            "calibration_point_fpr": [
+              0.0398821079985693,
+              0.059752960118222086
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 5,
+          "effect_index": 0,
+          "positive_rows": 80,
+          "negative_rows": 3130,
+          "episode_count": 80,
+          "auroc": 0.9451597444089457,
+          "tpr_at_fpr_0.05": 0.675,
+          "achieved_roc_fpr": 0.04984025559105431,
+          "calibration_threshold": 0.3640240430831909,
+          "calibration_point": {
+            "tpr": 0.2625,
+            "fpr": 0.019169329073482427
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9187646798465453,
+              0.9656817028316738
+            ],
+            "tpr_at_fpr_0.05": [
+              0.425,
+              0.825
+            ],
+            "calibration_point_tpr": [
+              0.175,
+              0.3625
+            ],
+            "calibration_point_fpr": [
+              0.00801750682104555,
+              0.03360857960359724
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 0,
+          "positive_rows": 1865,
+          "negative_rows": 2894,
+          "episode_count": 80,
+          "auroc": 0.9773505690797823,
+          "tpr_at_fpr_0.05": 0.8723860589812332,
+          "achieved_roc_fpr": 0.0497581202487906,
+          "calibration_threshold": 0.42696455121040344,
+          "calibration_point": {
+            "tpr": 0.967828418230563,
+            "fpr": 0.08465791292328956
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9582987727226795,
+              0.9924000181259827
+            ],
+            "tpr_at_fpr_0.05": [
+              0.6748327155809131,
+              0.9853296409182384
+            ],
+            "calibration_point_tpr": [
+              0.9430378989401992,
+              0.988508087161631
+            ],
+            "calibration_point_fpr": [
+              0.0348079013098938,
+              0.14244823717814176
+            ],
+            "valid_replicates": 2000
+          }
+        },
+        {
+          "task_id": 9,
+          "effect_index": 1,
+          "positive_rows": 73,
+          "negative_rows": 4686,
+          "episode_count": 80,
+          "auroc": 0.9926741854196997,
+          "tpr_at_fpr_0.05": 1.0,
+          "achieved_roc_fpr": 0.0499359795134443,
+          "calibration_threshold": 0.06255242973566055,
+          "calibration_point": {
+            "tpr": 1.0,
+            "fpr": 0.07298335467349552
+          },
+          "roc_threshold_selection_eligible": false,
+          "episode_cluster_ci95": {
+            "auroc": [
+              0.9885166721130572,
+              0.9959438298785079
+            ],
+            "tpr_at_fpr_0.05": [
+              1.0,
+              1.0
+            ],
+            "calibration_point_tpr": [
+              1.0,
+              1.0
+            ],
+            "calibration_point_fpr": [
+              0.05505268688828637,
+              0.09286494949056834
+            ],
+            "valid_replicates": 2000
+          }
+        }
+      ],
+      "interval_method": "episode bootstrap 2000 resamples seed 20260915; rows within episode jointly weighted",
+      "roc_metrics_descriptive": true,
+      "claim_eligible": false,
+      "selection_eligible": false,
+      "protocol_valid": false
+    }
+  },
+  "source": "F1_FORMAL_CACHE.npz"
+}
